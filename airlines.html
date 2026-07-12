@@ -359,4 +359,19 @@ function jumpTo(id){
 function askDelete(id){
   const d=AIRLINE_DEALS.find(x=>x.id===id);
   document.getElementById('modalBody').innerHTML=`Hide <strong>${d.airline} — ${d.name}</strong> from your board? You can bring it back by clearing your browser data.`;
- 
+  document.getElementById('modalConfirm').onclick=()=>{ saveDeleted(id); closeModal(); renderBanner(); render(); };
+  document.getElementById('overlay').classList.add('show');
+}
+function closeModal(){ document.getElementById('overlay').classList.remove('show'); }
+document.getElementById('overlay').addEventListener('click',function(e){ if(e.target===this) closeModal(); });
+
+document.getElementById('lastChecked').textContent=`${shortDate(LAST_CHECKED)}, ${LAST_CHECKED.slice(0,4)}`;
+populateFilters();
+renderBanner();
+render();
+document.getElementById('search').addEventListener('input',render);
+document.getElementById('airlineFilter').addEventListener('change',render);
+document.getElementById('scopeFilter').addEventListener('change',render);
+</script>
+</body>
+</html>
