@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Deals — Travel Deal Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#4A2C5E; --grape:#6B3FA0; --coral:#FF6B5B; --coral-dark:#E8503F;
+    --teal:#12B3A6; --gold:#FFB84D; --sky:#3FA9F5; --cream:#FFF7EF;
+    --ink:#2E2A3A; --muted:#7A7488; --line:#EFE6DB; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Poppins',sans-serif; background:var(--cream); color:var(--ink); min-height:100vh;}
+  h1,h2,h3,.serif{font-family:'Fraunces',serif;}
+  a{text-decoration:none;}
+
+  header{
+    padding:22px 40px; background:linear-gradient(120deg,var(--plum),var(--grape));
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; color:#fff;
+  }
+  .brand{display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-weight:700; font-size:22px;}
+  .brand .mark{width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--coral),var(--gold)); display:flex; align-items:center; justify-content:center; font-size:19px;}
+  .brand small{display:block; font-family:'Poppins',sans-serif; font-weight:500; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.72);}
+  .head-right{display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+  .nav-links{display:flex; gap:8px;}
+  .nav-links a{font-weight:600; font-size:13.5px; color:#fff; padding:8px 16px; border-radius:999px; border:2px solid rgba(255,255,255,.28); transition:.2s;}
+  .nav-links a:hover{background:#fff; color:var(--plum); border-color:#fff;}
+  .nav-links a.active{background:#fff; color:var(--plum); border-color:#fff;}
+  .meta{font-size:13px; color:rgba(255,255,255,.85);}
+  .meta b{color:var(--gold);}
+
+  .title-row{max-width:1240px; margin:30px auto 0; padding:0 40px;}
+  .title-row h1{font-size:34px; color:var(--plum);}
+  .title-row p{color:var(--muted); font-size:15px; margin-top:4px;}
+
+  /* UPDATES BANNER */
+  .updates{max-width:1240px; margin:22px auto 0; padding:0 40px;}
+  .updates-inner{background:#fff; border:2px solid var(--line); border-left:6px solid var(--coral); border-radius:16px; padding:16px 22px; display:none;}
+  .updates-inner.show{display:block;}
+  .updates-title{font-weight:600; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--plum); margin-bottom:12px; display:flex; align-items:center; gap:8px;}
+  .updates-title .as-of{font-weight:500; text-transform:none; letter-spacing:normal; color:var(--muted);}
+  .chips{display:flex; flex-wrap:wrap; gap:8px 10px;}
+  .chip{display:inline-flex; align-items:center; gap:7px; font-size:13px; color:var(--ink); background:var(--cream); border:1.5px solid var(--line); padding:6px 13px; border-radius:999px; cursor:pointer; transition:.15s;}
+  .chip:hover{border-color:var(--coral); transform:translateY(-1px);}
+  .chip .tag{font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:2px 8px; border-radius:999px; color:#fff;}
+  .chip .tag.new{background:var(--coral);}
+  .chip .tag.updated{background:var(--sky);}
+
+  /* TOOLBAR */
+  .toolbar{max-width:1240px; margin:24px auto 0; padding:0 40px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;}
+  .toolbar input[type=text], .toolbar select{
+    font-family:'Poppins',sans-serif; font-size:14px; color:var(--ink);
+    background:#fff; border:2px solid var(--line); border-radius:999px; padding:11px 18px;
+  }
+  .toolbar input[type=text]{min-width:240px;}
+  .toolbar input[type=text]:focus, .toolbar select:focus{outline:none; border-color:var(--coral);}
+  .toolbar .count{margin-left:auto; font-size:13px; color:var(--muted);}
+
+  /* GRID */
+  .grid{max-width:1240px; margin:22px auto 0; padding:0 40px 80px; display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:20px;}
+  .card{background:var(--card); border:2px solid var(--line); border-radius:20px; padding:24px; transition:.22s; position:relative; display:flex; flex-direction:column;}
+  .card::before{content:""; position:absolute; inset:0 0 auto 0; height:6px; border-radius:20px 20px 0 0; background:linear-gradient(90deg,var(--coral),var(--gold));}
+  .card:hover{transform:translateY(-4px); border-color:var(--coral); box-shadow:0 18px 38px rgba(74,44,94,0.12);}
+  .card-top{display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:6px; padding-top:6px;}
+  .brand-name{font-weight:700; font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--grape);}
+  .fresh{display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:#fff; padding:3px 10px; border-radius:999px; background:var(--coral);}
+  .fresh.updated{background:var(--sky);}
+  .card h2{font-family:'Fraunces',serif; font-size:21px; line-height:1.22; color:var(--plum); margin:6px 0 8px;}
+  .scope{font-size:13px; color:var(--muted); margin-bottom:12px; display:flex; align-items:center; gap:6px;}
+  .summary{font-size:14px; line-height:1.55; color:var(--ink); margin-bottom:14px;}
+  .tags{display:flex; flex-wrap:wrap; gap:7px; margin-bottom:14px;}
+  .pill{font-size:11.5px; font-weight:600; color:var(--plum); background:rgba(107,63,160,.09); border:1px solid rgba(107,63,160,.22); padding:4px 11px; border-radius:999px;}
+  .pill.type{background:rgba(18,179,166,.12); border-color:rgba(18,179,166,.3); color:#0c7d74;}
+  .terms{font-size:12.5px; color:var(--muted); line-height:1.5; background:var(--cream); border-radius:12px; padding:10px 13px; margin-bottom:16px;}
+  .terms b{color:var(--plum);}
+  .props{margin-bottom:16px;}
+  .props-label{font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:8px;}
+  .props-links{display:flex; flex-wrap:wrap; gap:7px;}
+  .prop-link{font-size:12.5px; font-weight:600; color:var(--grape); background:rgba(107,63,160,.07); border:1px solid rgba(107,63,160,.22); padding:5px 11px; border-radius:999px; transition:.15s;}
+  .prop-link:hover{background:var(--grape); color:#fff; border-color:var(--grape);}
+  .card-foot{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px;}
+  .btn-view{display:inline-flex; align-items:center; gap:7px; font-weight:600; font-size:14px; color:#fff; background:var(--coral); padding:10px 18px; border-radius:999px; transition:.2s;}
+  .btn-view:hover{background:var(--coral-dark);}
+  .btn-del{background:none; border:none; cursor:pointer; font-size:11.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); transition:.15s;}
+  .btn-del:hover{color:var(--coral-dark);}
+
+  .card.flash{animation:flash 1.8s ease;}
+  @keyframes flash{0%,100%{box-shadow:none;} 18%{box-shadow:0 0 0 4px var(--gold);}}
+
+  .empty{grid-column:1/-1; text-align:center; padding:80px 20px; color:var(--muted);}
+  .empty .big{font-size:40px; margin-bottom:12px;}
+
+  /* MODAL */
+  .overlay{position:fixed; inset:0; background:rgba(74,44,94,.5); display:flex; align-items:center; justify-content:center; z-index:200; opacity:0; pointer-events:none; transition:.2s;}
+  .overlay.show{opacity:1; pointer-events:all;}
+  .modal{background:#fff; border-radius:20px; border-top:6px solid var(--coral); padding:30px 34px; max-width:430px; width:90%;}
+  .modal h3{font-size:22px; color:var(--plum); margin-bottom:10px;}
+  .modal p{font-size:14px; color:var(--ink); line-height:1.6; margin-bottom:24px;}
+  .modal-actions{display:flex; gap:12px; justify-content:flex-end;}
+  .mbtn{font-weight:600; font-size:13.5px; padding:10px 20px; border-radius:999px; border:none; cursor:pointer;}
+  .mbtn.cancel{background:var(--cream); color:var(--ink); border:2px solid var(--line);}
+  .mbtn.confirm{background:var(--coral); color:#fff;}
+  .mbtn.confirm:hover{background:var(--coral-dark);}
+
+  footer{text-align:center; padding:30px 24px; color:var(--muted); font-size:12.5px; border-top:2px solid var(--line); background:#fff;}
+  @media(max-width:600px){header,.title-row,.toolbar,.updates,.grid{padding-left:20px; padding-right:20px;} .grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand" style="color:#fff;">
+    <span class="mark">🏨</span>
+    <span>Travel Deal Monitor<small>Hotels &amp; Resorts</small></span>
+  </a>
+  <div class="head-right">
+    <div class="meta">Last checked: <b id="lastChecked">—</b> · <span id="count">0</span> deals</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="hotels.html" class="active">Hotels</a>
+      <a href="airlines.html">Airlines</a>
+    </div>
+  </div>
+</header>
+
+<div class="title-row">
+  <h1>🏨 Hotel &amp; Resort Deals</h1>
+  <p>Special offers we're watching across the world's finest hotel brands.</p>
+</div>
+
+<div class="updates"><div class="updates-inner" id="updates"></div></div>
+
+<div class="toolbar">
+  <input type="text" id="search" placeholder="Search brand, deal, or destination…">
+  <select id="brandFilter"><option value="">All brands</option></select>
+  <select id="typeFilter"><option value="">All deal types</option></select>
+  <div class="count" id="resultCount"></div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<footer>Travel Deal Monitor — Hotels · Refreshed nightly by an automated check. Offers reflect publicly listed promotions and change often — always confirm current terms on the brand's own website before booking.</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h3>Remove this deal?</h3>
+    <p id="modalBody"></p>
+    <div class="modal-actions">
+      <button class="mbtn cancel" onclick="closeModal()">Keep it</button>
+      <button class="mbtn confirm" id="modalConfirm">Remove</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===========================================================================
+// HOTEL DEAL DATA — single source of truth.
+// The nightly scheduled task edits THIS array in place (matched by id) and
+// overwrites this file. Keep the variable name HOTEL_DEALS and LAST_CHECKED.
+//
+// dateAdded  : set once when a deal is first added. Never changes.
+// lastUpdated: date of the most recent change (equals dateAdded for a new deal).
+// A "New"/"Updated" badge shows automatically for 7 days from lastUpdated, then
+// ages out on its own. Anything with lastUpdated === LAST_CHECKED also appears
+// in the "Latest from the nightly check" banner at the top.
+//
+// properties: OPTIONAL array of { name, url } for brand deals that run at
+// specific hotels. When present, the tile lists a direct link to each hotel's
+// own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
+// button reads "View all offers". Omit it for a single brand-wide deal.
+// ===========================================================================
+const LAST_CHECKED = "2026-07-12";
+
+const HOTEL_DEALS = [
+  {
+    id:"four-seasons-third-night-free",
+    brand:"Four Seasons",
+    name:"Stay Longer — Third Night Free",
+    scope:"Select properties worldwide (Chicago, Napa, Seattle, Miami, Toronto, Houston & more)",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Book two consecutive paid nights and the third night is on the house — offered independently at many Four Seasons city and resort properties. Ocean Club, Bahamas runs a Fourth Night Free version.",
+    terms:"Varies by property; advance booking required. Check each hotel's Offers page for blackout dates.",
+    url:"https://www.fourseasons.com/napavalley/offers/stay-longer-third-night-free/",
+    source:"fourseasons.com",
+    properties:[
+      {name:"Chicago", url:"https://www.fourseasons.com/chicago/offers/stay_longer_third_night_free/"},
+      {name:"Napa Valley", url:"https://www.fourseasons.com/napavalley/offers/stay-longer-third-night-free/"},
+      {name:"Miami", url:"https://www.fourseasons.com/miami/offers/stay_longer_third_night_free/"},
+      {name:"Houston", url:"https://www.fourseasons.com/houston/offers/stay_longer_third_night_free/"},
+      {name:"Toronto", url:"https://www.fourseasons.com/toronto/offers/stay-longer-third-night-free/"},
+      {name:"Seattle", url:"https://www.fourseasons.com/seattle/offers/"},
+      {name:"Ocean Club, Bahamas (4th night)", url:"https://www.fourseasons.com/oceanclub/offers/fourth-night-free/"}
+    ],
+    dateAdded:"2026-07-11", lastUpdated:"2026-07-11"
+  },
+  {
+    id:"fairmont-endless-summer",
+    brand:"Fairmont",
+    name:"Endless Summer Memories — Up to 20% Off + Breakfast",
+    scope:"Participating Fairmont hotels & resorts worldwide",
+    type:"Percent Off",
+    region:"Worldwide",
+    summary:"Stay-longer tiered savings of 10–20% plus breakfast, with an extra 10% for ALL Accor members. Fairmont Kea Lani (Maui) also offers every fifth night free.",
+    terms:"Travel May 18–Dec 30, 2026. Book by Sept 15, 2026. Longer stays = bigger discount.",
+    url:"https://www.fairmont.com/en/offers/endless-summer-memories.html",
+    source:"fairmont.com",
+    dateAdded:"2026-06-20", lastUpdated:"2026-07-11"
+  },
+  {
+    id:"omni-resort-credit",
+    brand:"Omni",
+    name:"Stay 3+ Nights, Get $250 Resort Credit",
+    scope:"Omni Mount Washington Resort & Spa (+ specials portfolio-wide)",
+    type:"Resort Credit",
+    region:"United States",
+    summary:"Three or more nights earns a $250 resort credit toward dining, spa and activities. Omni's specials page also lists up to ~15% off seasonal stays across US properties.",
+    terms:"Applies to Presidential Wing, Historic Premier & Upscale rooms; see specials page for dates.",
+    url:"https://www.omnihotels.com/specials",
+    source:"omnihotels.com",
+    properties:[
+      {name:"Omni Mount Washington Resort & Spa", url:"https://www.omnihotels.com/hotels/bretton-woods-mount-washington/specials/three-or-more-nights-credit"}
+    ],
+    dateAdded:"2026-07-11", lastUpdated:"2026-07-11"
+  },
+  {
+    id:"lhw-stay-more-pay-less",
+    brand:"Leading Hotels of the World",
+    name:"Stay 4 / Pay 3 (and Stay 3 / Pay 2)",
+    scope:"Participating LHW independent luxury hotels worldwide",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Complimentary nights on longer stays across the LHW collection, with best-rate guarantees, flexible cancellation and added amenities. Leaders Club members layer on breakfast for two and upgrades.",
+    terms:"Booking/travel windows vary by property; see the Offers page for current dates.",
+    url:"https://www.lhw.com/offers",
+    source:"lhw.com",
+    dateAdded:"2026-07-11", lastUpdated:"2026-07-11"
+  },
+  {
+    id:"ritz-carlton-stay-longer",
+    brand:"Ritz-Carlton",
+    name:"Stay Longer, Save More — Up to 25% Off",
+    scope:"Miami Beach, Waikiki, Naples, Turks & Caicos, Amelia Island & more",
+    type:"Percent Off",
+    region:"Worldwide",
+    summary:"Save up to 20% for three-plus nights and up to 25% for four-plus nights at participating Ritz-Carlton resorts. Individual properties list their own stay-longer tiers.",
+    terms:"Discount scales with length of stay; advance purchase at most resorts.",
+    url:"https://www.ritzcarlton.com/en/hotels-and-resorts/promotions/",
+    source:"ritzcarlton.com",
+    properties:[
+      {name:"Naples, FL", url:"https://www.marriott.com/offers/stay-longer-OFF-96035/RSWRZ-the-ritz-carlton-naples"},
+      {name:"South Beach, Miami", url:"https://www.marriott.com/offers/stay-longer-save-more-OFF-112387/MIASB-the-ritz-carlton-south-beach"},
+      {name:"Amelia Island, FL", url:"https://www.ritzcarlton.com/en/hotels/florida/amelia-island/offers/stay-longer-with-us"},
+      {name:"Sarasota, FL", url:"https://www.ritzcarlton.com/en/hotels/florida/sarasota/offers/stay-longer-with-us"},
+      {name:"Orlando, Grande Lakes", url:"https://www.ritzcarlton.com/en/hotels/florida/orlando/offers/stay-longer-save-more"},
+      {name:"Chicago", url:"https://www.ritzcarlton.com/en/hotels/chicago/offers/stay-longer"}
+    ],
+    dateAdded:"2026-07-07", lastUpdated:"2026-07-07"
+  },
+  {
+    id:"shangri-la-stay-longer",
+    brand:"Shangri-La",
+    name:"Stay Longer, Save More — Up to 35% Off",
+    scope:"Shangri-La hotels across Asia, Europe & the Middle East",
+    type:"Percent Off",
+    region:"Worldwide",
+    summary:"Length-of-stay savings from 15% (3 nights) up to 25–35% on extended stays, with select-property Amex offers of 25% off and complimentary-third-night deals.",
+    terms:"Tiers vary by city; some Amex offers require booking by Aug 31, 2026 for travel to Apr 30, 2027.",
+    url:"https://www.shangri-la.com/offers/",
+    source:"shangri-la.com",
+    properties:[
+      {name:"Istanbul (Stay Longer, Save 15%)", url:"https://www.shangri-la.com/istanbul/shangrila/offer-detail/rooms-suites/stay-longer-save-15/"},
+      {name:"Makati, Manila", url:"https://www.shangri-la.com/manila/makatishangrila/offer-detail/rooms-suites/stay-longer-save-more/"},
+      {name:"Shenzhen (30-day stay)", url:"https://www.shangri-la.com/shenzhen/nanshanshangrila/offer-detail/rooms-suites/length-of-stay-30-days-promotion/"}
+    ],
+    dateAdded:"2026-07-10", lastUpdated:"2026-07-10"
+  },
+  {
+    id:"mandarin-oriental-one-more-night",
+    brand:"Mandarin Oriental",
+    name:"Complimentary Night — 'One More Night'",
+    scope:"Mandarin Oriental, New York & select global properties",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Complimentary third (or fourth) night folded into the average nightly rate at participating Mandarin Oriental hotels — including the flagship on Columbus Circle in New York.",
+    terms:"New York: book by Sept 26, 2026 for travel by Sept 30, 2026. Other properties vary.",
+    url:"https://www.mandarinoriental.com/en/offers",
+    source:"mandarinoriental.com",
+    properties:[
+      {name:"New York (One More Night)", url:"https://www.mandarinoriental.com/en/new-york/manhattan/offers/one-more-night"}
+    ],
+    dateAdded:"2026-07-08", lastUpdated:"2026-07-08"
+  },
+  {
+    id:"marriott-luxury-bonus-points",
+    brand:"Marriott",
+    name:"10,000 Bonus Points at Luxury Brands",
+    scope:"Ritz-Carlton, St. Regis, EDITION, Luxury Collection, W & JW Marriott",
+    type:"Loyalty Bonus",
+    region:"Worldwide",
+    summary:"Earn 10,000 Marriott Bonvoy bonus points per stay of two-plus nights across Marriott's luxury portfolio — stackable with property stay-longer offers.",
+    terms:"Register with promo code S2449; book by Aug 31, 2026 for stays through Sept 7, 2026.",
+    url:"https://www.marriott.com/loyalty/earn/promotions.mi",
+    source:"marriott.com",
+    dateAdded:"2026-07-06", lastUpdated:"2026-07-06"
+  },
+  {
+    id:"jw-marriott-luxury-collection",
+    brand:"JW Marriott",
+    name:"Mexico Hot Sale — Up to 25% Off Luxury Stays",
+    scope:"JW Marriott & The Luxury Collection resorts in Mexico",
+    type:"Percent Off",
+    region:"Mexico",
+    summary:"Members take 25% off (up to 20% for non-members) at premium JW Marriott and Luxury Collection properties during the Mexico Hot Sale.",
+    terms:"Valid stay dates May 26 – Nov 20, 2026; member rate requires Bonvoy sign-in.",
+    url:"https://www.marriott.com/loyalty/earn/promotions.mi",
+    source:"marriott.com",
+    dateAdded:"2026-07-04", lastUpdated:"2026-07-04"
+  },
+  {
+    id:"autograph-collection-bonus",
+    brand:"Autograph Collection",
+    name:"Bonus Points + Vacation Packages",
+    scope:"Autograph Collection independent hotels (US & worldwide)",
+    type:"Loyalty Bonus",
+    region:"Worldwide",
+    summary:"Earn 5,000 bonus points per stay at participating Autograph and select Marriott brands, plus curated Autograph vacation packages bundling stays with experiences.",
+    terms:"Property-specific promos (e.g., Hotel Paseo, Palm Desert) run through late July 2026.",
+    url:"https://www.vacationsbymarriott.com/brands/autograph-collection",
+    source:"marriott.com",
+    dateAdded:"2026-07-05", lastUpdated:"2026-07-05"
+  },
+  {
+    id:"waldorf-astoria-suite-credit",
+    brand:"Waldorf Astoria",
+    name:"Suite Offer — $300 Resort Credit (+ 25% Off Select Stays)",
+    scope:"Waldorf Astoria Monarch Beach & participating resorts",
+    type:"Resort Credit",
+    region:"United States",
+    summary:"Book a suite at Monarch Beach for $300 resort credit (penthouses add a complimentary poolside cabana day). Other Waldorf Astoria resorts run 25%-off room-rate promotions.",
+    terms:"Select 25%-off offers require booking by July 31, 2026; suite credit while promotion lasts.",
+    url:"https://www.hilton.com/en/offers/waldorf-astoria/",
+    source:"hilton.com",
+    properties:[
+      {name:"Monarch Beach, CA", url:"https://www.waldorfastoriamonarchbeach.com/"}
+    ],
+    dateAdded:"2026-07-03", lastUpdated:"2026-07-03"
+  },
+  {
+    id:"montage-fourth-night-free",
+    brand:"Montage",
+    name:"Fourth Night Free + Suite Escape Credits",
+    scope:"Montage Los Cabos, Laguna Beach, Palmetto Bluff, Healdsburg",
+    type:"Free Night",
+    region:"United States / Mexico",
+    summary:"Los Cabos gives a complimentary fourth night with a $70 daily breakfast credit and airport transfers. Suite Escape adds 10–15% off plus up to $500 daily resort credit at other Montage resorts.",
+    terms:"Los Cabos: three consecutive paid nights required. Suite credits vary ($300–$500/day).",
+    url:"https://www.montage.com/loscabos/accommodations/special-offers/",
+    source:"montage.com",
+    properties:[
+      {name:"Los Cabos (4th night free)", url:"https://www.montage.com/loscabos/accommodations/special-offers/"},
+      {name:"Laguna Beach, CA", url:"https://www.montage.com/lagunabeach/accommodations/special-offers/"},
+      {name:"Palmetto Bluff, SC", url:"https://www.montage.com/palmettobluff/accommodations/special-offers/"},
+      {name:"Healdsburg, CA", url:"https://www.montage.com/healdsburg/special-offers/"}
+    ],
+    dateAdded:"2026-06-15", lastUpdated:"2026-06-15"
+  },
+  {
+    id:"aman-complimentary-nights",
+    brand:"Aman",
+    name:"Exclusive Offers — Complimentary Nights",
+    scope:"Aman Tokyo, Amangiri, Amanemu & more",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Advance-purchase savings and complimentary nights across Aman's ultra-luxury resorts — e.g., a free fifth night at Aman Tokyo through Sept 30, 2026, and full-board wellness packages at Amangiri.",
+    terms:"Property-specific; most valid through Dec 31, 2026. Some include spa or transfers.",
+    url:"https://www.aman.com/exclusive-offers",
+    source:"aman.com",
+    properties:[
+      {name:"Aman Tokyo (5th night free)", url:"https://www.aman.com/hotels/aman-tokyo/exclusives"},
+      {name:"Amangiri, Utah", url:"https://www.aman.com/resorts/amangiri/exclusives"},
+      {name:"Amanemu, Japan", url:"https://www.aman.com/resorts/amanemu/exclusives"}
+    ],
+    dateAdded:"2026-06-30", lastUpdated:"2026-06-30"
+  },
+  {
+    id:"peninsula-luxury-in-advance",
+    brand:"Peninsula",
+    name:"Luxury in Advance + Stay Longer",
+    scope:"The Peninsula Hotels worldwide",
+    type:"Percent Off",
+    region:"Worldwide",
+    summary:"Advance-booking rates plus stay-longer and third-night-free packages, all with Peninsula Time (6am check-in / 10pm checkout when available). PenClub adds guaranteed upgrades.",
+    terms:"Rates and minimum-night rules vary by city; see the global Special Offers page.",
+    url:"https://www.peninsula.com/en/global-pages/special-offers",
+    source:"peninsula.com",
+    dateAdded:"2026-06-25", lastUpdated:"2026-06-25"
+  },
+  {
+    id:"park-hyatt-member-offers",
+    brand:"Park Hyatt",
+    name:"Member Rates & Seasonal Offers",
+    scope:"Park Hyatt & World of Hyatt luxury properties",
+    type:"Member Rate",
+    region:"Worldwide",
+    summary:"World of Hyatt member rates plus seasonal package offers and point-earning promotions across Park Hyatt properties. Worth watching as new Park Hyatts open in 2026 (Cancún, Mexico City, Vancouver).",
+    terms:"Member rate requires free World of Hyatt sign-in; seasonal offers rotate.",
+    url:"https://www.hyatt.com/en-US/why-hyatt/offers",
+    source:"hyatt.com",
+    dateAdded:"2026-06-28", lastUpdated:"2026-06-28"
+  },
+  {
+    id:"relais-chateaux-extended-stays",
+    brand:"Relais & Châteaux",
+    name:"Extended Stays & Complimentary Fourth Night",
+    scope:"Relais & Châteaux boutique hotels & château estates",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Extended-weekend packages plus complimentary-fourth-night and 15–25%-off offers across the independent Relais & Châteaux collection of luxury inns and gourmet estates.",
+    terms:"Amex offers: 25% off select rooms booking by Sept 13, 2026 for Oct 18–Dec 23, 2026 travel.",
+    url:"https://www.relaischateaux.com/us/special-offers",
+    source:"relaischateaux.com",
+    dateAdded:"2026-06-22", lastUpdated:"2026-06-22"
+  },
+  {
+    id:"westin-stay-longer-breakfast",
+    brand:"Westin",
+    name:"Stay Longer & Save + Stay for Breakfast",
+    scope:"Westin Hotels & Resorts worldwide",
+    type:"Percent Off",
+    region:"Worldwide",
+    summary:"Westin's recurring Stay Longer & Save (up to 20% off 5+ nights) plus 'Stay for Breakfast' rates that bundle in daily breakfast for two. Bonvoy members layer on bonus points and family perks.",
+    terms:"Stay-longer valid Feb 18 – Dec 18, 2026; breakfast packages vary by property. Member rate needs Bonvoy sign-in.",
+    url:"https://westin.marriott.com/offers/",
+    source:"westin.marriott.com",
+    properties:[
+      {name:"Houston Memorial City (Stay for Breakfast)", url:"https://www.marriott.com/offers/breakfast-package-houston-texas-OFF-165794/HOUMY-houmy-the-westin-houston-memorial-city"}
+    ],
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  },
+  {
+    id:"st-regis-free-night",
+    brand:"St. Regis",
+    name:"Third/Fourth Night Free at Resorts",
+    scope:"St. Regis resorts (Punta Mita, Kanai & more)",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Marquee St. Regis resorts run complimentary-night offers — St. Regis Kanai (Riviera Maya) gives a free third night and St. Regis Punta Mita a free third or fourth night — with butler service throughout. Bonvoy luxury bonus points stack on top.",
+    terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates.",
+    url:"https://st-regis.marriott.com/offers/",
+    source:"st-regis.marriott.com",
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  },
+  {
+    id:"w-hotels-credits",
+    brand:"W Hotels",
+    name:"Stay Longer Sales + Property Credits",
+    scope:"W Hotels worldwide",
+    type:"Resort Credit",
+    region:"Worldwide",
+    summary:"W's design-forward resorts run seasonal sale fares and, via Amex Fine Hotels + Resorts, food-and-beverage or property credits plus room upgrades. A lively option for city breaks and beach escapes.",
+    terms:"Amex FHR credits and upgrades require an eligible card; sale rates advance-purchase.",
+    url:"https://w-hotels.marriott.com/offers/",
+    source:"w-hotels.marriott.com",
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  },
+  {
+    id:"rosewood-fourth-night",
+    brand:"Rosewood",
+    name:"Complimentary Fourth Night + Property Credit",
+    scope:"Rosewood Hotels & Resorts worldwide",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Rosewood resorts offer a complimentary fourth night plus property credits through Amex Fine Hotels + Resorts — e.g., Kona Village (Hawaii) adds a US$500 resort credit, others a US$100 spa credit.",
+    terms:"Kona Village: book by July 31, 2026 for travel by Dec 20, 2026. Windows vary by resort.",
+    url:"https://www.rosewoodhotels.com/en/offers",
+    source:"rosewoodhotels.com",
+    properties:[
+      {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"}
+    ],
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  },
+  {
+    id:"auberge-fourth-night-credit",
+    brand:"Auberge Resorts",
+    name:"Fourth Night Free + $500 Property Credit",
+    scope:"Auberge Resorts Collection worldwide",
+    type:"Resort Credit",
+    region:"Worldwide",
+    summary:"Select Auberge Resorts Collection properties bundle a complimentary fourth night with a US$500 property credit via Amex Fine Hotels + Resorts, on top of daily breakfast and room upgrades.",
+    terms:"Representative offer: book by July 31, 2026 for travel by Dec 20, 2026. Varies by property.",
+    url:"https://aubergeresorts.com/offers/",
+    source:"aubergeresorts.com",
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  },
+  {
+    id:"conrad-third-night-credit",
+    brand:"Conrad",
+    name:"Complimentary Third Night + $200 Credit",
+    scope:"Conrad Hotels & Resorts worldwide",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Conrad resorts run a complimentary third (or fourth) night plus up to a US$200 property credit, with select 25%-off room-rate deals. Hilton Honors members can stack points and perks.",
+    terms:"Sample: 3rd night + $200 credit, book by July 31, 2026 for travel by Dec 20, 2026. Varies by hotel.",
+    url:"https://www.hilton.com/en/offers/conrad-hotels/",
+    source:"hilton.com",
+    properties:[
+      {name:"Conrad Orlando", url:"https://www.hilton.com/en/hotels/orlcici-conrad-orlando/offers/"},
+      {name:"Conrad Washington DC", url:"https://conradwashingtondc.com/offers/"}
+    ],
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  },
+  {
+    id:"intercontinental-member-sales",
+    brand:"InterContinental",
+    name:"IHG Member Sales & Seasonal Offers",
+    scope:"InterContinental Hotels & Resorts worldwide",
+    type:"Member Rate",
+    region:"Worldwide",
+    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city.",
+    terms:"Member rate requires free IHG One Rewards sign-in; seasonal sale dates rotate.",
+    url:"https://www.ihg.com/hotels/us/en/deals",
+    source:"ihg.com",
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  },
+  {
+    id:"belmond-longer-stay",
+    brand:"Belmond",
+    name:"Discounted Fourth & Fifth Nights",
+    scope:"Belmond hotels, trains & river cruises worldwide",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Belmond's storied properties reward longer stays — Copacabana Palace (Rio) discounts the fourth or fifth consecutive night across 2026–27 — plus curated packages spanning its legendary hotels and trains.",
+    terms:"Copacabana Palace: discounted 4th night Apr 1–Sep 30; 5th night Oct 1–Dec 17 & Jan 4–Mar 31.",
+    url:"https://www.belmond.com/packages-and-tours",
+    source:"belmond.com",
+    properties:[
+      {name:"Copacabana Palace, Rio", url:"https://www.belmond.com/hotels/south-america/brazil/rio-de-janeiro/belmond-copacabana-palace/offers"}
+    ],
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  },
+  {
+    id:"six-senses-stay-longer",
+    brand:"Six Senses",
+    name:"Stay Longer, Early Booking & Extended Stay",
+    scope:"Six Senses wellness resorts worldwide",
+    type:"Percent Off",
+    region:"Worldwide",
+    summary:"Six Senses' wellness-focused resorts offer stacked value: stay-longer savings, early-booking discounts and extended-stay deals with bonus inclusions. IHG One Rewards members can also earn and redeem points.",
+    terms:"Discounts and inclusions vary by resort and season; see each offer page for terms.",
+    url:"https://www.sixsenses.com/en/offers/",
+    source:"sixsenses.com",
+    properties:[
+      {name:"Stay Longer deals", url:"https://www.sixsenses.com/en/offers/stay-longer/"},
+      {name:"Early Booking offers", url:"https://www.sixsenses.com/en/offers/early-booking/"},
+      {name:"Extended Stay deals", url:"https://www.sixsenses.com/en/offers/extended-stay/"}
+    ],
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  }
+];
+
+// ===========================================================================
+// RENDER LOGIC — no edits needed by the nightly task below this line.
+// ===========================================================================
+const DELETED_KEY = 'tdm_hotels_deleted';
+function getDeleted(){ try{return new Set(JSON.parse(localStorage.getItem(DELETED_KEY)||'[]'));}catch(e){return new Set();} }
+function saveDeleted(id){ const s=getDeleted(); s.add(id); try{localStorage.setItem(DELETED_KEY,JSON.stringify([...s]));}catch(e){} }
+
+function daysSince(dateStr){
+  const d=new Date(dateStr+'T00:00:00'); const now=new Date();
+  return Math.floor((now-d)/86400000);
+}
+function shortDate(dateStr){
+  return new Date(dateStr+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+}
+function freshBadge(d){
+  const s=d.lastUpdated||d.dateAdded; const diff=daysSince(s);
+  if(isNaN(diff)||diff<0||diff>=7) return '';
+  const isNew=s===d.dateAdded;
+  return `<span class="fresh${isNew?'':' updated'}">${isNew?'New':'Updated'} ${shortDate(s)}</span>`;
+}
+
+function activeDeals(){ const del=getDeleted(); return HOTEL_DEALS.filter(d=>!del.has(d.id)); }
+
+function populateFilters(){
+  const brands=[...new Set(activeDeals().map(d=>d.brand))].sort();
+  const types=[...new Set(activeDeals().map(d=>d.type))].sort();
+  const bf=document.getElementById('brandFilter'), tf=document.getElementById('typeFilter');
+  brands.forEach(b=>{const o=document.createElement('option');o.value=b;o.textContent=b;bf.appendChild(o);});
+  types.forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;tf.appendChild(o);});
+}
+
+function renderBanner(){
+  const box=document.getElementById('updates');
+  const todays=activeDeals().filter(d=>d.lastUpdated===LAST_CHECKED);
+  if(todays.length===0){ box.className='updates-inner'; box.innerHTML=''; return; }
+  box.className='updates-inner show';
+  box.innerHTML=`<div class="updates-title">🔔 Fresh from last night's check <span class="as-of">— ${shortDate(LAST_CHECKED)}, ${LAST_CHECKED.slice(0,4)}</span></div>
+    <div class="chips">${todays.map(d=>{
+      const isNew=d.lastUpdated===d.dateAdded;
+      return `<span class="chip" onclick="jumpTo('${d.id}')"><span class="tag ${isNew?'new':'updated'}">${isNew?'New':'Updated'}</span>${d.brand} — ${d.name}</span>`;
+    }).join('')}</div>`;
+}
+
+function render(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const bf=document.getElementById('brandFilter').value;
+  const tf=document.getElementById('typeFilter').value;
+  const grid=document.getElementById('grid');
+  const list=activeDeals().filter(d=>{
+    const props=(d.properties||[]).map(p=>p.name).join(' ');
+    const hay=(d.brand+d.name+d.scope+d.summary+d.region+' '+props).toLowerCase();
+    return (!q||hay.includes(q)) && (!bf||d.brand===bf) && (!tf||d.type===tf);
+  });
+  document.getElementById('count').textContent=activeDeals().length;
+  document.getElementById('resultCount').textContent=`Showing ${list.length} of ${activeDeals().length}`;
+  if(list.length===0){ grid.innerHTML=`<div class="empty"><div class="big">🔍</div>No deals match your filters yet — try clearing the search.</div>`; return; }
+  grid.innerHTML=list.map(d=>`
+    <div class="card" id="deal-${d.id}">
+      <div class="card-top">
+        <span class="brand-name">${d.brand}</span>
+        ${freshBadge(d)}
+      </div>
+      <h2>${d.name}</h2>
+      <div class="scope">📍 ${d.scope}</div>
+      <div class="summary">${d.summary}</div>
+      <div class="tags">
+        <span class="pill type">${d.type}</span>
+        <span class="pill">${d.region}</span>
+      </div>
+      <div class="terms"><b>Good to know:</b> ${d.terms}</div>
+      ${d.properties && d.properties.length ? `
+      <div class="props">
+        <div class="props-label">🔗 Deals at specific hotels — click to open:</div>
+        <div class="props-links">
+          ${d.properties.map(p=>`<a class="prop-link" href="${p.url}" target="_blank" rel="noopener">${p.name} ↗</a>`).join('')}
+        </div>
+      </div>` : ''}
+      <div class="card-foot">
+        <a class="btn-view" href="${d.url}" target="_blank" rel="noopener">${d.properties && d.properties.length ? 'View all offers →' : 'View deal →'}</a>
+        <button class="btn-del" onclick="askDelete('${d.id}')">Remove</button>
+      </div>
+    </div>`).join('');
+}
+
+function jumpTo(id){
+  const el=document.getElementById('deal-'+id);
+  if(!el) return;
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+  el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+}
+
+// delete modal
+function askDelete(id){
+  const d=HOTEL_DEALS.find(x=>x.id===id);
+  document.getElementById('modalBody').innerHTML=`Hide <strong>${d.brand} — ${d.name}</strong> from your board? You can bring it back by clearing your browser data.`;
+  document.getElementById('modalConfirm').onclick=()=>{ saveDeleted(id); closeModal(); renderBanner(); render(); };
+  document.getElementById('overlay').classList.add('show');
+}
+function closeModal(){ document.getElementById('overlay').classList.remove('show'); }
+document.getElementById('overlay').addEventListener('click',function(e){ if(e.target===this) closeModal(); });
+
+// init
+document.getElementById('lastChecked').textContent=`${shortDate(LAST_CHECKED)}, ${LAST_CHECKED.slice(0,4)}`;
+populateFilters();
+renderBanner();
+render();
+document.getElementById('search').addEventListener('input',render);
+document.getElementById('brandFilter').addEventListener('change',render);
+document.getElementById('typeFilter').addEventListener('change',render);
+</script>
+</body>
+</html>

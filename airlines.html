@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airline Deals from Atlanta — Travel Deal Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#4A2C5E; --grape:#6B3FA0; --coral:#FF6B5B; --coral-dark:#E8503F;
+    --teal:#12B3A6; --teal-dark:#0C7D74; --gold:#FFB84D; --sky:#3FA9F5; --sky-dark:#2C86C9;
+    --cream:#FFF7EF; --ink:#2E2A3A; --muted:#7A7488; --line:#EFE6DB; --card:#FFFFFF;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Poppins',sans-serif; background:var(--cream); color:var(--ink); min-height:100vh;}
+  h1,h2,h3,.serif{font-family:'Fraunces',serif;}
+  a{text-decoration:none;}
+
+  header{
+    padding:22px 40px; background:linear-gradient(120deg,#123f66,var(--sky-dark));
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; color:#fff;
+  }
+  .brand{display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-weight:700; font-size:22px; color:#fff;}
+  .brand .mark{width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--sky),var(--teal)); display:flex; align-items:center; justify-content:center; font-size:19px;}
+  .brand small{display:block; font-family:'Poppins',sans-serif; font-weight:500; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.72);}
+  .head-right{display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+  .nav-links{display:flex; gap:8px;}
+  .nav-links a{font-weight:600; font-size:13.5px; color:#fff; padding:8px 16px; border-radius:999px; border:2px solid rgba(255,255,255,.28); transition:.2s;}
+  .nav-links a:hover, .nav-links a.active{background:#fff; color:var(--sky-dark); border-color:#fff;}
+  .meta{font-size:13px; color:rgba(255,255,255,.85);}
+  .meta b{color:#BEE7FF;}
+
+  .title-row{max-width:1240px; margin:30px auto 0; padding:0 40px;}
+  .title-row h1{font-size:34px; color:var(--plum);}
+  .title-row p{color:var(--muted); font-size:15px; margin-top:4px;}
+
+  .updates{max-width:1240px; margin:22px auto 0; padding:0 40px;}
+  .updates-inner{background:#fff; border:2px solid var(--line); border-left:6px solid var(--sky); border-radius:16px; padding:16px 22px; display:none;}
+  .updates-inner.show{display:block;}
+  .updates-title{font-weight:600; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--plum); margin-bottom:12px;}
+  .updates-title .as-of{font-weight:500; text-transform:none; letter-spacing:normal; color:var(--muted);}
+  .chips{display:flex; flex-wrap:wrap; gap:8px 10px;}
+  .chip{display:inline-flex; align-items:center; gap:7px; font-size:13px; color:var(--ink); background:var(--cream); border:1.5px solid var(--line); padding:6px 13px; border-radius:999px; cursor:pointer; transition:.15s;}
+  .chip:hover{border-color:var(--sky); transform:translateY(-1px);}
+  .chip .tag{font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:2px 8px; border-radius:999px; color:#fff;}
+  .chip .tag.new{background:var(--coral);}
+  .chip .tag.updated{background:var(--sky);}
+
+  .toolbar{max-width:1240px; margin:24px auto 0; padding:0 40px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;}
+  .toolbar input[type=text], .toolbar select{
+    font-family:'Poppins',sans-serif; font-size:14px; color:var(--ink);
+    background:#fff; border:2px solid var(--line); border-radius:999px; padding:11px 18px;
+  }
+  .toolbar input[type=text]{min-width:240px;}
+  .toolbar input[type=text]:focus, .toolbar select:focus{outline:none; border-color:var(--sky);}
+  .toolbar .count{margin-left:auto; font-size:13px; color:var(--muted);}
+
+  .grid{max-width:1240px; margin:22px auto 0; padding:0 40px 80px; display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:20px;}
+  .card{background:var(--card); border:2px solid var(--line); border-radius:20px; padding:24px; transition:.22s; position:relative; display:flex; flex-direction:column;}
+  .card::before{content:""; position:absolute; inset:0 0 auto 0; height:6px; border-radius:20px 20px 0 0; background:linear-gradient(90deg,var(--sky),var(--teal));}
+  .card:hover{transform:translateY(-4px); border-color:var(--sky); box-shadow:0 18px 38px rgba(44,134,201,0.14);}
+  .card-top{display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:6px; padding-top:6px;}
+  .brand-name{font-weight:700; font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--sky-dark);}
+  .fresh{display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:#fff; padding:3px 10px; border-radius:999px; background:var(--coral);}
+  .fresh.updated{background:var(--sky);}
+  .card h2{font-family:'Fraunces',serif; font-size:21px; line-height:1.22; color:var(--plum); margin:6px 0 8px;}
+  .scope{font-size:13px; color:var(--muted); margin-bottom:12px;}
+  .summary{font-size:14px; line-height:1.55; color:var(--ink); margin-bottom:14px;}
+  .tags{display:flex; flex-wrap:wrap; gap:7px; margin-bottom:14px;}
+  .pill{font-size:11.5px; font-weight:600; color:var(--plum); background:rgba(107,63,160,.09); border:1px solid rgba(107,63,160,.22); padding:4px 11px; border-radius:999px;}
+  .pill.type{background:rgba(63,169,245,.14); border-color:rgba(63,169,245,.34); color:var(--sky-dark);}
+  .pill.intl{background:rgba(18,179,166,.14); border-color:rgba(18,179,166,.34); color:var(--teal-dark);}
+  .terms{font-size:12.5px; color:var(--muted); line-height:1.5; background:var(--cream); border-radius:12px; padding:10px 13px; margin-bottom:16px;}
+  .terms b{color:var(--plum);}
+  .card-foot{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:10px;}
+  .btn-view{display:inline-flex; align-items:center; gap:7px; font-weight:600; font-size:14px; color:#fff; background:var(--sky-dark); padding:10px 18px; border-radius:999px; transition:.2s;}
+  .btn-view:hover{background:#1f6ca6;}
+  .btn-del{background:none; border:none; cursor:pointer; font-size:11.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); transition:.15s;}
+  .btn-del:hover{color:var(--coral-dark);}
+
+  .card.flash{animation:flash 1.8s ease;}
+  @keyframes flash{0%,100%{box-shadow:none;} 18%{box-shadow:0 0 0 4px var(--gold);}}
+
+  .empty{grid-column:1/-1; text-align:center; padding:80px 20px; color:var(--muted);}
+  .empty .big{font-size:40px; margin-bottom:12px;}
+
+  .overlay{position:fixed; inset:0; background:rgba(74,44,94,.5); display:flex; align-items:center; justify-content:center; z-index:200; opacity:0; pointer-events:none; transition:.2s;}
+  .overlay.show{opacity:1; pointer-events:all;}
+  .modal{background:#fff; border-radius:20px; border-top:6px solid var(--sky); padding:30px 34px; max-width:430px; width:90%;}
+  .modal h3{font-size:22px; color:var(--plum); margin-bottom:10px;}
+  .modal p{font-size:14px; color:var(--ink); line-height:1.6; margin-bottom:24px;}
+  .modal-actions{display:flex; gap:12px; justify-content:flex-end;}
+  .mbtn{font-weight:600; font-size:13.5px; padding:10px 20px; border-radius:999px; border:none; cursor:pointer;}
+  .mbtn.cancel{background:var(--cream); color:var(--ink); border:2px solid var(--line);}
+  .mbtn.confirm{background:var(--sky-dark); color:#fff;}
+
+  footer{text-align:center; padding:30px 24px; color:var(--muted); font-size:12.5px; border-top:2px solid var(--line); background:#fff;}
+  @media(max-width:600px){header,.title-row,.toolbar,.updates,.grid{padding-left:20px; padding-right:20px;} .grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand">
+    <span class="mark">✈️</span>
+    <span>Travel Deal Monitor<small>Airlines from Atlanta (ATL)</small></span>
+  </a>
+  <div class="head-right">
+    <div class="meta">Last checked: <b id="lastChecked">—</b> · <span id="count">0</span> deals</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="airlines.html" class="active">Airlines</a>
+    </div>
+  </div>
+</header>
+
+<div class="title-row">
+  <h1>✈️ Airline Deals from Atlanta</h1>
+  <p>Fare sales and offers departing Hartsfield-Jackson (ATL), domestic &amp; international.</p>
+</div>
+
+<div class="updates"><div class="updates-inner" id="updates"></div></div>
+
+<div class="toolbar">
+  <input type="text" id="search" placeholder="Search airline, deal, or destination…">
+  <select id="airlineFilter"><option value="">All airlines</option></select>
+  <select id="scopeFilter">
+    <option value="">Domestic &amp; International</option>
+    <option value="Domestic">Domestic only</option>
+    <option value="International">International only</option>
+  </select>
+  <div class="count" id="resultCount"></div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<footer>Travel Deal Monitor — Airlines · Refreshed nightly by an automated check. Fares are dynamic and change constantly — always confirm the live price and dates on the airline's own website before booking. Note: Spirit Airlines ceased operations in 2026 and is not tracked here.</footer>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h3>Remove this deal?</h3>
+    <p id="modalBody"></p>
+    <div class="modal-actions">
+      <button class="mbtn cancel" onclick="closeModal()">Keep it</button>
+      <button class="mbtn confirm" id="modalConfirm">Remove</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===========================================================================
+// AIRLINE DEAL DATA — single source of truth (deals departing Atlanta / ATL).
+// The nightly scheduled task edits THIS array in place (matched by id) and
+// overwrites this file. Keep the variable names AIRLINE_DEALS and LAST_CHECKED.
+// dateAdded / lastUpdated drive the New/Updated badges (7-day window) and the
+// nightly-check banner (anything with lastUpdated === LAST_CHECKED).
+// scope must be "Domestic" or "International" for the filter to work.
+// ===========================================================================
+const LAST_CHECKED = "2026-07-12";
+
+const AIRLINE_DEALS = [
+  {
+    id:"delta-atl-current-deals",
+    airline:"Delta Air Lines",
+    name:"Current ATL Flight Deals",
+    scope:"Domestic",
+    type:"Fare Sale",
+    dest:"Nationwide from Atlanta",
+    summary:"Delta's home hub — 300+ destinations nonstop from ATL. The current-deals page lists live low fares from Atlanta, with round-trips regularly appearing from the $60s–$100s one-way on popular routes.",
+    terms:"Fares dynamic; book 2+ weeks ahead to save ~20%. Main Cabin, advance purchase.",
+    url:"https://www.delta.com/us/en/flight-deals/current-flight-deals",
+    source:"delta.com",
+    dateAdded:"2026-07-11", lastUpdated:"2026-07-11"
+  },
+  {
+    id:"delta-europe-award-sale",
+    airline:"Delta Air Lines",
+    name:"Transatlantic Fares & SkyMiles Award Sales",
+    scope:"International",
+    type:"Award Sale",
+    dest:"Europe (nonstop ATL → LHR, CDG, AMS, FCO & more)",
+    summary:"Delta runs periodic SkyMiles flash sales to Europe from Atlanta plus cash fares to Europe often around $500–$600 round-trip. Great for Dublin, Madrid, Barcelona and Paris nonstops.",
+    terms:"Award prices and windows change fast; watch the Europe deals page for the next flash sale.",
+    url:"https://www.delta.com/us/en/flight-deals/europe-flights",
+    source:"delta.com",
+    dateAdded:"2026-06-24", lastUpdated:"2026-07-11"
+  },
+  {
+    id:"frontier-atl-discount-fares",
+    airline:"Frontier Airlines",
+    name:"Discount Fares + Bonus Miles from ATL",
+    scope:"Domestic",
+    type:"Bonus Miles",
+    dest:"49 cities from Atlanta (NYC, Chicago, Orlando, Vegas & more)",
+    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus system-wide discount promotions and register-and-earn bonus-mile offers on round-trip bookings.",
+    terms:"Bonus-mile promos require registering before booking; carry-on/seat fees extra.",
+    url:"https://flights.flyfrontier.com/en/flights-from-atlanta",
+    source:"flyfrontier.com",
+    dateAdded:"2026-07-05", lastUpdated:"2026-07-11"
+  },
+  {
+    id:"southwest-atl-low-fares",
+    airline:"Southwest Airlines",
+    name:"Low Fares from Atlanta + Rapid Rewards",
+    scope:"Domestic",
+    type:"Everyday Low Fares",
+    dest:"Domestic network from Atlanta",
+    summary:"Southwest's second-busiest presence at ATL. Watch for their recurring fare sales and Rapid Rewards points deals — two free checked bags and no change fees sweeten every booking.",
+    terms:"Sale fares are advance-purchase and limited; points bookings vary with cash price.",
+    url:"https://www.southwest.com/en/flights/flights-from-atlanta",
+    source:"southwest.com",
+    dateAdded:"2026-07-08", lastUpdated:"2026-07-08"
+  },
+  {
+    id:"american-atl-deals",
+    airline:"American Airlines",
+    name:"AAdvantage Fare Deals from ATL",
+    scope:"Domestic",
+    type:"Fare Sale",
+    dest:"American hubs & beyond from Atlanta",
+    summary:"American connects Atlanta to its hubs (DFW, CLT, MIA, ORD) with frequent web-fare sales and AAdvantage award specials. Handy alternative to Delta for one-stop international connections.",
+    terms:"Web specials are date-limited; award availability varies by route.",
+    url:"https://www.aa.com/en-us/flight-deals",
+    source:"aa.com",
+    dateAdded:"2026-07-02", lastUpdated:"2026-07-02"
+  },
+  {
+    id:"united-atl-deals",
+    airline:"United Airlines",
+    name:"Cheap Flights to/from Atlanta",
+    scope:"Domestic",
+    type:"Fare Sale",
+    dest:"United hubs from Atlanta (EWR, ORD, IAH, DEN, SFO)",
+    summary:"United's Atlanta deals page surfaces low fares to its hubs and MileagePlus saver awards — a strong option for West Coast and international connections beyond Delta's SkyTeam network.",
+    terms:"Fares dynamic; Basic Economy is cheapest but restrictive. Advance purchase.",
+    url:"https://www.united.com/en/us/deals/flights-to-atlanta",
+    source:"united.com",
+    dateAdded:"2026-06-30", lastUpdated:"2026-06-30"
+  },
+  {
+    id:"jetblue-atl-fares",
+    airline:"JetBlue",
+    name:"Fares & Fare Sales from Atlanta",
+    scope:"Domestic",
+    type:"Fare Sale",
+    dest:"East Coast & focus cities from Atlanta (BOS, JFK, FLL)",
+    summary:"JetBlue serves ATL to the Northeast and Florida with roomy seats and free Wi-Fi. Watch for their frequent 'Deals & Getaways' fare sales, often the lowest to Boston and New York.",
+    terms:"Blue Basic is cheapest; sale fares limited and advance-purchase.",
+    url:"https://www.jetblue.com/en/flights-from-atlanta",
+    source:"jetblue.com",
+    dateAdded:"2026-07-06", lastUpdated:"2026-07-06"
+  },
+  {
+    id:"virgin-atlantic-atl-london",
+    airline:"Virgin Atlantic",
+    name:"Nonstop ATL → London Deals",
+    scope:"International",
+    type:"Fare Sale",
+    dest:"London Heathrow (LHR) nonstop from Atlanta",
+    summary:"Virgin Atlantic (Delta's transatlantic partner) flies ATL–London nonstop, with regular sale fares and Flying Club redemptions — a stylish alternative for UK and onward-Europe trips.",
+    terms:"Sale fares are seasonal and advance-purchase; premium cabins sell out early.",
+    url:"https://flights.virginatlantic.com/en-us/flights-from-atlanta",
+    source:"virginatlantic.com",
+    dateAdded:"2026-07-09", lastUpdated:"2026-07-09"
+  },
+  {
+    id:"british-airways-atl-london-sale",
+    airline:"British Airways",
+    name:"Flight & Vacation Sale — ATL to London & Europe",
+    scope:"International",
+    type:"Fare Sale",
+    dest:"London Heathrow (LHR) nonstop, plus onward Europe",
+    summary:"British Airways is running its 2026 flight and vacation sale, with reduced fares from Atlanta to London and beyond in World Traveller and Club World (business). Handy for UK trips and one-stop connections to Europe via oneworld partners.",
+    terms:"Sale fares are seasonal and advance-purchase; business-class seats and best dates sell out early.",
+    url:"https://www.britishairways.com/content/en/us/offers/sale",
+    source:"britishairways.com",
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  }
+];
+
+// ===========================================================================
+// RENDER LOGIC — no edits needed by the nightly task below this line.
+// ===========================================================================
+const DELETED_KEY = 'tdm_airlines_deleted';
+function getDeleted(){ try{return new Set(JSON.parse(localStorage.getItem(DELETED_KEY)||'[]'));}catch(e){return new Set();} }
+function saveDeleted(id){ const s=getDeleted(); s.add(id); try{localStorage.setItem(DELETED_KEY,JSON.stringify([...s]));}catch(e){} }
+
+function daysSince(dateStr){ const d=new Date(dateStr+'T00:00:00'); return Math.floor((new Date()-d)/86400000); }
+function shortDate(dateStr){ return new Date(dateStr+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'}); }
+function freshBadge(d){
+  const s=d.lastUpdated||d.dateAdded; const diff=daysSince(s);
+  if(isNaN(diff)||diff<0||diff>=7) return '';
+  const isNew=s===d.dateAdded;
+  return `<span class="fresh${isNew?'':' updated'}">${isNew?'New':'Updated'} ${shortDate(s)}</span>`;
+}
+function activeDeals(){ const del=getDeleted(); return AIRLINE_DEALS.filter(d=>!del.has(d.id)); }
+
+function populateFilters(){
+  const airlines=[...new Set(activeDeals().map(d=>d.airline))].sort();
+  const af=document.getElementById('airlineFilter');
+  airlines.forEach(a=>{const o=document.createElement('option');o.value=a;o.textContent=a;af.appendChild(o);});
+}
+
+function renderBanner(){
+  const box=document.getElementById('updates');
+  const todays=activeDeals().filter(d=>d.lastUpdated===LAST_CHECKED);
+  if(todays.length===0){ box.className='updates-inner'; box.innerHTML=''; return; }
+  box.className='updates-inner show';
+  box.innerHTML=`<div class="updates-title">🔔 Fresh from last night's check <span class="as-of">— ${shortDate(LAST_CHECKED)}, ${LAST_CHECKED.slice(0,4)}</span></div>
+    <div class="chips">${todays.map(d=>{
+      const isNew=d.lastUpdated===d.dateAdded;
+      return `<span class="chip" onclick="jumpTo('${d.id}')"><span class="tag ${isNew?'new':'updated'}">${isNew?'New':'Updated'}</span>${d.airline} — ${d.name}</span>`;
+    }).join('')}</div>`;
+}
+
+function render(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const af=document.getElementById('airlineFilter').value;
+  const sf=document.getElementById('scopeFilter').value;
+  const grid=document.getElementById('grid');
+  const list=activeDeals().filter(d=>{
+    const hay=(d.airline+d.name+d.dest+d.summary).toLowerCase();
+    return (!q||hay.includes(q)) && (!af||d.airline===af) && (!sf||d.scope===sf);
+  });
+  document.getElementById('count').textContent=activeDeals().length;
+  document.getElementById('resultCount').textContent=`Showing ${list.length} of ${activeDeals().length}`;
+  if(list.length===0){ grid.innerHTML=`<div class="empty"><div class="big">🔍</div>No deals match your filters yet — try clearing the search.</div>`; return; }
+  grid.innerHTML=list.map(d=>`
+    <div class="card" id="deal-${d.id}">
+      <div class="card-top">
+        <span class="brand-name">${d.airline}</span>
+        ${freshBadge(d)}
+      </div>
+      <h2>${d.name}</h2>
+      <div class="scope">🛫 ${d.dest}</div>
+      <div class="summary">${d.summary}</div>
+      <div class="tags">
+        <span class="pill type">${d.type}</span>
+        <span class="pill ${d.scope==='International'?'intl':''}">${d.scope}</span>
+      </div>
+      <div class="terms"><b>Good to know:</b> ${d.terms}</div>
+      <div class="card-foot">
+        <a class="btn-view" href="${d.url}" target="_blank" rel="noopener">View deal →</a>
+        <button class="btn-del" onclick="askDelete('${d.id}')">Remove</button>
+      </div>
+    </div>`).join('');
+}
+
+function jumpTo(id){
+  const el=document.getElementById('deal-'+id);
+  if(!el) return;
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+  el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+}
+
+function askDelete(id){
+  const d=AIRLINE_DEALS.find(x=>x.id===id);
+  document.getElementById('modalBody').innerHTML=`Hide <strong>${d.airline} — ${d.name}</strong> from your board? You can bring it back by clearing your browser data.`;
+ 
