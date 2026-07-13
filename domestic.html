@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Domestic Destinations — Travel Deal Monitor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum:#4A2C5E; --grape:#6B3FA0; --coral:#FF6B5B; --coral-dark:#E8503F;
+    --teal:#12B3A6; --teal-dark:#0C7D74; --gold:#FFB84D; --sky:#3FA9F5; --sky-dark:#2C86C9;
+    --cream:#FFF7EF; --ink:#2E2A3A; --muted:#7A7488; --line:#EFE6DB; --card:#FFFFFF;
+    --acc:var(--coral); --acc-dark:var(--coral-dark);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Poppins',sans-serif; background:var(--cream); color:var(--ink); min-height:100vh;}
+  h1,h2,h3,.serif{font-family:'Fraunces',serif;}
+  a{text-decoration:none;}
+  header{padding:22px 40px; background:linear-gradient(120deg,var(--plum),var(--grape)); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; color:#fff;}
+  .brand{display:flex; align-items:center; gap:12px; font-family:'Fraunces',serif; font-weight:700; font-size:22px; color:#fff;}
+  .brand .mark{width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,var(--coral),var(--gold)); display:flex; align-items:center; justify-content:center; font-size:19px;}
+  .brand small{display:block; font-family:'Poppins',sans-serif; font-weight:500; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.72);}
+  .head-right{display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+  .nav-links{display:flex; gap:8px; flex-wrap:wrap;}
+  .nav-links a{font-weight:600; font-size:13.5px; color:#fff; padding:8px 14px; border-radius:999px; border:2px solid rgba(255,255,255,.28); transition:.2s;}
+  .nav-links a:hover, .nav-links a.active{background:#fff; color:var(--acc-dark); border-color:#fff;}
+  .meta{font-size:13px; color:rgba(255,255,255,.85);} .meta b{color:#fff;}
+  .title-row{max-width:1240px; margin:30px auto 0; padding:0 40px;}
+  .title-row h1{font-size:34px; color:var(--plum);}
+  .title-row p{color:var(--muted); font-size:15px; margin-top:4px;}
+  .updates{max-width:1240px; margin:22px auto 0; padding:0 40px;}
+  .updates-inner{background:#fff; border:2px solid var(--line); border-left:6px solid var(--acc); border-radius:16px; padding:16px 22px; display:none;}
+  .updates-inner.show{display:block;}
+  .updates-title{font-weight:600; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--plum); margin-bottom:12px;}
+  .updates-title .as-of{font-weight:500; text-transform:none; letter-spacing:normal; color:var(--muted);}
+  .chips{display:flex; flex-wrap:wrap; gap:8px 10px;}
+  .chip{display:inline-flex; align-items:center; gap:7px; font-size:13px; color:var(--ink); background:var(--cream); border:1.5px solid var(--line); padding:6px 13px; border-radius:999px; cursor:pointer; transition:.15s;}
+  .chip:hover{border-color:var(--acc); transform:translateY(-1px);}
+  .chip .tag{font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:2px 8px; border-radius:999px; color:#fff; background:var(--acc);}
+  .toolbar{max-width:1240px; margin:24px auto 0; padding:0 40px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;}
+  .toolbar input[type=text]{font-family:'Poppins',sans-serif; font-size:14px; color:var(--ink); background:#fff; border:2px solid var(--line); border-radius:999px; padding:11px 18px; min-width:260px;}
+  .toolbar input[type=text]:focus{outline:none; border-color:var(--acc);}
+  .toolbar .count{margin-left:auto; font-size:13px; color:var(--muted);}
+  .grid{max-width:1240px; margin:22px auto 0; padding:0 40px 80px; display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:20px;}
+  .card{background:var(--card); border:2px solid var(--line); border-radius:20px; padding:24px; transition:.22s; position:relative; display:flex; flex-direction:column;}
+  .card::before{content:""; position:absolute; inset:0 0 auto 0; height:6px; border-radius:20px 20px 0 0; background:linear-gradient(90deg,var(--coral),var(--gold));}
+  .card:hover{transform:translateY(-4px); border-color:var(--acc); box-shadow:0 18px 38px rgba(74,44,94,0.10);}
+  .card-top{display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:4px; padding-top:6px;}
+  .region{font-weight:700; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--acc-dark);}
+  .fresh{display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:#fff; padding:3px 10px; border-radius:999px; background:var(--acc);}
+  .card h2{font-family:'Fraunces',serif; font-size:23px; line-height:1.2; color:var(--plum); margin:4px 0 4px;}
+  .dest-sub{font-size:13px; color:var(--muted); margin-bottom:12px;}
+  .sec{margin-top:8px;}
+  .sec-head{font-size:12px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); margin:10px 0 8px;}
+  .deal-row{display:block; padding:10px 13px; border:1px solid var(--line); border-radius:12px; margin-bottom:8px; background:#fff; transition:.15s;}
+  .deal-row:hover{border-color:var(--acc); transform:translateY(-1px); box-shadow:0 6px 16px rgba(74,44,94,.07);}
+  .deal-name{display:block; font-weight:600; font-size:14px; color:var(--plum); margin-bottom:2px;}
+  .deal-note{display:block; font-size:12.5px; color:var(--muted); line-height:1.45;}
+  .none{font-size:12.5px; color:var(--muted); font-style:italic; padding:4px 2px;}
+  .empty{grid-column:1/-1; text-align:center; padding:80px 20px; color:var(--muted);} .empty .big{font-size:40px; margin-bottom:12px;}
+  footer{text-align:center; padding:30px 24px; color:var(--muted); font-size:12.5px; border-top:2px solid var(--line); background:#fff;}
+  @media(max-width:600px){header,.title-row,.toolbar,.updates,.grid{padding-left:20px; padding-right:20px;} .grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="brand"><span class="mark">🌄</span><span>Travel Deal Monitor<small>Domestic Destinations</small></span></a>
+  <div class="head-right">
+    <div class="meta">Last checked: <b id="lastChecked">—</b> · <span id="count">0</span> destinations</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="airlines.html">Airlines</a>
+      <a href="domestic.html" class="active">Domestic</a>
+      <a href="international.html">International</a>
+    </div>
+  </div>
+</header>
+<div class="title-row">
+  <h1>🌄 Domestic Destinations</h1>
+  <p>Live hotel deals and Atlanta flight options for our favorite U.S. escapes.</p>
+</div>
+<div class="updates"><div class="updates-inner" id="updates"></div></div>
+<div class="toolbar">
+  <input type="text" id="search" placeholder="Search destination, hotel, or region…">
+  <div class="count" id="resultCount"></div>
+</div>
+<div class="grid" id="grid"></div>
+<footer>Travel Deal Monitor — Domestic Destinations · Refreshed nightly by an automated check. Each card shows only live hotel deals plus current Atlanta flight options; fares and offers change often, so confirm on the provider's own site before booking.</footer>
+<script>
+const LAST_CHECKED = "2026-07-12";
+const DESTINATIONS = [
+  {
+    "id": "sarasota",
+    "name": "Sarasota",
+    "region": "Florida",
+    "subtitle": "Gulf Coast, Florida",
+    "hotels": [
+      {
+        "name": "The Ritz-Carlton, Sarasota",
+        "deal": "$250 property credit (book by Sep 30, 2026)",
+        "url": "https://www.ritzcarlton.com/en/hotels/florida/sarasota/offers/stay-longer-with-us"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "Nonstop ATL → Sarasota-Bradenton (SRQ)",
+        "url": "https://www.delta.com/us/en/flight-deals/florida-flights/flights-to-sarasota"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "amelia-island",
+    "name": "Amelia Island",
+    "region": "Florida",
+    "subtitle": "Atlantic coast, NE Florida",
+    "hotels": [
+      {
+        "name": "The Ritz-Carlton, Amelia Island",
+        "deal": "15% off + Fourth Night Free (select dates)",
+        "url": "https://www.ritzcarlton.com/en/hotels/florida/amelia-island/offers/stay-longer-with-us"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "Nonstop ATL → Jacksonville (JAX), ~45 min drive",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "sea-island",
+    "name": "Sea Island",
+    "region": "Georgia",
+    "subtitle": "Golden Isles, Georgia coast",
+    "hotels": [
+      {
+        "name": "The Cloister & The Lodge, Sea Island",
+        "deal": "Up to 25% off 2+ nights + up to $500 resort credit (Jul 5–Sep 9)",
+        "url": "https://www.seaisland.com/stay/offer/summer/"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "ATL → Brunswick (BQK), or Jacksonville (JAX) + drive",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "st-simons-island",
+    "name": "St. Simons Island",
+    "region": "Georgia",
+    "subtitle": "Golden Isles, Georgia coast",
+    "hotels": [
+      {
+        "name": "The King and Prince Resort",
+        "deal": "Up to 33% off / summer 20% off + $150 F&B credit (book by Jul 31)",
+        "url": "https://www.kingandprince.com/st-simons-island-hotel-deals/summer-offer"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "ATL → Brunswick (BQK), a short hop to the island",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "route-30a",
+    "name": "Route 30A (Florida)",
+    "region": "Florida",
+    "subtitle": "Scenic 30A, Florida Panhandle",
+    "hotels": [
+      {
+        "name": "The Pearl Hotel, Rosemary Beach",
+        "deal": "Advance-purchase savings (book 30+ days ahead) + FL-resident rates",
+        "url": "https://www.thepearlrb.com/"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "Nonstop ATL → Destin-Ft. Walton (VPS) or Panama City (ECP)",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "texas-hill-country",
+    "name": "Texas Hill Country",
+    "region": "Texas",
+    "subtitle": "Around Austin & San Antonio",
+    "hotels": [
+      {
+        "name": "Miraval Austin",
+        "deal": "Summer Long Sale — save up to $150 pp/night (through Aug 31)",
+        "url": "https://www.miravalresorts.com/austin/packages/summer-long-sale"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "Nonstop ATL → Austin (AUS) or San Antonio (SAT)",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "scottsdale",
+    "name": "Scottsdale",
+    "region": "Arizona",
+    "subtitle": "Sonoran Desert, Arizona",
+    "hotels": [
+      {
+        "name": "Fairmont Scottsdale Princess",
+        "deal": "Complimentary 3rd night + up to 20% off Gold + $100 credit (May 14–Sep 7)",
+        "url": "https://www.fairmont.com/en/hotels/scottsdale/fairmont-scottsdale-princess/offers.html"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "Nonstop ATL → Phoenix (PHX), ~30 min to Scottsdale",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "tucson",
+    "name": "Tucson",
+    "region": "Arizona",
+    "subtitle": "Sonoran Desert, Arizona",
+    "hotels": [
+      {
+        "name": "The Ritz-Carlton, Dove Mountain",
+        "deal": "25% off + complimentary 4th night (book by Sep 26, 2026)",
+        "url": "https://www.ritzcarlton.com/en/hotels/tusrz-the-ritz-carlton-dove-mountain/overview/"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "Nonstop ATL → Tucson (TUS), or via Phoenix (PHX)",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "coeur-dalene",
+    "name": "Coeur d'Alene",
+    "region": "Idaho",
+    "subtitle": "Lake Coeur d'Alene, North Idaho",
+    "hotels": [
+      {
+        "name": "The Coeur d'Alene Resort",
+        "deal": "30th-anniversary spa packages (~20% off) + seasonal packages",
+        "url": "https://www.cdaresort.com/seasonal-packages/"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "Nonstop ATL → Spokane (GEG), ~40 min drive",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "aspen",
+    "name": "Aspen",
+    "region": "Colorado",
+    "subtitle": "Rocky Mountains, Colorado",
+    "hotels": [
+      {
+        "name": "The St. Regis Aspen Resort",
+        "deal": "$300 property credit (book by Aug 30, 2026)",
+        "url": "https://www.marriott.com/en-us/hotels/asexr-the-st-regis-aspen-resort/offers/"
+      },
+      {
+        "name": "The Little Nell",
+        "deal": "$1,000 resort credit on 4-night stays (Jul 26–Oct 18)",
+        "url": "https://www.thelittlenell.com/stay/offers"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "Nonstop ATL → Aspen (ASE) seasonal, or via Denver (DEN)",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "charlottesville",
+    "name": "Charlottesville",
+    "region": "Virginia",
+    "subtitle": "Blue Ridge foothills, Virginia",
+    "hotels": [
+      {
+        "name": "Keswick Hall",
+        "deal": "Golf & 'America 250' packages; complimentary 4th night (select dates)",
+        "url": "https://www.keswick.com/"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "Nonstop ATL → Charlottesville (CHO)",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  },
+  {
+    "id": "maryland-eastern-shore",
+    "name": "Maryland Eastern Shore",
+    "region": "Maryland",
+    "subtitle": "Chesapeake Bay, St. Michaels",
+    "hotels": [
+      {
+        "name": "Inn at Perry Cabin (Belmond), St. Michaels",
+        "deal": "Daily breakfast for two + $100 resort credit (Amex FHR)",
+        "url": "https://innatperrycabin.com/"
+      }
+    ],
+    "flights": [
+      {
+        "airline": "Delta",
+        "note": "ATL → Baltimore (BWI) + drive, or Salisbury (SBY)",
+        "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
+      }
+    ],
+    "dateAdded": "2026-07-12",
+    "lastUpdated": "2026-07-12"
+  }
+];
+
+function daysSince(s){return Math.floor((new Date()-new Date(s+'T00:00:00'))/86400000);}
+function shortDate(s){return new Date(s+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});}
+function freshBadge(d){const s=d.lastUpdated||d.dateAdded,diff=daysSince(s);if(isNaN(diff)||diff<0||diff>=7)return '';return `<span class="fresh">${s===d.dateAdded?'New':'Updated'} ${shortDate(s)}</span>`;}
+function activeDeals(){return DESTINATIONS;}
+function renderBanner(){
+  const box=document.getElementById('updates');
+  const t=activeDeals().filter(d=>d.lastUpdated===LAST_CHECKED);
+  if(!t.length){box.className='updates-inner';box.innerHTML='';return;}
+  box.className='updates-inner show';
+  box.innerHTML=`<div class="updates-title">🔔 Fresh from last night's check <span class="as-of">— ${shortDate(LAST_CHECKED)}, ${LAST_CHECKED.slice(0,4)}</span></div>`+
+    `<div class="chips">${t.map(d=>`<span class="chip" onclick="jumpTo('${d.id}')"><span class="tag">${d.lastUpdated===d.dateAdded?'New':'Updated'}</span>${d.name}</span>`).join('')}</div>`;
+}
+function render(){
+  const q=document.getElementById('search').value.toLowerCase();
+  const grid=document.getElementById('grid');
+  const list=activeDeals().filter(d=>{
+    const hay=(d.name+d.region+d.subtitle+(d.hotels||[]).map(h=>h.name+h.deal).join(' ')+(d.flights||[]).map(f=>f.airline+f.note).join(' ')).toLowerCase();
+    return !q||hay.includes(q);
+  });
+  document.getElementById('count').textContent=activeDeals().length;
+  document.getElementById('resultCount').textContent=`Showing ${list.length} of ${activeDeals().length}`;
+  if(!list.length){grid.innerHTML=`<div class="empty"><div class="big">🔍</div>No destinations match your search.</div>`;return;}
+  grid.innerHTML=list.map(d=>`
+    <div class="card" id="dest-${d.id}">
+      <div class="card-top"><span class="region">${d.region}</span>${freshBadge(d)}</div>
+      <h2>${d.name}</h2>
+      <div class="dest-sub">${d.subtitle}</div>
+      <div class="sec">
+        <div class="sec-head">🏨 Hotel deals</div>
+        ${(d.hotels&&d.hotels.length)?d.hotels.map(h=>`<a class="deal-row" href="${h.url}" target="_blank" rel="noopener"><span class="deal-name">${h.name}</span><span class="deal-note">${h.deal}</span></a>`).join(''):`<div class="none">No live hotel deal right now — check back.</div>`}
+      </div>
+      <div class="sec">
+        <div class="sec-head">✈️ From Atlanta (ATL)</div>
+        ${(d.flights&&d.flights.length)?d.flights.map(f=>`<a class="deal-row" href="${f.url}" target="_blank" rel="noopener"><span class="deal-name">${f.airline}</span><span class="deal-note">${f.note}</span></a>`).join(''):`<div class="none">No current ATL flight deal listed.</div>`}
+      </div>
+    </div>`).join('');
+}
+function jumpTo(id){const el=document.getElementById('dest-'+id);if(!el)return;el.scrollIntoView({behavior:'smooth',block:'center'});el.style.transition='box-shadow .3s';el.style.boxShadow='0 0 0 4px var(--gold)';setTimeout(()=>el.style.boxShadow='',1400);}
+document.getElementById('lastChecked').textContent=`${shortDate(LAST_CHECKED)}, ${LAST_CHECKED.slice(0,4)}`;
+renderBanner();render();
+document.getElementById('search').addEventListener('input',render);
+</script>
+</body>
+</html>

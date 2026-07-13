@@ -48,6 +48,9 @@
   .choice::before{content:""; position:absolute; inset:0 0 auto 0; height:6px;}
   .choice.hotels::before{background:linear-gradient(90deg,var(--coral),var(--gold));}
   .choice.airlines::before{background:linear-gradient(90deg,var(--sky),var(--teal));}
+  .choice.domestic::before{background:linear-gradient(90deg,var(--grape),var(--coral));}
+  .choice.international::before{background:linear-gradient(90deg,var(--sky),var(--teal));}
+  .choice.international .go{color:var(--sky-dark);}
   .choice:hover{transform:translateY(-6px); border-color:var(--coral); box-shadow:0 20px 44px rgba(74,44,94,0.14);}
   .choice .emoji{font-size:44px; margin-bottom:16px; display:block;}
   .choice h2{font-size:30px; color:var(--plum); margin-bottom:8px;}
@@ -83,6 +86,8 @@
   <div class="nav-links">
     <a href="hotels.html">Hotels</a>
     <a href="airlines.html">Airlines</a>
+    <a href="domestic.html">Domestic</a>
+    <a href="international.html">International</a>
   </div>
 </nav>
 
@@ -103,6 +108,18 @@
       <h2>Airlines from ATL</h2>
       <p>Domestic &amp; international fare sales, award deals and bonus miles departing Hartsfield-Jackson on Delta, Southwest, United and more.</p>
       <span class="go">See airline deals <span>→</span></span>
+    </a>
+    <a href="domestic.html" class="choice domestic reveal d4">
+      <span class="emoji">🌄</span>
+      <h2>Domestic Destinations</h2>
+      <p>Live hotel deals and Atlanta flights for U.S. escapes — Sarasota, Sea Island, Scottsdale, Aspen and more.</p>
+      <span class="go">Explore domestic <span>&rarr;</span></span>
+    </a>
+    <a href="international.html" class="choice international reveal d4">
+      <span class="emoji">🌍</span>
+      <h2>International Destinations</h2>
+      <p>Bucket-list trips abroad — Paris, London, Maldives, Bora Bora, Vietnam and beyond, with deals from ATL.</p>
+      <span class="go">Explore international <span>&rarr;</span></span>
     </a>
   </div>
 </section>
