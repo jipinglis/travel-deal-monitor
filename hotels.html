@@ -173,7 +173,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-07-12";
+const LAST_CHECKED = "2026-07-13";
 
 const HOTEL_DEALS = [
   {
@@ -338,18 +338,19 @@ const HOTEL_DEALS = [
   {
     id:"waldorf-astoria-suite-credit",
     brand:"Waldorf Astoria",
-    name:"Suite Offer — $300 Resort Credit (+ 25% Off Select Stays)",
-    scope:"Waldorf Astoria Monarch Beach & participating resorts",
-    type:"Resort Credit",
-    region:"United States",
-    summary:"Book a suite at Monarch Beach for $300 resort credit (penthouses add a complimentary poolside cabana day). Other Waldorf Astoria resorts run 25%-off room-rate promotions.",
-    terms:"Select 25%-off offers require booking by July 31, 2026; suite credit while promotion lasts.",
+    name:"Stay 3, Get 4th Night Free (+ Resort Credits)",
+    scope:"Waldorf Astoria, Conrad & LXR resorts worldwide",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Stay three nights at any Waldorf Astoria, LXR or Conrad hotel or resort and the fourth night is complimentary. Waldorf Astoria Orlando layers on a $100 resort credit and complimentary valet, and Monarch Beach suite bookings add a $300 resort credit.",
+    terms:"Fourth-night-free requires a 4-to-7 consecutive-night stay; select 25%-off room-rate offers require booking by July 31, 2026. Varies by property.",
     url:"https://www.hilton.com/en/offers/waldorf-astoria/",
     source:"hilton.com",
     properties:[
+      {name:"Orlando ($100 credit)", url:"https://www.waldorfastoriaorlando.com/special-offers/"},
       {name:"Monarch Beach, CA", url:"https://www.waldorfastoriamonarchbeach.com/"}
     ],
-    dateAdded:"2026-07-03", lastUpdated:"2026-07-03"
+    dateAdded:"2026-07-03", lastUpdated:"2026-07-13"
   },
   {
     id:"montage-fourth-night-free",
@@ -472,18 +473,20 @@ const HOTEL_DEALS = [
   {
     id:"rosewood-fourth-night",
     brand:"Rosewood",
-    name:"Complimentary Fourth Night + Property Credit",
-    scope:"Rosewood Hotels & Resorts worldwide",
+    name:"More Rosewood — Fourth Night Free",
+    scope:"25 of 27 Rosewood hotels & resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Rosewood resorts offer a complimentary fourth night plus property credits through Amex Fine Hotels + Resorts — e.g., Kona Village (Hawaii) adds a US$500 resort credit, others a US$100 spa credit.",
-    terms:"Kona Village: book by July 31, 2026 for travel by Dec 20, 2026. Windows vary by resort.",
-    url:"https://www.rosewoodhotels.com/en/offers",
+    summary:"Rosewood's summer 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Mayakoba runs a stay-3-pay-2 version with daily breakfast for two plus a $100 food, beverage or spa credit; Amex Fine Hotels + Resorts adds resort credits at many resorts.",
+    terms:"Fourth-night-free on 3 paid nights; representative windows: Bangkok May 3–Oct 31, 2026 and Hong Kong through Sept 30, 2026. Windows vary by hotel.",
+    url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
-      {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"}
+      {name:"Mayakoba, Riviera Maya (stay 3 pay 2)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
+      {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
+      {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-13"
   },
   {
     id:"auberge-fourth-night-credit",
@@ -492,11 +495,15 @@ const HOTEL_DEALS = [
     scope:"Auberge Resorts Collection worldwide",
     type:"Resort Credit",
     region:"Worldwide",
-    summary:"Select Auberge Resorts Collection properties bundle a complimentary fourth night with a US$500 property credit via Amex Fine Hotels + Resorts, on top of daily breakfast and room upgrades.",
-    terms:"Representative offer: book by July 31, 2026 for travel by Dec 20, 2026. Varies by property.",
+    summary:"Select Auberge Resorts Collection properties bundle a complimentary fourth night with a US$500 property credit via Amex Fine Hotels + Resorts, on top of daily breakfast and room upgrades. Auberge du Soleil in Napa runs a stay-4-pay-3 offer this summer, and Chileno Bay in Los Cabos adds a complimentary fourth night on villa stays.",
+    terms:"Auberge du Soleil stay-4-pay-3 valid through Aug 31, 2026; Chileno Bay 4th night on villas May 22–Oct 31, 2026. Amex FHR offers: book by July 31, 2026 for travel by Dec 20, 2026. Varies by property.",
     url:"https://aubergeresorts.com/offers/",
     source:"aubergeresorts.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+    properties:[
+      {name:"Auberge du Soleil, Napa Valley", url:"https://aubergeresorts.com/aubergedusoleil/offers/"},
+      {name:"Chileno Bay, Los Cabos", url:"https://auberge.com/chileno-bay/special-offers/"}
+    ],
+    dateAdded:"2026-07-12", lastUpdated:"2026-07-13"
   },
   {
     id:"conrad-third-night-credit",
