@@ -29,6 +29,9 @@
   .nav-links{display:flex; gap:10px;}
   .nav-links a{font-weight:600; font-size:14px; color:var(--plum); padding:9px 18px; border-radius:999px; border:2px solid transparent; transition:.2s;}
   .nav-links a:hover{border-color:var(--coral); color:var(--coral-dark);}
+  .nav-right{display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+  .updated-note{font-size:12.5px; font-weight:600; color:var(--muted); white-space:nowrap;}
+  .updated-note b{color:var(--coral-dark); font-weight:700;}
 
   /* HERO */
   .hero{position:relative; text-align:center; padding:90px 24px 70px; background:
@@ -83,11 +86,14 @@
 
 <nav>
   <div class="logo"><span class="mark">🧳</span> Travel Deal Monitor</div>
-  <div class="nav-links">
-    <a href="hotels.html">Hotels</a>
-    <a href="airlines.html">Airlines</a>
-    <a href="domestic.html">Domestic</a>
-    <a href="international.html">International</a>
+  <div class="nav-right">
+    <span class="updated-note">Updated <b id="lastUpdated">—</b></span>
+    <div class="nav-links">
+      <a href="hotels.html">Hotels</a>
+      <a href="airlines.html">Airlines</a>
+      <a href="domestic.html">Domestic</a>
+      <a href="international.html">International</a>
+    </div>
   </div>
 </nav>
 
@@ -138,5 +144,10 @@
   Made with <span class="heart">♥</span> for the family &nbsp;·&nbsp; Travel Deal Monitor &nbsp;·&nbsp; Deals reflect publicly listed offers and can change anytime — always confirm terms on the hotel or airline's own site before booking.
 </footer>
 
+<script>
+  const LAST_CHECKED = "2026-07-28";
+  document.getElementById('lastUpdated').textContent =
+    new Date(LAST_CHECKED+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+</script>
 </body>
 </html>
