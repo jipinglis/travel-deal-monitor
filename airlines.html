@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-07-31";
+const LAST_CHECKED = "2026-08-01";
 
 const AIRLINE_DEALS = [
   {
@@ -210,11 +210,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Everyday Low Fares",
     dest:"Domestic network from Atlanta",
-    summary:"Southwest's second-busiest presence at ATL. The $49 fall/winter Basic-fare sale closed July 23, but Southwest refreshes nationwide flight deals often — check the deals page for the next one. Getaways flight+hotel packages still take up to $250 off domestic and $500 off international bundles, and two free checked bags plus no change fees sweeten every booking.",
-    terms:"Everyday low fares are always bookable; nationwide sale fares are one-way Basic, limited and typically require 21-day advance purchase. Getaways package discounts apply automatically at booking.",
+    summary:"Southwest's second-busiest presence at ATL. Code FLYWOW takes up to 40% off base fares for travel Aug 4-Dec 16, 2026, and Southwest refreshes nationwide flight deals often. Getaways flight+hotel packages still take up to $250 off domestic and $500 off international bundles, and two free checked bags plus no change fees sweeten every booking.",
+    terms:"FLYWOW discount applies to Wanna Get Away/Away Plus base fares only; taxes and fees extra. Everyday low fares are always bookable; nationwide sale fares are one-way Basic, limited and typically require advance purchase. Getaways package discounts apply automatically at booking.",
     url:"https://www.southwest.com/special-offers/flight-deals/",
     source:"southwest.com",
-    dateAdded:"2026-07-08", lastUpdated:"2026-07-24"
+    dateAdded:"2026-07-08", lastUpdated:"2026-08-01"
   },
   {
     id:"american-atl-deals",
@@ -301,11 +301,24 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Award Sale",
     dest:"Europe via Paris (CDG) or Amsterdam (AMS), connecting from Atlanta",
-    summary:"Flying Blue's monthly Promo Rewards take 25% off select Air France and KLM award flights between North America and Europe this month — economy awards from 18,750 miles each way, premium economy from 30,000 and business from 45,000. The July 2026 window is extra-long, covering travel all the way through Dec 31, 2026.",
-    terms:"Book by July 31, 2026 for travel through Dec 31, 2026. Discount applies to specific flagged routes/dates — check the Promo Rewards calendar for Atlanta availability before booking.",
+    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe this month — economy, premium economy and business fares flagged on specific routes/dates. The August 2026 window is extra-long, covering travel all the way through Jan 31, 2027.",
+    terms:"Book by Aug 31, 2026 for travel through Jan 31, 2027. Discount applies to specific flagged routes/dates — check the Promo Rewards calendar for Atlanta availability before booking.",
     url:"https://wwws.airfrance.us/en-us/flights-from-atlanta",
     source:"airfrance.us / klm.com",
-    dateAdded:"2026-07-30", lastUpdated:"2026-07-30"
+    dateAdded:"2026-07-30", lastUpdated:"2026-08-01"
+  },
+  {
+    id:"delta-australia-nz-award-sale",
+    airline:"Delta Air Lines",
+    name:"SkyMiles Flash Sale to Australia & New Zealand",
+    scope:"International",
+    type:"Award Sale",
+    dest:"Brisbane (BNE) & Auckland (AKL) via Los Angeles from Atlanta",
+    summary:"An unadvertised SkyMiles flash sale has round-trip Delta One economy awards from Atlanta as low as 30,000 miles to Brisbane and 40,000 miles to Auckland, connecting via Los Angeles — a rare discount on Delta's long-haul Pacific partner routes.",
+    terms:"Award seats are limited and largely for Sept-Dec 2026 travel; no published end date, so seats can disappear without notice. Search SkyMiles award calendar for exact availability from ATL.",
+    url:"https://www.delta.com/us/en/flight-deals/flash-sale",
+    source:"delta.com",
+    dateAdded:"2026-08-01", lastUpdated:"2026-08-01"
   }
 ];
 
