@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-08-01";
+const LAST_CHECKED = "2026-08-02";
 
 const HOTEL_DEALS = [
   {
@@ -346,14 +346,14 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Stay three nights at any Waldorf Astoria, LXR or Conrad hotel or resort and the fourth night is complimentary. Waldorf Astoria Orlando layers on a $100 resort credit and complimentary valet, and Monarch Beach suite bookings add a $300 resort credit.",
-    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property.",
+    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. Amex Travel is also showing 25% off select Waldorf Astoria rooms — book by Sept 30, 2026 for travel by Feb 28, 2027.",
     url:"https://www.hilton.com/en/offers/waldorf-astoria/",
     source:"hilton.com",
     properties:[
       {name:"Orlando ($100 credit)", url:"https://www.waldorfastoriaorlando.com/special-offers/"},
       {name:"Monarch Beach, CA", url:"https://www.waldorfastoriamonarchbeach.com/"}
     ],
-    dateAdded:"2026-07-03", lastUpdated:"2026-08-01"
+    dateAdded:"2026-07-03", lastUpdated:"2026-08-02"
   },
   {
     id:"montage-fourth-night-free",
@@ -571,6 +571,24 @@ const HOTEL_DEALS = [
       {name:"Extended Stay deals", url:"https://www.sixsenses.com/en/offers/extended-stay/"}
     ],
     dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+  },
+  {
+    id:"fairmont-second-night-free-holiday",
+    brand:"Fairmont",
+    name:"Second Night Free — Holiday Season Early Booking",
+    scope:"Fairmont San Francisco, Century Plaza (Los Angeles) & Grand Del Mar (San Diego)",
+    type:"Free Night",
+    region:"United States",
+    summary:"Book one night and get the next one on the house for holiday-season travel. San Francisco applies the savings to every second night on longer stays, and Grand Del Mar runs a straight buy-one-get-one on room nights — a nice way to stretch a Thanksgiving or Christmas trip.",
+    terms:"Book by Aug 15, 2026 (San Francisco family-room package by Aug 9). Stays roughly Nov 1, 2026 – Jan 9, 2027; exact windows vary by hotel.",
+    url:"https://www.fairmont.com/en/offers.html",
+    source:"fairmont.com",
+    properties:[
+      {name:"San Francisco", url:"https://www.fairmont.com/en/hotels/san-francisco/fairmont-san-francisco/offers.html"},
+      {name:"Century Plaza, Los Angeles", url:"https://www.fairmont.com/en/hotels/los-angeles/fairmont-century-plaza/offers.html"},
+      {name:"Grand Del Mar, San Diego", url:"https://www.fairmont.com/en/hotels/san-diego/fairmont-grand-del-mar/offers.html"}
+    ],
+    dateAdded:"2026-08-02", lastUpdated:"2026-08-02"
   }
 ];
 
