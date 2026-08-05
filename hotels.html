@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-08-04";
+const LAST_CHECKED = "2026-08-05";
 
 const HOTEL_DEALS = [
   {
@@ -308,11 +308,14 @@ const HOTEL_DEALS = [
     scope:"Ritz-Carlton, St. Regis, EDITION, Luxury Collection, W & JW Marriott",
     type:"Loyalty Bonus",
     region:"Worldwide",
-    summary:"Earn 10,000 Marriott Bonvoy bonus points per stay of two-plus nights across Marriott's luxury portfolio — stackable with property stay-longer offers. The same promo code also pays 3,000 bonus points per stay at 2,300+ regular Marriott hotels across the U.S. and Canada, so a luxury trip plus an ordinary road-trip night both earn.",
-    terms:"Register with promo code S2449; luxury tier: book by Aug 31, 2026 for stays through Sept 7, 2026 (2-night minimum). The U.S./Canada 3,000-point tier runs on bookings made by Sept 8, 2026.",
+    summary:"Earn 10,000 Marriott Bonvoy bonus points per stay of two-plus nights across Marriott's luxury portfolio — stackable with property stay-longer offers. The same promo code also pays 3,000 bonus points per stay at 2,300+ regular Marriott hotels across the U.S. and Canada, so a luxury trip plus an ordinary road-trip night both earn. New this month: book a 3+ night vacation package at a Marriott hotel in California or New York through Vacations by Marriott during August and you get 20,000 bonus points on top — no registration needed.",
+    terms:"Register with promo code S2449; luxury tier: book by Aug 31, 2026 for stays through Sept 7, 2026 (2-night minimum). The U.S./Canada 3,000-point tier runs on bookings made by Sept 8, 2026. California/New York package bonus: book Aug 1-31, 2026 for stays through Mar 31, 2027; 3-night minimum.",
     url:"https://www.marriott.com/loyalty/earn/promotions.mi",
     source:"marriott.com",
-    dateAdded:"2026-07-06", lastUpdated:"2026-08-04"
+    properties:[
+      {name:"California & New York packages (20,000 pts)", url:"https://www.vacationsbymarriott.com/deals/worldwide-member-offer"}
+    ],
+    dateAdded:"2026-07-06", lastUpdated:"2026-08-05"
   },
   {
     id:"jw-marriott-luxury-collection",
@@ -617,6 +620,22 @@ const HOTEL_DEALS = [
     url:"https://www.hilton.com/en/hilton-honors/member-offers/",
     source:"hilton.com",
     dateAdded:"2026-08-04", lastUpdated:"2026-08-04"
+  },
+  {
+    id:"hyatt-2k-bonus-points-summer",
+    brand:"Park Hyatt",
+    name:"2,000 Bonus Points Every Two Nights",
+    scope:"Park Hyatt, Alila, Andaz & every World of Hyatt participating hotel worldwide",
+    type:"Loyalty Bonus",
+    region:"Worldwide",
+    summary:"Register (free) and earn 2,000 World of Hyatt bonus points for every two eligible nights, starting from your second stay — up to 8,000 bonus points for the season. It counts at every participating Hyatt, so the Park Hyatt splurge and the airport Hyatt on the way home both add up. Hyatt House and Hyatt Studios stays of five or more nights earn a separate 5,000-point bonus per stay.",
+    terms:"Register by Sept 1, 2026; eligible stays July 1 – Sept 7, 2026. Bonus starts accruing on your second stay of the promotion. Stacks with member rates and seasonal package offers.",
+    url:"https://world.hyatt.com/content/gp/en/offers/global-2k-bonus-points-offer.html",
+    source:"hyatt.com",
+    properties:[
+      {name:"Hyatt House / Hyatt Studios 5-night bonus", url:"https://world.hyatt.com/content/gp/en/offers.html"}
+    ],
+    dateAdded:"2026-08-05", lastUpdated:"2026-08-05"
   }
 ];
 
