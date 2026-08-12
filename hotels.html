@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-08-11";
+const LAST_CHECKED = "2026-08-12";
 
 const HOTEL_DEALS = [
   {
@@ -472,16 +472,17 @@ const HOTEL_DEALS = [
     scope:"25 of 27 Rosewood hotels & resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Rosewood's summer 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Mayakoba runs a stay-3-pay-2 version with daily breakfast for two plus a $100 food, beverage or spa credit; Amex Fine Hotels + Resorts adds resort credits at many resorts.",
+    summary:"Rosewood's summer 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Mayakoba runs a stay-3-pay-2 version with daily breakfast for two plus a $100 food, beverage or spa credit, and Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit through Oct 31. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
     terms:"Fourth-night-free on 3 paid nights; representative windows: Bangkok May 3–Oct 31, 2026 and Hong Kong through Sept 30, 2026. Windows vary by hotel.",
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
       {name:"Mayakoba, Riviera Maya (stay 3 pay 2)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
+      {name:"Baha Mar, Bahamas ($100 daily credit)", url:"https://www.rosewoodhotels.com/en/baha-mar/offers/more-rosewood"},
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-13"
+    dateAdded:"2026-07-12", lastUpdated:"2026-08-12"
   },
   {
     id:"auberge-fourth-night-credit",
@@ -572,7 +573,7 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"United States",
     summary:"Book one night and get the next one on the house for holiday-season travel. San Francisco applies the savings to every second night on longer stays, and Grand Del Mar runs a straight buy-one-get-one on room nights — a nice way to stretch a Thanksgiving or Christmas trip.",
-    terms:"Book by Aug 15, 2026 — four days left. The San Francisco family-room package has closed, but the standard second-night-free rate there is still bookable. Stays roughly Nov 1, 2026 – Jan 9, 2027; exact windows vary by hotel.",
+    terms:"Book by Aug 15, 2026 — three days left. The San Francisco family-room package has closed, but the standard second-night-free rate there is still bookable. Stays roughly Nov 1, 2026 – Jan 9, 2027; exact windows vary by hotel.",
     url:"https://www.fairmont.com/en/offers.html",
     source:"fairmont.com",
     properties:[
@@ -580,20 +581,7 @@ const HOTEL_DEALS = [
       {name:"Century Plaza, Los Angeles", url:"https://www.fairmont.com/en/hotels/los-angeles/fairmont-century-plaza/offers.html"},
       {name:"Grand Del Mar, San Diego", url:"https://www.fairmont.com/en/hotels/san-diego/fairmont-grand-del-mar/offers.html"}
     ],
-    dateAdded:"2026-08-02", lastUpdated:"2026-08-11"
-  },
-  {
-    id:"hilton-more-nights-more-points",
-    brand:"Conrad",
-    name:"More Nights, More Points — Up to 4,000 Bonus Points",
-    scope:"Conrad, Waldorf Astoria, LXR & all Hilton brands worldwide",
-    type:"Loyalty Bonus",
-    region:"Worldwide",
-    summary:"Free Hilton Honors members who register earn 2,000 bonus points on stays of one to three nights and 4,000 bonus points on stays of four nights or more — at any Hilton brand, including the Conrad, Waldorf Astoria and LXR luxury collections. Easy to stack on top of the fourth-night-free resort offers.",
-    terms:"Registration required before your stay. Stays must be completed by Aug 15, 2026 — just four days left, so this is truly last call. If your trip starts after the 15th, skip this one and register for Hilton's Stay More, Earn More offer instead. No cap on the number of bonus stays.",
-    url:"https://www.hilton.com/en/hilton-honors/member-offers/",
-    source:"hilton.com",
-    dateAdded:"2026-08-03", lastUpdated:"2026-08-11"
+    dateAdded:"2026-08-02", lastUpdated:"2026-08-12"
   },
   {
     id:"hilton-stay-more-earn-more",
@@ -625,19 +613,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-08-05", lastUpdated:"2026-08-05"
   },
   {
-    id:"marriott-targeted-5k-one-stay",
-    brand:"Marriott",
-    name:"5,000 Bonus Points After One Stay (Targeted)",
-    scope:"Participating Marriott Bonvoy hotels worldwide",
-    type:"Loyalty Bonus",
-    region:"Worldwide",
-    summary:"A quick one: register, complete a single eligible paid stay, and 5,000 Marriott Bonvoy points land in your account. Worth about two-thirds of a free night at a mid-tier property for a stay you were taking anyway. It is targeted, so sign in and look under Promotions to see whether it is showing for your account — it often stacks with the 3,000-point U.S./Canada offer and the luxury-brand bonus.",
-    terms:"Register before you check in; one eligible paid stay must be completed by Sept 30, 2026. One-time 5,000-point bonus. Targeted — check your own Bonvoy Promotions page.",
-    url:"https://www.marriott.com/loyalty/promotions.mi",
-    source:"marriott.com",
-    dateAdded:"2026-08-07", lastUpdated:"2026-08-07"
-  },
-  {
     id:"marriott-design-hotels-bonus",
     brand:"Marriott",
     name:"5,000 Bonus Points at Design Hotels",
@@ -649,6 +624,19 @@ const HOTEL_DEALS = [
     url:"https://www.marriott.com/loyalty/earn/promotions.mi",
     source:"marriott.com",
     dateAdded:"2026-08-10", lastUpdated:"2026-08-10"
+  },
+  {
+    id:"hilton-3k-bonus-points-stay",
+    brand:"Conrad",
+    name:"3,000 Bonus Points on Your Next Stay",
+    scope:"Conrad, Waldorf Astoria, LXR & all Hilton brands worldwide",
+    type:"Loyalty Bonus",
+    region:"Worldwide",
+    summary:"Hilton's summer points promo closes on Aug 15, and this is the offer that carries on after it: register your free Hilton Honors account and earn 3,000 bonus points on your next stay at any Hilton property worldwide — Conrad, Waldorf Astoria and LXR included. There is no minimum night count, so even a single-night stop on the way somewhere counts, and it stacks neatly on top of the fourth-night-free resort offers.",
+    terms:"Register by Dec 31, 2026 and complete the stay within four months of registering. One-time bonus, one stay. Targeted for some members — sign in and check your Hilton Honors offers page to confirm it is showing for you.",
+    url:"https://www.hilton.com/en/hilton-honors/member-offers/",
+    source:"hilton.com",
+    dateAdded:"2026-08-12", lastUpdated:"2026-08-12"
   }
 ];
 
