@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-08-22";
+const LAST_CHECKED = "2026-08-24";
 
 const HOTEL_DEALS = [
   {
@@ -185,7 +185,7 @@ const HOTEL_DEALS = [
     scope:"Select properties worldwide (Atlanta, Chicago, Napa, Seattle, Miami, Toronto, Houston & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book two consecutive paid nights and the third night is on the house — offered independently at many Four Seasons city and resort properties. Orlando, Los Angeles, San Francisco and Ocean Club (Bahamas) run Fourth Night Free versions; the Orlando resort offer runs through Sept 30, 2026.",
+    summary:"Book two consecutive paid nights and the third night is on the house — offered independently at many Four Seasons city and resort properties. Orlando, Los Angeles, San Francisco, Washington DC, Palm Beach, Surfside (Miami Beach), Oahu and Ocean Club (Bahamas) run Fourth Night Free versions instead. The Oahu offer covers selected dates through Dec 23, 2026 and the Orlando one runs through Sept 30, 2026.",
     terms:"Varies by property; advance booking required. Check each hotel's Offers page for blackout dates.",
     url:"https://www.fourseasons.com/napavalley/offers/stay-longer-third-night-free/",
     source:"fourseasons.com",
@@ -200,9 +200,13 @@ const HOTEL_DEALS = [
       {name:"San Francisco (4th night free)", url:"https://www.fourseasons.com/sanfrancisco/offers/stay-longer-fourth-night-free/"},
       {name:"Ocean Club, Bahamas (4th night)", url:"https://www.fourseasons.com/oceanclub/offers/fourth-night-free/"},
       {name:"Orlando (4th night free)", url:"https://www.fourseasons.com/orlando/offers/stay-longer-fourth-night-free/"},
-      {name:"Los Angeles (4th night free)", url:"https://www.fourseasons.com/losangeles/offers/stay-longer-fourth-night-free/"}
+      {name:"Los Angeles (4th night free)", url:"https://www.fourseasons.com/losangeles/offers/stay-longer-fourth-night-free/"},
+      {name:"Oahu at Ko Olina (4th night free)", url:"https://www.fourseasons.com/oahu/offers/stay-longer-fourth-night-free/"},
+      {name:"Palm Beach (4th night free)", url:"https://www.fourseasons.com/palmbeach/offers/stay-longer-fourth-night-free/"},
+      {name:"Washington, DC (4th night free)", url:"https://www.fourseasons.com/washington/offers/stay-longer-fourth-night-free/"},
+      {name:"Surfside, Miami Beach (4th night free)", url:"https://www.fourseasons.com/surfside/offers/stay-longer-fourth-night-free/"}
     ],
-    dateAdded:"2026-07-11", lastUpdated:"2026-08-03"
+    dateAdded:"2026-07-11", lastUpdated:"2026-08-24"
   },
   {
     id:"fairmont-endless-summer",
@@ -318,19 +322,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-07-06", lastUpdated:"2026-08-08"
   },
   {
-    id:"autograph-collection-bonus",
-    brand:"Autograph Collection",
-    name:"Bonus Points + Summer Escape Vacation Packages",
-    scope:"Autograph Collection independent hotels (US, Europe, Africa & Middle East)",
-    type:"Loyalty Bonus",
-    region:"Worldwide",
-    summary:"Earn 5,000 bonus points per stay (promo code S2449) at participating Autograph Collection hotels in Europe, Africa & the Middle East, plus a Summer Escape Bonus of 25,000 points on qualifying 5+ night Autograph vacation packages.",
-    terms:"S2449 bonus points: stays June 15 – Sept 7, 2026, book by Aug 31, 2026, 2-night minimum. Summer Escape package bonus requires a 5+ night vacation package booking.",
-    url:"https://www.vacationsbymarriott.com/brands/autograph-collection",
-    source:"marriott.com",
-    dateAdded:"2026-07-05", lastUpdated:"2026-07-30"
-  },
-  {
     id:"waldorf-astoria-suite-credit",
     brand:"Waldorf Astoria",
     name:"Stay 3, Get 4th Night Free (+ Resort Credits)",
@@ -398,19 +389,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-06-25", lastUpdated:"2026-06-25"
   },
   {
-    id:"park-hyatt-member-offers",
-    brand:"Park Hyatt",
-    name:"Member Rates & Seasonal Offers",
-    scope:"Park Hyatt & World of Hyatt luxury properties",
-    type:"Member Rate",
-    region:"Worldwide",
-    summary:"World of Hyatt member rates plus seasonal package offers and point-earning promotions across Park Hyatt properties. Worth watching as new Park Hyatts open in 2026 (Cancún, Mexico City, Vancouver).",
-    terms:"Member rate requires free World of Hyatt sign-in; seasonal offers rotate.",
-    url:"https://www.hyatt.com/en-US/why-hyatt/offers",
-    source:"hyatt.com",
-    dateAdded:"2026-06-28", lastUpdated:"2026-06-28"
-  },
-  {
     id:"relais-chateaux-extended-stays",
     brand:"Relais & Châteaux",
     name:"Extended Stays & Complimentary Fourth Night",
@@ -450,19 +428,6 @@ const HOTEL_DEALS = [
     terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates.",
     url:"https://st-regis.marriott.com/offers/",
     source:"st-regis.marriott.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
-  },
-  {
-    id:"w-hotels-credits",
-    brand:"W Hotels",
-    name:"Stay Longer Sales + Property Credits",
-    scope:"W Hotels worldwide",
-    type:"Resort Credit",
-    region:"Worldwide",
-    summary:"W's design-forward resorts run seasonal sale fares and, via Amex Fine Hotels + Resorts, food-and-beverage or property credits plus room upgrades. A lively option for city breaks and beach escapes.",
-    terms:"Amex FHR credits and upgrades require an eligible card; sale rates advance-purchase.",
-    url:"https://w-hotels.marriott.com/offers/",
-    source:"w-hotels.marriott.com",
     dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
   },
   {
@@ -526,10 +491,10 @@ const HOTEL_DEALS = [
     type:"Member Rate",
     region:"Worldwide",
     summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. Layered on top right now is IHG's Pick Your Points promotion: register free and choose either 2,000 bonus points for every two paid nights, or 8,000 bonus points for every four paid nights. Pick the four-night option if you have a longer trip on the books — it is worth double.",
-    terms:"Member rate requires free IHG One Rewards sign-in. Pick Your Points: register and pick your option before you stay; eligible paid stays run through Aug 31, 2026 — nine days left. Seasonal sale dates rotate.",
+    terms:"Member rate requires free IHG One Rewards sign-in. Pick Your Points: register and pick your option before you stay; eligible paid stays run through Aug 31, 2026 — one week left. Seasonal sale dates rotate.",
     url:"https://www.ihg.com/content/us/en/deals/member-offers/2k8k",
     source:"ihg.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-08-22"
+    dateAdded:"2026-07-12", lastUpdated:"2026-08-24"
   },
   {
     id:"belmond-longer-stay",
@@ -577,35 +542,6 @@ const HOTEL_DEALS = [
     url:"https://www.hilton.com/en/hilton-honors/member-offers/",
     source:"hilton.com",
     dateAdded:"2026-08-04", lastUpdated:"2026-08-04"
-  },
-  {
-    id:"hyatt-2k-bonus-points-summer",
-    brand:"Park Hyatt",
-    name:"2,000 Bonus Points Every Two Nights",
-    scope:"Park Hyatt, Alila, Andaz & every World of Hyatt participating hotel worldwide",
-    type:"Loyalty Bonus",
-    region:"Worldwide",
-    summary:"Register (free) and earn 2,000 World of Hyatt bonus points for every two eligible nights, starting from your second stay — up to 8,000 bonus points for the season. It counts at every participating Hyatt, so the Park Hyatt splurge and the airport Hyatt on the way home both add up. Hyatt House and Hyatt Studios stays of five or more nights earn a separate 5,000-point bonus per stay.",
-    terms:"Register by Sept 1, 2026; eligible stays July 1 – Sept 7, 2026. Bonus starts accruing on your second stay of the promotion. Stacks with member rates and seasonal package offers.",
-    url:"https://world.hyatt.com/content/gp/en/offers/global-2k-bonus-points-offer.html",
-    source:"hyatt.com",
-    properties:[
-      {name:"Hyatt House / Hyatt Studios 5-night bonus", url:"https://world.hyatt.com/content/gp/en/offers.html"}
-    ],
-    dateAdded:"2026-08-05", lastUpdated:"2026-08-05"
-  },
-  {
-    id:"marriott-design-hotels-bonus",
-    brand:"Marriott",
-    name:"5,000 Bonus Points at Design Hotels",
-    scope:"130+ Design Hotels worldwide (part of Marriott Bonvoy)",
-    type:"Loyalty Bonus",
-    region:"Worldwide",
-    summary:"Marriott's independent, architecture-led Design Hotels collection is running its own bonus: 5,000 Marriott Bonvoy points per stay of two nights or more, at more than 130 properties around the world. These are the one-off boutique places — converted villas, hillside retreats, city design hotels — rather than the big flagship brands, and the bonus is a nice extra on a trip you were already planning. It sits alongside the 10,000-point luxury-brand offer, so pick whichever collection fits your trip.",
-    terms:"Book by Aug 31, 2026 for stays completed through Sept 15, 2026. Two-night minimum per stay. Registration with your (free) Marriott Bonvoy account required before you check in.",
-    url:"https://www.marriott.com/loyalty/earn/promotions.mi",
-    source:"marriott.com",
-    dateAdded:"2026-08-10", lastUpdated:"2026-08-10"
   },
   {
     id:"hyatt-latin-america-free-nights",
@@ -667,27 +603,28 @@ const HOTEL_DEALS = [
     type:"Loyalty Bonus",
     region:"Worldwide",
     summary:"If a beach trip is anywhere on the calendar, this is the best-paying Marriott offer running right now. Register with your free Bonvoy account and earn bonus points per stay at 135+ hotels across the Caribbean and Latin America — 3,000 at Marriott Hotels, Sheraton, Westin, Le Meridien, Renaissance, Autograph Collection and Tribute Portfolio; 5,000 at the luxury brands (Ritz-Carlton, St. Regis, W, JW Marriott, EDITION and The Luxury Collection); and a full 15,000 per stay at All-Inclusive by Marriott Bonvoy resorts. That top tier is the standout — one family week can earn more points than most people collect in a year. Marriott is running up to 20 percent off those same all-inclusive resorts too, so the discount and the points can land on a single booking.",
-    terms:"Register with promo code S2449 before you check in. Book by Aug 27, 2026 — five days left — and complete your stay by Sept 10, 2026. The bonus depends on which brand you book; the 15,000-point tier applies only to All-Inclusive by Marriott Bonvoy properties.",
+    terms:"Register with promo code S2449 before you check in. Book by Aug 27, 2026 — three days left — and complete your stay by Sept 10, 2026. The bonus depends on which brand you book; the 15,000-point tier applies only to All-Inclusive by Marriott Bonvoy properties.",
     url:"https://www.marriott.com/loyalty/earn/promotions.mi",
     source:"marriott.com",
-    dateAdded:"2026-08-21", lastUpdated:"2026-08-22"
+    dateAdded:"2026-08-21", lastUpdated:"2026-08-24"
   },
   {
-    id:"sea-island-holiday-25-off",
+    id:"sea-island-cool-rates",
     brand:"Sea Island",
-    name:"Holiday Season — 25% Off The Cloister & The Lodge",
-    scope:"Sea Island Resort, Georgia (The Cloister, The Lodge & Sea Island Cottages)",
+    name:"Cool Rates + Prepay Savings at The Cloister & The Lodge",
+    scope:"Sea Island Resort, Georgia (The Cloister, The Lodge & The Inn)",
     type:"Percent Off",
     region:"United States",
-    summary:"A quarter off winter-holiday rates at the Forbes Five-Star Cloister and The Lodge on the Georgia coast, tied to the America 250 Christmas season — or 15% off if you would rather take a whole cottage for the family. Sea Island is a five-hour drive or a short Delta hop from Atlanta, which makes it one of the easiest luxury holiday trips on this list, and late November through December is when the resort is at its most festive.",
-    terms:"Valid for stays Nov 29 – Dec 23, 2026. 25% off rooms at The Cloister and The Lodge, 15% off cottage rentals. Subject to availability; the separate advance-purchase rate saves 10% if these dates do not work.",
-    url:"https://www.seaisland.com/stay/offer/",
+    summary:"The Christmas-in-July holiday offer closed to new bookings on July 29, so here is what is actually live at Sea Island today. Cool Rates gives discounted nightly rates at The Cloister and The Lodge on flexible dates — the resort marks the cheaper dates on its Special Rates calendar, so shifting a weekend can save real money at a Forbes Five-Star resort. Alongside it, prepaying the whole stay saves 10 percent at The Cloister and The Lodge, or 15 percent at The Inn. Sea Island is a five-hour drive or a short Delta hop from Atlanta, which makes it one of the easiest luxury trips on this list.",
+    terms:"Cool Rates: discounted dates are shown on the resort Special Rates calendar; new reservations only and not combinable with other packages. Prepay rates require paying the full stay up front and booking 8 to 90 days ahead. Fees and taxes are additional.",
+    url:"https://www.seaisland.com/stay/offer/cool-rates/",
     source:"seaisland.com",
     properties:[
-      {name:"The Cloister", url:"https://www.seaisland.com/stay/the-cloister/"},
-      {name:"Advance-purchase 10% off", url:"https://www.seaisland.com/stay/offer/save-10-off-our-standard-rate/"}
+      {name:"Cool Rates (Cloister & Lodge)", url:"https://www.seaisland.com/stay/offer/cool-rates/"},
+      {name:"Prepay & save 10%", url:"https://www.seaisland.com/stay/offer/save-10-off-our-standard-rate/"},
+      {name:"All Sea Island offers", url:"https://www.seaisland.com/stay/offer/"}
     ],
-    dateAdded:"2026-08-22", lastUpdated:"2026-08-22"
+    dateAdded:"2026-08-22", lastUpdated:"2026-08-24"
   }
 ];
 
