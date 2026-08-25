@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-08-24";
+const LAST_CHECKED = "2026-08-25";
 
 const HOTEL_DEALS = [
   {
@@ -185,7 +185,7 @@ const HOTEL_DEALS = [
     scope:"Select properties worldwide (Atlanta, Chicago, Napa, Seattle, Miami, Toronto, Houston & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book two consecutive paid nights and the third night is on the house — offered independently at many Four Seasons city and resort properties. Orlando, Los Angeles, San Francisco, Washington DC, Palm Beach, Surfside (Miami Beach), Oahu and Ocean Club (Bahamas) run Fourth Night Free versions instead. The Oahu offer covers selected dates through Dec 23, 2026 and the Orlando one runs through Sept 30, 2026.",
+    summary:"Book two consecutive paid nights and the third night is on the house — offered independently at many Four Seasons city and resort properties. Orlando, Los Angeles, San Francisco, Washington DC, Palm Beach, Surfside (Miami Beach), Oahu and Ocean Club (Bahamas) run Fourth Night Free versions instead. The Oahu offer covers selected dates through Dec 23, 2026 and the Orlando one runs through Sept 30, 2026. Three more good fall options turned up this morning: Costa Rica (Aug 18 to Nov 16), Cabo del Sol, and London Park Lane, whose window runs all the way into 2027. San Francisco and Los Angeles are both good through Dec 31.",
     terms:"Varies by property; advance booking required. Check each hotel's Offers page for blackout dates.",
     url:"https://www.fourseasons.com/napavalley/offers/stay-longer-third-night-free/",
     source:"fourseasons.com",
@@ -204,9 +204,12 @@ const HOTEL_DEALS = [
       {name:"Oahu at Ko Olina (4th night free)", url:"https://www.fourseasons.com/oahu/offers/stay-longer-fourth-night-free/"},
       {name:"Palm Beach (4th night free)", url:"https://www.fourseasons.com/palmbeach/offers/stay-longer-fourth-night-free/"},
       {name:"Washington, DC (4th night free)", url:"https://www.fourseasons.com/washington/offers/stay-longer-fourth-night-free/"},
-      {name:"Surfside, Miami Beach (4th night free)", url:"https://www.fourseasons.com/surfside/offers/stay-longer-fourth-night-free/"}
+      {name:"Surfside, Miami Beach (4th night free)", url:"https://www.fourseasons.com/surfside/offers/stay-longer-fourth-night-free/"},
+      {name:"London Park Lane (4th night free)", url:"https://www.fourseasons.com/london/offers/stay-longer-fourth-night-free/"},
+      {name:"Costa Rica (4th night free)", url:"https://www.fourseasons.com/costarica/offers/stay-longer-fourth-night-free/"},
+      {name:"Cabo del Sol (4th night free)", url:"https://www.fourseasons.com/cabodelsol/offers/stay-longer-fourth-night-free/"}
     ],
-    dateAdded:"2026-07-11", lastUpdated:"2026-08-24"
+    dateAdded:"2026-07-11", lastUpdated:"2026-08-25"
   },
   {
     id:"fairmont-endless-summer",
@@ -313,13 +316,13 @@ const HOTEL_DEALS = [
     type:"Loyalty Bonus",
     region:"Worldwide",
     summary:"Earn 10,000 Marriott Bonvoy bonus points per stay of two-plus nights across Marriott's luxury portfolio — stackable with property stay-longer offers. The same promo code also pays 3,000 bonus points per stay at 2,300+ regular Marriott hotels across the U.S. and Canada, so a luxury trip plus an ordinary road-trip night both earn, and it covers Europe, the Middle East and Africa too on a sliding scale — 5,000 points a stay at Westin, Marriott Hotels, Sheraton, Le Meridien and Autograph Collection, 2,000 at Courtyard, AC and Moxy. Book a 3+ night vacation package at a Marriott hotel in California or New York through Vacations by Marriott during August and you get 20,000 bonus points on top — no registration needed.",
-    terms:"Register with promo code S2449; luxury tier: book by Aug 31, 2026 for stays through Sept 7, 2026 (2-night minimum). The Europe/Middle East/Africa tier is also book-by Aug 31, 2026 for stays through Sept 7. The U.S./Canada 3,000-point tier runs on bookings made by Sept 8, 2026. California/New York package bonus: book Aug 1-31, 2026 for stays through Mar 31, 2027; 3-night minimum.",
+    terms:"Register with promo code S2449; luxury tier: book by Aug 31, 2026 — six days left — for stays through Sept 7, 2026 (2-night minimum). The Europe/Middle East/Africa tier is also book-by Aug 31, 2026 for stays through Sept 7. The U.S./Canada 3,000-point tier runs on bookings made by Sept 8, 2026. California/New York package bonus: book Aug 1-31, 2026 for stays through Mar 31, 2027; 3-night minimum.",
     url:"https://www.marriott.com/loyalty/earn/promotions.mi",
     source:"marriott.com",
     properties:[
       {name:"California & New York packages (20,000 pts)", url:"https://www.vacationsbymarriott.com/deals/worldwide-member-offer"}
     ],
-    dateAdded:"2026-07-06", lastUpdated:"2026-08-08"
+    dateAdded:"2026-07-06", lastUpdated:"2026-08-25"
   },
   {
     id:"waldorf-astoria-suite-credit",
@@ -490,11 +493,11 @@ const HOTEL_DEALS = [
     scope:"InterContinental Hotels & Resorts worldwide",
     type:"Member Rate",
     region:"Worldwide",
-    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. Layered on top right now is IHG's Pick Your Points promotion: register free and choose either 2,000 bonus points for every two paid nights, or 8,000 bonus points for every four paid nights. Pick the four-night option if you have a longer trip on the books — it is worth double.",
-    terms:"Member rate requires free IHG One Rewards sign-in. Pick Your Points: register and pick your option before you stay; eligible paid stays run through Aug 31, 2026 — one week left. Seasonal sale dates rotate.",
-    url:"https://www.ihg.com/content/us/en/deals/member-offers/2k8k",
+    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. Two bonus-point offers are worth knowing about. Pick Your Points is in its final week: register free and choose either 2,000 bonus points for every two paid nights or 8,000 for every four, and pick the four-night option if a longer trip is already booked. Picking up where it leaves off, IHG has just opened a September offer paying 2,000 bonus points for every two nights, up to 6,000 points across the month — so a stay that straddles the end of August could earn from both.",
+    terms:"Member rate requires free IHG One Rewards sign-in. Pick Your Points: register and choose your option before you stay; eligible paid stays run through Aug 31, 2026 — six days left. The September offer covers stays Sept 1-30, 2026, needs $30+ per night, and is targeted, so sign in and check the member offers page to see if it is showing for you. Award and Points + Cash nights do not count on either.",
+    url:"https://www.ihg.com/content/us/en/deals/member-offers",
     source:"ihg.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-08-24"
+    dateAdded:"2026-07-12", lastUpdated:"2026-08-25"
   },
   {
     id:"belmond-longer-stay",
@@ -603,10 +606,10 @@ const HOTEL_DEALS = [
     type:"Loyalty Bonus",
     region:"Worldwide",
     summary:"If a beach trip is anywhere on the calendar, this is the best-paying Marriott offer running right now. Register with your free Bonvoy account and earn bonus points per stay at 135+ hotels across the Caribbean and Latin America — 3,000 at Marriott Hotels, Sheraton, Westin, Le Meridien, Renaissance, Autograph Collection and Tribute Portfolio; 5,000 at the luxury brands (Ritz-Carlton, St. Regis, W, JW Marriott, EDITION and The Luxury Collection); and a full 15,000 per stay at All-Inclusive by Marriott Bonvoy resorts. That top tier is the standout — one family week can earn more points than most people collect in a year. Marriott is running up to 20 percent off those same all-inclusive resorts too, so the discount and the points can land on a single booking.",
-    terms:"Register with promo code S2449 before you check in. Book by Aug 27, 2026 — three days left — and complete your stay by Sept 10, 2026. The bonus depends on which brand you book; the 15,000-point tier applies only to All-Inclusive by Marriott Bonvoy properties.",
+    terms:"Register with promo code S2449 before you check in. Book by Aug 27, 2026 — this is the last call, just two days left — and complete your stay by Sept 10, 2026. The bonus depends on which brand you book; the 15,000-point tier applies only to All-Inclusive by Marriott Bonvoy properties.",
     url:"https://www.marriott.com/loyalty/earn/promotions.mi",
     source:"marriott.com",
-    dateAdded:"2026-08-21", lastUpdated:"2026-08-24"
+    dateAdded:"2026-08-21", lastUpdated:"2026-08-25"
   },
   {
     id:"sea-island-cool-rates",
