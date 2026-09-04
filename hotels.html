@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-08-27";
+const LAST_CHECKED = "2026-09-04";
 
 const HOTEL_DEALS = [
   {
@@ -241,19 +241,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-07-11", lastUpdated:"2026-07-11"
   },
   {
-    id:"lhw-stay-more-pay-less",
-    brand:"Leading Hotels of the World",
-    name:"Stay 4 / Pay 3 (and Stay 3 / Pay 2)",
-    scope:"Participating LHW independent luxury hotels worldwide",
-    type:"Free Night",
-    region:"Worldwide",
-    summary:"Complimentary nights on longer stays across the LHW collection, with best-rate guarantees, flexible cancellation and added amenities. Leaders Club members layer on breakfast for two and upgrades.",
-    terms:"Booking/travel windows vary by property; see the Offers page for current dates.",
-    url:"https://www.lhw.com/offers",
-    source:"lhw.com",
-    dateAdded:"2026-07-11", lastUpdated:"2026-07-11"
-  },
-  {
     id:"ritz-carlton-stay-longer",
     brand:"Ritz-Carlton",
     name:"Stay Longer, Save More — Up to 25% Off",
@@ -281,8 +268,8 @@ const HOTEL_DEALS = [
     scope:"Shangri-La hotels across Asia, Europe & the Middle East",
     type:"Percent Off",
     region:"Worldwide",
-    summary:"Length-of-stay savings from 15% (3 nights) up to 25–35% on extended stays, with select-property Amex offers of 25% off and complimentary-third-night deals.",
-    terms:"Tiers vary by city; some Amex offers require booking by Aug 31, 2026 for travel to Apr 30, 2027.",
+    summary:"Length-of-stay savings from 15% (3 nights) up to 25% on extended stays, with select-property Amex offers and complimentary-third-night deals. Shangri-La Paris has a separate 15% off offer.",
+    terms:"Tiers vary by city; Amex Travel offer requires booking by Sept 25, 2026 for travel through Apr 30, 2027. Shangri-La Paris 15% off: book by Oct 19, 2026.",
     url:"https://www.shangri-la.com/offers/",
     source:"shangri-la.com",
     properties:[
@@ -290,7 +277,7 @@ const HOTEL_DEALS = [
       {name:"Makati, Manila", url:"https://www.shangri-la.com/manila/makatishangrila/offer-detail/rooms-suites/stay-longer-save-more/"},
       {name:"Shenzhen (30-day stay)", url:"https://www.shangri-la.com/shenzhen/nanshanshangrila/offer-detail/rooms-suites/length-of-stay-30-days-promotion/"}
     ],
-    dateAdded:"2026-07-10", lastUpdated:"2026-07-10"
+    dateAdded:"2026-07-10", lastUpdated:"2026-09-04"
   },
   {
     id:"mandarin-oriental-one-more-night",
@@ -311,18 +298,15 @@ const HOTEL_DEALS = [
   {
     id:"marriott-luxury-bonus-points",
     brand:"Marriott",
-    name:"10,000 Bonus Points at Luxury Brands",
-    scope:"Ritz-Carlton, St. Regis, EDITION, Luxury Collection, W & JW Marriott",
+    name:"Bonus Points on Every Stay — Fall Promotion",
+    scope:"Nearly the entire Marriott Bonvoy portfolio worldwide, including Ritz-Carlton, St. Regis, W & JW Marriott",
     type:"Loyalty Bonus",
     region:"Worldwide",
-    summary:"Earn 10,000 Marriott Bonvoy bonus points per stay of two-plus nights across Marriott's luxury portfolio — stackable with property stay-longer offers. The same promo code also pays 3,000 bonus points per stay at 2,300+ regular Marriott hotels across the U.S. and Canada, so a luxury trip plus an ordinary road-trip night both earn, and it covers Europe, the Middle East and Africa too on a sliding scale — 5,000 points a stay at Westin, Marriott Hotels, Sheraton, Le Meridien and Autograph Collection, 2,000 at Courtyard, AC and Moxy. Book a 3+ night vacation package at a Marriott hotel in California or New York through Vacations by Marriott during August and you get 20,000 bonus points on top — no registration needed.",
-    terms:"Register with promo code S2449; luxury tier: book by Aug 31, 2026 — four days left — for stays through Sept 7, 2026 (2-night minimum). The Europe/Middle East/Africa tier is also book-by Aug 31, 2026 for stays through Sept 7. The U.S./Canada 3,000-point tier runs on bookings made by Sept 8, 2026. California/New York package bonus: book Aug 1-31, 2026 for stays through Mar 31, 2027; 3-night minimum.",
+    summary:"Earn 1,500 Marriott Bonvoy bonus points on every stay of two or more nights, plus an extra 3,000 points if the stay is at a Marriott Bonvoy resort — across nearly the whole portfolio, from luxury brands like Ritz-Carlton, St. Regis and JW Marriott down to Courtyard and Fairfield. Replaces the summer luxury bonus-points promotion, which closed at the end of August.",
+    terms:"Register with your free Bonvoy account before you stay. Eligible stays must be booked and completed between Sept 22 and Nov 22, 2026; 2-night minimum.",
     url:"https://www.marriott.com/loyalty/earn/promotions.mi",
     source:"marriott.com",
-    properties:[
-      {name:"California & New York packages (20,000 pts)", url:"https://www.vacationsbymarriott.com/deals/worldwide-member-offer"}
-    ],
-    dateAdded:"2026-07-06", lastUpdated:"2026-08-27"
+    dateAdded:"2026-07-06", lastUpdated:"2026-09-04"
   },
   {
     id:"waldorf-astoria-suite-credit",
@@ -332,14 +316,14 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Stay three nights at any Waldorf Astoria, LXR or Conrad hotel or resort and the fourth night is complimentary. There is also a straight 25% off three-plus-night stays that includes full breakfast for two daily and a $150 resort credit — a good swap if a free fourth night does not fit your dates. Waldorf Astoria Orlando layers on a $100 resort credit and complimentary valet, Park City runs 25% off any length of stay with breakfast and a $100 credit, and Monarch Beach suite bookings add a $300 resort credit.",
-    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Travel is also showing 25% off select Waldorf Astoria rooms — book by Sept 30, 2026 for travel by Feb 28, 2027.",
+    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include New York (3rd night, book by Sept 15 for travel by Sept 17), Beverly Hills (3rd night, book by Sept 30 for travel by Oct 2) and Chicago (4th night, book by Sept 27 for travel by Oct 1).",
     url:"https://www.hilton.com/en/offers/waldorf-astoria/",
     source:"hilton.com",
     properties:[
       {name:"Orlando ($100 credit)", url:"https://www.waldorfastoriaorlando.com/special-offers/"},
       {name:"Monarch Beach, CA", url:"https://www.waldorfastoriamonarchbeach.com/"}
     ],
-    dateAdded:"2026-07-03", lastUpdated:"2026-08-09"
+    dateAdded:"2026-07-03", lastUpdated:"2026-09-04"
   },
   {
     id:"montage-fourth-night-free",
@@ -377,19 +361,6 @@ const HOTEL_DEALS = [
       {name:"Amanemu, Japan", url:"https://www.aman.com/resorts/amanemu/exclusives"}
     ],
     dateAdded:"2026-06-30", lastUpdated:"2026-06-30"
-  },
-  {
-    id:"peninsula-luxury-in-advance",
-    brand:"Peninsula",
-    name:"Luxury in Advance + Stay Longer",
-    scope:"The Peninsula Hotels worldwide",
-    type:"Percent Off",
-    region:"Worldwide",
-    summary:"Advance-booking rates plus stay-longer and third-night-free packages, all with Peninsula Time (6am check-in / 10pm checkout when available). PenClub adds guaranteed upgrades.",
-    terms:"Rates and minimum-night rules vary by city; see the global Special Offers page.",
-    url:"https://www.peninsula.com/en/global-pages/special-offers",
-    source:"peninsula.com",
-    dateAdded:"2026-06-25", lastUpdated:"2026-06-25"
   },
   {
     id:"relais-chateaux-extended-stays",
@@ -441,7 +412,7 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Rosewood's summer 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Mayakoba runs a stay-3-pay-2 version with daily breakfast for two plus a $100 food, beverage or spa credit, and Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit through Oct 31. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
-    terms:"Fourth-night-free on 3 paid nights; representative windows: Bangkok May 3–Oct 31, 2026 and Hong Kong through Sept 30, 2026. Windows vary by hotel.",
+    terms:"Fourth-night-free on 3 paid nights; representative windows: Bangkok through Dec 31, 2026 and Hong Kong through Sept 30, 2026. Windows vary by hotel.",
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
@@ -450,7 +421,7 @@ const HOTEL_DEALS = [
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-08-12"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-04"
   },
   {
     id:"auberge-fourth-night-credit",
@@ -459,15 +430,15 @@ const HOTEL_DEALS = [
     scope:"Auberge Resorts Collection worldwide",
     type:"Resort Credit",
     region:"Worldwide",
-    summary:"Select Auberge Resorts Collection properties bundle a complimentary fourth night with a US$500 property credit via Amex Fine Hotels + Resorts, on top of daily breakfast and room upgrades. Auberge du Soleil in Napa runs a stay-4-pay-3 offer this summer, and Chileno Bay in Los Cabos adds a complimentary fourth night on villa stays.",
-    terms:"Auberge du Soleil stay-4-pay-3 valid through Aug 31, 2026; Chileno Bay 4th night on villas May 22–Oct 31, 2026. Amex FHR windows roll forward regularly — current offers include a $300 property credit (book by Oct 28, 2026) and a complimentary 4th night (book by Sep 4, 2026). Varies by property.",
+    summary:"Select Auberge Resorts Collection properties bundle a complimentary fourth night with a US$500 property credit via Amex Fine Hotels + Resorts, on top of daily breakfast and room upgrades. These Amex FHR windows roll forward continuously rather than running on one fixed campaign, so the exact booking dates vary by property and by when you book.",
+    terms:"Amex FHR windows are typically bookable only days to a few weeks ahead of travel and refresh on a rolling basis — current examples include a $300 property credit (book by Oct 28, 2026) and a complimentary 4th night. Check each property's Amex Travel or Auberge offers page for its current window.",
     url:"https://aubergeresorts.com/offers/",
     source:"aubergeresorts.com",
     properties:[
       {name:"Auberge du Soleil, Napa Valley", url:"https://aubergeresorts.com/aubergedusoleil/offers/"},
       {name:"Chileno Bay, Los Cabos", url:"https://auberge.com/chileno-bay/special-offers/"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-31"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-04"
   },
   {
     id:"conrad-third-night-credit",
@@ -489,15 +460,15 @@ const HOTEL_DEALS = [
   {
     id:"intercontinental-member-sales",
     brand:"InterContinental",
-    name:"IHG Member Sales + \"Pick Your Points\" Bonus",
+    name:"IHG Member Sales + 15% Off Points & Cash",
     scope:"InterContinental Hotels & Resorts worldwide",
     type:"Member Rate",
     region:"Worldwide",
-    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. Two bonus-point offers are worth knowing about. Pick Your Points is in its final week: register free and choose either 2,000 bonus points for every two paid nights or 8,000 for every four, and pick the four-night option if a longer trip is already booked. Picking up where it leaves off, IHG has just opened a September offer paying 2,000 bonus points for every two nights, up to 6,000 points across the month — so a stay that straddles the end of August could earn from both.",
-    terms:"Member rate requires free IHG One Rewards sign-in. Pick Your Points: register and choose your option before you stay; eligible paid stays run through Aug 31, 2026 — four days left. The September offer covers stays Sept 1-30, 2026, pays 2,000 points for every two nights up to 6,000 points for the month, needs $30+ per night, and is targeted, so sign in and check the member offers page to see if it is showing for you. Award and Points + Cash nights do not count on either.",
+    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. The current member offer takes 15% off the cash portion of Points & Cash bookings, which works out to an effective points value of about half a cent each.",
+    terms:"Requires a free IHG One Rewards account. Book by Sept 28, 2026 for stays through Oct 12, 2026.",
     url:"https://www.ihg.com/content/us/en/deals/member-offers",
     source:"ihg.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-08-27"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-04"
   },
   {
     id:"belmond-longer-stay",
@@ -599,17 +570,17 @@ const HOTEL_DEALS = [
     dateAdded:"2026-08-20", lastUpdated:"2026-08-20"
   },
   {
-    id:"marriott-caribbean-latam-bonus",
-    brand:"Marriott",
-    name:"Up to 15,000 Bonus Points — Caribbean & Latin America",
-    scope:"135+ Marriott hotels & resorts across the Caribbean, Mexico & Latin America",
-    type:"Loyalty Bonus",
+    id:"hyatt-fall-sale-up-to-30-off",
+    brand:"Park Hyatt",
+    name:"Fall Sale — Up to 30% Off",
+    scope:"800+ Hyatt hotels worldwide",
+    type:"Percent Off",
     region:"Worldwide",
-    summary:"If a beach trip is anywhere on the calendar, this is the best-paying Marriott offer running right now. Register with your free Bonvoy account and earn bonus points per stay at 135+ hotels across the Caribbean and Latin America — 3,000 at Marriott Hotels, Sheraton, Westin, Le Meridien, Renaissance, Autograph Collection and Tribute Portfolio; 5,000 at the luxury brands (Ritz-Carlton, St. Regis, W, JW Marriott, EDITION and The Luxury Collection); and a full 15,000 per stay at All-Inclusive by Marriott Bonvoy resorts. That top tier is the standout — one family week can earn more points than most people collect in a year. Marriott is running up to 20 percent off those same all-inclusive resorts too, so the discount and the points can land on a single booking.",
-    terms:"Register with promo code S2449 before you check in. Book by Aug 27, 2026 — that is today, so this is the last call — and complete your stay by Sept 10, 2026. The bonus depends on which brand you book; the 15,000-point tier applies only to All-Inclusive by Marriott Bonvoy properties.",
-    url:"https://www.marriott.com/loyalty/earn/promotions.mi",
-    source:"marriott.com",
-    dateAdded:"2026-08-21", lastUpdated:"2026-08-27"
+    summary:"World of Hyatt members save up to 30% on stays booked now for travel this fall. Non-members save up to 25%; joining World of Hyatt is free and takes a minute at booking.",
+    terms:"Book by Sept 30, 2026 for stays through Dec 20, 2026. Discount tier depends on membership status and the rate plan selected.",
+    url:"https://world.hyatt.com/content/gp/en/offers.html",
+    source:"hyatt.com",
+    dateAdded:"2026-09-04", lastUpdated:"2026-09-04"
   },
   {
     id:"sea-island-cool-rates",
@@ -643,17 +614,17 @@ const HOTEL_DEALS = [
     dateAdded:"2026-08-27", lastUpdated:"2026-08-27"
   },
   {
-    id:"marriott-design-hotels-bonus",
-    brand:"Autograph",
-    name:"5,000 Bonus Points at Design Hotels",
-    scope:"130+ Design Hotels worldwide (Marriott Bonvoy independent collection)",
+    id:"hyatt-house-studios-extended-stay-bonus",
+    brand:"Park Hyatt",
+    name:"5,000 Bonus Points per 5+ Night Extended Stay",
+    scope:"Hyatt House & Hyatt Studios hotels worldwide",
     type:"Loyalty Bonus",
     region:"Worldwide",
-    summary:"A quieter Marriott offer, and a nice one if you like small independent hotels rather than big chains. Every stay of two or more nights at a Design Hotels property earns 5,000 Bonvoy bonus points, across 137 architecturally minded hotels in Europe, Asia and the Americas. Because these are independent properties, the collection tends to be full of places you would not otherwise find inside a loyalty programme.",
-    terms:"Register with your free Bonvoy account using promo code S2449 before you check in. Book by Aug 31, 2026 — four days left — for stays completed through Sept 15, 2026. Two-night minimum per stay.",
-    url:"https://www.designhotels.com/offers/",
-    source:"marriott.com / designhotels.com",
-    dateAdded:"2026-08-26", lastUpdated:"2026-08-27"
+    summary:"World of Hyatt members earn 5,000 bonus points for every stay of five or more consecutive nights at a Hyatt House or Hyatt Studios hotel, repeatable up to a maximum of 50,000 bonus points across the promotion.",
+    terms:"Register (free) at the offer page before your stay. Registration is open through Dec 31, 2026, and all qualifying stays must be completed by Dec 31, 2026.",
+    url:"https://world.hyatt.com/content/gp/en/offers/extended-stay-offer.html",
+    source:"hyatt.com",
+    dateAdded:"2026-09-04", lastUpdated:"2026-09-04"
   }
 ];
 

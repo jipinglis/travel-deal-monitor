@@ -90,7 +90,7 @@
 <div class="grid" id="grid"></div>
 <footer>Travel Deal Monitor — International Destinations · Refreshed nightly by an automated check. Each card shows only live hotel deals plus current Atlanta flight options; fares and offers change often, so confirm on the provider's own site before booking.</footer>
 <script>
-const LAST_CHECKED = "2026-08-27";
+const LAST_CHECKED = "2026-09-04";
 const DESTINATIONS = [
   {
     "id": "vancouver",
@@ -144,19 +144,24 @@ const DESTINATIONS = [
     "hotels": [
       {
         "name": "Fairmont Le Château Frontenac",
-        "deal": "Up to 20% off (book May 15–Sep 15) + AAA/CAA 15% & $50 credit",
+        "deal": "Up to 20% off (book by Sept 15, 2026) + AAA/CAA 15% & $50 credit",
+        "url": "https://www.fairmont.com/en/hotels/quebec-city/fairmont-le-chateau-frontenac/offers.html"
+      },
+      {
+        "name": "Fairmont Le Château Frontenac — Start Christmas in November",
+        "deal": "20% off best available rate for stays through Dec 30, 2026 (book by Dec 3, 2026)",
         "url": "https://www.fairmont.com/en/hotels/quebec-city/fairmont-le-chateau-frontenac/offers.html"
       }
     ],
     "flights": [
       {
         "airline": "Delta",
-        "note": "ATL → Québec City (YQB), 1 stop",
+        "note": "ATL → Québec City (YQB), connecting via Delta hub (no nonstop)",
         "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-07-12"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "dublin",
@@ -210,7 +215,7 @@ const DESTINATIONS = [
     "hotels": [
       {
         "name": "Mandarin Oriental Hyde Park, London",
-        "deal": "Seasonal suite & stay packages",
+        "deal": "Plan Ahead: up to 20% off when booking 7+ days ahead, plus a separate complimentary 4th night for travel through Sept 30, 2026 (book by Sept 26, 2026)",
         "url": "https://www.mandarinoriental.com/en/london/hyde-park/offers"
       }
     ],
@@ -222,7 +227,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-07-12"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "stockholm",
@@ -254,7 +259,7 @@ const DESTINATIONS = [
     "hotels": [
       {
         "name": "Belmond La Residencia, Mallorca",
-        "deal": "Belmond stay-longer offers (discounted extra nights)",
+        "deal": "Amex Fine Hotels + Resorts: $400 food & beverage credit (book by Sept 17, 2026, for travel by Nov 15, 2026)",
         "url": "https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/"
       }
     ],
@@ -266,7 +271,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-07-12"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "canary-islands",
@@ -276,7 +281,7 @@ const DESTINATIONS = [
     "hotels": [
       {
         "name": "The Ritz-Carlton Tenerife, Abama",
-        "deal": "Ritz-Carlton stay-longer & Amex FHR offers",
+        "deal": "Stay Longer On Us: discounted rate for stays through Dec 30, 2026, plus Amex Fine Hotels + Resorts benefits",
         "url": "https://www.ritzcarlton.com/en/hotels/tfsrz-the-ritz-carlton-abama/overview/"
       }
     ],
@@ -288,20 +293,14 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-07-12"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "venice",
     "name": "Venice",
     "region": "Italy",
     "subtitle": "Veneto, Italy",
-    "hotels": [
-      {
-        "name": "Belmond Hotel Cipriani",
-        "deal": "Belmond stay-longer offers",
-        "url": "https://www.belmond.com/hotels/europe/italy/venice/belmond-hotel-cipriani/"
-      }
-    ],
+    "hotels": [],
     "flights": [
       {
         "airline": "Delta",
@@ -310,7 +309,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-07-12"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "florence",
@@ -320,13 +319,8 @@ const DESTINATIONS = [
     "hotels": [
       {
         "name": "Four Seasons Firenze",
-        "deal": "Stay Longer — Third Night Free",
+        "deal": "Experience More package — daily breakfast plus a €100–€200 food & beverage credit, 2-night minimum (through Dec 31, 2029)",
         "url": "https://www.fourseasons.com/florence/offers/"
-      },
-      {
-        "name": "Belmond Villa San Michele",
-        "deal": "Reopened Apr 2026 — opening offers",
-        "url": "https://www.belmond.com/hotels/europe/italy/florence/belmond-villa-san-michele/"
       }
     ],
     "flights": [
@@ -337,7 +331,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-07-12"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "croatia",
@@ -347,7 +341,7 @@ const DESTINATIONS = [
     "hotels": [
       {
         "name": "Hyatt Regency Zadar",
-        "deal": "15% off nightly rate (book by Sep 30, travel by Oct 2, 2026)",
+        "deal": "Romantic Getaway package — complimentary bottle of wine, 20% off dining, 20% off spa treatments, complimentary parking",
         "url": "https://www.hyatt.com/hyatt-regency/en-US/zadrz-hyatt-regency-zadar/offers"
       }
     ],
@@ -359,7 +353,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-08-01"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "aruba",
@@ -369,8 +363,8 @@ const DESTINATIONS = [
     "hotels": [
       {
         "name": "The Ritz-Carlton, Aruba",
-        "deal": "Ritz-Carlton Caribbean package & resort credits",
-        "url": "https://www.marriott.com/en-us/offers/packages/The_Ritz_Carlton_Caribbean.mi"
+        "deal": "Stay Longer, Enjoy More — up to 25% off stays of 4+ nights",
+        "url": "https://www.marriott.com/offers/resort-vacations-in-the-caribbean-and-latin-america-OFF-111263/AUART-the-ritz-carlton-aruba"
       }
     ],
     "flights": [
@@ -381,7 +375,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-07-12"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "turks-and-caicos",
@@ -446,13 +440,13 @@ const DESTINATIONS = [
     ],
     "flights": [
       {
-        "airline": "Delta + Air Tahiti",
-        "note": "ATL → Papeete (PPT) via LAX, then to Bora Bora (BOB)",
+        "airline": "Delta (codeshare) + Air Tahiti",
+        "note": "ATL → Los Angeles (LAX) → Papeete (PPT) on Air Tahiti Nui (Delta codeshare; Delta ended its own PPT flight in 2025), then Air Tahiti to Bora Bora (BOB)",
         "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-08-01"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "galapagos",
@@ -462,7 +456,7 @@ const DESTINATIONS = [
     "hotels": [
       {
         "name": "Pikaia Lodge",
-        "deal": "Free extra night on 5+ night programs, plus a complimentary Quito or Guayaquil hotel night (arrivals through Dec 15, 2026)",
+        "deal": "Complimentary Quito or Guayaquil hotel night added to 5+ night Galápagos programs (arrivals through Dec 15, 2026)",
         "url": "https://www.pikaialodge.com/offers.php"
       }
     ],
@@ -474,7 +468,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-08-06"
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "australia",
@@ -512,13 +506,13 @@ const DESTINATIONS = [
     ],
     "flights": [
       {
-        "airline": "Delta + partners",
-        "note": "ATL → Ho Chi Minh City (SGN)/Da Nang (DAD), via Asia hub",
+        "airline": "Delta + Vietnam Airlines (partner)",
+        "note": "ATL → Ho Chi Minh City (SGN) or Hanoi via an Asia hub, then a domestic Vietnam Airlines connection to Cam Ranh/Nha Trang (CXR) for Ninh Van Bay",
         "url": "https://www.delta.com/us/en/flight-deals/current-flight-deals"
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-07-12"
+    "lastUpdated": "2026-09-04"
   }
 ];
 
