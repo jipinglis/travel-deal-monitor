@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-06";
+const LAST_CHECKED = "2026-09-07";
 
 const HOTEL_DEALS = [
   {
@@ -227,18 +227,18 @@ const HOTEL_DEALS = [
   {
     id:"omni-resort-credit",
     brand:"Omni",
-    name:"Stay 3+ Nights, Get $250 Resort Credit",
+    name:"Stay 2 Nights, Get 3rd Night Free",
     scope:"Omni Mount Washington Resort & Spa (+ specials portfolio-wide)",
-    type:"Resort Credit",
+    type:"Free Night",
     region:"United States",
-    summary:"Three or more nights earns a $250 resort credit toward dining, spa and activities. Omni's specials page also lists up to ~15% off seasonal stays across US properties.",
-    terms:"Applies to Presidential Wing, Historic Premier & Upscale rooms; see specials page for dates.",
+    summary:"Book two nights at Omni Mount Washington Resort & Spa and the third night is complimentary, plus a $50 food and beverage credit. Omni's specials page also lists seasonal percent-off stays across other US properties.",
+    terms:"Applies to Presidential Wing, Historic Premier & Upscale rooms; see specials page for current dates.",
     url:"https://www.omnihotels.com/specials",
     source:"omnihotels.com",
     properties:[
-      {name:"Omni Mount Washington Resort & Spa", url:"https://www.omnihotels.com/hotels/bretton-woods-mount-washington/specials/three-or-more-nights-credit"}
+      {name:"Omni Mount Washington Resort & Spa", url:"https://www.omnihotels.com/hotels/bretton-woods-mount-washington/specials/third-night-free"}
     ],
-    dateAdded:"2026-07-11", lastUpdated:"2026-07-11"
+    dateAdded:"2026-07-11", lastUpdated:"2026-09-07"
   },
   {
     id:"ritz-carlton-stay-longer",
@@ -287,13 +287,13 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Complimentary third (or fourth) night folded into the average nightly rate at participating Mandarin Oriental hotels — including the flagship on Columbus Circle in New York.",
-    terms:"New York: book by Sept 26, 2026 for travel by Sept 30, 2026. Other properties vary.",
+    terms:"New York: book by Nov 23, 2026 for travel by Nov 25, 2026. Other properties vary.",
     url:"https://www.mandarinoriental.com/en/offers",
     source:"mandarinoriental.com",
     properties:[
       {name:"New York (One More Night)", url:"https://www.mandarinoriental.com/en/new-york/manhattan/offers/one-more-night"}
     ],
-    dateAdded:"2026-07-08", lastUpdated:"2026-07-08"
+    dateAdded:"2026-07-08", lastUpdated:"2026-09-07"
   },
   {
     id:"marriott-luxury-bonus-points",
@@ -412,7 +412,7 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Rosewood's summer 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Mayakoba runs a stay-3-pay-2 version with daily breakfast for two plus a $100 food, beverage or spa credit, and Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit through Oct 31. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
-    terms:"Fourth-night-free on 3 paid nights; representative window: Bangkok through Dec 31, 2026. Windows vary by hotel — check each property's offers page for current dates.",
+    terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Windows vary by hotel — check each property's offers page for current dates.",
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
@@ -421,7 +421,7 @@ const HOTEL_DEALS = [
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-05"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-07"
   },
   {
     id:"auberge-fourth-night-credit",
@@ -557,30 +557,17 @@ const HOTEL_DEALS = [
     dateAdded:"2026-08-19", lastUpdated:"2026-08-19"
   },
   {
-    id:"ihg-bonus-elite-nights",
-    brand:"InterContinental",
-    name:"Up to 10 Bonus Elite Night Credits",
-    scope:"InterContinental, Kimpton, Six Senses & all IHG brands worldwide",
-    type:"Loyalty Bonus",
-    region:"Worldwide",
-    summary:"A good one for anyone chasing IHG status this year: register (free) and every paid night you stay earns a bonus Elite Night Credit on top of the night itself, up to 10 bonus credits. In practice that halves the number of nights you need to reach the next tier. It stacks with the Pick Your Points bonus, so the same trip can earn both.",
-    terms:"Registration required before you stay. Eligible stays through Sept 30, 2026; minimum one night with at least $30 total spend per night. Award nights and Points + Cash nights do not count. Maximum 10 bonus Elite Night Credits.",
-    url:"https://www.ihg.com/content/us/en/deals/member-offers/bencsq3",
-    source:"ihg.com",
-    dateAdded:"2026-08-20", lastUpdated:"2026-08-20"
-  },
-  {
     id:"hyatt-fall-sale-up-to-30-off",
     brand:"Park Hyatt",
-    name:"Fall Sale — Up to 30% Off",
+    name:"Global Summer Offers — Up to 25% Off",
     scope:"800+ Hyatt hotels worldwide",
     type:"Percent Off",
     region:"Worldwide",
-    summary:"World of Hyatt members save up to 30% on stays booked now for travel this fall. Non-members save up to 25%; joining World of Hyatt is free and takes a minute at booking.",
-    terms:"Book by Sept 30, 2026 for stays through Dec 20, 2026. Discount tier depends on membership status and the rate plan selected.",
+    summary:"World of Hyatt members save up to 25% on stays completed by Sept 30, 2026, as part of Hyatt's Global Summer Offers sale. Joining World of Hyatt is free and takes a minute at booking.",
+    terms:"Stays must be completed by Sept 30, 2026. Discount tier depends on membership status and the rate plan selected.",
     url:"https://world.hyatt.com/content/gp/en/offers.html",
     source:"hyatt.com",
-    dateAdded:"2026-09-04", lastUpdated:"2026-09-04"
+    dateAdded:"2026-09-04", lastUpdated:"2026-09-07"
   },
   {
     id:"sea-island-cool-rates",
@@ -633,11 +620,11 @@ const HOTEL_DEALS = [
     scope:"Participating Peninsula hotels worldwide (Beverly Hills, New York, London, Bangkok, Hong Kong & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Booking and travel windows vary by property; Peninsula Beverly Hills is currently bookable through Sept 28, 2026 for travel by Dec 30, 2026.",
+    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Booking and travel windows vary by property; Peninsula Beverly Hills is currently bookable through Sept 30, 2026 for travel by Oct 2, 2026.",
     terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Two consecutive paid nights minimum; exact windows vary by hotel.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/peninsula-hotels",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-05"
+    dateAdded:"2026-09-05", lastUpdated:"2026-09-07"
   },
   {
     id:"lhw-complimentary-night",
@@ -659,11 +646,24 @@ const HOTEL_DEALS = [
     scope:"Participating W Hotels worldwide",
     type:"Resort Credit",
     region:"Worldwide",
-    summary:"A $150 food-and-beverage credit is included on qualifying stays booked through American Express Fine Hotels + Resorts at participating W Hotels. Book by Sept 7, 2026 for travel between May 21, 2026 and Apr 18, 2027.",
+    summary:"A food-and-beverage credit is included on qualifying stays booked through American Express Fine Hotels + Resorts at participating W Hotels — for example, a $150 credit at W Shanghai The Bund, bookable through Dec 27, 2026 for travel by Dec 30, 2026. Exact credit amount and window vary by property.",
     terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/w-hotels",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-05"
+    dateAdded:"2026-09-05", lastUpdated:"2026-09-07"
+  },
+  {
+    id:"park-hyatt-aviara-grandeur-getaway",
+    brand:"Park Hyatt",
+    name:"Grandeur Getaway — 20% Off Suites + $600 Resort Credit",
+    scope:"Park Hyatt Aviara Resort, Golf Club & Spa, Carlsbad, California",
+    type:"Percent Off",
+    region:"United States",
+    summary:"Book three or more nights in a suite at Park Hyatt Aviara Resort, Golf Club & Spa and save 20% off the room rate, plus a $600 resort credit toward dining and spa treatments.",
+    terms:"Bookable through Dec 20, 2026 for stays through Dec 31, 2026. Three-night suite minimum. Credit excludes room fee, tax, resort fees and alcohol; subject to availability.",
+    url:"https://parkhyattaviara.com/offers/",
+    source:"parkhyattaviara.com",
+    dateAdded:"2026-09-07", lastUpdated:"2026-09-07"
   }
 ];
 

@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-06";
+const LAST_CHECKED = "2026-09-07";
 
 const AIRLINE_DEALS = [
   {
@@ -184,11 +184,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Award Sale",
     dest:"Europe (nonstop ATL → LHR, CDG, AMS, FCO & more)",
-    summary:"Delta's summer SkyMiles flash sales to Europe continue — economy award seats have landed around 26,000 SkyMiles round-trip from most U.S. cities (as low as 19,000 nonstop from New York), while Delta One business class to Europe is running about 115,000 SkyMiles each way (roughly 97,750 with the 15% Delta SkyMiles co-brand card discount). Cash fares still run about $500–$600 round-trip. Atlanta is one of the best gateways for this one — reporting points to ATL and Seattle as the routings with the most Delta One award space, with availability holding into late August. Nonstop ATL service to Dublin, Paris, Amsterdam, Rome and London makes SkyTeam Europe easy — flash-sale seats sell out fast.",
+    summary:"Delta's summer SkyMiles flash sales to Europe continue — economy award seats have landed around 26,000 SkyMiles round-trip from most U.S. cities (as low as 19,000 nonstop from New York), while Delta One business class to Europe is running about 115,000 SkyMiles each way (roughly 97,750 with the 15% Delta SkyMiles co-brand card discount). Cash fares still run about $500–$600 round-trip. Atlanta is one of the best gateways for this one — reporting points to ATL and Seattle as the routings with the most Delta One award space, though award space changes day to day. Nonstop ATL service to Dublin, Paris, Amsterdam, Rome and London makes SkyTeam Europe easy — flash-sale seats sell out fast.",
     terms:"Flash-sale award seats sell out fast and have no fixed end date. Delta SkyMiles co-brand card holders save an extra 15% on award bookings. Book advance-purchase; Main Cabin for cash fares.",
     url:"https://www.delta.com/us/en/flight-deals/flash-sale",
     source:"delta.com",
-    dateAdded:"2026-06-24", lastUpdated:"2026-08-02"
+    dateAdded:"2026-06-24", lastUpdated:"2026-09-07"
   },
   {
     id:"frontier-atl-discount-fares",
@@ -197,11 +197,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Bonus Miles",
     dest:"49 cities from Atlanta (NYC, Chicago, Orlando, Vegas & more)",
-    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus system-wide Discount Den fare sales and register-and-earn bonus-mile offers on round-trip bookings. The current Discount Den sale requires booking by Sept 7, 2026 for travel Sept 22–Dec 17, 2026. Frontier is also running a GoWild Fall & Winter Pass promotion: new Discount Den members who buy a GoWild pass between Sept 1 and Sept 15, 2026 get a $25 voucher, and passes purchased through Sept 15, 2026 cover travel through Jan 4, 2027. Frontier's deals page refreshes its Atlanta routes often, so it is worth a quick look before booking anything domestic.",
-    terms:"Discount Den sale fares need a 21-day advance purchase and apply only on select days of the week. Bonus-mile promos require registering before booking; carry-on, seat and bag fees are extra and add up fast, so compare the all-in price against Delta and Southwest before booking. Fares are one-way and non-refundable. The GoWild pass promotion requires a Discount Den membership.",
+    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus recurring system-wide Discount Den fare sales with rotating booking windows and register-and-earn bonus-mile offers on round-trip bookings. Frontier is also running a GoWild Fall & Winter Pass promotion: new Discount Den members who buy a GoWild pass between Sept 1 and Sept 15, 2026 get a $25 voucher, and passes purchased through Sept 15, 2026 cover travel through Jan 4, 2027. Frontier's deals page refreshes its Atlanta routes and Discount Den sale dates often, so it is worth a quick look before booking anything domestic.",
+    terms:"Discount Den sale fares need advance purchase and apply only on select days of the week — check flyfrontier.com for the current booking window. Bonus-mile promos require registering before booking; carry-on, seat and bag fees are extra and add up fast, so compare the all-in price against Delta and Southwest before booking. Fares are one-way and non-refundable. The GoWild pass promotion requires a Discount Den membership.",
     url:"https://flights.flyfrontier.com/en/flights-from-atlanta",
     source:"flyfrontier.com",
-    dateAdded:"2026-07-05", lastUpdated:"2026-09-05"
+    dateAdded:"2026-07-05", lastUpdated:"2026-09-07"
   },
   {
     id:"southwest-atl-low-fares",
@@ -297,15 +297,15 @@ const AIRLINE_DEALS = [
   {
     id:"delta-vacations-summer-package-savings",
     airline:"Delta Air Lines",
-    name:"Delta Vacations — Up to $500 Off Flight + Hotel",
+    name:"Delta Vacations — Save on Flight + Hotel Packages",
     scope:"Domestic",
     type:"Package Deal",
     dest:"U.S., Canada, Mexico, the Caribbean & Central America from Atlanta",
-    summary:"Bundle an ATL flight with a hotel through Delta Vacations and save up to $300 on eligible worldwide packages as a SkyMiles member — the summer SMSUMMER26/SMMED26 codes have rolled into a new fall cycle. The lead traveler also picks up bonus SkyMiles on qualifying bookings.",
-    terms:"Book by Sept 30, 2026 for most travel windows (some packages extend the book-by date to Oct 31, 2026 for travel through Dec 31, 2026). Requires a four-night minimum hotel stay with flight and hotel booked together, at least one Delta-operated flight, and the lead traveler must be a (free) SkyMiles member. Exact discount tier and travel window vary by package — check delta.com/vacations for the current promo code.",
+    summary:"Bundle an ATL flight with a hotel through Delta Vacations and save on eligible worldwide packages as a SkyMiles member — instant savings run roughly $200–$350 or more depending on the resort. The lead traveler also picks up bonus SkyMiles on qualifying bookings.",
+    terms:"Book by Sept 30, 2026 for travel through about Mar 30, 2027. Requires a four-night minimum hotel stay with flight and hotel booked together, at least one Delta-operated flight, and the lead traveler must be a (free) SkyMiles member. Exact discount amount and travel window vary by package — check delta.com/vacations for current terms.",
     url:"https://www.delta.com/us/en/delta-vacations/offers-deals",
     source:"delta.com",
-    dateAdded:"2026-08-03", lastUpdated:"2026-09-04"
+    dateAdded:"2026-08-03", lastUpdated:"2026-09-07"
   },
   {
     id:"delta-south-pacific-award-sale",
@@ -319,6 +319,19 @@ const AIRLINE_DEALS = [
     url:"https://www.delta.com/us/en/flight-deals/flash-sale",
     source:"delta.com",
     dateAdded:"2026-08-10", lastUpdated:"2026-08-21"
+  },
+  {
+    id:"american-vacations-fall-savings",
+    airline:"American Airlines",
+    name:"American Airlines Vacations — Fall Package Savings",
+    scope:"Domestic",
+    type:"Package Deal",
+    dest:"U.S. & Canada vacation packages from Atlanta",
+    summary:"American Airlines Vacations is discounting flight-and-hotel packages this fall with promo codes FALL75 ($75 off packages of $1,500 or more) and FALL100 ($100 off packages of $2,500 or more). Each requires round-trip flights booked as part of the package.",
+    terms:"Book Sept 1–30, 2026 for travel Sept 3–Dec 31, 2026. Minimum 3-night stay. Blackout dates: Sept 7, Nov 26, Dec 25 and Dec 31, 2026. U.S. and Canada packages only.",
+    url:"https://www.aavacations.com/en/",
+    source:"aavacations.com",
+    dateAdded:"2026-09-07", lastUpdated:"2026-09-07"
   }
 ];
 
