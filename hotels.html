@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-08";
+const LAST_CHECKED = "2026-09-09";
 
 const HOTEL_DEALS = [
   {
@@ -316,14 +316,14 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Stay three nights at any Waldorf Astoria, LXR or Conrad hotel or resort and the fourth night is complimentary. There is also a straight 25% off three-plus-night stays that includes full breakfast for two daily and a $150 resort credit — a good swap if a free fourth night does not fit your dates. Waldorf Astoria Orlando layers on a $100 resort credit and complimentary valet, Park City runs 25% off any length of stay with breakfast and a $100 credit, and Monarch Beach suite bookings add a $300 resort credit.",
-    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include Chicago (4th night, book by Sept 27 for travel by Oct 1, 2026) and Beijing (complimentary night, book by Dec 26 for travel by Dec 30, 2026).",
+    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include Osaka (complimentary 3rd night, book by Sept 30 for travel by Dec 31, 2026) and Beverly Hills (complimentary 3rd night, book by Sept 30 for travel by Oct 2, 2026).",
     url:"https://www.hilton.com/en/offers/waldorf-astoria/",
     source:"hilton.com",
     properties:[
       {name:"Orlando ($100 credit)", url:"https://www.waldorfastoriaorlando.com/special-offers/"},
       {name:"Monarch Beach, CA", url:"https://www.waldorfastoriamonarchbeach.com/"}
     ],
-    dateAdded:"2026-07-03", lastUpdated:"2026-09-05"
+    dateAdded:"2026-07-03", lastUpdated:"2026-09-09"
   },
   {
     id:"montage-fourth-night-free",
@@ -523,25 +523,25 @@ const HOTEL_DEALS = [
     name:"Up to 5 Free Nights — Latin America & Caribbean",
     scope:"Participating Hyatt resorts across Latin America & the Caribbean",
     type:"Loyalty Bonus",
-    region:"Worldwide",
+    region:"Latin America & Caribbean",
     summary:"A good one to register for now and use over the winter: earn one Category 1-4 Free Night Award for every three nights at participating Hyatt resorts in Latin America and the Caribbean, up to five free nights in total. The qualifying stays are in January through March 2027, so this is a plan-ahead offer — but registration is open today and costs nothing. Pairs well with a spring-break beach trip.",
     terms:"Register (free World of Hyatt account) between Aug 3 and Sept 30, 2026. Only nights completed after you register and between Jan 1 and Mar 31, 2027 count. Maximum five Free Night Awards; they must be redeemed by June 30, 2027.",
     url:"https://world.hyatt.com/content/gp/en/offers.html",
     source:"hyatt.com",
-    dateAdded:"2026-08-13", lastUpdated:"2026-08-13"
+    dateAdded:"2026-08-13", lastUpdated:"2026-09-09"
   },
   {
     id:"hyatt-extended-stay-3k-points",
     brand:"Park Hyatt",
     name:"3,000 Bonus Points on Every 3+ Night Stay",
-    scope:"Hyatt Place & Hyatt Select hotels worldwide (World of Hyatt members)",
+    scope:"Hyatt Place & Hyatt Select hotels in the Americas (World of Hyatt members)",
     type:"Bonus Points",
-    region:"Worldwide",
-    summary:"A quieter World of Hyatt offer that rewards longer stays — every stay of three or more consecutive nights at a Hyatt Place or Hyatt Select earns 3,000 bonus points, repeatable up to 30,000 points across the promotion.",
+    region:"Americas (US, Canada, Caribbean & Latin America)",
+    summary:"A quieter World of Hyatt offer that rewards longer stays — every stay of three or more consecutive nights at a Hyatt Place or Hyatt Select in the Americas earns 3,000 bonus points, repeatable up to 30,000 points across the promotion.",
     terms:"Register with your free World of Hyatt account before your stay. Eligible stays run June 1 – Sept 30, 2026. Three consecutive nights minimum per stay; maximum 30,000 bonus points.",
     url:"https://world.hyatt.com/content/gp/en/offers/hyatt-place-hyatt-select-3k-bonus-points.html",
     source:"hyatt.com",
-    dateAdded:"2026-08-14", lastUpdated:"2026-09-06"
+    dateAdded:"2026-08-14", lastUpdated:"2026-09-09"
   },
   {
     id:"acqualina-fourth-night-free",
@@ -557,17 +557,17 @@ const HOTEL_DEALS = [
     dateAdded:"2026-08-19", lastUpdated:"2026-08-19"
   },
   {
-    id:"hyatt-fall-sale-up-to-30-off",
-    brand:"Park Hyatt",
-    name:"Global Summer Offers — Up to 25% Off",
-    scope:"800+ Hyatt hotels worldwide",
-    type:"Percent Off",
+    id:"autograph-collection-amex-credit",
+    brand:"Autograph Collection",
+    name:"$75 Property Credit — Amex Fine Hotels + Resorts",
+    scope:"Participating Autograph Collection hotels worldwide, booked through American Express Travel",
+    type:"Resort Credit",
     region:"Worldwide",
-    summary:"World of Hyatt members save up to 25% on stays completed by Sept 30, 2026, as part of Hyatt's Global Summer Offers sale. Joining World of Hyatt is free and takes a minute at booking.",
-    terms:"Stays must be completed by Sept 30, 2026. Discount tier depends on membership status and the rate plan selected.",
-    url:"https://world.hyatt.com/content/gp/en/offers.html",
-    source:"hyatt.com",
-    dateAdded:"2026-09-04", lastUpdated:"2026-09-07"
+    summary:"American Express Travel's Fine Hotels + Resorts / The Hotel Collection lists a $75 credit toward eligible on-property charges at participating Autograph Collection hotels, for bookings of two or more consecutive nights, on top of the standard perks (room upgrade when available, late checkout) that come with the collection.",
+    terms:"Requires booking two or more consecutive nights through American Express Travel with an eligible Amex Gold, Platinum or Business Platinum card. Book by Apr 9, 2027 for travel between Oct 18, 2026 and Apr 11, 2027.",
+    url:"https://www.americanexpress.com/en-us/travel/discover/brand/autograph-collection-hotels",
+    source:"americanexpress.com",
+    dateAdded:"2026-09-09", lastUpdated:"2026-09-09"
   },
   {
     id:"sea-island-cool-rates",
