@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-11";
+const LAST_CHECKED = "2026-09-12";
 
 const HOTEL_DEALS = [
   {
@@ -283,17 +283,19 @@ const HOTEL_DEALS = [
     id:"mandarin-oriental-one-more-night",
     brand:"Mandarin Oriental",
     name:"Complimentary Night — 'One More Night'",
-    scope:"Mandarin Oriental, New York & select global properties",
+    scope:"Mandarin Oriental hotels worldwide (New York, both Paris addresses & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Complimentary third (or fourth) night folded into the average nightly rate at participating Mandarin Oriental hotels — including the flagship on Columbus Circle in New York.",
-    terms:"New York: book by Nov 23, 2026 for travel by Nov 25, 2026. Other properties vary.",
+    summary:"Complimentary night folded into the stay under Mandarin Oriental's 'One More Night' program, now running at a growing list of participating hotels — including the flagship on Columbus Circle in New York and both Paris properties, Place Vendôme and Lutetia.",
+    terms:"New York: book by Sept 26, 2026 for travel by Sept 30, 2026. Paris and other properties vary — check each hotel's own offers page for its current window.",
     url:"https://www.mandarinoriental.com/en/offers",
     source:"mandarinoriental.com",
     properties:[
-      {name:"New York (One More Night)", url:"https://www.mandarinoriental.com/en/new-york/manhattan/offers/one-more-night"}
+      {name:"New York (One More Night)", url:"https://www.mandarinoriental.com/en/new-york/manhattan/offers/one-more-night"},
+      {name:"Paris, Place Vendôme", url:"https://www.mandarinoriental.com/en/paris/place-vendome/offers"},
+      {name:"Paris, Lutetia (One More Night)", url:"https://www.mandarinoriental.com/en/paris/lutetia/offers/one-more-night"}
     ],
-    dateAdded:"2026-07-08", lastUpdated:"2026-09-07"
+    dateAdded:"2026-07-08", lastUpdated:"2026-09-12"
   },
   {
     id:"marriott-luxury-bonus-points",
@@ -395,14 +397,17 @@ const HOTEL_DEALS = [
     id:"st-regis-free-night",
     brand:"St. Regis",
     name:"Third/Fourth Night Free at Resorts",
-    scope:"St. Regis resorts (Punta Mita, Kanai & more)",
+    scope:"St. Regis resorts (Punta Mita, Kanai, Longboat Key & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Marquee St. Regis resorts run complimentary-night offers — St. Regis Kanai (Riviera Maya) gives a free third night and St. Regis Punta Mita a free third or fourth night — with butler service throughout. Bonvoy luxury bonus points stack on top.",
-    terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates.",
+    summary:"Marquee St. Regis resorts run complimentary-night offers — St. Regis Kanai (Riviera Maya) gives a free third night and St. Regis Punta Mita a free third or fourth night — with butler service throughout. St. Regis Longboat Key Resort in Florida instead runs a $350 food & beverage credit through Amex Fine Hotels + Resorts. Bonvoy luxury bonus points stack on top where applicable.",
+    terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates. Longboat Key's Amex FHR credit: book by Dec 31, 2026 for travel by Jan 3, 2027.",
     url:"https://st-regis.marriott.com/offers/",
     source:"st-regis.marriott.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+    properties:[
+      {name:"Longboat Key, FL ($350 F&B credit)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Longboat-Key/The-St-Regis-Longboat-Key-Resort"}
+    ],
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-12"
   },
   {
     id:"rosewood-fourth-night",
@@ -620,11 +625,11 @@ const HOTEL_DEALS = [
     scope:"Participating Peninsula hotels worldwide (Beverly Hills, New York, London, Bangkok, Hong Kong & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Booking and travel windows vary by property; Peninsula Beverly Hills is currently bookable through Sept 28, 2026 for travel by Dec 30, 2026.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Two consecutive paid nights minimum; exact windows vary by hotel.",
+    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Peninsula Beverly Hills is currently running this through a book-by-Sept-30, 2026 window (travel by Oct 2, 2026), alongside a separate complimentary-fourth-night version bookable through Dec 20, 2026 (travel by Dec 23, 2026).",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Exact night count and window vary by hotel and by booking date.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/peninsula-hotels",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-08"
+    dateAdded:"2026-09-05", lastUpdated:"2026-09-12"
   },
   {
     id:"lhw-complimentary-night",
