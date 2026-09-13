@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-12";
+const LAST_CHECKED = "2026-09-13";
 
 const HOTEL_DEALS = [
   {
@@ -286,16 +286,16 @@ const HOTEL_DEALS = [
     scope:"Mandarin Oriental hotels worldwide (New York, both Paris addresses & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Complimentary night folded into the stay under Mandarin Oriental's 'One More Night' program, now running at a growing list of participating hotels — including the flagship on Columbus Circle in New York and both Paris properties, Place Vendôme and Lutetia.",
-    terms:"New York: book by Sept 26, 2026 for travel by Sept 30, 2026. Paris and other properties vary — check each hotel's own offers page for its current window.",
+    summary:"Complimentary night folded into the stay under Mandarin Oriental's 'One More Night' program, now running at a growing list of participating hotels — including the flagship on Columbus Circle in New York and both Paris properties, Place Vendôme and Lutetia. The Paris booking window was recently extended.",
+    terms:"New York: an ongoing rolling offer rather than a fixed cutoff — check the property's own offers page for its current window. Paris (Place Vendôme and Lutetia): book by Dec 1, 2026 for travel by Dec 31, 2026.",
     url:"https://www.mandarinoriental.com/en/offers",
     source:"mandarinoriental.com",
     properties:[
       {name:"New York (One More Night)", url:"https://www.mandarinoriental.com/en/new-york/manhattan/offers/one-more-night"},
-      {name:"Paris, Place Vendôme", url:"https://www.mandarinoriental.com/en/paris/place-vendome/offers"},
+      {name:"Paris, Place Vendôme", url:"https://www.mandarinoriental.com/en/paris/place-vendome/offers/one-more-night"},
       {name:"Paris, Lutetia (One More Night)", url:"https://www.mandarinoriental.com/en/paris/lutetia/offers/one-more-night"}
     ],
-    dateAdded:"2026-07-08", lastUpdated:"2026-09-12"
+    dateAdded:"2026-07-08", lastUpdated:"2026-09-13"
   },
   {
     id:"marriott-luxury-bonus-points",
@@ -305,10 +305,10 @@ const HOTEL_DEALS = [
     type:"Loyalty Bonus",
     region:"Worldwide",
     summary:"Earn 1,500 Marriott Bonvoy bonus points on every stay of two or more nights, plus an extra 3,000 points if the stay is at a Marriott Bonvoy resort — across nearly the whole portfolio, from luxury brands like Ritz-Carlton, St. Regis and JW Marriott down to Courtyard and Fairfield. Replaces the summer luxury bonus-points promotion, which closed at the end of August.",
-    terms:"Register with your free Bonvoy account before you stay. Eligible stays must be booked and completed between Sept 22 and Nov 22, 2026; 2-night minimum.",
+    terms:"Register with your free Bonvoy account by Nov 13, 2026. Eligible stays must be booked and completed between Sept 22 and Nov 22, 2026; 2-night minimum. Excludes Bulgari and Ritz-Carlton Yacht Collection.",
     url:"https://www.marriott.com/loyalty/earn/promotions.mi",
     source:"marriott.com",
-    dateAdded:"2026-07-06", lastUpdated:"2026-09-04"
+    dateAdded:"2026-07-06", lastUpdated:"2026-09-13"
   },
   {
     id:"waldorf-astoria-suite-credit",
@@ -318,14 +318,14 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Stay three nights at any Waldorf Astoria, LXR or Conrad hotel or resort and the fourth night is complimentary. There is also a straight 25% off three-plus-night stays that includes full breakfast for two daily and a $150 resort credit — a good swap if a free fourth night does not fit your dates. Waldorf Astoria Orlando layers on a $100 resort credit and complimentary valet, Park City runs 25% off any length of stay with breakfast and a $100 credit, and Monarch Beach suite bookings add a $300 resort credit.",
-    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include Osaka (complimentary 3rd night, book by Sept 30 for travel by Dec 31, 2026) and Beverly Hills (complimentary 3rd night, book by Sept 30 for travel by Oct 2, 2026).",
+    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include Osaka (complimentary 3rd night, book by Dec 28, 2026 for travel by Dec 31, 2026, plus a separate 25% off booked by Dec 31, 2026 for travel by Aug 31, 2027) and Beverly Hills (complimentary 3rd night, book by Sept 28, 2026 for travel by Dec 30, 2026).",
     url:"https://www.hilton.com/en/offers/waldorf-astoria/",
     source:"hilton.com",
     properties:[
       {name:"Orlando ($100 credit)", url:"https://www.waldorfastoriaorlando.com/special-offers/"},
       {name:"Monarch Beach, CA", url:"https://www.waldorfastoriamonarchbeach.com/"}
     ],
-    dateAdded:"2026-07-03", lastUpdated:"2026-09-09"
+    dateAdded:"2026-07-03", lastUpdated:"2026-09-13"
   },
   {
     id:"montage-fourth-night-free",
@@ -599,11 +599,11 @@ const HOTEL_DEALS = [
     scope:"Fairmont Royal Pavilion, St. James, Barbados",
     type:"Free Night",
     region:"Caribbean",
-    summary:"Book three consecutive nights at this beachfront Fairmont on the calm west coast of Barbados and the fourth night is complimentary, with breakfast for two included every morning. Barbados sits outside the busiest part of the hurricane belt and its late-autumn rates are far gentler than the winter ones, so this is a good shoulder-season family option. Atlanta connects easily via Miami or New York.",
-    terms:"Three consecutive paid nights required for the complimentary fourth. Current windows: book by Sept 30, 2026 for stays through Oct 31, and book by Oct 31, 2026 for stays through Nov 22. Breakfast for two included; rates exclude taxes and service charges.",
+    summary:"Book three consecutive nights at this beachfront Fairmont on the calm west coast of Barbados and the fourth night is complimentary, with breakfast for two included every morning. Barbados sits outside the busiest part of the hurricane belt and its late-autumn rates are far gentler than the winter ones, so this is a good shoulder-season family option. Atlanta connects easily via Miami or New York. The offer has since settled into a standing, evergreen deal rather than the earlier rolling monthly booking windows.",
+    terms:"Three consecutive paid nights required for the complimentary fourth. Breakfast for two included every morning; blackout dates apply and rates exclude taxes and service charges.",
     url:"https://www.fairmont.com/en/hotels/barbados/fairmont-royal-pavilion/offers.html",
     source:"fairmont.com",
-    dateAdded:"2026-08-27", lastUpdated:"2026-08-27"
+    dateAdded:"2026-08-27", lastUpdated:"2026-09-13"
   },
   {
     id:"hyatt-house-studios-extended-stay-bonus",

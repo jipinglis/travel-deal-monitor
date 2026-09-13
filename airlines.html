@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-12";
+const LAST_CHECKED = "2026-09-13";
 
 const AIRLINE_DEALS = [
   {
@@ -184,11 +184,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Award Sale",
     dest:"Europe (nonstop ATL → LHR, CDG, AMS, FCO & more)",
-    summary:"Delta's summer SkyMiles flash sales to Europe continue — economy award seats have landed around 26,000 SkyMiles round-trip from most U.S. cities (as low as 19,000 nonstop from New York), while Delta One business class to Europe is running about 115,000 SkyMiles each way (roughly 97,750 with the 15% Delta SkyMiles co-brand card discount). Cash fares still run about $500–$600 round-trip. Atlanta is one of the best gateways for this one — reporting points to ATL and Seattle as the routings with the most Delta One award space, though award space changes day to day. Nonstop ATL service to Dublin, Paris, Amsterdam, Rome and London makes SkyTeam Europe easy — flash-sale seats sell out fast.",
-    terms:"Flash-sale award seats sell out fast and have no fixed end date. Delta SkyMiles co-brand card holders save an extra 15% on award bookings. Book advance-purchase; Main Cabin for cash fares.",
+    summary:"Delta runs periodic SkyMiles flash sales and fare sales to Europe from Atlanta throughout the year rather than one continuous static sale — recent rounds have priced economy award seats around 26,000 SkyMiles round-trip from most U.S. cities (as low as 19,000 nonstop from New York) and Delta One business class around 115,000 SkyMiles each way (roughly 97,750 with the 15% Delta SkyMiles co-brand card discount), with cash fares around $500–$600 round-trip. Separately, Delta is also running a buy-SkyMiles promotion with up to a 50% bonus through Oct 31, 2026, a way to top up for an award booking. Nonstop ATL service to Dublin, Paris, Amsterdam, Rome and London makes SkyTeam Europe easy — check the flash-sale page for what's currently live.",
+    terms:"Flash-sale award seats sell out fast and rotate without a fixed schedule; check delta.com for the current round. Delta SkyMiles co-brand card holders save an extra 15% on award bookings. The buy-miles bonus (up to 50%, capped at 60,000 base miles per account per year) runs through Oct 31, 2026.",
     url:"https://www.delta.com/us/en/flight-deals/flash-sale",
     source:"delta.com",
-    dateAdded:"2026-06-24", lastUpdated:"2026-09-07"
+    dateAdded:"2026-06-24", lastUpdated:"2026-09-13"
   },
   {
     id:"frontier-atl-discount-fares",
@@ -197,24 +197,24 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Bonus Miles",
     dest:"49 cities from Atlanta (NYC, Chicago, Orlando, Vegas & more)",
-    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus recurring system-wide Discount Den fare sales with rotating booking windows and register-and-earn bonus-mile offers on round-trip bookings. Frontier's 2026 GoWild Fall & Winter Pass is $199 for immediate, unlimited travel through Feb 28, 2027. New Discount Den members who buy a GoWild Fall & Winter Pass between Sept 1 and Sept 15, 2026 also get a one-time $25 voucher.",
+    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus recurring system-wide Discount Den fare sales with rotating booking windows and register-and-earn bonus-mile offers on round-trip bookings. Frontier's 2026 GoWild Fall & Winter Pass is now $249 for immediate, unlimited travel through Feb 28, 2027 (price has risen from its August launch price of $199). New Discount Den members who buy a GoWild Fall & Winter Pass between Sept 1 and Sept 15, 2026 also get a one-time $25 voucher.",
     terms:"Discount Den sale fares need advance purchase and apply only on select days of the week — check flyfrontier.com for the current booking window. Bonus-mile promos require registering before booking; carry-on, seat and bag fees are extra and add up fast, so compare the all-in price against Delta and Southwest before booking. Fares are one-way and non-refundable. The GoWild pass promotion requires a Discount Den membership.",
     url:"https://flights.flyfrontier.com/en/flights-from-atlanta",
     source:"flyfrontier.com",
-    dateAdded:"2026-07-05", lastUpdated:"2026-09-08"
+    dateAdded:"2026-07-05", lastUpdated:"2026-09-13"
   },
   {
     id:"southwest-atl-low-fares",
     airline:"Southwest Airlines",
-    name:"Summer Low Fares from Atlanta + Rapid Rewards",
+    name:"Everyday Low Fares from Atlanta + Rapid Rewards",
     scope:"Domestic",
     type:"Everyday Low Fares",
     dest:"Domestic network from Atlanta",
-    summary:"Southwest has the second-biggest presence at ATL. Its three most recent flash sales have now all closed — a 40%-off sale that ended Aug 13, a one-way fare sale that ended Sept 3, and the Travel S'more Sale (one-way fares from $59, for travel Sept 29, 2026 through Mar 3, 2027) that closed Sept 10 — but everyday low fares remain bookable on the deals page, and Getaways flight+hotel packages continue to take up to $250 off domestic and $500 off international bundles. Two free checked bags plus no change fees sweeten every booking. Southwest runs flash sales roughly monthly, so it is worth checking back.",
-    terms:"Everyday low fares remain bookable any time; sale fares when they return are one-way Basic, need advance purchase, and are limited by seat, day and market — flexible dates help a lot. Getaways package discounts apply automatically at booking.",
+    summary:"Southwest has the second-biggest presence at ATL. Its recent flash sales (40% off, a one-way fare sale, and the Travel S'more Sale) have all closed for now and no new fare sale has replaced them yet, but everyday low fares remain bookable on the deals page and Getaways flight+hotel packages continue to take up to $250 off domestic and $500 off international bundles. Rapid Rewards members can also buy points at a 50% discount, as low as 1.5 cents each, through Oct 2, 2026. Two free checked bags plus no change fees sweeten every booking.",
+    terms:"Everyday low fares remain bookable any time; Getaways package discounts apply automatically at booking. The 50%-off points purchase runs through Oct 2, 2026, 11:59pm CT, capped at 60,000 points per transaction.",
     url:"https://www.southwest.com/special-offers/flight-deals/",
     source:"southwest.com",
-    dateAdded:"2026-07-08", lastUpdated:"2026-09-10"
+    dateAdded:"2026-07-08", lastUpdated:"2026-09-13"
   },
   {
     id:"american-atl-deals",
@@ -236,11 +236,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Fare Sale",
     dest:"United hubs from Atlanta (EWR, ORD, IAH, DEN, SFO)",
-    summary:"United's Atlanta deals page surfaces low fares to its hubs and MileagePlus saver awards — a strong option for West Coast and international connections beyond Delta's SkyTeam network.",
-    terms:"Fares dynamic; Basic Economy is cheapest but restrictive. Advance purchase.",
+    summary:"United's Atlanta deals page surfaces low fares to its hubs and MileagePlus saver awards — a strong option for West Coast and international connections beyond Delta's SkyTeam network. United is also running a buy-miles promotion with bonuses reportedly as high as 95% or more on targeted offers, a way to stock up for a future award booking.",
+    terms:"Fares dynamic; Basic Economy is cheapest but restrictive. Advance purchase. The buy-miles bonus runs through Sept 30, 2026, 11:59pm CT, capped at 50,000 miles per 90 days and 200,000 per year.",
     url:"https://www.united.com/en/us/deals/flights-to-atlanta",
     source:"united.com",
-    dateAdded:"2026-06-30", lastUpdated:"2026-06-30"
+    dateAdded:"2026-06-30", lastUpdated:"2026-09-13"
   },
   {
     id:"jetblue-atl-fares",
