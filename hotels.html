@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-14";
+const LAST_CHECKED = "2026-09-15";
 
 const HOTEL_DEALS = [
   {
@@ -207,9 +207,10 @@ const HOTEL_DEALS = [
       {name:"Surfside, Miami Beach (4th night free)", url:"https://www.fourseasons.com/surfside/offers/stay-longer-fourth-night-free/"},
       {name:"London Park Lane (4th night free)", url:"https://www.fourseasons.com/london/offers/stay-longer-fourth-night-free/"},
       {name:"Costa Rica (4th night free)", url:"https://www.fourseasons.com/costarica/offers/stay-longer-fourth-night-free/"},
-      {name:"Cabo del Sol (4th night free)", url:"https://www.fourseasons.com/cabodelsol/offers/stay-longer-fourth-night-free/"}
+      {name:"Cabo del Sol (4th night free)", url:"https://www.fourseasons.com/cabodelsol/offers/stay-longer-fourth-night-free/"},
+      {name:"Baltimore (4th night free)", url:"https://www.fourseasons.com/baltimore/offers/stay_longer_third_night_free/"}
     ],
-    dateAdded:"2026-07-11", lastUpdated:"2026-08-25"
+    dateAdded:"2026-07-11", lastUpdated:"2026-09-15"
   },
   {
     id:"fairmont-endless-summer",
@@ -335,7 +336,7 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"United States / Mexico",
     summary:"Los Cabos gives a complimentary fourth night with a $70 daily breakfast credit and airport transfers. Suite Escape adds 10–15% off plus up to $500 daily resort credit at other Montage resorts.",
-    terms:"Los Cabos: three consecutive paid nights required. Suite credits vary ($300–$500/day).",
+    terms:"Los Cabos: three consecutive paid nights required, booked at least 21 days ahead. Suite credits vary ($300–$500/day).",
     url:"https://www.montage.com/loscabos/accommodations/special-offers/",
     source:"montage.com",
     properties:[
@@ -344,7 +345,7 @@ const HOTEL_DEALS = [
       {name:"Palmetto Bluff, SC", url:"https://www.montage.com/palmettobluff/accommodations/special-offers/"},
       {name:"Healdsburg, CA", url:"https://www.montage.com/healdsburg/special-offers/"}
     ],
-    dateAdded:"2026-06-15", lastUpdated:"2026-06-15"
+    dateAdded:"2026-06-15", lastUpdated:"2026-09-15"
   },
   {
     id:"aman-complimentary-nights",
@@ -371,11 +372,11 @@ const HOTEL_DEALS = [
     scope:"Relais & Châteaux boutique hotels & château estates",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Extended-weekend packages plus complimentary-fourth-night and 15–25%-off offers across the independent Relais & Châteaux collection of luxury inns and gourmet estates.",
-    terms:"Amex offers: 25% off select rooms booking by Sept 30, 2026 for travel through Dec 29, 2026.",
+    summary:"Extended-weekend packages plus complimentary-fourth-night and 15–25%-off offers across the independent Relais & Châteaux collection of luxury inns and gourmet estates. A separate targeted Amex Offer gives a $100 statement credit after spending $500 or more at a participating property.",
+    terms:"Amex Travel offer: 25% off select rooms, booking by Sept 30, 2026 for travel through Dec 29, 2026. Amex Offers statement credit: spend $500+ at a participating property between July 15 and Nov 15, 2026 (enrollment required, targeted offer, booking must go through the Relais & Châteaux channel).",
     url:"https://www.relaischateaux.com/us/special-offers",
     source:"relaischateaux.com",
-    dateAdded:"2026-06-22", lastUpdated:"2026-09-05"
+    dateAdded:"2026-06-22", lastUpdated:"2026-09-15"
   },
   {
     id:"westin-stay-longer-breakfast",
@@ -384,14 +385,14 @@ const HOTEL_DEALS = [
     scope:"Westin Hotels & Resorts worldwide",
     type:"Percent Off",
     region:"Worldwide",
-    summary:"Westin's recurring Stay Longer & Save (up to 20% off 5+ nights) plus 'Stay for Breakfast' rates that bundle in daily breakfast for two. Bonvoy members layer on bonus points and family perks.",
-    terms:"Stay-longer valid Feb 18 – Dec 18, 2026; breakfast packages vary by property. Member rate needs Bonvoy sign-in.",
-    url:"https://westin.marriott.com/offers/",
+    summary:"Westin's recurring Stay Longer & Save gives tiered savings — 10% off 3 nights, 15% off 4 nights, 20% off 5+ nights — plus 'Stay for Breakfast' rates that bundle in daily breakfast for two. Bonvoy members layer on bonus points and family perks.",
+    terms:"Stay Longer & Save: promo code S6058, valid through Nov 11, 2026; breakfast packages vary by property. Member rate needs Bonvoy sign-in.",
+    url:"https://www.marriott.com/offers/stay-longer-and-save-OFF-158597",
     source:"westin.marriott.com",
     properties:[
       {name:"Houston Memorial City (Stay for Breakfast)", url:"https://www.marriott.com/offers/breakfast-package-houston-texas-OFF-165794/HOUMY-houmy-the-westin-houston-memorial-city"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-15"
   },
   {
     id:"st-regis-free-night",
@@ -421,12 +422,12 @@ const HOTEL_DEALS = [
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
-      {name:"Mayakoba, Riviera Maya (stay 3 pay 2)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
+      {name:"Mayakoba, Riviera Maya (stay 3 pay 2, book by Oct 15 2026 for travel by Oct 31 2026)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
       {name:"Baha Mar, Bahamas ($100 daily credit)", url:"https://www.rosewoodhotels.com/en/baha-mar/offers/more-rosewood"},
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-07"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-15"
   },
   {
     id:"auberge-fourth-night-credit",
@@ -555,11 +556,11 @@ const HOTEL_DEALS = [
     scope:"Acqualina Resort & Spa on the Beach, Sunny Isles Beach, Florida",
     type:"Free Night",
     region:"United States",
-    summary:"Book three nights at this Forbes Five-Star oceanfront resort north of Miami Beach and the fourth night is complimentary, with daily breakfast for two and a spa credit included. A nice one for a long fall weekend — it is a short nonstop from Atlanta and the shoulder season rates are much friendlier than winter.",
+    summary:"Book three nights at this Forbes Five-Star oceanfront resort north of Miami Beach and the fourth night is complimentary, with daily breakfast for two and a $45 spa credit included. A nice one for a long fall weekend — it is a short nonstop from Atlanta and the shoulder season rates are much friendlier than winter.",
     terms:"Four-night minimum stay required; valid for stays through Dec 19, 2026. Blackout dates apply over holidays and the offer is not combinable with other promotions.",
     url:"https://www.acqualinaresort.com/offers/fourth-night-free/",
     source:"acqualinaresort.com",
-    dateAdded:"2026-08-19", lastUpdated:"2026-08-19"
+    dateAdded:"2026-08-19", lastUpdated:"2026-09-15"
   },
   {
     id:"autograph-collection-amex-credit",
@@ -625,11 +626,11 @@ const HOTEL_DEALS = [
     scope:"Participating Peninsula hotels worldwide (Beverly Hills, New York, London, Bangkok, Hong Kong & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Peninsula Beverly Hills is currently running this through a book-by-Sept-30, 2026 window (travel by Oct 2, 2026), alongside a separate complimentary-fourth-night version bookable through Dec 20, 2026 (travel by Dec 23, 2026).",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Exact night count and window vary by hotel and by booking date.",
+    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Peninsula Beverly Hills is currently running this through a book-by-Sept-30, 2026 window (travel by Oct 2, 2026), alongside a separate complimentary-fourth-night version bookable through Dec 20, 2026 (travel by Dec 23, 2026). A separate, targeted Amex Offer credits $100 back after spending $500 or more at a participating Peninsula hotel, for spending between Aug 21 and Nov 30, 2026 (enrollment required; not all cardholders will see it).",
+    terms:"FHR free-night offer requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card; exact night count and window vary by hotel and by booking date. The $100 Amex Offers statement credit requires separate enrollment and is targeted.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/peninsula-hotels",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-12"
+    dateAdded:"2026-09-05", lastUpdated:"2026-09-15"
   },
   {
     id:"lhw-complimentary-night",
@@ -651,11 +652,11 @@ const HOTEL_DEALS = [
     scope:"Participating W Hotels worldwide",
     type:"Resort Credit",
     region:"Worldwide",
-    summary:"A food-and-beverage credit is included on qualifying stays booked through American Express Fine Hotels + Resorts at participating W Hotels — for example, a $150 credit at W Shanghai The Bund, bookable through Dec 27, 2026 for travel by Dec 30, 2026. Exact credit amount and window vary by property.",
+    summary:"A property credit is included on qualifying stays booked through American Express Fine Hotels + Resorts at participating W Hotels — for example, a $200 credit at W Shanghai The Bund, bookable through Dec 20, 2026 for travel by Dec 23, 2026. Exact credit amount and window vary by property.",
     terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/w-hotels",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-07"
+    dateAdded:"2026-09-05", lastUpdated:"2026-09-15"
   },
   {
     id:"park-hyatt-aviara-grandeur-getaway",
@@ -665,10 +666,10 @@ const HOTEL_DEALS = [
     type:"Percent Off",
     region:"United States",
     summary:"Book three or more nights in a suite at Park Hyatt Aviara Resort, Golf Club & Spa and save 20% off the room rate, plus a $600 resort credit toward dining and spa treatments.",
-    terms:"Bookable through Dec 20, 2026 for stays through Dec 31, 2026. Three-night suite minimum. Credit excludes room fee, tax, resort fees and alcohol; subject to availability.",
+    terms:"Bookable through Dec 26, 2026 (reservations must be made at least 5 days before arrival) for stays through Dec 31, 2026. Three-night suite minimum. Credit excludes room fee, tax, resort fees and alcohol; subject to availability.",
     url:"https://parkhyattaviara.com/offers/",
     source:"parkhyattaviara.com",
-    dateAdded:"2026-09-07", lastUpdated:"2026-09-07"
+    dateAdded:"2026-09-07", lastUpdated:"2026-09-15"
   },
   {
     id:"hyatt-thompson-double-points",
