@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-16";
+const LAST_CHECKED = "2026-09-17";
 
 const HOTEL_DEALS = [
   {
@@ -231,23 +231,24 @@ const HOTEL_DEALS = [
   {
     id:"ritz-carlton-stay-longer",
     brand:"Ritz-Carlton",
-    name:"Stay Longer, Save More — Up to 25% Off",
-    scope:"Miami Beach, Waikiki, Naples, Turks & Caicos, Amelia Island & more",
+    name:"Stay Longer, Save More — Up to 30% Off",
+    scope:"Toronto, Almaty, Turks & Caicos, Miami Beach, Naples, Amelia Island & more",
     type:"Percent Off",
     region:"Worldwide",
-    summary:"Save up to 20% for three-plus nights and up to 25% for four-plus nights at participating Ritz-Carlton resorts. Individual properties list their own stay-longer tiers.",
-    terms:"Discount scales with length of stay; advance purchase at most resorts.",
+    summary:"Ritz-Carlton runs its stay-longer savings property by property rather than one global rate. The Ritz-Carlton, Almaty currently takes 15% off stays of four or more nights, The Ritz-Carlton, Turks & Caicos discounts stays of five or more consecutive nights, and the Toronto property's Luxury Getaway takes up to 30% off longer stays. Miami Beach, Naples, Amelia Island, Sarasota, Orlando Grande Lakes and Chicago each run their own version of the offer.",
+    terms:"Discount tier and minimum length of stay vary by hotel; most require advance purchase. Almaty: 15% off 4+ nights, valid for stays through Dec 1, 2026. Check each property's own offer page for current terms.",
     url:"https://www.ritzcarlton.com/en/hotels-and-resorts/promotions/",
     source:"ritzcarlton.com",
     properties:[
+      {name:"Almaty, Kazakhstan (15% off 4+ nights)", url:"https://www.marriott.com/offers/stay-longer-on-us-OFF-171098/ALARZ-alarz-the-ritz-carlton-almaty"},
+      {name:"Toronto (up to 30% off)", url:"https://www.marriott.com/offers/luxury-getaway-stay-longer-save-up-to-30-percent-OFF-149384/yyzrz-the-ritz-carlton-toronto"},
+      {name:"Turks & Caicos (5+ nights)", url:"https://www.marriott.com/offers/long-term-stay-savings-in-the-u-s-and-canada-1355935/PLSRT-plsrt-the-ritz-carlton-turks-and-caicos"},
       {name:"Naples, FL", url:"https://www.marriott.com/offers/stay-longer-OFF-96035/RSWRZ-the-ritz-carlton-naples"},
       {name:"South Beach, Miami", url:"https://www.marriott.com/offers/stay-longer-save-more-OFF-112387/MIASB-the-ritz-carlton-south-beach"},
       {name:"Amelia Island, FL", url:"https://www.ritzcarlton.com/en/hotels/florida/amelia-island/offers/stay-longer-with-us"},
-      {name:"Sarasota, FL", url:"https://www.ritzcarlton.com/en/hotels/florida/sarasota/offers/stay-longer-with-us"},
-      {name:"Orlando, Grande Lakes", url:"https://www.ritzcarlton.com/en/hotels/florida/orlando/offers/stay-longer-save-more"},
       {name:"Chicago", url:"https://www.ritzcarlton.com/en/hotels/chicago/offers/stay-longer"}
     ],
-    dateAdded:"2026-07-07", lastUpdated:"2026-07-07"
+    dateAdded:"2026-07-07", lastUpdated:"2026-09-17"
   },
   {
     id:"shangri-la-stay-longer",
@@ -341,16 +342,17 @@ const HOTEL_DEALS = [
     scope:"Aman Tokyo, Amangiri, Amanemu & more",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Advance-purchase savings and complimentary nights across Aman's ultra-luxury resorts. Aman Tokyo's 'Extend Your Stay' offer gives a complimentary fifth night on a minimum four-night stay, part of a longer program that runs through Mar 15, 2028. Amangiri offers full-board wellness packages.",
-    terms:"Property-specific. Aman Tokyo's current booking window runs through Sept 30, 2026, inside the broader program valid through Mar 15, 2028. Other properties mostly valid through Dec 31, 2026. Some include spa or transfers.",
+    summary:"Advance-purchase savings and complimentary nights across Aman's ultra-luxury resorts. Aman Tokyo's 'Extend Your Stay' offer gives a complimentary fifth night on a minimum four-night stay, part of a longer program that runs through Mar 15, 2028. Amanyara in Turks & Caicos gives a complimentary fourth night on stays of four or more nights, and separately takes 20% off two- or three-night stays with breakfast included when booked up to a month ahead. Amangiri offers full-board wellness packages.",
+    terms:"Property-specific. Aman Tokyo's current booking window runs through Sept 30, 2026, inside the broader program valid through Mar 15, 2028. Amanyara's complimentary 4th night runs through Dec 20, 2026. Other properties mostly valid through Dec 31, 2026. Some include spa or transfers.",
     url:"https://www.aman.com/exclusive-offers",
     source:"aman.com",
     properties:[
       {name:"Aman Tokyo (5th night free)", url:"https://www.aman.com/hotels/aman-tokyo/exclusives"},
+      {name:"Amanyara, Turks & Caicos (4th night free)", url:"https://www.aman.com/resorts/amanyara/exclusives/extend-your-stay"},
       {name:"Amangiri, Utah", url:"https://www.aman.com/resorts/amangiri/exclusives"},
       {name:"Amanemu, Japan", url:"https://www.aman.com/resorts/amanemu/exclusives"}
     ],
-    dateAdded:"2026-06-30", lastUpdated:"2026-09-05"
+    dateAdded:"2026-06-30", lastUpdated:"2026-09-17"
   },
   {
     id:"relais-chateaux-extended-stays",
@@ -417,38 +419,22 @@ const HOTEL_DEALS = [
     dateAdded:"2026-07-12", lastUpdated:"2026-09-15"
   },
   {
-    id:"auberge-fourth-night-credit",
-    brand:"Auberge Resorts",
-    name:"Fourth Night Free + $500 Property Credit",
-    scope:"Auberge Resorts Collection worldwide",
-    type:"Resort Credit",
-    region:"Worldwide",
-    summary:"Select Auberge Resorts Collection properties bundle a complimentary fourth night with a US$500 property credit via Amex Fine Hotels + Resorts, on top of daily breakfast and room upgrades. These Amex FHR windows roll forward continuously rather than running on one fixed campaign, so the exact booking dates vary by property and by when you book.",
-    terms:"Amex FHR windows are typically bookable only days to a few weeks ahead of travel and refresh on a rolling basis — current examples include a $300 property credit (book by Oct 28, 2026) and a complimentary 4th night. Check each property's Amex Travel or Auberge offers page for its current window.",
-    url:"https://aubergeresorts.com/offers/",
-    source:"aubergeresorts.com",
-    properties:[
-      {name:"Auberge du Soleil, Napa Valley", url:"https://aubergeresorts.com/aubergedusoleil/offers/"},
-      {name:"Chileno Bay, Los Cabos", url:"https://auberge.com/chileno-bay/special-offers/"}
-    ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-04"
-  },
-  {
     id:"conrad-third-night-credit",
     brand:"Conrad",
     name:"Complimentary Third Night + $200 Credit",
     scope:"Conrad Hotels & Resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Conrad resorts run a complimentary third (or fourth) night plus up to a US$200 property credit, with select 25%-off room-rate deals. Hilton Honors members can stack points and perks.",
-    terms:"Amex Fine Hotels + Resorts windows roll forward regularly — current: complimentary 3rd night, book by Dec 28, 2026 for travel by Dec 31, 2026. Varies by hotel.",
+    summary:"Conrad resorts run a complimentary third or fourth night plus a property credit, mostly through American Express Fine Hotels + Resorts, with select 25%-off room-rate deals. Hilton Honors members can stack points and perks.",
+    terms:"Amex Fine Hotels + Resorts windows roll forward regularly — current examples: Conrad Osaka, complimentary 3rd night, book by Sept 30, 2026 for travel by Dec 31, 2026; Conrad Orlando, complimentary 4th night, book by Sept 26, 2026 for travel by Sept 30, 2026. Varies by hotel.",
     url:"https://www.hilton.com/en/offers/conrad-hotels/",
     source:"hilton.com",
     properties:[
-      {name:"Conrad Orlando", url:"https://www.hilton.com/en/hotels/orlcici-conrad-orlando/offers/"},
+      {name:"Conrad Osaka (3rd night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Japan/Osaka/Conrad-Osaka"},
+      {name:"Conrad Orlando (4th night free)", url:"https://www.hilton.com/en/hotels/orlcici-conrad-orlando/offers/"},
       {name:"Conrad Washington DC", url:"https://conradwashingtondc.com/offers/"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-31"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-17"
   },
   {
     id:"intercontinental-member-sales",
@@ -457,58 +443,45 @@ const HOTEL_DEALS = [
     scope:"InterContinental Hotels & Resorts worldwide",
     type:"Member Rate",
     region:"Worldwide",
-    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. The current member offer takes 15% off the cash portion of Points & Cash bookings, which works out to an effective points value of about half a cent each.",
-    terms:"Requires a free IHG One Rewards account. Book by Sept 28, 2026 for stays through Oct 12, 2026.",
+    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. The current member offer takes 15% off the cash portion of Points & Cash bookings, which works out to an effective points value of about half a cent each. IHG is also running double and triple points on stays across the portfolio, including InterContinental, from Oct 1 through Dec 31, 2026.",
+    terms:"Requires a free IHG One Rewards account. Points & Cash discount: book by Sept 28, 2026 for stays through Oct 12, 2026. Double/triple points promotion: registration required; eligible stays must fall between Oct 1 and Dec 31, 2026.",
     url:"https://www.ihg.com/content/us/en/deals/member-offers",
     source:"ihg.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-04"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-17"
   },
   {
     id:"belmond-longer-stay",
     brand:"Belmond",
-    name:"Discounted Fourth & Fifth Nights",
-    scope:"Belmond hotels, trains & river cruises worldwide",
+    name:"Complimentary Fifth Night — New Year in Rio",
+    scope:"Copacabana Palace, A Belmond Hotel, Rio de Janeiro",
     type:"Free Night",
-    region:"Worldwide",
-    summary:"Belmond's storied properties reward longer stays — Copacabana Palace (Rio) discounts the fourth or fifth consecutive night across 2026–27 — plus curated packages spanning its legendary hotels and trains.",
-    terms:"Copacabana Palace: discounted 4th night Apr 1–Sep 30; 5th night Oct 1–Dec 17 & Jan 4–Mar 31.",
+    region:"South America",
+    summary:"Belmond's storied Copacabana Palace in Rio is currently offering a complimentary fifth night through American Express Fine Hotels + Resorts for stays beginning Jan 1, 2027, on top of curated packages spanning Belmond's legendary hotels and trains.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Dec 23, 2026 for travel by Dec 28, 2026; stays must begin on or after Jan 1, 2027.",
     url:"https://www.belmond.com/packages-and-tours",
     source:"belmond.com",
     properties:[
-      {name:"Copacabana Palace, Rio", url:"https://www.belmond.com/hotels/south-america/brazil/rio-de-janeiro/belmond-copacabana-palace/offers"}
+      {name:"Copacabana Palace, Rio (5th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Brazil/Rio-de-Janeiro/Copacabana-Palace-A-Belmond-Hotel-Rio-De-Janeiro"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-17"
   },
   {
     id:"six-senses-stay-longer",
     brand:"Six Senses",
-    name:"Stay Longer, Early Booking & Extended Stay",
-    scope:"Six Senses wellness resorts worldwide",
-    type:"Percent Off",
+    name:"Complimentary Third Night — Krabey Island, Cambodia",
+    scope:"Six Senses Krabey Island, Cambodia (+ stay-longer & early-booking deals portfolio-wide)",
+    type:"Free Night",
     region:"Worldwide",
-    summary:"Six Senses' wellness-focused resorts offer stacked value: stay-longer savings, early-booking discounts and extended-stay deals with bonus inclusions. IHG One Rewards members can also earn and redeem points.",
-    terms:"Discounts and inclusions vary by resort and season; see each offer page for terms.",
+    summary:"Six Senses Krabey Island in Cambodia is currently offering a complimentary third night through American Express Fine Hotels + Resorts. Other Six Senses resorts run their own stay-longer, early-booking and extended-stay discounts with bonus inclusions.",
+    terms:"Krabey Island: requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Sept 30, 2026 for travel by Oct 3, 2026. Other resorts' discounts and inclusions vary by season; see each offer page for terms.",
     url:"https://www.sixsenses.com/en/offers/",
     source:"sixsenses.com",
     properties:[
+      {name:"Krabey Island, Cambodia (3rd night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Cambodia/Sihanoukville/Six-Senses-Krabey-Island"},
       {name:"Stay Longer deals", url:"https://www.sixsenses.com/en/offers/stay-longer/"},
-      {name:"Early Booking offers", url:"https://www.sixsenses.com/en/offers/early-booking/"},
-      {name:"Extended Stay deals", url:"https://www.sixsenses.com/en/offers/extended-stay/"}
+      {name:"Early Booking offers", url:"https://www.sixsenses.com/en/offers/early-booking/"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-07-12"
-  },
-  {
-    id:"hilton-stay-more-earn-more",
-    brand:"Waldorf Astoria",
-    name:"Stay More, Earn More — Up to 15,000 Bonus Points",
-    scope:"Waldorf Astoria, Conrad, LXR & all Hilton brands worldwide",
-    type:"Loyalty Bonus",
-    region:"Worldwide",
-    summary:"The follow-on to Hilton's summer promo, and a better one for anyone travelling into the fall: register and you earn escalating bonus points across five stays — 1,000 for the first, then 2,000, 3,000, 4,000 and 5,000 — for 15,000 points total. There is no minimum night count, so five one-night stays count just as much as five long ones. Works at Waldorf Astoria, Conrad and LXR alongside every other Hilton brand.",
-    terms:"Registration required before your first eligible stay, and you have six months from the day you register to finish all five. Register by Dec 31, 2026. This one is targeted — sign in to your Hilton Honors account and check the offers page to see if it is showing for you.",
-    url:"https://www.hilton.com/en/hilton-honors/member-offers/",
-    source:"hilton.com",
-    dateAdded:"2026-08-04", lastUpdated:"2026-08-04"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-17"
   },
   {
     id:"hyatt-latin-america-free-nights",
@@ -524,19 +497,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-08-13", lastUpdated:"2026-09-09"
   },
   {
-    id:"hyatt-extended-stay-3k-points",
-    brand:"Park Hyatt",
-    name:"3,000 Bonus Points on Every 3+ Night Stay",
-    scope:"Hyatt Place & Hyatt Select hotels in the Americas (World of Hyatt members)",
-    type:"Bonus Points",
-    region:"Americas (US, Canada, Caribbean & Latin America)",
-    summary:"A quieter World of Hyatt offer that rewards longer stays — every stay of three or more consecutive nights at a Hyatt Place or Hyatt Select in the Americas earns 3,000 bonus points, repeatable up to 30,000 points across the promotion.",
-    terms:"Register with your free World of Hyatt account before your stay. Eligible stays run June 1 – Sept 30, 2026. Three consecutive nights minimum per stay; maximum 30,000 bonus points.",
-    url:"https://world.hyatt.com/content/gp/en/offers/hyatt-place-hyatt-select-3k-bonus-points.html",
-    source:"hyatt.com",
-    dateAdded:"2026-08-14", lastUpdated:"2026-09-09"
-  },
-  {
     id:"acqualina-fourth-night-free",
     brand:"Acqualina",
     name:"Fourth Night Free — Oceanfront Miami",
@@ -548,6 +508,19 @@ const HOTEL_DEALS = [
     url:"https://www.acqualinaresort.com/offers/fourth-night-free/",
     source:"acqualinaresort.com",
     dateAdded:"2026-08-19", lastUpdated:"2026-09-15"
+  },
+  {
+    id:"jw-marriott-orlando-primo-nights",
+    brand:"JW Marriott",
+    name:"Primo Magical Nights — Overnight Stay + $50 Dining Credit",
+    scope:"JW Marriott Orlando, Grande Lakes, Florida",
+    type:"Resort Credit",
+    region:"United States",
+    summary:"Book an overnight stay at JW Marriott Orlando, Grande Lakes and get complimentary self-parking plus a $50 daily resort credit toward dinner at Primo, the resort's on-site Italian restaurant.",
+    terms:"Valid for stays booked through Sept 30, 2026. Credit applies to dining at Primo only; blackout dates and standard cancellation terms may apply.",
+    url:"https://www.grandelakes.com/specials/jw-marriott",
+    source:"grandelakes.com",
+    dateAdded:"2026-09-17", lastUpdated:"2026-09-17"
   },
   {
     id:"autograph-collection-amex-credit",
@@ -563,24 +536,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-09-09", lastUpdated:"2026-09-09"
   },
   {
-    id:"sea-island-cool-rates",
-    brand:"Sea Island",
-    name:"Cool Rates + Prepay Savings at The Cloister & The Lodge",
-    scope:"Sea Island Resort, Georgia (The Cloister, The Lodge & The Inn)",
-    type:"Percent Off",
-    region:"United States",
-    summary:"The Christmas-in-July holiday offer closed to new bookings on July 29, so here is what is actually live at Sea Island today. Cool Rates gives discounted nightly rates at The Cloister and The Lodge on flexible dates — the resort marks the cheaper dates on its Special Rates calendar, so shifting a weekend can save real money at a Forbes Five-Star resort. Alongside it, prepaying the whole stay saves 10 percent at The Cloister and The Lodge, or 15 percent at The Inn. Sea Island is a five-hour drive or a short Delta hop from Atlanta, which makes it one of the easiest luxury trips on this list.",
-    terms:"Cool Rates: discounted dates are shown on the resort Special Rates calendar; new reservations only and not combinable with other packages. Prepay rates require paying the full stay up front and booking 8 to 90 days ahead. Fees and taxes are additional.",
-    url:"https://www.seaisland.com/stay/offer/cool-rates/",
-    source:"seaisland.com",
-    properties:[
-      {name:"Cool Rates (Cloister & Lodge)", url:"https://www.seaisland.com/stay/offer/cool-rates/"},
-      {name:"Prepay & save 10%", url:"https://www.seaisland.com/stay/offer/save-10-off-our-standard-rate/"},
-      {name:"All Sea Island offers", url:"https://www.seaisland.com/stay/offer/"}
-    ],
-    dateAdded:"2026-08-22", lastUpdated:"2026-08-24"
-  },
-  {
     id:"fairmont-royal-pavilion-fourth-night",
     brand:"Fairmont",
     name:"Fourth Night Free — Beachfront Barbados",
@@ -592,19 +547,6 @@ const HOTEL_DEALS = [
     url:"https://www.fairmont.com/en/hotels/barbados/fairmont-royal-pavilion/offers.html",
     source:"fairmont.com",
     dateAdded:"2026-08-27", lastUpdated:"2026-09-13"
-  },
-  {
-    id:"hyatt-house-studios-extended-stay-bonus",
-    brand:"Park Hyatt",
-    name:"5,000 Bonus Points per 5+ Night Extended Stay",
-    scope:"Hyatt House & Hyatt Studios hotels worldwide",
-    type:"Loyalty Bonus",
-    region:"Worldwide",
-    summary:"World of Hyatt members earn 5,000 bonus points for every stay of five or more consecutive nights at a Hyatt House or Hyatt Studios hotel, repeatable up to a maximum of 50,000 bonus points across the promotion.",
-    terms:"Register (free) at the offer page before your stay. Registration is open through Dec 31, 2026, and all qualifying stays must be completed by Dec 31, 2026.",
-    url:"https://world.hyatt.com/content/gp/en/offers/extended-stay-offer.html",
-    source:"hyatt.com",
-    dateAdded:"2026-09-04", lastUpdated:"2026-09-04"
   },
   {
     id:"peninsula-third-night-free",

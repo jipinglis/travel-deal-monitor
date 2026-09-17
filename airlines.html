@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-16";
+const LAST_CHECKED = "2026-09-17";
 
 const AIRLINE_DEALS = [
   {
@@ -197,11 +197,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Bonus Miles",
     dest:"49 cities from Atlanta (NYC, Chicago, Orlando, Vegas & more)",
-    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus recurring system-wide Discount Den fare sales with rotating booking windows and register-and-earn bonus-mile offers on round-trip bookings. Frontier's 2026 GoWild Fall & Winter Pass is $199 for immediate, unlimited travel through Feb 28, 2027. New Discount Den members who buy a GoWild Fall & Winter Pass between Sept 1 and Sept 15, 2026 also get a one-time $25 voucher.",
-    terms:"Discount Den sale fares need advance purchase and apply only on select days of the week — check flyfrontier.com for the current booking window. Bonus-mile promos require registering before booking; carry-on, seat and bag fees are extra and add up fast, so compare the all-in price against Delta and Southwest before booking. Fares are one-way and non-refundable. The GoWild pass promotion requires a Discount Den membership.",
+    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus recurring system-wide Discount Den fare sales (fares advertised from $19) with rotating booking windows and register-and-earn bonus-mile offers on round-trip bookings. Frontier's 2026 GoWild Fall & Winter Pass remains on sale at $199 for immediate, unlimited travel through Feb 28, 2027.",
+    terms:"Discount Den sale fares need advance purchase and apply only on select days of the week — check flyfrontier.com for the current booking window. Bonus-mile promos require registering before booking; carry-on, seat and bag fees are extra and add up fast, so compare the all-in price against Delta and Southwest before booking. Fares are one-way and non-refundable. The GoWild pass requires a Discount Den membership; its limited-time early-booking perks (priority standby seats, discounted early-bird fees) ended Aug 17, 2026, but the $199 pass itself remains on sale.",
     url:"https://flights.flyfrontier.com/en/flights-from-atlanta",
     source:"flyfrontier.com",
-    dateAdded:"2026-07-05", lastUpdated:"2026-09-15"
+    dateAdded:"2026-07-05", lastUpdated:"2026-09-17"
   },
   {
     id:"southwest-atl-low-fares",
@@ -210,11 +210,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Everyday Low Fares",
     dest:"Domestic network from Atlanta",
-    summary:"Southwest has the second-biggest presence at ATL. Its recent flash sales (40% off, a one-way fare sale, and the Travel S'more Sale) have all closed for now and no new fare sale has replaced them yet, but everyday low fares remain bookable on the deals page and Getaways flight+hotel packages continue to take up to $250 off domestic and $500 off international bundles. Rapid Rewards members can also buy points at a 50% discount, as low as 1.5 cents each, through Oct 2, 2026. Two free checked bags plus no change fees sweeten every booking.",
-    terms:"Everyday low fares remain bookable any time; Getaways package discounts apply automatically at booking. The 50%-off points purchase runs through Oct 2, 2026, 11:59pm CT, capped at 60,000 points per transaction.",
+    summary:"Southwest has the second-biggest presence at ATL. Its 'Week of WOW' sale, launched Sept 14, 2026, takes up to 40% off base fares for travel Oct 5, 2026 through Mar 3, 2027, bookable through Sept 17, 2026, 11:59pm PT. The same event bundles in up to $500 off five-night Getaways flight+hotel packages for two travelers and up to 15% off Enterprise rental cars of three days or more. Rapid Rewards members can separately buy points at a 50% discount, as low as 1.5 cents each, through Oct 2, 2026. Two free checked bags plus no change fees sweeten every booking.",
+    terms:"Week of WOW fares require 21-day advance purchase; sale applies to continental U.S. travel Mon–Sat, Puerto Rico Mon–Thu, and Hawaii/St. Thomas/international Sun–Wed, with blackout dates including Oct 12, 2026; Nov 20–25 & 28–30, 2026; Dec 18, 2026–Jan 4, 2027; and Feb 12 & 15, 2027 (additional blackouts apply for international/island travel). Book fares by Sept 17, 2026, 11:59pm PT; Enterprise car discount bookable through Sept 21, 2026 with pickup by Dec 15, 2026. The 50%-off points purchase runs through Oct 2, 2026, 11:59pm CT, capped at 60,000 points per transaction.",
     url:"https://www.southwest.com/special-offers/flight-deals/",
     source:"southwest.com",
-    dateAdded:"2026-07-08", lastUpdated:"2026-09-13"
+    dateAdded:"2026-07-08", lastUpdated:"2026-09-17"
   },
   {
     id:"american-atl-deals",
@@ -319,6 +319,19 @@ const AIRLINE_DEALS = [
     url:"https://www.aavacations.com/en/",
     source:"aavacations.com",
     dateAdded:"2026-09-07", lastUpdated:"2026-09-07"
+  },
+  {
+    id:"american-europe-flight-deals",
+    airline:"American Airlines",
+    name:"Europe Flight Deals — UK & Ireland",
+    scope:"International",
+    type:"Fare Sale",
+    dest:"London Heathrow (LHR) and Dublin (DUB), one-stop from Atlanta via American hubs or partner airlines",
+    summary:"American's Europe Flight Deals page discounts Basic Economy fares to the UK and Ireland on American, British Airways, Iberia, Aer Lingus and Finnair. Atlanta connects via an American hub or via BA/Aer Lingus partner service. UK travel is bookable outbound Sept 16–Nov 19, 2026; Nov 23–Dec 12, 2026; and Dec 29, 2026–Mar 10, 2027. Ireland travel is bookable outbound Sept 16–Nov 19, 2026; Nov 23–Dec 13, 2026; and Dec 24, 2026–Mar 10, 2027.",
+    terms:"Book by Sept 23, 2026. Weekday-pattern travel required: outbound Sun/Mon/Tue/Wed, return Tue/Wed/Thu/Fri. Basic Economy, non-refundable; seats limited by day and route; not combinable with other offers.",
+    url:"https://www.aa.com/en-us/europe-deals",
+    source:"aa.com",
+    dateAdded:"2026-09-17", lastUpdated:"2026-09-17"
   }
 ];
 
