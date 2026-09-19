@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-18";
+const LAST_CHECKED = "2026-09-19";
 
 const AIRLINE_DEALS = [
   {
@@ -224,10 +224,10 @@ const AIRLINE_DEALS = [
     type:"Fare Sale",
     dest:"American hubs & beyond from Atlanta (DFW, CLT, MIA, ORD)",
     summary:"American's Summer Flight Deals page lists reduced web fares to its hubs and beyond. From Atlanta it connects to DFW, CLT, MIA and ORD with frequent sales and AAdvantage award specials — a handy alternative to Delta for one-stop international connections. (American Airlines Vacations runs its own current promo codes for package bookings — see the separate American Airlines Vacations listing.)",
-    terms:"Web specials are date-limited and advance-purchase; award availability varies by route.",
+    terms:"Web specials are date-limited and advance-purchase; award availability varies by route. Promo code SUMMERUSA takes $75 off trips of $200 or more, bookable through Dec 31, 2026.",
     url:"https://www.aa.com/en-us/summer-deals",
     source:"aa.com",
-    dateAdded:"2026-07-02", lastUpdated:"2026-09-18"
+    dateAdded:"2026-07-02", lastUpdated:"2026-09-19"
   },
   {
     id:"united-atl-deals",
@@ -250,10 +250,10 @@ const AIRLINE_DEALS = [
     type:"Fare Sale",
     dest:"East Coast & focus cities from Atlanta (BOS, JFK, FLL)",
     summary:"JetBlue serves ATL to the Northeast and Florida with roomy seats and free Wi-Fi. JetBlue Vacations' 'Very Important Perks' throws in extras worth $125 or more — think resort credits, breakfast and upgrades — when you book a flight plus hotel at select resorts for four nights or longer, bookable through the end of the year. JetBlue Vacations is also running a separate sale taking up to 50% off flight+hotel packages for travel this fall and winter, on top of the everyday 'Deals & Getaways' fare list.",
-    terms:"Blue Basic is cheapest; sale fares are limited and advance-purchase. Very Important Perks requires a minimum four-night stay at a participating resort with flight and hotel booked together on jetbluevacations.com, and is bookable through Dec 31, 2026; exact perks vary by resort. The up-to-50%-off package sale covers travel Aug 28, 2026 through Feb 10, 2027; discount depth varies by resort and package.",
+    terms:"Blue Basic is cheapest; sale fares are limited and advance-purchase. Very Important Perks requires a minimum four-night stay at a participating resort with flight and hotel booked together on jetbluevacations.com, and is bookable through Dec 31, 2026, excluding blackout travel dates Dec 21, 2026–Jan 2, 2027; exact perks vary by resort. The up-to-50%-off package sale covers travel Aug 28, 2026 through Feb 10, 2027, and excludes Mint fares; discount depth varies by resort and package.",
     url:"https://www.jetbluevacations.com/sale/current",
     source:"jetbluevacations.com",
-    dateAdded:"2026-07-06", lastUpdated:"2026-09-04"
+    dateAdded:"2026-07-06", lastUpdated:"2026-09-19"
   },
   {
     id:"virgin-atlantic-atl-london",
@@ -288,11 +288,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Award Sale",
     dest:"Europe via Paris (CDG) or Amsterdam (AMS), connecting from Atlanta",
-    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates. The September 2026 window covers travel all the way through Feb 28, 2027.",
+    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates. The September 2026 window (book by Sept 30, 2026) covers travel through Feb 28, 2027, with discounted awards from 13 North American cities to Europe priced as low as 18,750 miles each way in economy, 30,000 in premium economy and 45,000 in business on flagged dates.",
     terms:"Book by Sept 30, 2026 for travel through Feb 28, 2027. Discount applies only to specific flagged routes/dates, so check the Promo Rewards calendar for Atlanta availability before booking. Starting Sept 8, 2026, Flying Blue award tickets split into Light/Standard/Flex fares; Promo Rewards seats are typically issued as Light fares, which carry no changes, no refunds, no advance seat selection and no complimentary checked bag in economy or premium economy.",
     url:"https://wwws.airfrance.us/en-us/flights-from-atlanta",
     source:"airfrance.us / klm.com",
-    dateAdded:"2026-07-30", lastUpdated:"2026-09-04"
+    dateAdded:"2026-07-30", lastUpdated:"2026-09-19"
   },
   {
     id:"delta-vacations-summer-package-savings",
@@ -332,6 +332,19 @@ const AIRLINE_DEALS = [
     url:"https://www.aa.com/en-us/europe-deals",
     source:"aa.com",
     dateAdded:"2026-09-17", lastUpdated:"2026-09-17"
+  },
+  {
+    id:"delta-atl-riyadh-skymiles-launch-sale",
+    airline:"Delta Air Lines",
+    name:"Atlanta–Riyadh Launch SkyMiles Sale",
+    scope:"International",
+    type:"Award Sale",
+    dest:"Riyadh, Saudi Arabia (RUH), nonstop from Atlanta",
+    summary:"Delta begins its first nonstop U.S.–Saudi Arabia service, Atlanta to Riyadh, on Oct 23, 2026 (daily Oct 23–30, then three times weekly on an Airbus A350-900), and has launched a discounted SkyMiles sale on the route. Basic Economy award tickets start at 30,000 SkyMiles round-trip and Main Cabin from about 47,500 SkyMiles round-trip, both plus roughly $77 in taxes and fees; Delta SkyMiles American Express cardholders can stack the TakeOff 15 discount for a further 15% off, bringing the cheapest round-trip to about 25,500 SkyMiles.",
+    terms:"Award travel valid Oct 23, 2026 through Apr 15, 2027. TakeOff 15 discount requires an eligible Delta SkyMiles American Express card. Award seat counts are limited and priced per SkyMiles' dynamic award chart, so exact mileage varies by date.",
+    url:"https://www.delta.com/us/en/flight-deals/flash-sale",
+    source:"delta.com",
+    dateAdded:"2026-09-19", lastUpdated:"2026-09-19"
   }
 ];
 

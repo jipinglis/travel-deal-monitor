@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-18";
+const LAST_CHECKED = "2026-09-19";
 
 const HOTEL_DEALS = [
   {
@@ -320,20 +320,21 @@ const HOTEL_DEALS = [
     id:"montage-fourth-night-free",
     brand:"Montage",
     name:"Fourth Night Free + Suite Escape Credits",
-    scope:"Montage Los Cabos, Laguna Beach, Palmetto Bluff, Healdsburg",
+    scope:"Montage Los Cabos, Laguna Beach, Palmetto Bluff, Healdsburg, Deer Valley",
     type:"Free Night",
     region:"United States / Mexico",
-    summary:"Los Cabos gives a complimentary fourth night with a $70 daily breakfast credit and airport transfers. Suite Escape adds 10–15% off plus up to $500 daily resort credit at other Montage resorts.",
-    terms:"Los Cabos: three consecutive paid nights required, booked at least 21 days ahead. Suite credits vary ($300–$500/day).",
+    summary:"Los Cabos gives a complimentary fourth night with a $70 daily breakfast credit and airport transfers. Suite Escape adds 10–15% off plus up to $500 daily resort credit at other Montage resorts. Montage Deer Valley in Park City, Utah runs its own complimentary fourth night with a $100 daily resort credit toward dining, Compass Sports rentals or spa treatments, for stays Aug 1 through Nov 30, 2026; a separate winter version swaps in a $200 daily credit per bedroom for ski gear and guided mountain experiences.",
+    terms:"Los Cabos: three consecutive paid nights required, booked at least 21 days ahead. Suite credits vary ($300–$500/day). Deer Valley: three consecutive paid nights required for the complimentary fourth; fall window runs Aug 1–Nov 30, 2026, winter ski terms differ — check the property's offers page.",
     url:"https://www.montage.com/loscabos/accommodations/special-offers/",
     source:"montage.com",
     properties:[
       {name:"Los Cabos (4th night free)", url:"https://www.montage.com/loscabos/accommodations/special-offers/"},
       {name:"Laguna Beach, CA", url:"https://www.montage.com/lagunabeach/accommodations/special-offers/"},
       {name:"Palmetto Bluff, SC", url:"https://www.montage.com/palmettobluff/accommodations/special-offers/"},
-      {name:"Healdsburg, CA", url:"https://www.montage.com/healdsburg/special-offers/"}
+      {name:"Healdsburg, CA", url:"https://www.montage.com/healdsburg/special-offers/"},
+      {name:"Deer Valley, Park City, UT (4th night free)", url:"https://www.montage.com/deervalley/accommodations/special-offers/"}
     ],
-    dateAdded:"2026-06-15", lastUpdated:"2026-09-15"
+    dateAdded:"2026-06-15", lastUpdated:"2026-09-19"
   },
   {
     id:"aman-complimentary-nights",
@@ -390,14 +391,15 @@ const HOTEL_DEALS = [
     scope:"St. Regis resorts (Punta Mita, Kanai, Longboat Key & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Marquee St. Regis resorts run complimentary-night offers — St. Regis Kanai (Riviera Maya) gives a free third night and St. Regis Punta Mita a free third or fourth night — with butler service throughout. St. Regis Longboat Key Resort in Florida instead runs a $350 food & beverage credit through Amex Fine Hotels + Resorts. Bonvoy luxury bonus points stack on top where applicable.",
-    terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates. Longboat Key's Amex FHR credit: book by Dec 31, 2026 for travel by Jan 3, 2027.",
+    summary:"Marquee St. Regis resorts run complimentary-night offers — St. Regis Kanai (Riviera Maya) gives a free third night and St. Regis Punta Mita a free third or fourth night — with butler service throughout. St. Regis Longboat Key Resort in Florida instead runs a $350 food & beverage credit through Amex Fine Hotels + Resorts. The St. Regis Bermuda Resort adds a complimentary third night through American Express Fine Hotels + Resorts, book by Sept 30, 2026 for travel between Oct 10, 2026 and Mar 31, 2027. Bonvoy luxury bonus points stack on top where applicable.",
+    terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates. Longboat Key's Amex FHR credit: book by Dec 31, 2026 for travel by Jan 3, 2027. Bermuda's Amex FHR free third night requires an eligible Amex Platinum or Business Platinum card.",
     url:"https://st-regis.marriott.com/offers/",
     source:"st-regis.marriott.com",
     properties:[
-      {name:"Longboat Key, FL ($350 F&B credit)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Longboat-Key/The-St-Regis-Longboat-Key-Resort"}
+      {name:"Longboat Key, FL ($350 F&B credit)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Longboat-Key/The-St-Regis-Longboat-Key-Resort"},
+      {name:"Bermuda (3rd night free, Amex FHR)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Bermuda/St.-George's/The-St-Regis-Bermuda-Resort"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-12"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-19"
   },
   {
     id:"rosewood-fourth-night",
@@ -542,11 +544,11 @@ const HOTEL_DEALS = [
     scope:"Fairmont Royal Pavilion, St. James, Barbados",
     type:"Free Night",
     region:"Caribbean",
-    summary:"Book three consecutive nights at this beachfront Fairmont on the calm west coast of Barbados and the fourth night is complimentary, with breakfast for two included every morning. Barbados sits outside the busiest part of the hurricane belt and its late-autumn rates are far gentler than the winter ones, so this is a good shoulder-season family option. Atlanta connects easily via Miami or New York. The offer has since settled into a standing, evergreen deal rather than the earlier rolling monthly booking windows.",
-    terms:"Three consecutive paid nights required for the complimentary fourth. Breakfast for two included every morning; blackout dates apply and rates exclude taxes and service charges.",
+    summary:"Book three consecutive nights at this beachfront Fairmont on the calm west coast of Barbados and the fourth night is complimentary, with breakfast for two included every morning. Barbados sits outside the busiest part of the hurricane belt and its late-autumn rates are far gentler than the winter ones, so this is a good shoulder-season family option. Atlanta connects easily via Miami or New York. The offer runs on a rolling monthly booking window rather than a single fixed date; the window active now requires booking by Sept 30, 2026 for stays completed by Oct 31, 2026.",
+    terms:"Three consecutive paid nights required for the complimentary fourth. Breakfast for two included every morning; blackout dates apply and rates exclude taxes and service charges. The booking window rolls forward roughly monthly — check the property's offers page for the current month's exact dates.",
     url:"https://www.fairmont.com/en/hotels/barbados/fairmont-royal-pavilion/offers.html",
     source:"fairmont.com",
-    dateAdded:"2026-08-27", lastUpdated:"2026-09-13"
+    dateAdded:"2026-08-27", lastUpdated:"2026-09-19"
   },
   {
     id:"peninsula-third-night-free",
