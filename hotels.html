@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-19";
+const LAST_CHECKED = "2026-09-20";
 
 const HOTEL_DEALS = [
   {
@@ -344,7 +344,7 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Advance-purchase savings and complimentary nights across Aman's ultra-luxury resorts. Aman Tokyo's 'Extend Your Stay' offer gives a complimentary fifth night on a minimum four-night stay, part of a longer program that runs through Mar 15, 2028. Amanyara in Turks & Caicos gives a complimentary fourth night on stays of four or more nights, and separately takes 20% off two- or three-night stays with breakfast included when booked up to a month ahead. Amangiri offers full-board wellness packages.",
-    terms:"Property-specific. Aman Tokyo's current booking window runs through Sept 30, 2026, inside the broader program valid through Mar 15, 2028. Amanyara's complimentary 4th night runs through Dec 20, 2026. Other properties mostly valid through Dec 31, 2026. Some include spa or transfers.",
+    terms:"Property-specific. Aman Tokyo's 'Extend Your Stay' offer is now an ongoing rolling program rather than a fixed cutoff; a related 5-plus-night suite version runs through Mar 15, 2028 with holiday blackout windows. Amanyara's complimentary 4th night runs through Dec 20, 2026. Other properties mostly valid through Dec 31, 2026. Some include spa or transfers.",
     url:"https://www.aman.com/exclusive-offers",
     source:"aman.com",
     properties:[
@@ -353,7 +353,7 @@ const HOTEL_DEALS = [
       {name:"Amangiri, Utah", url:"https://www.aman.com/resorts/amangiri/exclusives"},
       {name:"Amanemu, Japan", url:"https://www.aman.com/resorts/amanemu/exclusives"}
     ],
-    dateAdded:"2026-06-30", lastUpdated:"2026-09-17"
+    dateAdded:"2026-06-30", lastUpdated:"2026-09-20"
   },
   {
     id:"relais-chateaux-extended-stays",
@@ -408,17 +408,17 @@ const HOTEL_DEALS = [
     scope:"25 of 27 Rosewood hotels & resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Rosewood's summer 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Mayakoba runs a stay-3-pay-2 version with daily breakfast for two plus a $100 food, beverage or spa credit, and Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit through Oct 31. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
+    summary:"Rosewood's summer 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Mayakoba's own version gives a complimentary third night with daily breakfast for two and kids eat free; check the property page for its current window, since terms there have varied by season. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit through Oct 31. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
     terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Windows vary by hotel — check each property's offers page for current dates.",
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
-      {name:"Mayakoba, Riviera Maya (stay 3 pay 2, book by Oct 15 2026 for travel by Oct 31 2026)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
+      {name:"Mayakoba, Riviera Maya (3rd night free)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
       {name:"Baha Mar, Bahamas ($100 daily credit)", url:"https://www.rosewoodhotels.com/en/baha-mar/offers/more-rosewood"},
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-15"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-20"
   },
   {
     id:"conrad-third-night-credit",
@@ -427,16 +427,16 @@ const HOTEL_DEALS = [
     scope:"Conrad Hotels & Resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Conrad resorts run a complimentary third or fourth night plus a property credit, mostly through American Express Fine Hotels + Resorts, with select 25%-off room-rate deals. Hilton Honors members can stack points and perks.",
-    terms:"Amex Fine Hotels + Resorts windows roll forward regularly — current examples: Conrad Osaka, complimentary 3rd night, book by Sept 30, 2026 for travel by Dec 31, 2026; Conrad Orlando, complimentary 4th night, book by Sept 26, 2026 for travel by Sept 30, 2026. Varies by hotel.",
+    summary:"Conrad resorts run a mix of complimentary-night and percent-off deals, mostly through American Express Fine Hotels + Resorts. Conrad Osaka and Conrad Orlando are currently running 25% off the nightly room rate rather than a free-night structure. Hilton Honors members can stack points and perks.",
+    terms:"Amex Fine Hotels + Resorts windows roll forward regularly — current examples: Conrad Osaka, 25% off, book by Dec 30, 2026; Conrad Orlando, 25% off, book by Dec 31, 2026. Varies by hotel.",
     url:"https://www.hilton.com/en/offers/conrad-hotels/",
     source:"hilton.com",
     properties:[
-      {name:"Conrad Osaka (3rd night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Japan/Osaka/Conrad-Osaka"},
-      {name:"Conrad Orlando (4th night free)", url:"https://www.hilton.com/en/hotels/orlcici-conrad-orlando/offers/"},
+      {name:"Conrad Osaka (25% off)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Japan/Osaka/Conrad-Osaka"},
+      {name:"Conrad Orlando (25% off)", url:"https://www.hilton.com/en/hotels/orlcici-conrad-orlando/offers/"},
       {name:"Conrad Washington DC", url:"https://conradwashingtondc.com/offers/"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-17"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-20"
   },
   {
     id:"intercontinental-member-sales",
@@ -518,11 +518,11 @@ const HOTEL_DEALS = [
     scope:"JW Marriott Orlando, Grande Lakes, Florida",
     type:"Resort Credit",
     region:"United States",
-    summary:"Book an overnight stay at JW Marriott Orlando, Grande Lakes and get complimentary self-parking plus a $50 daily resort credit toward dinner at Primo, the resort's on-site Italian restaurant.",
-    terms:"Valid for stays booked through Sept 30, 2026. Credit applies to dining at Primo only; blackout dates and standard cancellation terms may apply.",
+    summary:"The resort's Primo Magical Nights Offer includes complimentary self-parking plus a $50 daily resort credit toward dinner at Primo, its on-site Italian restaurant, on any overnight stay.",
+    terms:"Valid for stays Aug 16 through Sept 30, 2026. Credit applies to dining at Primo only; blackout dates and standard cancellation terms may apply.",
     url:"https://www.grandelakes.com/specials/jw-marriott",
     source:"grandelakes.com",
-    dateAdded:"2026-09-17", lastUpdated:"2026-09-17"
+    dateAdded:"2026-09-17", lastUpdated:"2026-09-20"
   },
   {
     id:"autograph-collection-amex-credit",
@@ -544,11 +544,11 @@ const HOTEL_DEALS = [
     scope:"Fairmont Royal Pavilion, St. James, Barbados",
     type:"Free Night",
     region:"Caribbean",
-    summary:"Book three consecutive nights at this beachfront Fairmont on the calm west coast of Barbados and the fourth night is complimentary, with breakfast for two included every morning. Barbados sits outside the busiest part of the hurricane belt and its late-autumn rates are far gentler than the winter ones, so this is a good shoulder-season family option. Atlanta connects easily via Miami or New York. The offer runs on a rolling monthly booking window rather than a single fixed date; the window active now requires booking by Sept 30, 2026 for stays completed by Oct 31, 2026.",
+    summary:"Book three consecutive nights at this beachfront Fairmont on the calm west coast of Barbados and the fourth night is complimentary, with breakfast for two included every morning. Barbados sits outside the busiest part of the hurricane belt and its late-autumn rates are far gentler than the winter ones, so this is a good shoulder-season family option. Atlanta connects easily via Miami or New York. The offer runs on a rolling monthly booking window rather than a single fixed date; the window now posted requires booking by Oct 31, 2026 for stays completed by Nov 22, 2026.",
     terms:"Three consecutive paid nights required for the complimentary fourth. Breakfast for two included every morning; blackout dates apply and rates exclude taxes and service charges. The booking window rolls forward roughly monthly — check the property's offers page for the current month's exact dates.",
     url:"https://www.fairmont.com/en/hotels/barbados/fairmont-royal-pavilion/offers.html",
     source:"fairmont.com",
-    dateAdded:"2026-08-27", lastUpdated:"2026-09-19"
+    dateAdded:"2026-08-27", lastUpdated:"2026-09-20"
   },
   {
     id:"peninsula-third-night-free",
@@ -557,11 +557,11 @@ const HOTEL_DEALS = [
     scope:"Participating Peninsula hotels worldwide (Beverly Hills, New York, London, Bangkok, Hong Kong & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Peninsula Beverly Hills is currently running this through a book-by-Sept-30, 2026 window (travel by Oct 2, 2026), alongside a separate complimentary-fourth-night version bookable through Dec 20, 2026 (travel by Dec 23, 2026). A separate, targeted Amex Offer credits $100 back after spending $500 or more at a participating Peninsula hotel, for spending between Aug 21 and Nov 30, 2026 (enrollment required; not all cardholders will see it).",
+    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Peninsula Beverly Hills is currently running this through a book-by-Sept-28, 2026 window (travel by Dec 30, 2026), alongside a separate complimentary-fourth-night version bookable through Dec 20, 2026 (travel by Dec 23, 2026). A separate, targeted Amex Offer credits $100 back after spending $500 or more at a participating Peninsula hotel, for spending between Aug 21 and Nov 30, 2026 (enrollment required; not all cardholders will see it).",
     terms:"FHR free-night offer requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card; exact night count and window vary by hotel and by booking date. The $100 Amex Offers statement credit requires separate enrollment and is targeted.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/peninsula-hotels",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-15"
+    dateAdded:"2026-09-05", lastUpdated:"2026-09-20"
   },
   {
     id:"lhw-complimentary-night",
@@ -583,11 +583,11 @@ const HOTEL_DEALS = [
     scope:"Participating W Hotels worldwide",
     type:"Resort Credit",
     region:"Worldwide",
-    summary:"A property credit is included on qualifying stays booked through American Express Fine Hotels + Resorts at participating W Hotels — for example, a $200 credit at W Shanghai The Bund, bookable through Dec 20, 2026 for travel by Dec 23, 2026. Exact credit amount and window vary by property.",
+    summary:"A property credit is included on qualifying stays booked through American Express Fine Hotels + Resorts at participating W Hotels — for example, a $150 credit at W Shanghai The Bund, bookable through Dec 27, 2026 for travel by Dec 30, 2026. Exact credit amount and window vary by property.",
     terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/w-hotels",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-15"
+    dateAdded:"2026-09-05", lastUpdated:"2026-09-20"
   },
   {
     id:"park-hyatt-aviara-grandeur-getaway",
@@ -622,11 +622,37 @@ const HOTEL_DEALS = [
     scope:"Esperanza, Auberge Resorts Collection, Cabo San Lucas, Mexico",
     type:"Free Night",
     region:"Mexico",
-    summary:"Book three consecutive nights at Esperanza, on the bluffs above the Sea of Cortez in Cabo San Lucas, and the third night is complimentary through American Express Fine Hotels + Resorts, plus a $250 resort credit per bedroom (up to $1,000 for Casonas and Haciendas).",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Oct 28, 2026 for travel by Oct 31, 2026.",
+    summary:"Book three consecutive nights at Esperanza, on the bluffs above the Sea of Cortez in Cabo San Lucas, and the third night is complimentary through American Express Fine Hotels + Resorts, plus a $250 resort credit per bedroom (up to $1,000 for Casonas and Haciendas), for stays through Oct 31, 2026. A separate holiday offer gives a complimentary fourth night on Casita bookings for stays Dec 18, 2026 through Jan 4, 2027.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Standard offer valid for stays through Oct 31, 2026; holiday Casita offer covers stays Dec 18, 2026–Jan 4, 2027.",
     url:"https://auberge.com/esperanza/special-offers/",
     source:"auberge.com",
-    dateAdded:"2026-09-16", lastUpdated:"2026-09-16"
+    dateAdded:"2026-09-16", lastUpdated:"2026-09-20"
+  },
+  {
+    id:"raffles-stay-longer-complimentary-night",
+    brand:"Raffles",
+    name:"Stay Longer with Raffles — Complimentary Fourth Night",
+    scope:"Raffles Hotel Singapore (+ other Raffles properties worldwide)",
+    type:"Free Night",
+    region:"Worldwide",
+    summary:"Raffles Hotel Singapore is offering a complimentary fourth night on a minimum four-night stay, bookable by Oct 27, 2026 for travel by Oct 31, 2026, with a further window bookable by Dec 19, 2026 for travel by Dec 23, 2026. Other Raffles properties run their own stay-longer and Amex Fine Hotels + Resorts complimentary-night offers.",
+    terms:"Minimum four-night stay required for the free night. Blackout dates apply; terms vary by property, and some windows require booking through Amex Fine Hotels + Resorts rather than direct.",
+    url:"https://www.raffles.com/offers/stay-longer-with-raffles/",
+    source:"raffles.com",
+    dateAdded:"2026-09-20", lastUpdated:"2026-09-20"
+  },
+  {
+    id:"oneandonly-royal-mirage-fourth-night",
+    brand:"One&Only",
+    name:"Royal Mirage Fourth Night Free with Spa Perks",
+    scope:"One&Only Royal Mirage, Dubai (+ Moonlight Basin, Montana & Mandarina, Mexico)",
+    type:"Free Night",
+    region:"Middle East",
+    summary:"One&Only Royal Mirage in Dubai is offering a complimentary fourth night plus spa treatments, a personal training session and use of a private beachside gazebo on qualifying stays. Similar third- or fourth-night-free offers are running concurrently at One&Only Moonlight Basin in Montana and One&Only Mandarina in Mexico through year-end 2026.",
+    terms:"Minimum four-night stay required for the free night at Royal Mirage; spa, training and gazebo perks included. Recent booking window: book by Nov 22, 2026 for travel by Dec 25, 2026 (dates roll periodically); blackout dates and property-specific conditions apply.",
+    url:"https://www.oneandonlyresorts.com/royal-mirage/offers",
+    source:"oneandonlyresorts.com",
+    dateAdded:"2026-09-20", lastUpdated:"2026-09-20"
   }
 ];
 

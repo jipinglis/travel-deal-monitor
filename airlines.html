@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-19";
+const LAST_CHECKED = "2026-09-20";
 
 const AIRLINE_DEALS = [
   {
@@ -210,11 +210,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Everyday Low Fares",
     dest:"Domestic network from Atlanta",
-    summary:"Southwest has the second-biggest presence at ATL. Its most recent fare sale, 'Week of WOW' (up to 40% off base fares for travel Oct 5, 2026 through Mar 3, 2027), closed to new bookings Sept 17, 2026 and had no announced successor as of Sept 18, 2026 — check southwest.com's flight-deals page for the next round. Rapid Rewards members can still buy points at a 50% discount, as low as 1.5 cents each, through Oct 2, 2026. Two free checked bags plus no change fees apply to every booking regardless of any active sale.",
+    summary:"Southwest has the second-biggest presence at ATL. Its most recent fare sale, 'Week of WOW' (up to 40% off base fares for travel Oct 5, 2026 through Mar 3, 2027), closed to new bookings Sept 17, 2026, with no successor sale posted yet — check southwest.com's flight-deals page for the next round. Rapid Rewards members can still buy points at a 50% discount, as low as 1.5 cents each, through Oct 2, 2026. Two free checked bags plus no change fees apply to every booking regardless of any active sale.",
     terms:"Check southwest.com/special-offers/flight-deals/ for the current live fare sale, since Southwest's sales rotate every few weeks with their own booking windows and blackout dates. The 50%-off Rapid Rewards points purchase runs through Oct 2, 2026, 11:59pm CT, capped at 60,000 points per transaction.",
     url:"https://www.southwest.com/special-offers/flight-deals/",
     source:"southwest.com",
-    dateAdded:"2026-07-08", lastUpdated:"2026-09-18"
+    dateAdded:"2026-07-08", lastUpdated:"2026-09-20"
   },
   {
     id:"american-atl-deals",
@@ -223,11 +223,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Fare Sale",
     dest:"American hubs & beyond from Atlanta (DFW, CLT, MIA, ORD)",
-    summary:"American's Summer Flight Deals page lists reduced web fares to its hubs and beyond. From Atlanta it connects to DFW, CLT, MIA and ORD with frequent sales and AAdvantage award specials — a handy alternative to Delta for one-stop international connections. (American Airlines Vacations runs its own current promo codes for package bookings — see the separate American Airlines Vacations listing.)",
-    terms:"Web specials are date-limited and advance-purchase; award availability varies by route. Promo code SUMMERUSA takes $75 off trips of $200 or more, bookable through Dec 31, 2026.",
-    url:"https://www.aa.com/en-us/summer-deals",
+    summary:"American's Domestic Deals page lists reduced web fares to its hubs and beyond. From Atlanta it connects to DFW, CLT, MIA and ORD with frequent sales and AAdvantage award specials — a handy alternative to Delta for one-stop international connections. (American Airlines Vacations runs its own current promo codes for package bookings — see the separate American Airlines Vacations listing.)",
+    terms:"Web specials are date-limited and advance-purchase; award availability varies by route and current promo codes change frequently — check aa.com's Domestic Deals page for what's live now.",
+    url:"https://www.aa.com/en-us/domestic-deals",
     source:"aa.com",
-    dateAdded:"2026-07-02", lastUpdated:"2026-09-19"
+    dateAdded:"2026-07-02", lastUpdated:"2026-09-20"
   },
   {
     id:"united-atl-deals",
@@ -301,11 +301,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Package Deal",
     dest:"U.S., Canada, Mexico, the Caribbean & Central America from Atlanta",
-    summary:"Bundle an ATL flight with a hotel through Delta Vacations and save on eligible worldwide packages as a SkyMiles member — instant savings run up to $300 per package depending on the resort. The lead traveler also picks up bonus SkyMiles on qualifying bookings.",
-    terms:"Book by Sept 30, 2026 for travel through Apr 30, 2027. Requires a four-night minimum hotel stay with flight and hotel booked together, at least one Delta-operated flight, and the lead traveler must be a (free) SkyMiles member. Blackout dates Dec 16, 2026–Jan 2, 2027. Exact discount amount varies by package — check delta.com/vacations for current terms.",
+    summary:"Bundle an ATL flight with a hotel through Delta Vacations and save on eligible worldwide packages as a SkyMiles member — savings run up to 51% off for travel in October 2026, tapering for later dates through April 2027. The lead traveler also picks up bonus SkyMiles on qualifying bookings.",
+    terms:"Book by Sept 30, 2026 for travel Oct 1, 2026 through Apr 30, 2027 (deepest discount for Oct 1–31, 2026 travel). Requires a four-night minimum hotel stay with flight and hotel booked together, at least one Delta-operated flight, and the lead traveler must be a (free) SkyMiles member. Blackout dates Dec 16, 2026–Jan 2, 2027. Exact discount amount varies by package and travel date — check delta.com/vacations for current terms.",
     url:"https://www.delta.com/us/en/delta-vacations/offers-deals",
     source:"delta.com",
-    dateAdded:"2026-08-03", lastUpdated:"2026-09-09"
+    dateAdded:"2026-08-03", lastUpdated:"2026-09-20"
   },
   {
     id:"american-vacations-fall-savings",
@@ -314,11 +314,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Package Deal",
     dest:"U.S. & Canada vacation packages from Atlanta",
-    summary:"American Airlines Vacations is discounting flight-and-hotel packages this fall with promo codes FALL75 ($75 off packages of $1,500 or more) and FALL100 ($100 off packages of $2,500 or more). Each requires round-trip flights booked as part of the package.",
-    terms:"Book Sept 1–30, 2026 for travel Sept 3–Dec 31, 2026. Minimum 3-night stay. Blackout dates: Sept 7, Nov 26, Dec 25 and Dec 31, 2026. U.S. and Canada packages only.",
+    summary:"American Airlines Vacations is discounting flight-and-hotel packages this fall with promo codes FALL75 ($75 off packages of $1,500 or more) and FALL100 ($100 off packages of $2,500 or more) for U.S. and Canada packages. A separate code, EURO200, takes $200 off European packages of $7,000 or more with a 5-night minimum stay, for travel through July 31, 2027. Each requires round-trip flights booked as part of the package.",
+    terms:"Book Sept 1–30, 2026. FALL75/FALL100: travel Sept 3–Dec 31, 2026, minimum 3-night stay, blackout dates Sept 7, Nov 26, Dec 25 and Dec 31, 2026, U.S. and Canada packages only. EURO200: travel through Jul 31, 2027, minimum 5-night stay.",
     url:"https://www.aavacations.com/en/",
     source:"aavacations.com",
-    dateAdded:"2026-09-07", lastUpdated:"2026-09-07"
+    dateAdded:"2026-09-07", lastUpdated:"2026-09-20"
   },
   {
     id:"american-europe-flight-deals",
