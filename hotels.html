@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-28";
+const LAST_CHECKED = "2026-09-29";
 
 const HOTEL_DEALS = [
   {
@@ -208,9 +208,10 @@ const HOTEL_DEALS = [
       {name:"London Park Lane (4th night free)", url:"https://www.fourseasons.com/london/offers/stay-longer-fourth-night-free/"},
       {name:"Costa Rica (4th night free)", url:"https://www.fourseasons.com/costarica/offers/stay-longer-fourth-night-free/"},
       {name:"Cabo del Sol (4th night free)", url:"https://www.fourseasons.com/cabodelsol/offers/stay-longer-fourth-night-free/"},
-      {name:"Baltimore (4th night free)", url:"https://www.fourseasons.com/baltimore/offers/stay_longer_third_night_free/"}
+      {name:"Baltimore (4th night free)", url:"https://www.fourseasons.com/baltimore/offers/stay_longer_third_night_free/"},
+      {name:"Punta Mita, Mexico (4th night free)", url:"https://www.fourseasons.com/puntamita/offers/stay-longer-fourth-night-free/"}
     ],
-    dateAdded:"2026-07-11", lastUpdated:"2026-09-15"
+    dateAdded:"2026-07-11", lastUpdated:"2026-09-29"
   },
   {
     id:"omni-resort-credit",
@@ -417,9 +418,10 @@ const HOTEL_DEALS = [
       {name:"Mayakoba, Riviera Maya (3rd night free)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
       {name:"Baha Mar, Bahamas ($100 daily credit)", url:"https://www.rosewoodhotels.com/en/baha-mar/offers/more-rosewood"},
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
-      {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"}
+      {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"},
+      {name:"Miyakojima, Japan", url:"https://www.rosewoodhotels.com/en/miyakojima/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-20"
+    dateAdded:"2026-07-12", lastUpdated:"2026-09-29"
   },
   {
     id:"conrad-third-night-credit",
@@ -447,8 +449,8 @@ const HOTEL_DEALS = [
     scope:"InterContinental Hotels & Resorts worldwide",
     type:"Member Rate",
     region:"Worldwide",
-    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. IHG's current member sale takes 25% off the Best Flexible Rate at its Essentials and Suites brands, or 30% off at its Luxury, Lifestyle and Premium brands, which includes InterContinental. IHG is also running double and triple points on stays across the portfolio, including InterContinental, from Oct 1 through Dec 31, 2026.",
-    terms:"Requires a free IHG One Rewards account. Member sale: book by Sept 29, 2026 for stays Sept 25 through Nov 8, 2026. Double/triple points promotion: registration required; eligible stays must fall between Oct 1 and Dec 31, 2026.",
+    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. IHG's member sale takes 25% off the Best Flexible Rate at its Essentials and Suites brands, or 30% off at its Luxury, Lifestyle and Premium brands, which includes InterContinental. A separate Autumn Sale takes 23% off stays across Europe, the Middle East, Africa, India and South Asia. IHG is also running double and triple points on stays across the portfolio, including InterContinental, from Oct 1 through Dec 31, 2026.",
+    terms:"Requires a free IHG One Rewards account. Member sale: book by Sept 29, 2026 for stays Sept 25 through Nov 8, 2026. Autumn Sale (Europe/Middle East/Africa/India/South Asia): book by Sept 30, 2026 for stays through Jun 21, 2027. Double/triple points promotion: registration required; eligible stays must fall between Oct 1 and Dec 31, 2026.",
     url:"https://www.ihg.com/content/us/en/deals/member-offers",
     source:"ihg.com",
     dateAdded:"2026-07-12", lastUpdated:"2026-09-27"
@@ -546,11 +548,11 @@ const HOTEL_DEALS = [
     scope:"Participating Peninsula hotels worldwide (Beverly Hills, New York, London, Bangkok, Hong Kong & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Peninsula Beverly Hills is currently running this through a book-by-Sept-28, 2026 window (travel by Dec 30, 2026), alongside a complimentary-fourth-night window: book by Dec 20, 2026 for travel by Dec 23, 2026. A separate, targeted Amex Offer credits $100 back after spending $500 or more at a participating Peninsula hotel, for spending between Aug 21 and Nov 30, 2026 (enrollment required; not all cardholders will see it).",
+    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Peninsula Beverly Hills' third-night window (booked by Sept 28, 2026) has closed; its complimentary-fourth-night window remains open: book by Dec 20, 2026 for travel by Dec 23, 2026. Peninsula Hong Kong now runs its own complimentary third night in two booking windows — by Oct 28, 2026 for travel by Oct 31, 2026, and by Dec 27, 2026 for travel by Dec 30, 2026. A separate, targeted Amex Offer credits $100 back after spending $500 or more at a participating Peninsula hotel, for spending between Aug 21 and Nov 30, 2026 (enrollment required; not all cardholders will see it).",
     terms:"FHR free-night offer requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card; exact night count and window vary by hotel and by booking date. The $100 Amex Offers statement credit requires separate enrollment and is targeted.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/peninsula-hotels",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-26"
+    dateAdded:"2026-09-05", lastUpdated:"2026-09-29"
   },
   {
     id:"lhw-complimentary-night",
@@ -559,11 +561,11 @@ const HOTEL_DEALS = [
     scope:"Participating Leading Hotels of the World properties worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"American Express Fine Hotels + Resorts lists a complimentary third or fourth night, depending on the property, at select Leading Hotels of the World members. Current examples include a fourth-night offer bookable by Oct 27, 2026 for travel by Oct 31, 2026, and a third-night offer bookable by Oct 25, 2026 for travel by Oct 31, 2026.",
+    summary:"American Express Fine Hotels + Resorts lists a complimentary third or fourth night, depending on the property, at select Leading Hotels of the World members. Current examples include a third-night offer bookable by Oct 27, 2026 for travel by Oct 31, 2026, and further December windows: a third night bookable by Dec 12, 2026 for travel by Dec 15, 2026, and a fourth night bookable by Dec 11, 2026 for travel by Dec 15, 2026.",
     terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Night count and booking window vary by hotel.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/the-leading-hotels-of-the-world",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-05"
+    dateAdded:"2026-09-05", lastUpdated:"2026-09-29"
   },
   {
     id:"w-hotels-fb-credit",
@@ -637,11 +639,11 @@ const HOTEL_DEALS = [
     scope:"One&Only Royal Mirage, Dubai (+ Moonlight Basin, Montana & Mandarina, Mexico)",
     type:"Free Night",
     region:"Middle East",
-    summary:"One&Only Royal Mirage in Dubai is offering a complimentary fourth night plus spa treatments, a personal training session and use of a private beachside gazebo on qualifying stays. Similar third- or fourth-night-free offers are running concurrently at One&Only Moonlight Basin in Montana and One&Only Mandarina in Mexico through year-end 2026.",
-    terms:"Minimum four-night stay required for the free night at Royal Mirage; spa, training and gazebo perks included. Recent booking window: book by Nov 22, 2026 for travel by Dec 25, 2026 (dates roll periodically); blackout dates and property-specific conditions apply.",
+    summary:"One&Only Royal Mirage in Dubai is offering a complimentary fourth night plus spa treatments, a personal training session and use of a private beachside gazebo on qualifying stays. One&Only Moonlight Basin in Montana runs its own evergreen complimentary-night program, 'Night On Us,' rather than a fixed seasonal window; One&Only Mandarina in Mexico has a similar fourth-night-free offer, book by Nov 22, 2026 for travel by Dec 25, 2026.",
+    terms:"Minimum four-night stay required for the free night at Royal Mirage; spa, training and gazebo perks included. Booking window rolls periodically — check the property's own offers page for the current dates; blackout dates and property-specific conditions apply.",
     url:"https://www.oneandonlyresorts.com/royal-mirage/offers",
     source:"oneandonlyresorts.com",
-    dateAdded:"2026-09-20", lastUpdated:"2026-09-20"
+    dateAdded:"2026-09-20", lastUpdated:"2026-09-29"
   }
 ];
 
