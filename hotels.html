@@ -175,14 +175,14 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-30";
+const LAST_CHECKED = "2026-10-01";
 
 const HOTEL_DEALS = [
   {
     id:"four-seasons-third-night-free",
     brand:"Four Seasons",
     name:"Stay Longer — Third Night Free",
-    scope:"Select properties worldwide (Atlanta, Chicago, Napa, Seattle, Miami, Toronto, Houston & more)",
+    scope:"Select properties worldwide (Chicago, Napa, Seattle, Miami, Toronto, Houston & more)",
     type:"Free Night",
     region:"Worldwide",
     summary:"Book two consecutive paid nights and the third night is on the house — offered independently at many Four Seasons city and resort properties. Orlando, Los Angeles, San Francisco, Washington DC, Palm Beach, Surfside (Miami Beach), Oahu and Ocean Club (Bahamas) run Fourth Night Free versions instead. The Oahu offer covers selected dates through Dec 23, 2026, and Orlando's fourth-night-free window has been renewed through Nov 30, 2027 for travel by Dec 18, 2027 (Orlando also has a separate 25% off nightly rate, book by Dec 31, 2026 for travel by Mar 7, 2027). Three more good fall options turned up this morning: Costa Rica (Aug 18 to Nov 16), Cabo del Sol, and London Park Lane, whose window runs all the way into 2027. San Francisco and Los Angeles are both good through Dec 31.",
@@ -190,7 +190,6 @@ const HOTEL_DEALS = [
     url:"https://www.fourseasons.com/napavalley/offers/stay-longer-third-night-free/",
     source:"fourseasons.com",
     properties:[
-      {name:"Atlanta", url:"https://www.fourseasons.com/atlanta/offers/stay_longer_third_night_free/"},
       {name:"Chicago", url:"https://www.fourseasons.com/chicago/offers/stay_longer_third_night_free/"},
       {name:"Napa Valley", url:"https://www.fourseasons.com/napavalley/offers/stay-longer-third-night-free/"},
       {name:"Miami", url:"https://www.fourseasons.com/miami/offers/stay_longer_third_night_free/"},
@@ -211,7 +210,7 @@ const HOTEL_DEALS = [
       {name:"Baltimore (4th night free)", url:"https://www.fourseasons.com/baltimore/offers/stay_longer_third_night_free/"},
       {name:"Punta Mita, Mexico (4th night free)", url:"https://www.fourseasons.com/puntamita/offers/stay-longer-fourth-night-free/"}
     ],
-    dateAdded:"2026-07-11", lastUpdated:"2026-09-30"
+    dateAdded:"2026-07-11", lastUpdated:"2026-10-01"
   },
   {
     id:"omni-resort-credit",
@@ -307,8 +306,8 @@ const HOTEL_DEALS = [
     scope:"Waldorf Astoria, Conrad & LXR resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Stay three nights at any Waldorf Astoria, LXR or Conrad hotel or resort and the fourth night is complimentary. There is also a straight 25% off three-plus-night stays that includes full breakfast for two daily and a $150 resort credit — a good swap if a free fourth night does not fit your dates. Waldorf Astoria Orlando layers on a $100 resort credit and complimentary valet, Park City runs 25% off any length of stay with breakfast and a $100 credit, and Monarch Beach suite bookings add a $300 resort credit. Separately, American Express Fine Hotels + Resorts runs a brand-wide 25% off eligible rooms at Waldorf Astoria properties, plus its own property-specific windows at Monarch Beach and Los Cabos Pedregal.",
-    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include Osaka (complimentary 3rd night, book by Dec 28, 2026 for travel by Dec 31, 2026, plus a separate 25% off booked by Dec 31, 2026 for travel by Aug 31, 2027) and Beverly Hills (complimentary 3rd night, book by Sept 28, 2026 for travel by Dec 30, 2026). The brand-wide Amex FHR 25% off rate runs book by Sept 30, 2026 for travel through Oct 31, 2027; Monarch Beach and Los Cabos Pedregal each carry the same 25% off through Dec 31, 2026 and Jan 31, 2027 respectively.",
+    summary:"Stay three nights at any Waldorf Astoria, LXR or Conrad hotel or resort and the fourth night is complimentary. There is also a straight 25% off three-plus-night stays that includes full breakfast for two daily and a $150 resort credit — a good swap if a free fourth night does not fit your dates. Waldorf Astoria Orlando layers on a $100 resort credit and complimentary valet, Park City runs 25% off any length of stay with breakfast and a $100 credit, and Monarch Beach suite bookings add a $300 resort credit. Separately, American Express Fine Hotels + Resorts runs a rolling 25% off eligible rooms at individual Waldorf Astoria properties rather than one fixed brand-wide window — current examples include Waldorf Astoria New York (30% off suites, book by Oct 31, 2026), Washington DC (25% off, book by Dec 30, 2026) and Los Cabos Pedregal (25% off through Jan 31, 2027). A separate targeted Amex Offer credits $250 back after spending $1,250 or more at a Waldorf Astoria hotel in the US or Latin America, for spending through Nov 30, 2026.",
+    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include Osaka (complimentary 3rd night, book by Dec 28, 2026 for travel by Dec 31, 2026, plus a separate 25% off booked by Dec 31, 2026 for travel by Aug 31, 2027). Check americanexpress.com/travel for current property-specific dates. The $250 Amex Offers statement credit requires separate enrollment and is targeted, for spending through Nov 30, 2026.",
     url:"https://www.hilton.com/en/offers/waldorf-astoria/",
     source:"hilton.com",
     properties:[
@@ -316,7 +315,7 @@ const HOTEL_DEALS = [
       {name:"Monarch Beach, CA", url:"https://www.waldorfastoriamonarchbeach.com/"},
       {name:"Brand-wide 25% off (Amex FHR)", url:"https://www.americanexpress.com/en-us/travel/discover/brand/waldorf-astoria-hotels-and-resorts"}
     ],
-    dateAdded:"2026-07-03", lastUpdated:"2026-09-26"
+    dateAdded:"2026-07-03", lastUpdated:"2026-10-01"
   },
   {
     id:"montage-fourth-night-free",
@@ -365,10 +364,10 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Extended-weekend packages plus complimentary-fourth-night and 15–25%-off offers across the independent Relais & Châteaux collection of luxury inns and gourmet estates. A separate targeted Amex Offer gives a $100 statement credit after spending $500 or more at a participating property.",
-    terms:"Amex Travel offer: 25% off select rooms, booking by Sept 30, 2026 for travel through Dec 29, 2026. Amex Offers statement credit: spend $500+ at a participating property between July 15 and Nov 15, 2026 (enrollment required, targeted offer, booking must go through the Relais & Châteaux channel).",
+    terms:"Amex Travel offer: 25% off select rooms is a rolling program with per-property booking windows rather than one fixed date; check americanexpress.com/travel for current dates. Amex Offers statement credit: spend $500+ at a participating property between July 15 and Nov 15, 2026 (enrollment required, targeted offer, booking must go through the Relais & Châteaux channel).",
     url:"https://www.relaischateaux.com/us/special-offers",
     source:"relaischateaux.com",
-    dateAdded:"2026-06-22", lastUpdated:"2026-09-15"
+    dateAdded:"2026-06-22", lastUpdated:"2026-10-01"
   },
   {
     id:"westin-stay-longer-breakfast",
@@ -393,15 +392,14 @@ const HOTEL_DEALS = [
     scope:"St. Regis resorts (Punta Mita, Kanai, Longboat Key & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Marquee St. Regis resorts run complimentary-night offers — St. Regis Kanai (Riviera Maya) gives a free third night and St. Regis Punta Mita a free third or fourth night — with butler service throughout. St. Regis Longboat Key Resort in Florida instead runs a $350 food & beverage credit through Amex Fine Hotels + Resorts. The St. Regis Bermuda Resort adds a complimentary third night through American Express Fine Hotels + Resorts, book by Sept 30, 2026 for travel between Oct 10, 2026 and Mar 31, 2027. Bonvoy luxury bonus points stack on top where applicable.",
-    terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates. Longboat Key's Amex FHR credit: book by Dec 31, 2026 for travel by Jan 3, 2027. Bermuda's Amex FHR free third night requires an eligible Amex Platinum or Business Platinum card.",
+    summary:"Marquee St. Regis resorts run complimentary-night offers — St. Regis Kanai (Riviera Maya) gives a free third night and St. Regis Punta Mita a free third or fourth night — with butler service throughout. St. Regis Longboat Key Resort in Florida instead runs a $350 food & beverage credit through Amex Fine Hotels + Resorts. Bonvoy luxury bonus points stack on top where applicable.",
+    terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates. Longboat Key's Amex FHR credit: book by Dec 31, 2026 for travel by Jan 3, 2027.",
     url:"https://st-regis.marriott.com/offers/",
     source:"st-regis.marriott.com",
     properties:[
-      {name:"Longboat Key, FL ($350 F&B credit)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Longboat-Key/The-St-Regis-Longboat-Key-Resort"},
-      {name:"Bermuda (3rd night free, Amex FHR)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Bermuda/St.-George's/The-St-Regis-Bermuda-Resort"}
+      {name:"Longboat Key, FL ($350 F&B credit)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Longboat-Key/The-St-Regis-Longboat-Key-Resort"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-19"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-01"
   },
   {
     id:"rosewood-fourth-night",
@@ -449,11 +447,11 @@ const HOTEL_DEALS = [
     scope:"InterContinental Hotels & Resorts worldwide",
     type:"Member Rate",
     region:"Worldwide",
-    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. IHG's Autumn Sale takes up to 23% off stays across Europe, the Middle East, Africa, India and South Asia, for stays until Jun 21, 2027. IHG is also running double and triple points on stays across the portfolio, including InterContinental, from Oct 1 through Dec 31, 2026. (IHG's separate Member Sale, which ran Sept 25–Nov 8 stays, closed for booking Sept 29, 2026 with no successor posted yet.)",
-    terms:"Requires a free IHG One Rewards account. Autumn Sale (Europe/Middle East/Africa/India/South Asia): book by Sept 30, 2026 for stays through Jun 21, 2027. Double/triple points promotion: registration required; eligible stays must fall between Oct 1 and Dec 31, 2026.",
+    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. IHG is running double and triple points on stays across the portfolio, including InterContinental, for stays between Oct 1 and Dec 31, 2026. IHG's Autumn Sale (up to 23% off Europe/Middle East/Africa/India/South Asia) closed for booking Sept 30, 2026, and its separate Member Sale closed Sept 29, 2026; no successor sale has been posted yet.",
+    terms:"Requires a free IHG One Rewards account. Double/triple points promotion: registration required; eligible stays must fall between Oct 1 and Dec 31, 2026.",
     url:"https://www.ihg.com/content/us/en/deals/member-offers",
     source:"ihg.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-30"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-01"
   },
   {
     id:"belmond-longer-stay",
@@ -488,19 +486,6 @@ const HOTEL_DEALS = [
       {name:"Early Booking offers", url:"https://www.sixsenses.com/en/offers/early-booking/"}
     ],
     dateAdded:"2026-07-12", lastUpdated:"2026-09-18"
-  },
-  {
-    id:"hyatt-latin-america-free-nights",
-    brand:"Park Hyatt",
-    name:"Up to 5 Free Nights — Latin America & Caribbean",
-    scope:"Participating Hyatt resorts across Latin America & the Caribbean",
-    type:"Loyalty Bonus",
-    region:"Latin America & Caribbean",
-    summary:"A good one to register for now and use over the winter: earn one Category 1-4 Free Night Award for every three nights at participating Hyatt resorts in Latin America and the Caribbean, up to five free nights in total. The qualifying stays are in January through March 2027, so this is a plan-ahead offer — but registration is open today and costs nothing. Pairs well with a spring-break beach trip.",
-    terms:"Register (free World of Hyatt account) between Aug 3 and Sept 30, 2026. Only nights completed after you register and between Jan 1 and Mar 31, 2027 count. Maximum five Free Night Awards; they must be redeemed by June 30, 2027.",
-    url:"https://world.hyatt.com/content/gp/en/offers.html",
-    source:"hyatt.com",
-    dateAdded:"2026-08-13", lastUpdated:"2026-09-09"
   },
   {
     id:"acqualina-fourth-night-free",
@@ -657,6 +642,32 @@ const HOTEL_DEALS = [
     url:"https://www.aman.com/hotels/aman-new-york/exclusives",
     source:"aman.com",
     dateAdded:"2026-09-30", lastUpdated:"2026-09-30"
+  },
+  {
+    id:"hilton-honors-more-points-to-play",
+    brand:"Hilton",
+    name:"More Points to Play — Bonus Points on Every Stay",
+    scope:"Hilton portfolio worldwide, including Waldorf Astoria, Conrad, LXR and resort/luxury/lifestyle properties",
+    type:"Loyalty Bonus",
+    region:"Worldwide",
+    summary:"Hilton Honors members who register earn 1,000 bonus points on stays at most Hilton brands, or 3,000 bonus points on stays at Luxury, Lifestyle and Resort properties — including Waldorf Astoria, Conrad and LXR — for stays completed between Oct 15 and Dec 31, 2026.",
+    terms:"Register (free Hilton Honors account) before your stay at hiltonhonors.com/morepointstoplay. No cap on the number of qualifying stays; points post 6-8 weeks after checkout. Bonus points do not count toward elite tier qualification.",
+    url:"https://www.hiltonhonors.com/morepointstoplay",
+    source:"hiltonhonors.com",
+    dateAdded:"2026-10-01", lastUpdated:"2026-10-01"
+  },
+  {
+    id:"jw-marriott-guanacaste-fourth-night",
+    brand:"JW Marriott",
+    name:"Complimentary Fourth Night — Guanacaste, Costa Rica",
+    scope:"JW Marriott Guanacaste Resort & Spa, Costa Rica",
+    type:"Free Night",
+    region:"Central America",
+    summary:"Book through American Express Fine Hotels + Resorts at JW Marriott Guanacaste Resort & Spa, on Costa Rica's Pacific coast, and get a complimentary fourth night.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Nov 30, 2026 for travel by Mar 31, 2027.",
+    url:"https://www.americanexpress.com/en-us/travel/discover/property/Costa-Rica/Tamarindo/Jw-Marriott-Guanacaste",
+    source:"americanexpress.com",
+    dateAdded:"2026-10-01", lastUpdated:"2026-10-01"
   }
 ];
 

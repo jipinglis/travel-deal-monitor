@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-09-30";
+const LAST_CHECKED = "2026-10-01";
 
 const AIRLINE_DEALS = [
   {
@@ -171,11 +171,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Award Sale",
     dest:"Europe (nonstop ATL → LHR, CDG, AMS, FCO & more)",
-    summary:"Delta runs periodic SkyMiles flash sales and fare sales to Europe from Atlanta throughout the year rather than one continuous static sale — recent rounds have priced economy award seats around 26,000 SkyMiles round-trip from most U.S. cities (as low as 19,000 nonstop from New York) and Delta One business class around 115,000 SkyMiles each way (roughly 97,750 with the 15% Delta SkyMiles co-brand card discount), with cash fares around $500–$600 round-trip. Separately, Delta is also running a buy-SkyMiles promotion with up to a 50% bonus through Sept 30, 2026, a way to top up for an award booking. Nonstop ATL service to Dublin, Paris, Amsterdam, Rome and London makes SkyTeam Europe easy — check the flash-sale page for what's currently live.",
-    terms:"Flash-sale award seats sell out fast and rotate without a fixed schedule; check delta.com for the current round. Delta SkyMiles co-brand card holders save an extra 15% on award bookings. The buy-miles bonus (up to 50%, capped at 60,000 base miles per account per year) runs through Sept 30, 2026.",
+    summary:"Delta runs periodic SkyMiles flash sales and fare sales to Europe from Atlanta throughout the year rather than one continuous static sale — the current fall round prices economy award seats from 34,000-40,000 SkyMiles round-trip to cities including London, Paris, Milan, Dublin, Munich and Stockholm, dropping to about 29,000 with the 15% Delta SkyMiles co-brand card discount (TakeOff 15), with Delta One business class around 115,000 SkyMiles each way. Nonstop ATL service to Dublin, Paris, Amsterdam, Rome and London makes SkyTeam Europe easy — check the flash-sale page for what's currently live.",
+    terms:"Flash-sale award seats sell out fast and rotate without a fixed schedule; check delta.com for the current round. Delta SkyMiles co-brand card holders save an extra 15% (TakeOff 15) on award bookings. Delta's buy-SkyMiles bonus promotion is evergreen and rotates — the up-to-50% bonus window posted through Sept 30, 2026 has closed; check delta.com for the current bonus rate.",
     url:"https://www.delta.com/us/en/flight-deals/flash-sale",
     source:"delta.com",
-    dateAdded:"2026-06-24", lastUpdated:"2026-09-18"
+    dateAdded:"2026-06-24", lastUpdated:"2026-10-01"
   },
   {
     id:"frontier-atl-discount-fares",
@@ -197,11 +197,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Everyday Low Fares",
     dest:"Domestic network from Atlanta",
-    summary:"Southwest has the second-biggest presence at ATL. Its newest sale, \"Hey pumpkin, fall's on,\" offers one-way fares from $59, bookable now through Oct 1, 2026, for travel Oct 20, 2026 through Mar 3, 2027. Rapid Rewards members can also buy points at up to 50% off, as low as 1.5 cents each, through Oct 2, 2026. Two free checked bags plus no change fees apply to every booking regardless of any active sale.",
-    terms:"Fall fare sale (\"Hey pumpkin, fall's on\"): book by Oct 1, 2026, 11:59pm; requires at least 21 days' advance purchase before travel, and seats are limited by market and day of week. The 50%-off Rapid Rewards points purchase runs through Oct 2, 2026, 11:59pm CT, capped at 60,000 points per transaction.",
+    summary:"Southwest has the second-biggest presence at ATL. Its \"Hey pumpkin, fall's on\" one-way fares from $59 sale booking window closed Oct 1, 2026; Southwest runs frequent flash sales (multiple per month), so a new round is likely imminent — check southwest.com's low-fare calendar for what's currently live. Rapid Rewards members can also buy points at up to 50% off, as low as 1.5 cents each, through Oct 2, 2026. Two free checked bags plus no change fees apply to every booking regardless of any active sale.",
+    terms:"Check southwest.com/special-offers/flight-deals for the current fare sale. The 50%-off Rapid Rewards points purchase runs through Oct 2, 2026, 11:59pm CT, capped at 60,000 points per transaction.",
     url:"https://www.southwest.com/special-offers/flight-deals/",
     source:"southwest.com",
-    dateAdded:"2026-07-08", lastUpdated:"2026-09-30"
+    dateAdded:"2026-07-08", lastUpdated:"2026-10-01"
   },
   {
     id:"american-atl-deals",
@@ -224,10 +224,10 @@ const AIRLINE_DEALS = [
     type:"Fare Sale",
     dest:"United hubs from Atlanta (EWR, ORD, IAH, DEN, SFO)",
     summary:"United's Atlanta deals page surfaces low fares to its hubs and MileagePlus saver awards — a strong option for West Coast and international connections beyond Delta's SkyTeam network. United is also running a buy-miles promotion with bonuses reportedly as high as 100% on targeted offers, a way to stock up for a future award booking.",
-    terms:"Fares dynamic; Basic Economy is cheapest but restrictive. Advance purchase. The buy-miles bonus runs through Sept 30, 2026, 11:59pm CT, capped at 50,000 miles per 90 days and 200,000 per year.",
+    terms:"Fares dynamic; Basic Economy is cheapest but restrictive. Advance purchase. The buy-miles bonus (up to 100%) that ran through Sept 30, 2026 has closed with no renewal confirmed yet; check united.com/mileageplus for a current promotion.",
     url:"https://www.united.com/en/us/deals/flights-to-atlanta",
     source:"united.com",
-    dateAdded:"2026-06-30", lastUpdated:"2026-09-25"
+    dateAdded:"2026-06-30", lastUpdated:"2026-10-01"
   },
   {
     id:"jetblue-atl-fares",
@@ -236,11 +236,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Fare Sale",
     dest:"East Coast & focus cities from Atlanta (BOS, JFK, FLL)",
-    summary:"JetBlue serves ATL to the Northeast and Florida with roomy seats and free Wi-Fi. JetBlue Vacations' 'Very Important Perks' throws in extras worth up to $125 — resort credits, breakfast and upgrades — on flight-plus-hotel packages of four or more nights booked at select resorts at least four days ahead. JetBlue Vacations also takes up to 50% off flight-plus-cruise packages, up to 35% off car rentals added to a flight or package, and includes free airport transfers to Aruba, Cancun, Montego Bay, Punta Cana, Nassau, San Juan, St. Lucia and Tulum on qualifying vacation packages.",
-    terms:"Blue Basic is cheapest for flight-only bookings. Very Important Perks requires flight and hotel booked together on jetbluevacations.com at least 4 days before travel; exact perks vary by resort. The up-to-50%-off flight+cruise package sale requires a four-night minimum and must be booked by Feb 10, 2027.",
+    summary:"JetBlue serves ATL to the Northeast and Florida with roomy seats and free Wi-Fi. A current Fall Fare flash sale offers one-way fares from $54 for travel Tuesdays, Wednesdays and Saturdays between Sept 9 and Nov 18, 2026 (blackout dates Oct 9-14 and Nov 8-11). JetBlue Vacations' 'Very Important Perks' throws in extras worth up to $125 — resort credits, breakfast and upgrades — on flight-plus-hotel packages of four or more nights booked at select resorts at least four days ahead. JetBlue Vacations also takes up to 50% off flight-plus-cruise packages, up to 35% off car rentals added to a flight or package, and includes free airport transfers to Aruba, Cancun, Montego Bay, Punta Cana, Nassau, San Juan, St. Lucia and Tulum on qualifying vacation packages.",
+    terms:"Fall Fare sale fares are limited to Tue/Wed/Sat travel with blackout dates Oct 9-14 and Nov 8-11, 2026; book early as seats are limited. Blue Basic is cheapest for flight-only bookings. Very Important Perks requires flight and hotel booked together on jetbluevacations.com at least 4 days before travel; exact perks vary by resort. The up-to-50%-off flight+cruise package sale requires a four-night minimum and must be booked by Feb 10, 2027.",
     url:"https://www.jetbluevacations.com/sale/current",
     source:"jetbluevacations.com",
-    dateAdded:"2026-07-06", lastUpdated:"2026-09-25"
+    dateAdded:"2026-07-06", lastUpdated:"2026-10-01"
   },
   {
     id:"virgin-atlantic-atl-london",
@@ -249,11 +249,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Fare Sale",
     dest:"London Heathrow (LHR) nonstop from Atlanta",
-    summary:"Virgin Atlantic (Delta's transatlantic partner) flies ATL–London nonstop, with regular sale fares and Flying Club redemptions — a stylish alternative for UK and onward-Europe trips. The current sale runs Aug 27–Sept 30, 2026 for travel between Sept 1, 2026 and Aug 31, 2027.",
-    terms:"Sale fares are advance-purchase and bookable Aug 27–Sept 30, 2026; premium cabins sell out early.",
+    summary:"Virgin Atlantic (Delta's transatlantic partner) flies ATL–London nonstop, with regular sale fares and Flying Club redemptions — a stylish alternative for UK and onward-Europe trips. The current fare sale covers October 2026 through February 2027 travel, with round-trip fares from roughly $810-$1,011; a separate Upper Class SkyMiles/Virgin Points award sale offers ATL-LHR from 29,000 points plus $706 for travel in the same window.",
+    terms:"Sale fares are advance-purchase; premium cabins sell out early. Check virginatlantic.com for the current booking deadline.",
     url:"https://flights.virginatlantic.com/en-us/flights-from-atlanta",
     source:"virginatlantic.com",
-    dateAdded:"2026-07-09", lastUpdated:"2026-09-05"
+    dateAdded:"2026-07-09", lastUpdated:"2026-10-01"
   },
   {
     id:"air-france-klm-flying-blue-promo",
@@ -262,11 +262,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Award Sale",
     dest:"Europe via Paris (CDG) or Amsterdam (AMS), connecting from Atlanta",
-    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates. The September 2026 window (book by Sept 30, 2026) covers travel through Feb 28, 2027, with discounted awards from 13 North American cities to Europe priced as low as 18,750 miles each way in economy, 30,000 in premium economy and 45,000 in business on flagged dates.",
-    terms:"Book by Sept 30, 2026 for travel through Feb 28, 2027. Discount applies only to specific flagged routes/dates, so check the Promo Rewards calendar for Atlanta availability before booking. Starting Sept 8, 2026, Flying Blue award tickets split into Light/Standard/Flex fares; Promo Rewards seats are typically issued as Light fares, which carry no changes, no refunds, no advance seat selection and no complimentary checked bag in economy or premium economy.",
+    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates. The October 2026 window (book by Oct 31, 2026) covers travel through Mar 31, 2027, across 54 flagged routes, with discounted awards priced as low as 18,750 miles each way in economy; this round also newly flags some non-Europe routes, such as Europe to Vancouver from 18,750 miles on KLM.",
+    terms:"Book by Oct 31, 2026 for travel through Mar 31, 2027. Discount applies only to specific flagged routes/dates, so check the Promo Rewards calendar for Atlanta availability before booking. Flying Blue award tickets are split into Light/Standard/Flex fares; Promo Rewards seats are typically issued as Light fares, which carry no changes, no refunds, no advance seat selection and no complimentary checked bag in economy or premium economy.",
     url:"https://wwws.airfrance.us/en-us/flights-from-atlanta",
     source:"airfrance.us / klm.com",
-    dateAdded:"2026-07-30", lastUpdated:"2026-09-19"
+    dateAdded:"2026-07-30", lastUpdated:"2026-10-01"
   },
   {
     id:"delta-vacations-summer-package-savings",
@@ -275,24 +275,24 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Package Deal",
     dest:"U.S., Canada, Mexico, the Caribbean & Central America from Atlanta",
-    summary:"Delta Vacations now discounts flight-and-hotel packages property by property rather than one broad worldwide rate. Current examples include $150 off Royalton Hideaway Blue Waters and Royalton Negril in Jamaica, $300 off Conrad Tulum Riviera Maya, and a complimentary room upgrade at Margaritaville Island Reserve Riviera Cancun — all bookable with an ATL flight. The lead traveler also picks up bonus SkyMiles on qualifying bookings.",
-    terms:"Royalton Jamaica properties and Conrad Tulum: book by Sept 30, 2026 for travel through Mar 30, 2027. Margaritaville Island Reserve Riviera Cancun: book by Oct 31, 2026. Requires flight and hotel booked together, at least one Delta-operated flight, and a four-night minimum hotel stay; the lead traveler must be a (free) SkyMiles member. Exact discount varies by package — check delta.com/vacations for current terms.",
+    summary:"Delta Vacations now discounts flight-and-hotel packages property by property rather than one broad worldwide rate. Current examples include $300 off Conrad Tulum Riviera Maya and a complimentary room upgrade at Margaritaville Island Reserve Riviera Cancun — both bookable with an ATL flight. The Royalton Hideaway Blue Waters and Royalton Negril discounts in Jamaica closed for booking Sept 30, 2026 with no successor confirmed yet. The lead traveler also picks up bonus SkyMiles on qualifying bookings.",
+    terms:"Conrad Tulum: book by Oct 5, 2026 for travel through Dec 20, 2026, $300 instant savings. Margaritaville Island Reserve Riviera Cancun: book by Oct 31, 2026. Requires flight and hotel booked together, at least one Delta-operated flight, and a four-night minimum hotel stay; the lead traveler must be a (free) SkyMiles member. Exact discount varies by package — check delta.com/vacations for current terms.",
     url:"https://www.delta.com/us/en/delta-vacations/offers-deals",
     source:"delta.com",
-    dateAdded:"2026-08-03", lastUpdated:"2026-09-30"
+    dateAdded:"2026-08-03", lastUpdated:"2026-10-01"
   },
   {
     id:"american-vacations-fall-savings",
     airline:"American Airlines",
-    name:"American Airlines Vacations — Fall Package Savings",
+    name:"American Airlines Vacations — Package Savings",
     scope:"Domestic",
     type:"Package Deal",
     dest:"U.S. & Canada vacation packages from Atlanta",
-    summary:"American Airlines Vacations is discounting flight-and-hotel packages this fall with promo codes FALL75 ($75 off packages of $1,500 or more) and FALL100 ($100 off packages of $2,500 or more) for U.S. and Canada packages. A separate code, EURO200, takes $200 off European packages of $7,000 or more with a 5-night minimum stay, for travel through July 31, 2027. Each requires round-trip flights booked as part of the package.",
-    terms:"Book Sept 1–30, 2026. FALL75/FALL100: travel Sept 3–Dec 31, 2026, minimum 3-night stay, blackout dates Sept 7, Nov 26, Dec 25 and Dec 31, 2026, U.S. and Canada packages only. EURO200: travel through Jul 31, 2027, minimum 5-night stay.",
+    summary:"American Airlines Vacations is discounting flight-and-hotel packages with promo codes VACATIONS100 ($100 off eligible trips) and LUXURY600 ($600 off vacation packages), both valid through Dec 31, 2026. The earlier FALL75/FALL100/EURO200 codes' Sept 1-30, 2026 booking window has closed. Each requires round-trip flights booked as part of the package.",
+    terms:"VACATIONS100 and LUXURY600 valid through Dec 31, 2026; exact minimum spend and stay requirements vary by code — check aavacations.com for current terms.",
     url:"https://www.aavacations.com/en/",
     source:"aavacations.com",
-    dateAdded:"2026-09-07", lastUpdated:"2026-09-20"
+    dateAdded:"2026-09-07", lastUpdated:"2026-10-01"
   },
   {
     id:"american-europe-flight-deals",
