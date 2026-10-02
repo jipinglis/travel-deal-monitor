@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-01";
+const LAST_CHECKED = "2026-10-02";
 
 const AIRLINE_DEALS = [
   {
@@ -171,11 +171,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Award Sale",
     dest:"Europe (nonstop ATL → LHR, CDG, AMS, FCO & more)",
-    summary:"Delta runs periodic SkyMiles flash sales and fare sales to Europe from Atlanta throughout the year rather than one continuous static sale — the current fall round prices economy award seats from 34,000-40,000 SkyMiles round-trip to cities including London, Paris, Milan, Dublin, Munich and Stockholm, dropping to about 29,000 with the 15% Delta SkyMiles co-brand card discount (TakeOff 15), with Delta One business class around 115,000 SkyMiles each way. Nonstop ATL service to Dublin, Paris, Amsterdam, Rome and London makes SkyTeam Europe easy — check the flash-sale page for what's currently live.",
+    summary:"Delta runs periodic SkyMiles flash sales and fare sales to Europe from Atlanta throughout the year rather than one continuous static sale. Recent rounds have priced economy award seats from roughly 30,000-40,000 SkyMiles round-trip to cities including London, Paris, Milan, Dublin, Munich and Stockholm, with Delta SkyMiles co-brand cardholders saving an extra 15% (TakeOff 15) on top. Nonstop ATL service to Dublin, Paris, Amsterdam, Rome and London makes SkyTeam Europe easy — check the flash-sale page for what's currently live, since rounds rotate without a fixed schedule.",
     terms:"Flash-sale award seats sell out fast and rotate without a fixed schedule; check delta.com for the current round. Delta SkyMiles co-brand card holders save an extra 15% (TakeOff 15) on award bookings. Delta's buy-SkyMiles bonus promotion is evergreen and rotates — the up-to-50% bonus window posted through Sept 30, 2026 has closed; check delta.com for the current bonus rate.",
     url:"https://www.delta.com/us/en/flight-deals/flash-sale",
     source:"delta.com",
-    dateAdded:"2026-06-24", lastUpdated:"2026-10-01"
+    dateAdded:"2026-06-24", lastUpdated:"2026-10-02"
   },
   {
     id:"frontier-atl-discount-fares",
@@ -197,11 +197,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Everyday Low Fares",
     dest:"Domestic network from Atlanta",
-    summary:"Southwest has the second-biggest presence at ATL. Its \"Hey pumpkin, fall's on\" one-way fares from $59 sale booking window closed Oct 1, 2026; Southwest runs frequent flash sales (multiple per month), so a new round is likely imminent — check southwest.com's low-fare calendar for what's currently live. Rapid Rewards members can also buy points at up to 50% off, as low as 1.5 cents each, through Oct 2, 2026. Two free checked bags plus no change fees apply to every booking regardless of any active sale.",
-    terms:"Check southwest.com/special-offers/flight-deals for the current fare sale. The 50%-off Rapid Rewards points purchase runs through Oct 2, 2026, 11:59pm CT, capped at 60,000 points per transaction.",
+    summary:"Southwest has the second-biggest presence at ATL. Its \"Hey pumpkin, fall's on\" one-way fares from $59 sale closed Oct 1, 2026, and the 50%-off Rapid Rewards points purchase closes tonight, Oct 2, 2026; no new systemwide fare sale has been announced yet. Southwest runs frequent flash sales — multiple per month — so check southwest.com's low-fare calendar for the next one. Two free checked bags plus no change fees apply to every booking regardless of any active sale.",
+    terms:"Check southwest.com/special-offers/flight-deals for the next fare sale announcement. The 50%-off Rapid Rewards points purchase ends Oct 2, 2026, 11:59pm CT, capped at 60,000 points per transaction.",
     url:"https://www.southwest.com/special-offers/flight-deals/",
     source:"southwest.com",
-    dateAdded:"2026-07-08", lastUpdated:"2026-10-01"
+    dateAdded:"2026-07-08", lastUpdated:"2026-10-02"
   },
   {
     id:"american-atl-deals",
@@ -223,11 +223,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Fare Sale",
     dest:"United hubs from Atlanta (EWR, ORD, IAH, DEN, SFO)",
-    summary:"United's Atlanta deals page surfaces low fares to its hubs and MileagePlus saver awards — a strong option for West Coast and international connections beyond Delta's SkyTeam network. United is also running a buy-miles promotion with bonuses reportedly as high as 100% on targeted offers, a way to stock up for a future award booking.",
-    terms:"Fares dynamic; Basic Economy is cheapest but restrictive. Advance purchase. The buy-miles bonus (up to 100%) that ran through Sept 30, 2026 has closed with no renewal confirmed yet; check united.com/mileageplus for a current promotion.",
+    summary:"United's Atlanta deals page surfaces low fares to its hubs and MileagePlus saver awards — a strong option for West Coast and international connections beyond Delta's SkyTeam network. Its buy-miles bonus promotion (up to 100% on targeted offers) closed Sept 30, 2026 and has not been renewed as of this check.",
+    terms:"Fares dynamic; Basic Economy is cheapest but restrictive. Advance purchase. No active buy-miles promotion currently; check united.com/mileageplus for a new offer.",
     url:"https://www.united.com/en/us/deals/flights-to-atlanta",
     source:"united.com",
-    dateAdded:"2026-06-30", lastUpdated:"2026-10-01"
+    dateAdded:"2026-06-30", lastUpdated:"2026-10-02"
   },
   {
     id:"jetblue-atl-fares",
@@ -262,11 +262,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Award Sale",
     dest:"Europe via Paris (CDG) or Amsterdam (AMS), connecting from Atlanta",
-    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates. The October 2026 window (book by Oct 31, 2026) covers travel through Mar 31, 2027, across 54 flagged routes, with discounted awards priced as low as 18,750 miles each way in economy; this round also newly flags some non-Europe routes, such as Europe to Vancouver from 18,750 miles on KLM.",
+    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates. The October 2026 window (book by Oct 31, 2026) covers travel through Mar 31, 2027, across 54 flagged routes, with discounted awards priced as low as 18,750 miles each way in economy; this round also newly flags some non-Europe routes, such as Europe to Vancouver from 18,750 miles on KLM and ATL-Beijing economy awards from 30,000 miles.",
     terms:"Book by Oct 31, 2026 for travel through Mar 31, 2027. Discount applies only to specific flagged routes/dates, so check the Promo Rewards calendar for Atlanta availability before booking. Flying Blue award tickets are split into Light/Standard/Flex fares; Promo Rewards seats are typically issued as Light fares, which carry no changes, no refunds, no advance seat selection and no complimentary checked bag in economy or premium economy.",
     url:"https://wwws.airfrance.us/en-us/flights-from-atlanta",
     source:"airfrance.us / klm.com",
-    dateAdded:"2026-07-30", lastUpdated:"2026-10-01"
+    dateAdded:"2026-07-30", lastUpdated:"2026-10-02"
   },
   {
     id:"delta-vacations-summer-package-savings",

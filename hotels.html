@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-01";
+const LAST_CHECKED = "2026-10-02";
 
 const HOTEL_DEALS = [
   {
@@ -185,7 +185,7 @@ const HOTEL_DEALS = [
     scope:"Select properties worldwide (Chicago, Napa, Seattle, Miami, Toronto, Houston & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book two consecutive paid nights and the third night is on the house — offered independently at many Four Seasons city and resort properties. Orlando, Los Angeles, San Francisco, Washington DC, Palm Beach, Surfside (Miami Beach), Oahu and Ocean Club (Bahamas) run Fourth Night Free versions instead. The Oahu offer covers selected dates through Dec 23, 2026, and Orlando's fourth-night-free window has been renewed through Nov 30, 2027 for travel by Dec 18, 2027 (Orlando also has a separate 25% off nightly rate, book by Dec 31, 2026 for travel by Mar 7, 2027). Three more good fall options turned up this morning: Costa Rica (Aug 18 to Nov 16), Cabo del Sol, and London Park Lane, whose window runs all the way into 2027. San Francisco and Los Angeles are both good through Dec 31.",
+    summary:"Book two consecutive paid nights and the third night is on the house — offered independently at many Four Seasons city and resort properties. Orlando, Los Angeles, San Francisco, Washington DC, Palm Beach, Surfside (Miami Beach), Oahu and Ocean Club (Bahamas) run Fourth Night Free versions instead. The Oahu offer covers selected dates through Dec 23, 2026. London Park Lane's fourth-night-free window now runs Sep 6, 2026 through Dec 31, 2027, and Los Angeles's version now runs through Dec 31, 2027 as well. San Francisco is good through Dec 31, 2026.",
     terms:"Varies by property; advance booking required. Check each hotel's Offers page for blackout dates.",
     url:"https://www.fourseasons.com/napavalley/offers/stay-longer-third-night-free/",
     source:"fourseasons.com",
@@ -205,28 +205,10 @@ const HOTEL_DEALS = [
       {name:"Washington, DC (4th night free)", url:"https://www.fourseasons.com/washington/offers/stay-longer-fourth-night-free/"},
       {name:"Surfside, Miami Beach (4th night free)", url:"https://www.fourseasons.com/surfside/offers/stay-longer-fourth-night-free/"},
       {name:"London Park Lane (4th night free)", url:"https://www.fourseasons.com/london/offers/stay-longer-fourth-night-free/"},
-      {name:"Costa Rica (4th night free)", url:"https://www.fourseasons.com/costarica/offers/stay-longer-fourth-night-free/"},
-      {name:"Cabo del Sol (4th night free)", url:"https://www.fourseasons.com/cabodelsol/offers/stay-longer-fourth-night-free/"},
       {name:"Baltimore (4th night free)", url:"https://www.fourseasons.com/baltimore/offers/stay_longer_third_night_free/"},
       {name:"Punta Mita, Mexico (4th night free)", url:"https://www.fourseasons.com/puntamita/offers/stay-longer-fourth-night-free/"}
     ],
-    dateAdded:"2026-07-11", lastUpdated:"2026-10-01"
-  },
-  {
-    id:"omni-resort-credit",
-    brand:"Omni",
-    name:"Stay 2 Nights, Get 3rd Night Free",
-    scope:"Omni Mount Washington Resort & Spa (+ specials portfolio-wide)",
-    type:"Free Night",
-    region:"United States",
-    summary:"Book two nights at Omni Mount Washington Resort & Spa and the third night is complimentary, plus a $50 food and beverage credit. Omni's specials page also lists seasonal percent-off stays across other US properties.",
-    terms:"Applies to Presidential Wing, Historic Premier & Upscale rooms; see specials page for current dates.",
-    url:"https://www.omnihotels.com/specials",
-    source:"omnihotels.com",
-    properties:[
-      {name:"Omni Mount Washington Resort & Spa", url:"https://www.omnihotels.com/hotels/bretton-woods-mount-washington/specials/third-night-free"}
-    ],
-    dateAdded:"2026-07-11", lastUpdated:"2026-09-07"
+    dateAdded:"2026-07-11", lastUpdated:"2026-10-02"
   },
   {
     id:"ritz-carlton-stay-longer",
@@ -258,7 +240,7 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"American Express Fine Hotels + Resorts lists a complimentary fourth night at several Shangri-La properties in Asia. Shangri-La Singapore has the widest current window; Island Shangri-La Hong Kong and Shangri-La Boracay run their own shorter windows.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Singapore: book by Oct 31, 2026 for travel by Jan 31, 2027. Hong Kong: book by Dec 27, 2026 for travel by Dec 31, 2026. Boracay: book by Nov 12, 2026 for travel by Dec 15, 2026.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Singapore: book by Oct 31, 2026 for travel by Jan 31, 2027. Hong Kong: book by Dec 27, 2026 for travel by Dec 31, 2026. Boracay: book by Nov 26, 2026 for travel by Nov 30, 2026 (blackout dates Oct 19 and Oct 23, 2026).",
     url:"https://www.americanexpress.com/en-us/travel/discover/property/Singapore/Singapore/Shangri-la-Singapore",
     source:"americanexpress.com",
     properties:[
@@ -266,7 +248,7 @@ const HOTEL_DEALS = [
       {name:"Island Shangri-La, Hong Kong (4th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/China/Hong-Kong/Island-Shangri-la-Hong-Kong"},
       {name:"Boracay (4th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Philippines/Malay/Shangri-la-Boracay"}
     ],
-    dateAdded:"2026-07-10", lastUpdated:"2026-09-27"
+    dateAdded:"2026-07-10", lastUpdated:"2026-10-02"
   },
   {
     id:"mandarin-oriental-one-more-night",
@@ -276,7 +258,7 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Complimentary night folded into the stay under Mandarin Oriental's 'One More Night' program, now running at a growing list of participating hotels — including the flagship on Columbus Circle in New York and both Paris properties, Place Vendôme and Lutetia. The Paris booking window was recently extended.",
-    terms:"New York: an ongoing rolling offer rather than a fixed cutoff — check the property's own offers page for its current window. Paris (Place Vendôme and Lutetia): book by Dec 1, 2026 for travel by Dec 31, 2026.",
+    terms:"New York: an ongoing rolling offer rather than a fixed cutoff — check the property's own offers page for its current window. Paris, Place Vendôme: book by May 18, 2027 for travel Oct 26, 2026 through May 22, 2027. Paris, Lutetia: book by May 24, 2027 for travel Oct 21, 2026 through May 28, 2027 (blackout dates Dec 30–31, 2026 and Mar 5–6, 2027).",
     url:"https://www.mandarinoriental.com/en/offers",
     source:"mandarinoriental.com",
     properties:[
@@ -284,7 +266,7 @@ const HOTEL_DEALS = [
       {name:"Paris, Place Vendôme", url:"https://www.mandarinoriental.com/en/paris/place-vendome/offers/one-more-night"},
       {name:"Paris, Lutetia (One More Night)", url:"https://www.mandarinoriental.com/en/paris/lutetia/offers/one-more-night"}
     ],
-    dateAdded:"2026-07-08", lastUpdated:"2026-09-13"
+    dateAdded:"2026-07-08", lastUpdated:"2026-10-02"
   },
   {
     id:"marriott-luxury-bonus-points",
@@ -408,18 +390,18 @@ const HOTEL_DEALS = [
     scope:"25 of 27 Rosewood hotels & resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Rosewood's summer 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Mayakoba's own version gives a complimentary third night with daily breakfast for two and kids eat free; check the property page for its current window, since terms there have varied by season. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit through Oct 31. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
+    summary:"Rosewood's 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection, including Mayakoba, whose earlier seasonal third-night-free promotion ended Sept 30, 2026 and has reverted to the standard fourth-night-free structure. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit for stays May 1 through Oct 31, 2026. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
     terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Windows vary by hotel — check each property's offers page for current dates.",
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
-      {name:"Mayakoba, Riviera Maya (3rd night free)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
+      {name:"Mayakoba, Riviera Maya (4th night free)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
       {name:"Baha Mar, Bahamas ($100 daily credit)", url:"https://www.rosewoodhotels.com/en/baha-mar/offers/more-rosewood"},
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"},
       {name:"Miyakojima, Japan", url:"https://www.rosewoodhotels.com/en/miyakojima/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-29"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-02"
   },
   {
     id:"conrad-third-night-credit",
@@ -447,11 +429,11 @@ const HOTEL_DEALS = [
     scope:"InterContinental Hotels & Resorts worldwide",
     type:"Member Rate",
     region:"Worldwide",
-    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. IHG is running double and triple points on stays across the portfolio, including InterContinental, for stays between Oct 1 and Dec 31, 2026. IHG's Autumn Sale (up to 23% off Europe/Middle East/Africa/India/South Asia) closed for booking Sept 30, 2026, and its separate Member Sale closed Sept 29, 2026; no successor sale has been posted yet.",
+    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. IHG is running double and triple points on stays across the portfolio, including InterContinental, for stays between Oct 1 and Dec 31, 2026. IHG's Autumn Sale (up to 23% off Europe/Middle East/Africa/India/South Asia) closed for booking Sept 30, 2026, and its separate Member Sale closed Sept 29, 2026; no successor sale has been posted yet. IHG is also offering up to 100% bonus points on purchased IHG One Rewards points through Oct 5, 2026 — a way to stock up ahead of a future stay.",
     terms:"Requires a free IHG One Rewards account. Double/triple points promotion: registration required; eligible stays must fall between Oct 1 and Dec 31, 2026.",
     url:"https://www.ihg.com/content/us/en/deals/member-offers",
     source:"ihg.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-01"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-02"
   },
   {
     id:"belmond-longer-stay",
@@ -668,6 +650,19 @@ const HOTEL_DEALS = [
     url:"https://www.americanexpress.com/en-us/travel/discover/property/Costa-Rica/Tamarindo/Jw-Marriott-Guanacaste",
     source:"americanexpress.com",
     dateAdded:"2026-10-01", lastUpdated:"2026-10-01"
+  },
+  {
+    id:"st-regis-maldives-vommuli-property-credit",
+    brand:"St. Regis",
+    name:"$1,500 Property Credit — Amex Fine Hotels + Resorts",
+    scope:"St. Regis Maldives Vommuli Resort",
+    type:"Resort Credit",
+    region:"Worldwide",
+    summary:"Book through American Express Fine Hotels + Resorts at St. Regis Maldives Vommuli Resort and receive a $1,500 property credit, daily breakfast for two and a one-category room upgrade when available.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Dec 18, 2026 for travel by Dec 22, 2026.",
+    url:"https://www.americanexpress.com/en-us/travel/discover/property/Maldives/Dhaalu-Atoll/the-st-regis-maldives-vommuli-resort",
+    source:"americanexpress.com",
+    dateAdded:"2026-10-02", lastUpdated:"2026-10-02"
   }
 ];
 
