@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-03";
+const LAST_CHECKED = "2026-10-04";
 
 const HOTEL_DEALS = [
   {
@@ -240,7 +240,7 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"American Express Fine Hotels + Resorts lists a complimentary fourth night at several Shangri-La properties in Asia. Shangri-La Singapore has the widest current window; Island Shangri-La Hong Kong and Shangri-La Boracay run their own shorter windows.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Singapore: book by Oct 31, 2026 for travel by Jan 31, 2027. Hong Kong: book by Dec 27, 2026 for travel by Dec 31, 2026. Boracay: book by Nov 26, 2026 for travel by Nov 30, 2026 (blackout dates Oct 19 and Oct 23, 2026).",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Singapore: book by Dec 31, 2026 for travel by Dec 31, 2027. Hong Kong: book by Dec 27, 2026 for travel by Dec 31, 2026. Boracay: book by Nov 26, 2026 for travel by Nov 30, 2026 (blackout dates Oct 19 and Oct 23, 2026).",
     url:"https://www.americanexpress.com/en-us/travel/discover/property/Singapore/Singapore/Shangri-la-Singapore",
     source:"americanexpress.com",
     properties:[
@@ -248,7 +248,7 @@ const HOTEL_DEALS = [
       {name:"Island Shangri-La, Hong Kong (4th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/China/Hong-Kong/Island-Shangri-la-Hong-Kong"},
       {name:"Boracay (4th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Philippines/Malay/Shangri-la-Boracay"}
     ],
-    dateAdded:"2026-07-10", lastUpdated:"2026-10-02"
+    dateAdded:"2026-07-10", lastUpdated:"2026-10-04"
   },
   {
     id:"mandarin-oriental-one-more-night",
@@ -289,15 +289,16 @@ const HOTEL_DEALS = [
     type:"Free Night",
     region:"Worldwide",
     summary:"Stay three nights at any Waldorf Astoria, LXR or Conrad hotel or resort and the fourth night is complimentary. There is also a straight 25% off three-plus-night stays that includes full breakfast for two daily and a $150 resort credit — a good swap if a free fourth night does not fit your dates. Waldorf Astoria Orlando layers on a $100 resort credit and complimentary valet, Park City runs 25% off any length of stay with breakfast and a $100 credit, and Monarch Beach suite bookings add a $300 resort credit. Separately, American Express Fine Hotels + Resorts runs a rolling 25% off eligible rooms at individual Waldorf Astoria properties rather than one fixed brand-wide window — current examples include Waldorf Astoria New York (30% off suites, book by Oct 31, 2026), Washington DC (25% off, book by Dec 30, 2026) and Los Cabos Pedregal (25% off through Jan 31, 2027). A separate targeted Amex Offer credits $250 back after spending $1,250 or more at a Waldorf Astoria hotel in the US or Latin America, for spending through Nov 30, 2026.",
-    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include Osaka (complimentary 3rd night, book by Dec 28, 2026 for travel by Dec 31, 2026, plus a separate 25% off booked by Dec 31, 2026 for travel by Aug 31, 2027). Check americanexpress.com/travel for current property-specific dates. The $250 Amex Offers statement credit requires separate enrollment and is targeted, for spending through Nov 30, 2026.",
+    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include Osaka (complimentary 3rd night, book by Dec 28, 2026 for travel by Dec 31, 2026, plus a separate 25% off booked by Dec 31, 2026 for travel by Aug 31, 2027) and Chicago (complimentary 3rd night on a 4-night minimum stay, book by Dec 27, 2026 for travel by Dec 30, 2026, blackout dates Dec 31, 2026–Jan 1, 2027). Check americanexpress.com/travel for current property-specific dates. The $250 Amex Offers statement credit requires separate enrollment and is targeted, for spending through Nov 30, 2026.",
     url:"https://www.hilton.com/en/offers/waldorf-astoria/",
     source:"hilton.com",
     properties:[
       {name:"Orlando ($100 credit)", url:"https://www.waldorfastoriaorlando.com/special-offers/"},
       {name:"Monarch Beach, CA", url:"https://www.waldorfastoriamonarchbeach.com/"},
-      {name:"Brand-wide 25% off (Amex FHR)", url:"https://www.americanexpress.com/en-us/travel/discover/brand/waldorf-astoria-hotels-and-resorts"}
+      {name:"Brand-wide 25% off (Amex FHR)", url:"https://www.americanexpress.com/en-us/travel/discover/brand/waldorf-astoria-hotels-and-resorts"},
+      {name:"Chicago (comp 3rd night, Amex FHR)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Illinois-US/Chicago/waldorf-astoria-chicago"}
     ],
-    dateAdded:"2026-07-03", lastUpdated:"2026-10-01"
+    dateAdded:"2026-07-03", lastUpdated:"2026-10-04"
   },
   {
     id:"montage-fourth-night-free",
@@ -390,18 +391,18 @@ const HOTEL_DEALS = [
     scope:"25 of 27 Rosewood hotels & resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Rosewood's 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection, including Mayakoba, whose earlier seasonal third-night-free promotion ended Sept 30, 2026 and has reverted to the standard fourth-night-free structure. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit for stays May 1 through Oct 31, 2026. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
-    terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Windows vary by hotel — check each property's offers page for current dates.",
+    summary:"Rosewood's 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Mayakoba has a renewed complimentary-third-night promotion running through American Express Fine Hotels + Resorts instead of the standard fourth-night structure. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit for stays May 1 through Oct 31, 2026. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
+    terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Mayakoba's current Amex FHR offer: complimentary third night on a 3-night minimum stay, including breakfast and a $100 credit — book by Oct 15, 2026 for travel by Oct 31, 2026. Windows vary by hotel — check each property's offers page for current dates.",
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
-      {name:"Mayakoba, Riviera Maya (4th night free)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
+      {name:"Mayakoba, Riviera Maya (comp 3rd night, Amex FHR)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
       {name:"Baha Mar, Bahamas ($100 daily credit)", url:"https://www.rosewoodhotels.com/en/baha-mar/offers/more-rosewood"},
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"},
       {name:"Miyakojima, Japan", url:"https://www.rosewoodhotels.com/en/miyakojima/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-02"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-04"
   },
   {
     id:"conrad-third-night-credit",
@@ -410,17 +411,18 @@ const HOTEL_DEALS = [
     scope:"Conrad Hotels & Resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Conrad resorts run a mix of complimentary-night and percent-off deals, mostly through American Express Fine Hotels + Resorts. Conrad Osaka and Conrad Orlando are currently running 25% off the nightly room rate rather than a free-night structure, and Conrad Fort Lauderdale Beach has a complimentary fourth night. Hilton Honors members can stack points and perks.",
-    terms:"Amex Fine Hotels + Resorts windows roll forward regularly — current examples: Conrad Osaka, 25% off, book by Dec 30, 2026; Conrad Orlando, 25% off, book by Dec 31, 2026; Conrad Fort Lauderdale Beach, complimentary 4th night, book by Dec 31, 2026 for travel by Jan 4, 2027. Varies by hotel.",
+    summary:"Conrad resorts run a mix of complimentary-night and percent-off deals, mostly through American Express Fine Hotels + Resorts. Conrad Osaka and Conrad Orlando are currently running 25% off the nightly room rate rather than a free-night structure, Conrad Fort Lauderdale Beach has a complimentary fourth night, and Conrad Maldives Rangali Island adds a complimentary additional night on a four-night minimum stay. Hilton Honors members can stack points and perks.",
+    terms:"Amex Fine Hotels + Resorts windows roll forward regularly — current examples: Conrad Osaka, 25% off, book by Dec 30, 2026; Conrad Orlando, 25% off, book by Dec 31, 2026; Conrad Fort Lauderdale Beach, complimentary 4th night, book by Dec 31, 2026 for travel by Jan 4, 2027; Conrad Maldives Rangali Island, complimentary additional night (4-night minimum), book by Dec 14, 2026 for travel by Dec 20, 2026. Varies by hotel.",
     url:"https://www.hilton.com/en/offers/conrad-hotels/",
     source:"hilton.com",
     properties:[
       {name:"Conrad Osaka (25% off)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Japan/Osaka/Conrad-Osaka"},
       {name:"Conrad Orlando (25% off)", url:"https://www.hilton.com/en/hotels/orlcici-conrad-orlando/offers/"},
       {name:"Conrad Fort Lauderdale Beach (4th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Fort-Lauderdale/Conrad-Fort-Lauderdale-Beach"},
-      {name:"Conrad Washington DC", url:"https://conradwashingtondc.com/offers/"}
+      {name:"Conrad Washington DC", url:"https://conradwashingtondc.com/offers/"},
+      {name:"Conrad Maldives Rangali Island (comp night)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Maldives/South-Ari-Atoll/conrad-maldives-rangali-island"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-26"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-04"
   },
   {
     id:"intercontinental-member-sales",
@@ -663,6 +665,19 @@ const HOTEL_DEALS = [
     url:"https://www.americanexpress.com/en-us/travel/discover/property/Maldives/Dhaalu-Atoll/the-st-regis-maldives-vommuli-resort",
     source:"americanexpress.com",
     dateAdded:"2026-10-02", lastUpdated:"2026-10-02"
+  },
+  {
+    id:"omni-homestead-fourth-night",
+    brand:"Omni",
+    name:"Complimentary Fourth Night — The Omni Homestead Resort",
+    scope:"The Omni Homestead Resort and Spa, Hot Springs, Virginia",
+    type:"Free Night",
+    region:"United States",
+    summary:"Book through American Express Fine Hotels + Resorts at this historic mountain resort in Virginia's Allegheny Highlands and the fourth night is complimentary, with no blackout dates.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Minimum four consecutive nights. Book by Dec 8, 2026 for travel by Dec 20, 2026.",
+    url:"https://www.americanexpress.com/en-us/travel/discover/property/Virginia-US/Hot-Springs/The-Omni-Homestead-Resort-And-Spa",
+    source:"americanexpress.com",
+    dateAdded:"2026-10-04", lastUpdated:"2026-10-04"
   }
 ];
 
