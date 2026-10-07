@@ -175,40 +175,21 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-06";
+const LAST_CHECKED = "2026-10-07";
 
 const HOTEL_DEALS = [
   {
-    id:"four-seasons-third-night-free",
+    id:"four-seasons-oahu-fourth-night-free",
     brand:"Four Seasons",
-    name:"Stay Longer — Third Night Free",
-    scope:"Select properties worldwide (Chicago, Napa, Seattle, Miami, Toronto, Houston & more)",
+    name:"Stay Longer, Fourth Night Free — Oahu at Ko Olina",
+    scope:"Four Seasons Resort Oahu at Ko Olina, Hawaii",
     type:"Free Night",
-    region:"Worldwide",
-    summary:"Book two consecutive paid nights and the third night is on the house — offered independently at many Four Seasons city and resort properties. Orlando, Los Angeles, San Francisco, Washington DC, Palm Beach, Surfside (Miami Beach), Oahu and Ocean Club (Bahamas) run Fourth Night Free versions instead. The Oahu offer covers selected dates through Dec 23, 2026. London Park Lane's fourth-night-free window now runs Sep 6, 2026 through Dec 31, 2027, and Los Angeles's version now runs through Dec 31, 2027 as well. San Francisco is good through Dec 31, 2026.",
-    terms:"Varies by property; advance booking required. Check each hotel's Offers page for blackout dates.",
-    url:"https://www.fourseasons.com/napavalley/offers/stay-longer-third-night-free/",
+    region:"United States",
+    summary:"Book four consecutive nights at Four Seasons Resort Oahu at Ko Olina and the fourth night is complimentary.",
+    terms:"Minimum four-night stay required. Valid for stays through Dec 25, 2026, and again Jan 2 through Feb 28, 2027. Offer applies to a lower room category if the booked category is unavailable for the free night; blackout and availability restrictions apply.",
+    url:"https://www.fourseasons.com/oahu/offers/stay-longer-fourth-night-free/",
     source:"fourseasons.com",
-    properties:[
-      {name:"Chicago", url:"https://www.fourseasons.com/chicago/offers/stay_longer_third_night_free/"},
-      {name:"Napa Valley", url:"https://www.fourseasons.com/napavalley/offers/stay-longer-third-night-free/"},
-      {name:"Miami", url:"https://www.fourseasons.com/miami/offers/stay_longer_third_night_free/"},
-      {name:"Houston", url:"https://www.fourseasons.com/houston/offers/stay_longer_third_night_free/"},
-      {name:"Toronto", url:"https://www.fourseasons.com/toronto/offers/stay-longer-third-night-free/"},
-      {name:"Seattle", url:"https://www.fourseasons.com/seattle/offers/"},
-      {name:"San Francisco (4th night free)", url:"https://www.fourseasons.com/sanfrancisco/offers/stay-longer-fourth-night-free/"},
-      {name:"Ocean Club, Bahamas (4th night)", url:"https://www.fourseasons.com/oceanclub/offers/fourth-night-free/"},
-      {name:"Orlando (4th night free)", url:"https://www.fourseasons.com/orlando/offers/stay-longer-fourth-night-free/"},
-      {name:"Los Angeles (4th night free)", url:"https://www.fourseasons.com/losangeles/offers/stay-longer-fourth-night-free/"},
-      {name:"Oahu at Ko Olina (4th night free)", url:"https://www.fourseasons.com/oahu/offers/stay-longer-fourth-night-free/"},
-      {name:"Palm Beach (4th night free)", url:"https://www.fourseasons.com/palmbeach/offers/stay-longer-fourth-night-free/"},
-      {name:"Washington, DC (4th night free)", url:"https://www.fourseasons.com/washington/offers/stay-longer-fourth-night-free/"},
-      {name:"Surfside, Miami Beach (4th night free)", url:"https://www.fourseasons.com/surfside/offers/stay-longer-fourth-night-free/"},
-      {name:"London Park Lane (4th night free)", url:"https://www.fourseasons.com/london/offers/stay-longer-fourth-night-free/"},
-      {name:"Baltimore (4th night free)", url:"https://www.fourseasons.com/baltimore/offers/stay_longer_third_night_free/"},
-      {name:"Punta Mita, Mexico (4th night free)", url:"https://www.fourseasons.com/puntamita/offers/stay-longer-fourth-night-free/"}
-    ],
-    dateAdded:"2026-07-11", lastUpdated:"2026-10-02"
+    dateAdded:"2026-10-07", lastUpdated:"2026-10-07"
   },
   {
     id:"ritz-carlton-stay-longer",
@@ -217,20 +198,19 @@ const HOTEL_DEALS = [
     scope:"Toronto, Almaty, Turks & Caicos, Miami Beach, Naples, Amelia Island & more",
     type:"Percent Off",
     region:"Worldwide",
-    summary:"Ritz-Carlton runs its stay-longer savings property by property rather than one global rate. The Ritz-Carlton, Almaty currently takes 15% off stays of four or more nights, The Ritz-Carlton, Turks & Caicos takes up to 25% off stays of five or more consecutive nights, and the Toronto property's Luxury Getaway takes up to 30% off longer stays. Miami Beach, Naples, Amelia Island, Sarasota, Orlando Grande Lakes and Chicago each run their own version of the offer.",
-    terms:"Discount tier and minimum length of stay vary by hotel; most require advance purchase. Almaty: 15% off 4+ nights, valid for stays through Dec 1, 2026. Turks & Caicos: up to 25% off 5+ nights, valid for stays through Dec 15, 2026. Check each property's own offer page for current terms.",
+    summary:"Ritz-Carlton runs its stay-longer savings property by property rather than one global rate. The Ritz-Carlton, Almaty currently takes 15% off stays of four or more nights, and the Toronto property's Luxury Getaway takes up to 30% off longer stays. Miami Beach, Naples, Amelia Island, Sarasota, Orlando Grande Lakes and Chicago each run their own version of the offer.",
+    terms:"Discount tier and minimum length of stay vary by hotel; most require advance purchase. Almaty: 15% off 4+ nights, valid for stays through Dec 1, 2026. Check each property's own offer page for current terms.",
     url:"https://www.ritzcarlton.com/en/hotels-and-resorts/promotions/",
     source:"ritzcarlton.com",
     properties:[
       {name:"Almaty, Kazakhstan (15% off 4+ nights)", url:"https://www.marriott.com/offers/stay-longer-on-us-OFF-171098/ALARZ-alarz-the-ritz-carlton-almaty"},
       {name:"Toronto (up to 30% off)", url:"https://www.marriott.com/offers/luxury-getaway-stay-longer-save-up-to-30-percent-OFF-149384/yyzrz-the-ritz-carlton-toronto"},
-      {name:"Turks & Caicos (up to 25% off, 5+ nights)", url:"https://www.marriott.com/offers/long-term-stay-savings-in-the-u-s-and-canada-1355935/PLSRT-plsrt-the-ritz-carlton-turks-and-caicos"},
       {name:"Naples, FL", url:"https://www.marriott.com/offers/stay-longer-OFF-96035/RSWRZ-the-ritz-carlton-naples"},
       {name:"South Beach, Miami", url:"https://www.marriott.com/offers/stay-longer-save-more-OFF-112387/MIASB-the-ritz-carlton-south-beach"},
       {name:"Amelia Island, FL", url:"https://www.ritzcarlton.com/en/hotels/florida/amelia-island/offers/stay-longer-with-us"},
       {name:"Chicago", url:"https://www.ritzcarlton.com/en/hotels/chicago/offers/stay-longer"}
     ],
-    dateAdded:"2026-07-07", lastUpdated:"2026-10-03"
+    dateAdded:"2026-07-07", lastUpdated:"2026-10-07"
   },
   {
     id:"shangri-la-stay-longer",
@@ -282,23 +262,17 @@ const HOTEL_DEALS = [
     dateAdded:"2026-07-06", lastUpdated:"2026-09-13"
   },
   {
-    id:"waldorf-astoria-suite-credit",
+    id:"waldorf-astoria-maldives-sixth-night",
     brand:"Waldorf Astoria",
-    name:"Stay 3, Get 4th Night Free (+ Resort Credits)",
-    scope:"Waldorf Astoria, Conrad & LXR resorts worldwide",
+    name:"Complimentary Sixth Night — Waldorf Astoria Maldives Ithaafushi",
+    scope:"Waldorf Astoria Maldives Ithaafushi, South Malé Atoll",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Stay three nights at any Waldorf Astoria, LXR or Conrad hotel or resort and the fourth night is complimentary. There is also a straight 25% off three-plus-night stays that includes full breakfast for two daily and a $150 resort credit — a good swap if a free fourth night does not fit your dates. Waldorf Astoria Orlando layers on a $100 resort credit and complimentary valet, Park City runs 25% off any length of stay with breakfast and a $100 credit, and Monarch Beach suite bookings add a $300 resort credit. Separately, American Express Fine Hotels + Resorts runs a rolling 25% off eligible rooms at individual Waldorf Astoria properties rather than one fixed brand-wide window — current examples include Waldorf Astoria New York (30% off suites, book by Oct 31, 2026), Washington DC (25% off, book by Dec 30, 2026) and Los Cabos Pedregal (25% off through Jan 31, 2027). A separate targeted Amex Offer credits $250 back after spending $1,250 or more at a Waldorf Astoria hotel in the US or Latin America, for spending through Nov 30, 2026.",
-    terms:"Fourth-night-free (\"Extra Night\") requires a 4-to-7 consecutive-night stay with 3-day advance booking, at 80+ participating hotels; blackout dates vary by property. The 25% + breakfast + $150 credit rate is good for travel through Nov 18, 2026 (Park City runs through Dec 31). Amex Fine Hotels + Resorts also runs a rolling complimentary-night benefit whose exact window varies by hotel — recent examples include Osaka (complimentary 3rd night, book by Dec 28, 2026 for travel by Dec 31, 2026, plus a separate 25% off booked by Dec 31, 2026 for travel by Aug 31, 2027) and Chicago (complimentary 3rd night on a 4-night minimum stay, book by Dec 27, 2026 for travel by Dec 30, 2026, blackout dates Dec 31, 2026–Jan 1, 2027). Check americanexpress.com/travel for current property-specific dates. The $250 Amex Offers statement credit requires separate enrollment and is targeted, for spending through Nov 30, 2026.",
-    url:"https://www.hilton.com/en/offers/waldorf-astoria/",
+    summary:"Book through American Express Fine Hotels + Resorts at Waldorf Astoria Maldives Ithaafushi and get a complimentary sixth night on a six-consecutive-night stay. A separate 'Live Unforgettable' package takes 30% off accommodation for stays of seven or more nights, with round-trip yacht transfers, daily breakfast and a $100-per-person nightly dining credit.",
+    terms:"Six-night-free offer requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card; book by Dec 14, 2026 for travel by Dec 20, 2026. Live Unforgettable is bookable for stays through Dec 30, 2026 and combinable with other offers May 8–Dec 20, 2026.",
+    url:"https://www.hilton.com/en/hotels/mleonwa-waldorf-astoria-maldives-ithaafushi/offers/",
     source:"hilton.com",
-    properties:[
-      {name:"Orlando ($100 credit)", url:"https://www.waldorfastoriaorlando.com/special-offers/"},
-      {name:"Monarch Beach, CA", url:"https://www.waldorfastoriamonarchbeach.com/"},
-      {name:"Brand-wide 25% off (Amex FHR)", url:"https://www.americanexpress.com/en-us/travel/discover/brand/waldorf-astoria-hotels-and-resorts"},
-      {name:"Chicago (comp 3rd night, Amex FHR)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Illinois-US/Chicago/waldorf-astoria-chicago"}
-    ],
-    dateAdded:"2026-07-03", lastUpdated:"2026-10-04"
+    dateAdded:"2026-10-07", lastUpdated:"2026-10-07"
   },
   {
     id:"montage-fourth-night-free",
@@ -307,8 +281,8 @@ const HOTEL_DEALS = [
     scope:"Montage Los Cabos, Laguna Beach, Palmetto Bluff, Healdsburg, Deer Valley",
     type:"Free Night",
     region:"United States / Mexico",
-    summary:"Los Cabos gives a complimentary fourth night with a $70 daily breakfast credit and airport transfers. Suite Escape adds 10–15% off plus up to $500 daily resort credit at other Montage resorts. Montage Deer Valley in Park City, Utah runs its own complimentary fourth night with a $100 daily resort credit toward dining, Compass Sports rentals or spa treatments, for stays Aug 1 through Nov 30, 2026; a separate winter version swaps in a $200 daily credit per bedroom for ski gear and guided mountain experiences.",
-    terms:"Los Cabos: three consecutive paid nights required, booked at least 21 days ahead. Suite credits vary ($300–$500/day). Deer Valley: three consecutive paid nights required for the complimentary fourth; fall window runs Aug 1–Nov 30, 2026, winter ski terms differ — check the property's offers page.",
+    summary:"Los Cabos gives a complimentary fourth night with a $70 daily breakfast credit and airport transfers, now confirmed running through Dec 18, 2026. Suite Escape adds 10–15% off plus up to $500 daily resort credit at other Montage resorts. Montage Deer Valley in Park City, Utah runs its own complimentary fourth night with a $100 daily resort credit toward dining, Compass Sports rentals or spa treatments, for stays Aug 1 through Nov 30, 2026; a separate winter version swaps in a $200 daily credit per bedroom for ski gear and guided mountain experiences.",
+    terms:"Los Cabos: three consecutive paid nights required, booked at least 21 days ahead; valid for stays through Dec 18, 2026. Suite credits vary ($300–$500/day). Deer Valley: three consecutive paid nights required for the complimentary fourth; fall window runs Aug 1–Nov 30, 2026, winter ski terms differ — check the property's offers page.",
     url:"https://www.montage.com/loscabos/accommodations/special-offers/",
     source:"montage.com",
     properties:[
@@ -318,7 +292,7 @@ const HOTEL_DEALS = [
       {name:"Healdsburg, CA", url:"https://www.montage.com/healdsburg/special-offers/"},
       {name:"Deer Valley, Park City, UT (4th night free)", url:"https://www.montage.com/deervalley/accommodations/special-offers/"}
     ],
-    dateAdded:"2026-06-15", lastUpdated:"2026-09-19"
+    dateAdded:"2026-06-15", lastUpdated:"2026-10-07"
   },
   {
     id:"aman-complimentary-nights",
@@ -346,27 +320,11 @@ const HOTEL_DEALS = [
     scope:"Relais & Châteaux boutique hotels & château estates",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Extended-weekend packages plus complimentary-fourth-night and 15–25%-off offers across the independent Relais & Châteaux collection of luxury inns and gourmet estates. A separate targeted Amex Offer gives a $100 statement credit after spending $500 or more at a participating property.",
-    terms:"Amex Travel offer: 25% off select rooms is a rolling program with per-property booking windows rather than one fixed date; check americanexpress.com/travel for current dates. Amex Offers statement credit: spend $500+ at a participating property between July 15 and Nov 15, 2026 (enrollment required, targeted offer, booking must go through the Relais & Châteaux channel).",
+    summary:"Extended-weekend packages plus complimentary-fourth-night offers across the independent Relais & Châteaux collection of luxury inns and gourmet estates. A separate targeted Amex Offer gives a $100 statement credit after spending $500 or more at a participating property — an effective 20% back on the qualifying spend.",
+    terms:"Amex Offers statement credit: spend $500+ at a participating property between July 15 and Nov 15, 2026 (enrollment required, targeted offer, booking must go through the Relais & Châteaux channel). Complimentary-night and stay-longer offers vary by property; check relaischateaux.com for current per-property dates.",
     url:"https://www.relaischateaux.com/us/special-offers",
     source:"relaischateaux.com",
-    dateAdded:"2026-06-22", lastUpdated:"2026-10-01"
-  },
-  {
-    id:"westin-stay-longer-breakfast",
-    brand:"Westin",
-    name:"Stay Longer & Save + Stay for Breakfast",
-    scope:"Westin Hotels & Resorts worldwide",
-    type:"Percent Off",
-    region:"Worldwide",
-    summary:"Westin's recurring Stay Longer & Save gives tiered savings — 10% off 3 nights, 15% off 4 nights, 20% off 5+ nights — plus 'Stay for Breakfast' rates that bundle in daily breakfast for two. Bonvoy members layer on bonus points and family perks.",
-    terms:"Stay Longer & Save: promo code S6058, valid through Nov 11, 2026; breakfast packages vary by property. Member rate needs Bonvoy sign-in.",
-    url:"https://www.marriott.com/offers/stay-longer-and-save-OFF-158597",
-    source:"westin.marriott.com",
-    properties:[
-      {name:"Houston Memorial City (Stay for Breakfast)", url:"https://www.marriott.com/offers/breakfast-package-houston-texas-OFF-165794/HOUMY-houmy-the-westin-houston-memorial-city"}
-    ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-15"
+    dateAdded:"2026-06-22", lastUpdated:"2026-10-07"
   },
   {
     id:"st-regis-free-night",
@@ -444,14 +402,14 @@ const HOTEL_DEALS = [
     scope:"Copacabana Palace, A Belmond Hotel, Rio de Janeiro",
     type:"Free Night",
     region:"South America",
-    summary:"Belmond's storied Copacabana Palace in Rio is currently offering a complimentary fifth night through American Express Fine Hotels + Resorts for stays beginning Jan 1, 2027, on top of curated packages spanning Belmond's legendary hotels and trains.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Dec 23, 2026 for travel by Dec 28, 2026; stays must begin on or after Jan 1, 2027.",
+    summary:"Belmond's storied Copacabana Palace in Rio is currently offering a complimentary fifth night through American Express Fine Hotels + Resorts, on top of curated packages spanning Belmond's legendary hotels and trains.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Dec 20, 2026 for travel by Dec 23, 2026.",
     url:"https://www.belmond.com/packages-and-tours",
     source:"belmond.com",
     properties:[
       {name:"Copacabana Palace, Rio (5th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Brazil/Rio-de-Janeiro/Copacabana-Palace-A-Belmond-Hotel-Rio-De-Janeiro"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-17"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-07"
   },
   {
     id:"six-senses-stay-longer",
@@ -485,19 +443,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-08-19", lastUpdated:"2026-09-15"
   },
   {
-    id:"autograph-collection-amex-credit",
-    brand:"Autograph Collection",
-    name:"$75 Property Credit — Amex Fine Hotels + Resorts",
-    scope:"Participating Autograph Collection hotels worldwide, booked through American Express Travel",
-    type:"Resort Credit",
-    region:"Worldwide",
-    summary:"American Express Travel's Fine Hotels + Resorts / The Hotel Collection lists a $75 credit toward eligible on-property charges at participating Autograph Collection hotels, for bookings of two or more consecutive nights, on top of the standard perks (room upgrade when available, late checkout) that come with the collection.",
-    terms:"Requires booking two or more consecutive nights through American Express Travel with an eligible Amex Gold, Platinum or Business Platinum card. Book by Apr 9, 2027 for travel between Oct 18, 2026 and Apr 11, 2027.",
-    url:"https://www.americanexpress.com/en-us/travel/discover/brand/autograph-collection-hotels",
-    source:"americanexpress.com",
-    dateAdded:"2026-09-09", lastUpdated:"2026-09-09"
-  },
-  {
     id:"fairmont-royal-pavilion-fourth-night",
     brand:"Fairmont",
     name:"Fourth Night Free — Beachfront Barbados",
@@ -520,19 +465,6 @@ const HOTEL_DEALS = [
     summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Peninsula Beverly Hills' third-night window (booked by Sept 28, 2026) has closed; its complimentary-fourth-night window remains open: book by Dec 20, 2026 for travel by Dec 23, 2026. Peninsula Hong Kong now runs its own complimentary third night in two booking windows — by Oct 28, 2026 for travel by Oct 31, 2026, and by Dec 27, 2026 for travel by Dec 30, 2026. A separate, targeted Amex Offer credits $100 back after spending $500 or more at a participating Peninsula hotel, for spending between Aug 21 and Nov 30, 2026 (enrollment required; not all cardholders will see it).",
     terms:"FHR free-night offer requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card; exact night count and window vary by hotel and by booking date. The $100 Amex Offers statement credit requires separate enrollment and is targeted.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/peninsula-hotels",
-    source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-09-29"
-  },
-  {
-    id:"lhw-complimentary-night",
-    brand:"Leading Hotels of the World",
-    name:"Complimentary Third or Fourth Night — Amex Fine Hotels + Resorts",
-    scope:"Participating Leading Hotels of the World properties worldwide",
-    type:"Free Night",
-    region:"Worldwide",
-    summary:"American Express Fine Hotels + Resorts lists a complimentary third or fourth night, depending on the property, at select Leading Hotels of the World members. Current examples include a third-night offer bookable by Oct 27, 2026 for travel by Oct 31, 2026, and further December windows: a third night bookable by Dec 12, 2026 for travel by Dec 15, 2026, and a fourth night bookable by Dec 11, 2026 for travel by Dec 15, 2026.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Night count and booking window vary by hotel.",
-    url:"https://www.americanexpress.com/en-us/travel/discover/brand/the-leading-hotels-of-the-world",
     source:"americanexpress.com",
     dateAdded:"2026-09-05", lastUpdated:"2026-09-29"
   },
@@ -561,19 +493,6 @@ const HOTEL_DEALS = [
     url:"https://parkhyattaviara.com/offers/",
     source:"parkhyattaviara.com",
     dateAdded:"2026-09-07", lastUpdated:"2026-10-03"
-  },
-  {
-    id:"hyatt-thompson-double-points",
-    brand:"Thompson Hotels",
-    name:"Double Points — Thompson Hotels",
-    scope:"Thompson Hotels worldwide (World of Hyatt members)",
-    type:"Bonus Points",
-    region:"Worldwide",
-    summary:"World of Hyatt members earn double base points on stays at Thompson Hotels, the brand's upscale lifestyle collection, through the fall.",
-    terms:"Register (free) via the World of Hyatt app before your stay. Eligible stays must be booked and completed between Sept 8 and Nov 10, 2026. Only base points are doubled; bonus points are unaffected.",
-    url:"https://www.hyatt.com/en-US/info/double-your-points",
-    source:"hyatt.com",
-    dateAdded:"2026-09-11", lastUpdated:"2026-09-23"
   },
   {
     id:"auberge-esperanza-third-night",
@@ -608,11 +527,11 @@ const HOTEL_DEALS = [
     scope:"One&Only Royal Mirage, Dubai (+ Moonlight Basin, Montana & Mandarina, Mexico)",
     type:"Free Night",
     region:"Middle East",
-    summary:"One&Only Royal Mirage in Dubai is offering a complimentary fourth night plus spa treatments, a personal training session and use of a private beachside gazebo on qualifying stays. One&Only Moonlight Basin in Montana runs its own evergreen complimentary-night program, 'Night On Us,' rather than a fixed seasonal window; One&Only Mandarina in Mexico has a similar fourth-night-free offer, book by Nov 22, 2026 for travel by Dec 25, 2026.",
-    terms:"Minimum four-night stay required for the free night at Royal Mirage; spa, training and gazebo perks included. Booking window rolls periodically — check the property's own offers page for the current dates; blackout dates and property-specific conditions apply.",
+    summary:"One&Only Royal Mirage in Dubai is currently offering up to 45% off room rates with a complimentary half-board meal upgrade. One&Only Moonlight Basin in Montana runs its own evergreen complimentary-night program, 'Night On Us,' rather than a fixed seasonal window; One&Only Mandarina in Mexico has a fourth-night-free offer, book by Nov 22, 2026 for travel by Dec 25, 2026.",
+    terms:"Royal Mirage's 45% off + half-board upgrade is subject to availability and rate restrictions. Booking windows roll periodically — check each property's own offers page for current dates; blackout dates and property-specific conditions apply.",
     url:"https://www.oneandonlyresorts.com/royal-mirage/offers",
     source:"oneandonlyresorts.com",
-    dateAdded:"2026-09-20", lastUpdated:"2026-09-29"
+    dateAdded:"2026-09-20", lastUpdated:"2026-10-07"
   },
   {
     id:"aman-new-york-third-night-free",
@@ -626,19 +545,6 @@ const HOTEL_DEALS = [
     url:"https://www.aman.com/hotels/aman-new-york/exclusives",
     source:"aman.com",
     dateAdded:"2026-09-30", lastUpdated:"2026-09-30"
-  },
-  {
-    id:"hilton-honors-more-points-to-play",
-    brand:"Hilton",
-    name:"More Points to Play — Bonus Points on Every Stay",
-    scope:"Hilton portfolio worldwide, including Waldorf Astoria, Conrad, LXR and resort/luxury/lifestyle properties",
-    type:"Loyalty Bonus",
-    region:"Worldwide",
-    summary:"Hilton Honors members who register earn 1,000 bonus points on stays at most Hilton brands, or 3,000 bonus points on stays at Luxury, Lifestyle and Resort properties — including Waldorf Astoria, Conrad and LXR — for stays completed between Oct 15 and Dec 31, 2026.",
-    terms:"Register (free Hilton Honors account) before your stay at hiltonhonors.com/morepointstoplay. No cap on the number of qualifying stays; points post 6-8 weeks after checkout. Bonus points do not count toward elite tier qualification.",
-    url:"https://www.hiltonhonors.com/morepointstoplay",
-    source:"hiltonhonors.com",
-    dateAdded:"2026-10-01", lastUpdated:"2026-10-01"
   },
   {
     id:"jw-marriott-guanacaste-fourth-night",
