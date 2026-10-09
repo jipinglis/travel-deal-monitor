@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-08";
+const LAST_CHECKED = "2026-10-09";
 
 const AIRLINE_DEALS = [
   {
@@ -223,11 +223,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Fare Sale",
     dest:"United hubs from Atlanta (EWR, ORD, IAH, DEN, SFO)",
-    summary:"United's Atlanta deals page surfaces low fares to its hubs and MileagePlus saver awards — a strong option for West Coast and international connections beyond Delta's SkyTeam network. Its open buy-miles bonus promotion (up to 100% on targeted offers) closed Sept 30, 2026 and has not been renewed. United and Chase have since launched a separate, targeted \"ExtraMile\" bonus for United co-branded cardholders, running Oct 1 through Dec 31, 2026 — a spend-based offer rather than a public miles purchase.",
-    terms:"Fares dynamic; Basic Economy is cheapest but restrictive. Advance purchase. No open buy-miles promotion currently. The ExtraMile card bonus is targeted to specific co-branded cardholders: purchases made Oct 1–Dec 31, 2026 count toward spend tiers, and the bonus must be activated at united.com/ExtraMile by Dec 15, 2026; terms vary by offer, so check your Chase/United account for eligibility.",
+    summary:"United's Atlanta deals page surfaces low fares to its hubs and MileagePlus saver awards — a strong option for West Coast and international connections beyond Delta's SkyTeam network. Its open buy-miles bonus promotion (up to 100% on targeted offers) closed Sept 30, 2026 and has not been renewed. United is currently offering MileagePlus bonus miles on Avis and Budget car rentals booked through United — 750 miles for a 3-5 day rental, 1,500 miles for 6 or more days.",
+    terms:"Fares dynamic; Basic Economy is cheapest but restrictive. Advance purchase. No open buy-miles promotion currently. The car-rental bonus-miles offer requires booking the Avis or Budget rental through united.com by Oct 31, 2026; miles post after the rental is completed.",
     url:"https://www.united.com/en/us/deals/flights-to-atlanta",
     source:"united.com",
-    dateAdded:"2026-06-30", lastUpdated:"2026-10-07"
+    dateAdded:"2026-06-30", lastUpdated:"2026-10-09"
   },
   {
     id:"jetblue-atl-fares",
@@ -332,6 +332,19 @@ const AIRLINE_DEALS = [
     url:"https://www.delta.com/us/en/flight-deals/flash-sale",
     source:"delta.com",
     dateAdded:"2026-10-05", lastUpdated:"2026-10-08"
+  },
+  {
+    id:"lufthansa-atl-frankfurt-nonstop",
+    airline:"Lufthansa",
+    name:"Nonstop Atlanta–Frankfurt Flights",
+    scope:"International",
+    type:"Route / Fare",
+    dest:"Frankfurt (FRA), nonstop from Atlanta — easy onward connections across Europe",
+    summary:"Lufthansa flies nonstop between Atlanta and Frankfurt daily on a Boeing 787-9, a useful alternative to Delta's SkyTeam network for European and onward connections through Lufthansa's Frankfurt hub. The airline plans to upgrade this route to its new Allegris cabin product in winter 2026/27.",
+    terms:"Fares are dynamic; check lufthansa.com for current round-trip pricing on specific dates. This is Lufthansa's standard scheduled service rather than a time-limited sale.",
+    url:"https://www.lufthansa.com/lhg/us/en/o-d/cy-cy/frankfurt-atlanta",
+    source:"lufthansa.com",
+    dateAdded:"2026-10-09", lastUpdated:"2026-10-09"
   }
 ];
 
