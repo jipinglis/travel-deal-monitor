@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-13";
+const LAST_CHECKED = "2026-10-14";
 
 const HOTEL_DEALS = [
   {
@@ -349,19 +349,19 @@ const HOTEL_DEALS = [
     scope:"25 of 27 Rosewood hotels & resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Rosewood's 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Mayakoba's current Amex Fine Hotels + Resorts offer follows the same fourth-night-free structure, with a four-night minimum. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit for stays May 1 through Oct 31, 2026. Amex Fine Hotels + Resorts adds resort credits at many resorts.",
-    terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Mayakoba's current Amex FHR offer: complimentary fourth night on a 4-night minimum stay — book by Oct 27, 2026 for travel by Oct 31, 2026, blackout dates Nov 25–28, 2026. Windows vary by hotel — check each property's offers page for current dates.",
+    summary:"Rosewood's 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit for stays May 1 through Oct 31, 2026. Amex Fine Hotels + Resorts adds resort credits at many resorts, with property-specific terms that roll forward regularly — Mayakoba's current Amex FHR window, for instance, is a complimentary third night on a three-night minimum stay.",
+    terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Mayakoba's current Amex FHR offer: complimentary third night on a 3-night minimum stay, book by Oct 15, 2026 for travel through Oct 31, 2026. Windows vary by hotel and roll forward frequently — check each property's offers page for current dates.",
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
-      {name:"Mayakoba, Riviera Maya (comp 4th night, Amex FHR)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
+      {name:"Mayakoba, Riviera Maya (comp 3rd night, Amex FHR)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
       {name:"Baha Mar, Bahamas ($100 daily credit)", url:"https://www.rosewoodhotels.com/en/baha-mar/offers/more-rosewood"},
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"},
       {name:"Miyakojima, Japan", url:"https://www.rosewoodhotels.com/en/miyakojima/offers/more-rosewood"},
       {name:"Bermuda (tiered comp nights)", url:"https://www.rosewoodhotels.com/en/bermuda/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-13"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-14"
   },
   {
     id:"conrad-third-night-credit",
@@ -419,16 +419,16 @@ const HOTEL_DEALS = [
     scope:"Six Senses Krabey Island, Cambodia (+ stay-longer & early-booking deals portfolio-wide)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Six Senses Krabey Island in Cambodia is currently offering a complimentary third night through American Express Fine Hotels + Resorts. Other Six Senses resorts run their own stay-longer, early-booking and extended-stay discounts with bonus inclusions.",
-    terms:"Krabey Island: requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Oct 31, 2026 for travel by Dec 31, 2027. Other resorts' discounts and inclusions vary by season; see each offer page for terms.",
+    summary:"Six Senses Krabey Island in Cambodia runs a 'Three Nights Plus' rate — stay three or more consecutive nights and save on the nightly rate, with no advertised end date. Other Six Senses resorts run their own stay-longer, early-booking and extended-stay discounts with bonus inclusions.",
+    terms:"Krabey Island: discount applies to stays of three or more consecutive nights; exact percentage and any cutoff date are not published — confirm current terms on sixsenses.com before booking. Other resorts' discounts and inclusions vary by season; see each offer page for terms.",
     url:"https://www.sixsenses.com/en/offers/",
     source:"sixsenses.com",
     properties:[
-      {name:"Krabey Island, Cambodia (3rd night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Cambodia/Sihanoukville/Six-Senses-Krabey-Island"},
+      {name:"Krabey Island, Cambodia (Three Nights Plus)", url:"https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/cambodia/krabey-island/offers/three-nights-plus"},
       {name:"Stay Longer deals", url:"https://www.sixsenses.com/en/offers/stay-longer/"},
       {name:"Early Booking offers", url:"https://www.sixsenses.com/en/offers/early-booking/"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-09-18"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-14"
   },
   {
     id:"acqualina-fourth-night-free",
@@ -728,6 +728,32 @@ const HOTEL_DEALS = [
     url:"https://www.fairmont.com/en/hotels/san-diego/fairmont-grand-del-mar/offers/play-your-way.html",
     source:"fairmont.com",
     dateAdded:"2026-10-13", lastUpdated:"2026-10-13"
+  },
+  {
+    id:"waldorf-astoria-costa-rica-punta-cacique-fourth-night",
+    brand:"Waldorf Astoria",
+    name:"Complimentary Fourth Night — Waldorf Astoria Costa Rica Punta Cacique",
+    scope:"Waldorf Astoria Costa Rica Punta Cacique, Guanacaste",
+    type:"Free Night",
+    region:"Central America",
+    summary:"Book through American Express Fine Hotels + Resorts at Waldorf Astoria Costa Rica Punta Cacique, on the Papagayo Peninsula, and get a complimentary fourth night, plus daily breakfast for two and a $100 property credit.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Nov 30, 2026 for travel by Mar 31, 2027.",
+    url:"https://www.americanexpress.com/en-us/travel/discover/property/Costa-Rica/Guanacaste/Waldorf-Astoria-Costa-Rica-Punta-Cacique",
+    source:"americanexpress.com",
+    dateAdded:"2026-10-14", lastUpdated:"2026-10-14"
+  },
+  {
+    id:"intercontinental-hayman-third-night",
+    brand:"InterContinental",
+    name:"Complimentary Third Night — InterContinental Hayman Great Barrier Reef",
+    scope:"InterContinental Hayman Great Barrier Reef, Hayman Island, Queensland",
+    type:"Free Night",
+    region:"Australia",
+    summary:"Book through American Express Fine Hotels + Resorts at InterContinental Hayman Great Barrier Reef, on its private island off the Queensland coast, and get a complimentary third night on a three-night minimum stay, plus daily breakfast for two, a room upgrade when available and a $100 property credit.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Minimum three consecutive nights. Book by Dec 10, 2026 for travel by Dec 13, 2026.",
+    url:"https://www.americanexpress.com/en-us/travel/discover/property/Australia/Hayman-Island/Intercontinental-Hayman-Great-Barrier-Reef",
+    source:"americanexpress.com",
+    dateAdded:"2026-10-14", lastUpdated:"2026-10-14"
   }
 ];
 
