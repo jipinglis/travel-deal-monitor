@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-14";
+const LAST_CHECKED = "2026-10-15";
 
 const HOTEL_DEALS = [
   {
@@ -195,22 +195,21 @@ const HOTEL_DEALS = [
     id:"ritz-carlton-stay-longer",
     brand:"Ritz-Carlton",
     name:"Stay Longer, Save More — Up to 30% Off",
-    scope:"Toronto, Almaty, Turks & Caicos, Miami Beach, Naples, Amelia Island & more",
+    scope:"Toronto, Miami Beach, Naples, Amelia Island, Sarasota, Chicago & more",
     type:"Percent Off",
     region:"Worldwide",
-    summary:"Ritz-Carlton runs its stay-longer savings property by property rather than one global rate. The Ritz-Carlton, Almaty currently takes 15% off stays of four or more nights, and the Toronto property's Luxury Getaway takes up to 30% off longer stays. Miami Beach, Naples, Amelia Island, Sarasota, Orlando Grande Lakes and Chicago each run their own version of the offer.",
-    terms:"Discount tier and minimum length of stay vary by hotel; most require advance purchase. Almaty: 15% off 4+ nights, valid for stays through Dec 1, 2026. Check each property's own offer page for current terms.",
+    summary:"Ritz-Carlton runs its stay-longer savings property by property rather than one global rate. The Toronto property's Luxury Getaway takes up to 30% off longer stays. Miami Beach, Naples, Amelia Island, Sarasota, Orlando Grande Lakes and Chicago each run their own version of the offer.",
+    terms:"Discount tier and minimum length of stay vary by hotel; most require advance purchase. Check each property's own offer page for current terms.",
     url:"https://www.ritzcarlton.com/en/hotels-and-resorts/promotions/",
     source:"ritzcarlton.com",
     properties:[
-      {name:"Almaty, Kazakhstan (15% off 4+ nights)", url:"https://www.marriott.com/offers/stay-longer-on-us-OFF-171098/ALARZ-alarz-the-ritz-carlton-almaty"},
       {name:"Toronto (up to 30% off)", url:"https://www.marriott.com/offers/luxury-getaway-stay-longer-save-up-to-30-percent-OFF-149384/yyzrz-the-ritz-carlton-toronto"},
       {name:"Naples, FL", url:"https://www.marriott.com/offers/stay-longer-OFF-96035/RSWRZ-the-ritz-carlton-naples"},
       {name:"South Beach, Miami", url:"https://www.marriott.com/offers/stay-longer-save-more-OFF-112387/MIASB-the-ritz-carlton-south-beach"},
       {name:"Amelia Island, FL", url:"https://www.ritzcarlton.com/en/hotels/florida/amelia-island/offers/stay-longer-with-us"},
       {name:"Chicago", url:"https://www.ritzcarlton.com/en/hotels/chicago/offers/stay-longer"}
     ],
-    dateAdded:"2026-07-07", lastUpdated:"2026-10-07"
+    dateAdded:"2026-07-07", lastUpdated:"2026-10-15"
   },
   {
     id:"shangri-la-stay-longer",
@@ -349,19 +348,18 @@ const HOTEL_DEALS = [
     scope:"25 of 27 Rosewood hotels & resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Rosewood's 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit for stays May 1 through Oct 31, 2026. Amex Fine Hotels + Resorts adds resort credits at many resorts, with property-specific terms that roll forward regularly — Mayakoba's current Amex FHR window, for instance, is a complimentary third night on a three-night minimum stay.",
-    terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Mayakoba's current Amex FHR offer: complimentary third night on a 3-night minimum stay, book by Oct 15, 2026 for travel through Oct 31, 2026. Windows vary by hotel and roll forward frequently — check each property's offers page for current dates.",
+    summary:"Rosewood's 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit for stays May 1 through Oct 31, 2026. Amex Fine Hotels + Resorts adds resort credits at many other resorts, with property-specific terms that roll forward regularly.",
+    terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Windows vary by hotel and roll forward frequently — check each property's offers page for current dates.",
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
-      {name:"Mayakoba, Riviera Maya (comp 3rd night, Amex FHR)", url:"https://www.rosewoodhotels.com/en/mayakoba-riviera-maya/offers"},
       {name:"Baha Mar, Bahamas ($100 daily credit)", url:"https://www.rosewoodhotels.com/en/baha-mar/offers/more-rosewood"},
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"},
       {name:"Miyakojima, Japan", url:"https://www.rosewoodhotels.com/en/miyakojima/offers/more-rosewood"},
       {name:"Bermuda (tiered comp nights)", url:"https://www.rosewoodhotels.com/en/bermuda/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-14"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-15"
   },
   {
     id:"conrad-third-night-credit",
@@ -754,6 +752,32 @@ const HOTEL_DEALS = [
     url:"https://www.americanexpress.com/en-us/travel/discover/property/Australia/Hayman-Island/Intercontinental-Hayman-Great-Barrier-Reef",
     source:"americanexpress.com",
     dateAdded:"2026-10-14", lastUpdated:"2026-10-14"
+  },
+  {
+    id:"mandarin-oriental-jumeira-dubai-third-night",
+    brand:"Mandarin Oriental",
+    name:"Complimentary Third Night — Mandarin Oriental Jumeira, Dubai",
+    scope:"Mandarin Oriental Jumeira, Dubai",
+    type:"Free Night",
+    region:"Middle East",
+    summary:"Book through American Express Fine Hotels + Resorts at Mandarin Oriental Jumeira, Dubai and get a complimentary third night. This is a different property from Mandarin Oriental Downtown Dubai, whose comparable offer closed earlier in 2026.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Dec 21, 2026 for travel by Dec 24, 2026.",
+    url:"https://www.americanexpress.com/en-us/travel/discover/property/United-Arab-Emirates/Dubai/Mandarin-Oriental-Jumeira-Dubai",
+    source:"americanexpress.com",
+    dateAdded:"2026-10-15", lastUpdated:"2026-10-15"
+  },
+  {
+    id:"four-seasons-ocean-club-bahamas-fourth-night-free",
+    brand:"Four Seasons",
+    name:"Stay Longer, Fourth Night Free — The Ocean Club, Bahamas",
+    scope:"The Ocean Club, A Four Seasons Resort, Paradise Island, Bahamas",
+    type:"Free Night",
+    region:"Caribbean",
+    summary:"Book three consecutive nights at The Ocean Club on Paradise Island and the fourth night is complimentary, with round-trip private SUV airport transfers from Lynden Pindling International Airport included.",
+    terms:"Three consecutive paid nights required for the complimentary fourth. Valid for stays Jul 28, 2026 through Dec 31, 2027. Not combinable with other offers; blackout dates and availability restrictions apply.",
+    url:"https://www.fourseasons.com/oceanclub/offers/fourth-night-free/",
+    source:"fourseasons.com",
+    dateAdded:"2026-10-15", lastUpdated:"2026-10-15"
   }
 ];
 
