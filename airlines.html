@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-15";
+const LAST_CHECKED = "2026-10-16";
 
 const AIRLINE_DEALS = [
   {
@@ -171,11 +171,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Bonus Miles",
     dest:"49 cities from Atlanta (NYC, Chicago, Orlando, Vegas & more)",
-    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus recurring system-wide Discount Den fare sales (fares advertised from $19) with rotating booking windows and register-and-earn bonus-mile offers on round-trip bookings. Frontier's 2026-27 GoWild pass is on sale at $299 for early purchase, rising to $499 at the regular price, for unlimited travel through Apr 30, 2027.",
-    terms:"Discount Den sale fares need advance purchase and apply only on select days of the week — check flyfrontier.com for the current booking window. Bonus-mile promos require registering before booking; carry-on, seat and bag fees are extra and add up fast, so compare the all-in price against Delta and Southwest before booking. Fares are one-way and non-refundable. The GoWild pass requires a Discount Den membership and is priced at $299 for early purchase, rising to $499 at the regular price, for unlimited travel through Apr 30, 2027.",
+    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus recurring system-wide Discount Den fare sales (fares advertised from $19) with rotating booking windows and register-and-earn bonus-mile offers on round-trip bookings. Frontier's 2026-27 GoWild pass gives unlimited travel through Apr 30, 2027 for a regular price of $599, but Frontier periodically discounts it for new purchasers during limited-time sales (it launched in November 2025 at an intro price of $349).",
+    terms:"Discount Den sale fares need advance purchase and apply only on select days of the week — check flyfrontier.com for the current booking window. Bonus-mile promos require registering before booking; carry-on, seat and bag fees are extra and add up fast, so compare the all-in price against Delta and Southwest before booking. Fares are one-way and non-refundable. The GoWild pass requires a Discount Den membership; its regular price is $599, but check flyfrontier.com for a current discounted sale price before buying.",
     url:"https://flights.flyfrontier.com/en/flights-from-atlanta",
     source:"flyfrontier.com",
-    dateAdded:"2026-07-05", lastUpdated:"2026-10-15"
+    dateAdded:"2026-07-05", lastUpdated:"2026-10-16"
   },
   {
     id:"american-atl-deals",
@@ -314,11 +314,24 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Route / Fare",
     dest:"Frankfurt (FRA), nonstop from Atlanta — easy onward connections across Europe",
-    summary:"Lufthansa flies nonstop between Atlanta and Frankfurt daily on a Boeing 787-9, a useful alternative to Delta's SkyTeam network for European and onward connections through Lufthansa's Frankfurt hub. The airline plans to upgrade this route to its new Allegris cabin product in winter 2026/27.",
-    terms:"Fares are dynamic; check lufthansa.com for current round-trip pricing on specific dates. This is Lufthansa's standard scheduled service rather than a time-limited sale.",
+    summary:"Lufthansa flies nonstop between Atlanta and Frankfurt daily on a Boeing 787-9, a useful alternative to Delta's SkyTeam network for European and onward connections through Lufthansa's Frankfurt hub. Lufthansa has set Dec 1, 2026 as the start date for upgrading this route to its new Allegris cabin product, still on the 787-9.",
+    terms:"Fares are dynamic; check lufthansa.com for current round-trip pricing on specific dates. This is Lufthansa's standard scheduled service rather than a time-limited sale; the Dec 1, 2026 Allegris start date is subject to change.",
     url:"https://www.lufthansa.com/lhg/us/en/o-d/cy-cy/frankfurt-atlanta",
     source:"lufthansa.com",
-    dateAdded:"2026-10-09", lastUpdated:"2026-10-09"
+    dateAdded:"2026-10-09", lastUpdated:"2026-10-16"
+  },
+  {
+    id:"american-aadvantage-sydney-award-sale",
+    airline:"American Airlines",
+    name:"Sydney Award Sale — Main Cabin from 25,000 Miles",
+    scope:"International",
+    type:"Award Sale",
+    dest:"Sydney, Australia (SYD), one-stop from Atlanta via an American Airlines hub",
+    summary:"American is running a one-way Main Cabin award sale between the contiguous 48 states and Sydney, priced from 25,000 AAdvantage miles plus taxes and fees. Atlanta connects via an American hub such as Dallas-Fort Worth or Los Angeles; the sale covers American and American Eagle marketed-and-operated flights only, not partner codeshares such as Qantas.",
+    terms:"Reservations and travel must both be completed by 11:59pm CT on Oct 31, 2026 — a tight window. Valid only on American and American Eagle flights; not valid on codeshare flights. Taxes and fees apply on top of the mileage price. American may change or end the sale at any time without notice.",
+    url:"https://www.aa.com/en-us/south-pacific-miles",
+    source:"aa.com",
+    dateAdded:"2026-10-16", lastUpdated:"2026-10-16"
   }
 ];
 

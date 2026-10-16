@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-15";
+const LAST_CHECKED = "2026-10-16";
 
 const HOTEL_DEALS = [
   {
@@ -348,8 +348,8 @@ const HOTEL_DEALS = [
     scope:"25 of 27 Rosewood hotels & resorts worldwide",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Rosewood's 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit for stays May 1 through Oct 31, 2026. Amex Fine Hotels + Resorts adds resort credits at many other resorts, with property-specific terms that roll forward regularly.",
-    terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead). Windows vary by hotel and roll forward frequently — check each property's offers page for current dates.",
+    summary:"Rosewood's 'More Rosewood' program gives a complimentary fourth night with every three consecutive paid nights across nearly the whole collection. Rosewood Baha Mar in the Bahamas pairs its complimentary fourth night with a $100 daily resort credit for stays May 1 through Oct 31, 2026. Rosewood Mansion on Turtle Creek in Dallas instead gives a complimentary third night on a two-night stay, through Dec 30, 2026. Amex Fine Hotels + Resorts adds resort credits at many other resorts, with property-specific terms that roll forward regularly.",
+    terms:"Fourth-night-free on 3 paid nights at most participating hotels; some properties run their own variant (Bangkok currently offers a complimentary third night instead, and Dallas offers a complimentary third night on a two-night stay through Dec 30, 2026, plus a $45 nightly destination fee). Windows vary by hotel and roll forward frequently — check each property's offers page for current dates.",
     url:"https://www.rosewoodhotels.com/en/luxury-hotel-offers/more-rosewood",
     source:"rosewoodhotels.com",
     properties:[
@@ -357,9 +357,10 @@ const HOTEL_DEALS = [
       {name:"Kona Village, Hawaii", url:"https://www.rosewoodhotels.com/en/kona-village-hawaii"},
       {name:"London", url:"https://www.rosewoodhotels.com/en/london/offers/more-rosewood"},
       {name:"Miyakojima, Japan", url:"https://www.rosewoodhotels.com/en/miyakojima/offers/more-rosewood"},
-      {name:"Bermuda (tiered comp nights)", url:"https://www.rosewoodhotels.com/en/bermuda/offers/more-rosewood"}
+      {name:"Bermuda (tiered comp nights)", url:"https://www.rosewoodhotels.com/en/bermuda/offers/more-rosewood"},
+      {name:"Mansion on Turtle Creek, Dallas (3rd night free)", url:"https://www.rosewoodhotels.com/en/mansion-on-turtle-creek-dallas/offers/more-rosewood"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-15"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-16"
   },
   {
     id:"conrad-third-night-credit",
@@ -417,16 +418,17 @@ const HOTEL_DEALS = [
     scope:"Six Senses Krabey Island, Cambodia (+ stay-longer & early-booking deals portfolio-wide)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Six Senses Krabey Island in Cambodia runs a 'Three Nights Plus' rate — stay three or more consecutive nights and save on the nightly rate, with no advertised end date. Other Six Senses resorts run their own stay-longer, early-booking and extended-stay discounts with bonus inclusions.",
-    terms:"Krabey Island: discount applies to stays of three or more consecutive nights; exact percentage and any cutoff date are not published — confirm current terms on sixsenses.com before booking. Other resorts' discounts and inclusions vary by season; see each offer page for terms.",
+    summary:"Six Senses Krabey Island in Cambodia runs a 'Three Nights Plus' rate — stay three or more consecutive nights and save on the nightly rate, with no advertised end date. Six Senses Bhutan's 'Seasonal Discovery' gives two complimentary nights on a stay of 5-8 paid nights, or three complimentary nights on 9 or more paid nights, bundled with a spa treatment, a private car and driver, and a guide. Other Six Senses resorts run their own stay-longer, early-booking and extended-stay discounts with bonus inclusions.",
+    terms:"Krabey Island: discount applies to stays of three or more consecutive nights; exact percentage and any cutoff date are not published — confirm current terms on sixsenses.com before booking. Bhutan: five consecutive paid nights minimum; not combinable with other offers and not valid for groups of four or more rooms; no published end date — contact the resort to confirm current availability. Other resorts' discounts and inclusions vary by season; see each offer page for terms.",
     url:"https://www.sixsenses.com/en/offers/",
     source:"sixsenses.com",
     properties:[
       {name:"Krabey Island, Cambodia (Three Nights Plus)", url:"https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/cambodia/krabey-island/offers/three-nights-plus"},
+      {name:"Bhutan (Seasonal Discovery, 2-3 free nights)", url:"https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/bhutan/bhutan/offers/seasonal-discovery/"},
       {name:"Stay Longer deals", url:"https://www.sixsenses.com/en/offers/stay-longer/"},
       {name:"Early Booking offers", url:"https://www.sixsenses.com/en/offers/early-booking/"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-14"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-16"
   },
   {
     id:"acqualina-fourth-night-free",
@@ -587,15 +589,18 @@ const HOTEL_DEALS = [
   {
     id:"capella-bangkok-amex-third-night",
     brand:"Capella",
-    name:"Complimentary Third Night — Capella Bangkok",
-    scope:"Capella Bangkok, Thailand",
+    name:"Complimentary Night — Capella Bangkok & Capella Singapore",
+    scope:"Capella Bangkok, Thailand & Capella Singapore",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book through American Express Fine Hotels + Resorts at Capella Bangkok, on the banks of the Chao Phraya River, and a complimentary night is applied on a minimum three-night stay. The offer's booking window runs well into 2027, with a holiday blackout.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Minimum three consecutive nights. Book by Dec 17, 2027 for travel by Dec 20, 2027; blackout dates Dec 21, 2026 through Jan 4, 2027.",
+    summary:"Book through American Express Fine Hotels + Resorts at Capella Bangkok, on the banks of the Chao Phraya River, and a complimentary night is applied on a minimum three-night stay. Capella Singapore, on Sentosa Island, runs the same complimentary-night mechanic on its own booking window, repeatable depending on length of stay.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Minimum three consecutive nights at both properties. Bangkok: book by Dec 17, 2027 for travel by Dec 20, 2027; blackout dates Dec 21, 2026 through Jan 4, 2027. Singapore: book by Dec 15, 2026 for travel by Dec 18, 2026.",
     url:"https://www.americanexpress.com/en-us/travel/discover/property/Thailand/Bangkok/Capella-Bangkok",
     source:"americanexpress.com",
-    dateAdded:"2026-10-06", lastUpdated:"2026-10-12"
+    properties:[
+      {name:"Capella Singapore (comp night)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Singapore/Singapore/Capella-Singapore"}
+    ],
+    dateAdded:"2026-10-06", lastUpdated:"2026-10-16"
   },
   {
     id:"jumeirah-zabeel-saray-sixth-night",
