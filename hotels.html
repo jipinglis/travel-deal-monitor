@@ -175,21 +175,27 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-17";
+const LAST_CHECKED = "2026-10-18";
 
 const HOTEL_DEALS = [
   {
-    id:"four-seasons-oahu-fourth-night-free",
+    id:"four-seasons-stay-longer-fourth-night-free",
     brand:"Four Seasons",
-    name:"Stay Longer, Fourth Night Free — Oahu at Ko Olina",
-    scope:"Four Seasons Resort Oahu at Ko Olina, Hawaii",
+    name:"Stay Longer, Fourth Night Free — Multiple Resorts",
+    scope:"Oahu at Ko Olina, Jackson Hole, Fort Lauderdale, The Ocean Club (Bahamas)",
     type:"Free Night",
-    region:"United States",
-    summary:"Book four consecutive nights at Four Seasons Resort Oahu at Ko Olina and the fourth night is complimentary.",
-    terms:"Minimum four-night stay required. Valid for stays through Dec 25, 2026, and again Jan 2 through Feb 28, 2027. Offer applies to a lower room category if the booked category is unavailable for the free night; blackout and availability restrictions apply.",
-    url:"https://www.fourseasons.com/oahu/offers/stay-longer-fourth-night-free/",
+    region:"United States / Caribbean",
+    summary:"Four Seasons runs its 'Stay Longer, Fourth Night Free' program property by property. Book three or four consecutive nights (minimum varies by resort) and the extra night is complimentary — currently live at Oahu at Ko Olina, Jackson Hole, Fort Lauderdale Beach, and The Ocean Club on Paradise Island, Bahamas.",
+    terms:"Minimum stay and exact window vary by resort; see each property link. Offers are new-bookings-only, not combinable with other offers, and subject to blackout/availability restrictions.",
+    url:"https://www.fourseasons.com/promotions/stay-longer-fourth-night-free/",
     source:"fourseasons.com",
-    dateAdded:"2026-10-07", lastUpdated:"2026-10-07"
+    properties:[
+      {name:"Oahu at Ko Olina (4-night min; thru Dec 25, 2026 & Jan 2–Feb 28, 2027)", url:"https://www.fourseasons.com/oahu/offers/stay-longer-fourth-night-free/"},
+      {name:"Jackson Hole (3-night min; Oct 11–Dec 17, 2026 & May 3–15, 2027)", url:"https://www.fourseasons.com/jacksonhole/offers/stay-longer-fourth-night-free/"},
+      {name:"Fort Lauderdale Beach (3-night min; Oct 7–Dec 24, 2026)", url:"https://www.fourseasons.com/fortlauderdale/offers/stay-longer-fourth-night-free"},
+      {name:"The Ocean Club, Bahamas (3-night min; Jul 28, 2026–Dec 31, 2027)", url:"https://www.fourseasons.com/oceanclub/offers/fourth-night-free/"}
+    ],
+    dateAdded:"2026-10-07", lastUpdated:"2026-10-18"
   },
   {
     id:"ritz-carlton-stay-longer",
@@ -233,19 +239,20 @@ const HOTEL_DEALS = [
     id:"mandarin-oriental-one-more-night",
     brand:"Mandarin Oriental",
     name:"Complimentary Night — 'One More Night'",
-    scope:"Mandarin Oriental hotels worldwide (New York, both Paris addresses & more)",
+    scope:"Mandarin Oriental hotels worldwide (New York, both Paris addresses, Dubai & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Complimentary night folded into the stay under Mandarin Oriental's 'One More Night' program, now running at a growing list of participating hotels — including the flagship on Columbus Circle in New York and both Paris properties, Place Vendôme and Lutetia. The Paris booking window was recently extended.",
-    terms:"New York: an ongoing rolling offer rather than a fixed cutoff — check the property's own offers page for its current window. Paris, Place Vendôme: book by May 18, 2027 for travel Oct 26, 2026 through May 22, 2027. Paris, Lutetia: book by May 24, 2027 for travel Oct 21, 2026 through May 28, 2027 (blackout dates Dec 30–31, 2026 and Mar 5–6, 2027).",
+    summary:"Complimentary night folded into the stay under Mandarin Oriental's 'One More Night' program, now running at a growing list of participating hotels — including the flagship on Columbus Circle in New York, both Paris properties (Place Vendôme and Lutetia), and Mandarin Oriental Jumeira, Dubai. The Paris booking window was recently extended.",
+    terms:"New York: an ongoing rolling offer rather than a fixed cutoff — check the property's own offers page for its current window. Paris, Place Vendôme: book by May 18, 2027 for travel Oct 26, 2026 through May 22, 2027. Paris, Lutetia: book by May 24, 2027 for travel Oct 21, 2026 through May 28, 2027 (blackout dates Dec 30–31, 2026 and Mar 5–6, 2027). Dubai (Jumeira): complimentary third night via Amex FHR, book by Dec 21, 2026 for travel by Dec 24, 2026.",
     url:"https://www.mandarinoriental.com/en/offers",
     source:"mandarinoriental.com",
     properties:[
       {name:"New York (One More Night)", url:"https://www.mandarinoriental.com/en/new-york/manhattan/offers/one-more-night"},
       {name:"Paris, Place Vendôme", url:"https://www.mandarinoriental.com/en/paris/place-vendome/offers/one-more-night"},
-      {name:"Paris, Lutetia (One More Night)", url:"https://www.mandarinoriental.com/en/paris/lutetia/offers/one-more-night"}
+      {name:"Paris, Lutetia (One More Night)", url:"https://www.mandarinoriental.com/en/paris/lutetia/offers/one-more-night"},
+      {name:"Jumeira, Dubai (3rd night free via Amex FHR)", url:"https://www.americanexpress.com/en-us/travel/discover/property/United-Arab-Emirates/Dubai/Mandarin-Oriental-Jumeira-Dubai"}
     ],
-    dateAdded:"2026-07-08", lastUpdated:"2026-10-02"
+    dateAdded:"2026-07-08", lastUpdated:"2026-10-18"
   },
   {
     id:"marriott-luxury-bonus-points",
@@ -261,17 +268,22 @@ const HOTEL_DEALS = [
     dateAdded:"2026-07-06", lastUpdated:"2026-09-13"
   },
   {
-    id:"waldorf-astoria-maldives-sixth-night",
+    id:"waldorf-astoria-complimentary-nights",
     brand:"Waldorf Astoria",
-    name:"Complimentary Sixth Night — Waldorf Astoria Maldives Ithaafushi",
-    scope:"Waldorf Astoria Maldives Ithaafushi, South Malé Atoll",
+    name:"Complimentary Night Offers — Multiple Properties",
+    scope:"Maldives Ithaafushi, Los Cabos Pedregal, Costa Rica Punta Cacique",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book through American Express Fine Hotels + Resorts at Waldorf Astoria Maldives Ithaafushi and get a complimentary sixth night on a six-consecutive-night stay. A separate 'Live Unforgettable' package takes 30% off accommodation for stays of seven or more nights, with round-trip yacht transfers, daily breakfast and a $100-per-person nightly dining credit.",
-    terms:"Six-night-free offer requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card; book by Dec 14, 2026 for travel by Dec 20, 2026. Live Unforgettable is bookable for stays through Dec 30, 2026 and combinable with other offers May 8–Dec 20, 2026.",
+    summary:"Waldorf Astoria is running complimentary-night offers at several resorts. Maldives Ithaafushi gives a complimentary sixth night on a six-consecutive-night stay via Amex Fine Hotels + Resorts (a separate 'Live Unforgettable' package takes 30% off accommodation for stays of seven or more nights). Los Cabos Pedregal's 'Suite Serenity' package gives a complimentary night that shifted from the fourth night to the fifth night starting Oct 1, 2026. Costa Rica Punta Cacique gives a complimentary fourth night with breakfast and a $100 property credit via Amex FHR.",
+    terms:"Maldives: book by Dec 14, 2026 for travel by Dec 20, 2026 (Live Unforgettable bookable for stays through Dec 30, 2026). Los Cabos Pedregal: stays through Sept 30, 2026 get a complimentary fourth night; stays Oct 1, 2026–Jun 30, 2027 get a complimentary fifth night instead, booked directly through the resort. Costa Rica Punta Cacique: book by Nov 30, 2026 for travel by Mar 31, 2027 via Amex FHR.",
     url:"https://www.hilton.com/en/hotels/mleonwa-waldorf-astoria-maldives-ithaafushi/offers/",
     source:"hilton.com",
-    dateAdded:"2026-10-07", lastUpdated:"2026-10-07"
+    properties:[
+      {name:"Maldives Ithaafushi (6th night free)", url:"https://www.hilton.com/en/hotels/mleonwa-waldorf-astoria-maldives-ithaafushi/offers/"},
+      {name:"Los Cabos Pedregal, Mexico (comp night, Suite Serenity)", url:"https://www.waldorfastorialoscabospedregal.com/offers/suite-serenity/"},
+      {name:"Costa Rica Punta Cacique (4th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Costa-Rica/Guanacaste/Waldorf-Astoria-Costa-Rica-Punta-Cacique"}
+    ],
+    dateAdded:"2026-10-07", lastUpdated:"2026-10-18"
   },
   {
     id:"montage-fourth-night-free",
@@ -287,30 +299,32 @@ const HOTEL_DEALS = [
     properties:[
       {name:"Los Cabos (4th night free)", url:"https://www.montage.com/loscabos/accommodations/special-offers/"},
       {name:"Laguna Beach, CA", url:"https://www.montage.com/lagunabeach/accommodations/special-offers/"},
-      {name:"Palmetto Bluff, SC", url:"https://www.montage.com/palmettobluff/accommodations/special-offers/"},
+      {name:"Palmetto Bluff, SC (4th night free via Amex FHR, book by Dec 20 for travel by Dec 24, 2026)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Montage-Palmetto-Bluff"},
       {name:"Healdsburg, CA", url:"https://www.montage.com/healdsburg/special-offers/"},
       {name:"Deer Valley, Park City, UT (4th night free)", url:"https://www.montage.com/deervalley/accommodations/special-offers/"}
     ],
-    dateAdded:"2026-06-15", lastUpdated:"2026-10-07"
+    dateAdded:"2026-06-15", lastUpdated:"2026-10-18"
   },
   {
     id:"aman-complimentary-nights",
     brand:"Aman",
     name:"Exclusive Offers — Complimentary Nights",
-    scope:"Aman Tokyo, Amangiri, Amanemu & more",
+    scope:"Aman Tokyo, Amangiri, Amanemu, Aman New York, Amanera & more",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Advance-purchase savings and complimentary nights across Aman's ultra-luxury resorts. Aman Tokyo's 'Extend Your Stay' offer gives a complimentary fifth night on a minimum four-night stay, part of a longer program that runs through Mar 15, 2028. Amanyara in Turks & Caicos is closed for property enhancements until Oct 20, 2026; its direct 'Extend Your Stay' complimentary fourth night is bookable now for stays after reopening, through Dec 16, 2027, and a separate Amex Fine Hotels + Resorts complimentary fourth night runs book by Dec 14, 2026 for travel by Dec 18, 2026. Amangiri offers full-board wellness packages.",
-    terms:"Property-specific. Aman Tokyo's 'Extend Your Stay' offer is now an ongoing rolling program rather than a fixed cutoff; a related 5-plus-night suite version runs through Mar 15, 2028 with holiday blackout windows. Amanyara is closed until Oct 20, 2026; its direct complimentary 4th night runs through Dec 16, 2027, and the Amex FHR version requires booking by Dec 14, 2026 for travel by Dec 18, 2026. Other properties mostly valid through Dec 31, 2026. Some include spa or transfers.",
+    summary:"Advance-purchase savings and complimentary nights across Aman's ultra-luxury resorts. Aman Tokyo's 'Extend Your Stay' offer gives a complimentary fifth night on a minimum four-night stay, part of a longer program that runs through Mar 15, 2028. Amanyara in Turks & Caicos is closed for property enhancements until Oct 20, 2026; its direct 'Extend Your Stay' complimentary fourth night is bookable now for stays after reopening, through Dec 16, 2027, and a separate Amex Fine Hotels + Resorts complimentary fourth night runs book by Dec 14, 2026 for travel by Dec 18, 2026. Amangiri offers full-board wellness packages. Aman New York, in the Crown Building on Fifth Avenue, gives a complimentary third night on a two-night stay. Amanera, overlooking Playa Grande in the Dominican Republic, gives a complimentary night on a four-night minimum stay.",
+    terms:"Property-specific. Aman Tokyo's 'Extend Your Stay' offer is now an ongoing rolling program rather than a fixed cutoff; a related 5-plus-night suite version runs through Mar 15, 2028 with holiday blackout windows. Amanyara is closed until Oct 20, 2026; its direct complimentary 4th night runs through Dec 16, 2027, and the Amex FHR version requires booking by Dec 14, 2026 for travel by Dec 18, 2026. Aman New York: book by Mar 31, 2027 for travel Dec 21, 2026–Apr 4, 2027 (a shorter window covers travel by Nov 16, booked by Nov 13, 2026). Amanera: direct booking via aman.com runs through Mar 17, 2027; the Amex FHR version requires booking by Dec 27, 2026, blackout Nov 28, 2026. Other properties mostly valid through Dec 31, 2026. Some include spa or transfers.",
     url:"https://www.aman.com/exclusive-offers",
     source:"aman.com",
     properties:[
       {name:"Aman Tokyo (5th night free)", url:"https://www.aman.com/hotels/aman-tokyo/exclusives"},
       {name:"Amanyara, Turks & Caicos (4th night free)", url:"https://www.aman.com/resorts/amanyara/exclusives/extend-your-stay"},
       {name:"Amangiri, Utah", url:"https://www.aman.com/resorts/amangiri/exclusives"},
-      {name:"Amanemu, Japan", url:"https://www.aman.com/resorts/amanemu/exclusives"}
+      {name:"Amanemu, Japan", url:"https://www.aman.com/resorts/amanemu/exclusives"},
+      {name:"Aman New York (3rd night free)", url:"https://www.aman.com/hotels/aman-new-york/exclusives"},
+      {name:"Amanera, Dominican Republic (comp night)", url:"https://www.aman.com/resorts/amanera/exclusives/extend-your-stay"}
     ],
-    dateAdded:"2026-06-30", lastUpdated:"2026-10-09"
+    dateAdded:"2026-06-30", lastUpdated:"2026-10-18"
   },
   {
     id:"relais-chateaux-extended-stays",
@@ -332,14 +346,15 @@ const HOTEL_DEALS = [
     scope:"St. Regis resorts (Punta Mita, Kanai, Longboat Key & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Marquee St. Regis resorts run complimentary-night offers — St. Regis Kanai (Riviera Maya) gives a free third night and St. Regis Punta Mita a free third or fourth night — with butler service throughout. St. Regis Longboat Key Resort in Florida instead runs a $350 food & beverage credit through Amex Fine Hotels + Resorts. Bonvoy luxury bonus points stack on top where applicable.",
-    terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates. Longboat Key's Amex FHR credit: book by Dec 31, 2026 for travel by Jan 3, 2027.",
+    summary:"Marquee St. Regis resorts run complimentary-night offers — St. Regis Kanai (Riviera Maya) gives a free third night and St. Regis Punta Mita a free third or fourth night — with butler service throughout. St. Regis Longboat Key Resort in Florida instead runs a $350 food & beverage credit through Amex Fine Hotels + Resorts, and St. Regis Maldives Vommuli Resort gives a $1,500 property credit the same way. Bonvoy luxury bonus points stack on top where applicable.",
+    terms:"Free-night offers are resort-specific and advance-purchase; check each property's page for dates. Longboat Key's Amex FHR credit: book by Dec 31, 2026 for travel by Jan 3, 2027. Maldives Vommuli's Amex FHR credit: book by Dec 18, 2026 for travel by Dec 22, 2026.",
     url:"https://st-regis.marriott.com/offers/",
     source:"st-regis.marriott.com",
     properties:[
-      {name:"Longboat Key, FL ($350 F&B credit)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Longboat-Key/The-St-Regis-Longboat-Key-Resort"}
+      {name:"Longboat Key, FL ($350 F&B credit)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Longboat-Key/The-St-Regis-Longboat-Key-Resort"},
+      {name:"Maldives Vommuli ($1,500 property credit)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Maldives/Dhaalu-Atoll/the-st-regis-maldives-vommuli-resort"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-12"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-18"
   },
   {
     id:"rosewood-fourth-night",
@@ -378,22 +393,24 @@ const HOTEL_DEALS = [
       {name:"Conrad Orlando (25% off)", url:"https://www.hilton.com/en/hotels/orlcici-conrad-orlando/offers/"},
       {name:"Conrad Fort Lauderdale Beach (4th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Fort-Lauderdale/Conrad-Fort-Lauderdale-Beach"},
       {name:"Conrad Washington DC", url:"https://conradwashingtondc.com/offers/"},
-      {name:"Conrad Maldives Rangali Island (comp night)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Maldives/South-Ari-Atoll/conrad-maldives-rangali-island"}
+      {name:"Conrad Maldives Rangali Island (comp night)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Maldives/South-Ari-Atoll/conrad-maldives-rangali-island"},
+      {name:"Conrad Singapore Orchard (4th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/conrad-singapore-orchard"},
+      {name:"Conrad Bora Bora Nui ($100 credit)", url:"https://www.americanexpress.com/en-us/travel/discover/property-results/dt/2/d/French%20Polynesia"}
     ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-04"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-18"
   },
   {
     id:"intercontinental-member-sales",
     brand:"InterContinental",
-    name:"IHG Member Sales + 15% Off Points & Cash",
+    name:"IHG Fall 2026 Points Promotion + Member Rates",
     scope:"InterContinental Hotels & Resorts worldwide",
     type:"Member Rate",
     region:"Worldwide",
-    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. IHG is running double and triple points on stays across the portfolio, including InterContinental, for stays between Oct 1 and Dec 31, 2026. IHG's Autumn Sale (up to 23% off Europe/Middle East/Africa/India/South Asia) closed for booking Sept 30, 2026, and its separate Member Sale closed Sept 29, 2026; no successor sale has been posted yet. IHG is also offering up to 100% bonus points on purchased IHG One Rewards points through Oct 5, 2026 — a way to stock up ahead of a future stay.",
-    terms:"Requires a free IHG One Rewards account. Double/triple points promotion: registration required; eligible stays must fall between Oct 1 and Dec 31, 2026.",
+    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. IHG's new Fall 2026 points promotion (successor to the Autumn Sale and Member Sale, which both closed in late September) runs stays Oct 1 through Dec 31, 2026: no bonus on the first qualifying stay, then 2x points from the second stay booked direct, or 3x points when booked through the IHG One Rewards app, with no cap on bonus points. IHG is also running double and triple base points on stays across the portfolio, including InterContinental, for the same Oct 1–Dec 31, 2026 window.",
+    terms:"Requires a free IHG One Rewards account. Fall 2026 points promotion: pre-registration closed Sept 30, 2026 but late registration is accepted during the promotion period; qualifying stays must fall between Oct 1 and Dec 31, 2026.",
     url:"https://www.ihg.com/content/us/en/deals/member-offers",
     source:"ihg.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-02"
+    dateAdded:"2026-07-12", lastUpdated:"2026-10-18"
   },
   {
     id:"belmond-longer-stay",
@@ -535,19 +552,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-09-20", lastUpdated:"2026-10-07"
   },
   {
-    id:"aman-new-york-third-night-free",
-    brand:"Aman",
-    name:"Complimentary Third Night — Aman New York",
-    scope:"Aman New York, Crown Building, Midtown Manhattan",
-    type:"Free Night",
-    region:"United States",
-    summary:"Book two consecutive nights at Aman New York, inside the landmark Crown Building on Fifth Avenue, and the third night is complimentary.",
-    terms:"Two consecutive paid nights required for the complimentary third. Book by Mar 31, 2027 for travel Dec 21, 2026 through Apr 4, 2027; a separate shorter window covers travel by Nov 16, 2026, booked by Nov 13, 2026.",
-    url:"https://www.aman.com/hotels/aman-new-york/exclusives",
-    source:"aman.com",
-    dateAdded:"2026-09-30", lastUpdated:"2026-09-30"
-  },
-  {
     id:"jw-marriott-guanacaste-fourth-night",
     brand:"JW Marriott",
     name:"Complimentary Fourth Night — Guanacaste, Costa Rica",
@@ -559,19 +563,6 @@ const HOTEL_DEALS = [
     url:"https://www.americanexpress.com/en-us/travel/discover/property/Costa-Rica/Tamarindo/Jw-Marriott-Guanacaste",
     source:"americanexpress.com",
     dateAdded:"2026-10-01", lastUpdated:"2026-10-01"
-  },
-  {
-    id:"st-regis-maldives-vommuli-property-credit",
-    brand:"St. Regis",
-    name:"$1,500 Property Credit — Amex Fine Hotels + Resorts",
-    scope:"St. Regis Maldives Vommuli Resort",
-    type:"Resort Credit",
-    region:"Worldwide",
-    summary:"Book through American Express Fine Hotels + Resorts at St. Regis Maldives Vommuli Resort and receive a $1,500 property credit, daily breakfast for two and a one-category room upgrade when available.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Dec 18, 2026 for travel by Dec 22, 2026.",
-    url:"https://www.americanexpress.com/en-us/travel/discover/property/Maldives/Dhaalu-Atoll/the-st-regis-maldives-vommuli-resort",
-    source:"americanexpress.com",
-    dateAdded:"2026-10-02", lastUpdated:"2026-10-02"
   },
   {
     id:"omni-homestead-fourth-night",
@@ -629,97 +620,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-10-06", lastUpdated:"2026-10-08"
   },
   {
-    id:"four-seasons-jackson-hole-fourth-night-free",
-    brand:"Four Seasons",
-    name:"Stay Longer, Fourth Night Free — Jackson Hole",
-    scope:"Four Seasons Resort and Residences Jackson Hole, Wyoming",
-    type:"Free Night",
-    region:"United States",
-    summary:"Book three consecutive nights at Four Seasons Resort and Residences Jackson Hole and the fourth night is complimentary, for stays this fall and again next spring.",
-    terms:"Three consecutive paid nights required for the complimentary fourth. Valid for stays Oct 11–Dec 17, 2026, and May 3–15, 2027. New bookings only; not combinable with other offers; blackout dates and availability restrictions apply.",
-    url:"https://www.fourseasons.com/jacksonhole/offers/stay-longer-fourth-night-free/",
-    source:"fourseasons.com",
-    dateAdded:"2026-10-09", lastUpdated:"2026-10-09"
-  },
-  {
-    id:"aman-amanera-complimentary-night",
-    brand:"Aman",
-    name:"Extend Your Stay — Complimentary Night, Amanera",
-    scope:"Amanera, Playa Grande, Dominican Republic",
-    type:"Free Night",
-    region:"Caribbean",
-    summary:"Book a minimum four-night stay at Amanera, overlooking Playa Grande on the Dominican Republic's north coast, and one night is complimentary. Also bookable through American Express Fine Hotels + Resorts, which runs its own version of the offer.",
-    terms:"Direct booking via aman.com runs through Mar 17, 2027. The Amex Fine Hotels + Resorts version requires booking by Dec 27, 2026 for travel between Jan 1 and Dec 31, 2026, four-night minimum, blackout date Nov 28, 2026; the complimentary night cannot repeat within a single stay.",
-    url:"https://www.aman.com/resorts/amanera/exclusives/extend-your-stay",
-    source:"aman.com",
-    dateAdded:"2026-10-09", lastUpdated:"2026-10-09"
-  },
-  {
-    id:"four-seasons-fort-lauderdale-fourth-night-free",
-    brand:"Four Seasons",
-    name:"Stay Longer, Fourth Night Free — Fort Lauderdale Beach",
-    scope:"Four Seasons Hotel and Residences Fort Lauderdale",
-    type:"Free Night",
-    region:"United States",
-    summary:"Book three consecutive nights at Four Seasons Hotel and Residences Fort Lauderdale, on the beach north of Miami, and the fourth night is complimentary.",
-    terms:"Three consecutive paid nights required for the complimentary fourth. Valid for stays Oct 7 through Dec 24, 2026. The free night must be taken as part of the same stay; not combinable with other offers; not valid for groups; early departure fees may apply.",
-    url:"https://www.fourseasons.com/fortlauderdale/offers/stay-longer-fourth-night-free",
-    source:"fourseasons.com",
-    dateAdded:"2026-10-10", lastUpdated:"2026-10-10"
-  },
-  {
-    id:"conrad-singapore-orchard-fourth-night",
-    brand:"Conrad",
-    name:"Complimentary Fourth Night — Conrad Singapore Orchard",
-    scope:"Conrad Singapore Orchard",
-    type:"Free Night",
-    region:"Worldwide",
-    summary:"Book through American Express Fine Hotels + Resorts at Conrad Singapore Orchard and get a complimentary fourth night on a four-night minimum stay.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Minimum four consecutive nights; the free night cannot repeat regardless of stay length. Book by Dec 27, 2026 for travel by Dec 31, 2026; blackout dates include Oct 8–11, 2026 and Dec 30–31, 2026.",
-    url:"https://www.americanexpress.com/en-us/travel/discover/property/conrad-singapore-orchard",
-    source:"americanexpress.com",
-    dateAdded:"2026-10-09", lastUpdated:"2026-10-09"
-  },
-  {
-    id:"waldorf-astoria-los-cabos-pedregal-fifth-night",
-    brand:"Waldorf Astoria",
-    name:"Suite Serenity — Complimentary Night, Los Cabos Pedregal",
-    scope:"Waldorf Astoria Los Cabos Pedregal, Mexico",
-    type:"Free Night",
-    region:"Mexico",
-    summary:"Waldorf Astoria Los Cabos Pedregal offers a complimentary night on qualifying stays under its Suite Serenity package. The free-night position shifted from the fourth night to the fifth night starting Oct 1, 2026.",
-    terms:"Stays through Sept 30, 2026 receive a complimentary fourth night; stays Oct 1, 2026 through Jun 30, 2027 receive a complimentary fifth night instead. Booked directly through the resort's own offers page.",
-    url:"https://www.waldorfastorialoscabospedregal.com/offers/suite-serenity/",
-    source:"waldorfastorialoscabospedregal.com",
-    dateAdded:"2026-10-11", lastUpdated:"2026-10-11"
-  },
-  {
-    id:"montage-palmetto-bluff-fourth-night",
-    brand:"Montage",
-    name:"Complimentary Fourth Night — Amex Fine Hotels + Resorts",
-    scope:"Montage Palmetto Bluff, Bluffton, South Carolina",
-    type:"Free Night",
-    region:"United States",
-    summary:"Book through American Express Fine Hotels + Resorts at Montage Palmetto Bluff and get a complimentary fourth night.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Dec 20, 2026 for travel by Dec 24, 2026.",
-    url:"https://www.americanexpress.com/en-us/travel/discover/property/Montage-Palmetto-Bluff",
-    source:"americanexpress.com",
-    dateAdded:"2026-10-11", lastUpdated:"2026-10-11"
-  },
-  {
-    id:"conrad-bora-bora-nui-fhr-credit",
-    brand:"Conrad",
-    name:"$100 Property Credit — Amex Fine Hotels + Resorts",
-    scope:"Conrad Bora Bora Nui, French Polynesia",
-    type:"Resort Credit",
-    region:"Worldwide",
-    summary:"Book through American Express Fine Hotels + Resorts at Conrad Bora Bora Nui and receive a $100 property credit and daily breakfast for two, alongside a separate three-night-minimum rate offer.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. The separate rate offer is bookable Jan 3 through Nov 30, 2026 for travel Apr 2 through Dec 20, 2026, three-night minimum, no blackout dates.",
-    url:"https://www.americanexpress.com/en-us/travel/discover/property-results/dt/2/d/French%20Polynesia",
-    source:"americanexpress.com",
-    dateAdded:"2026-10-11", lastUpdated:"2026-10-11"
-  },
-  {
     id:"fairmont-grand-del-mar-play-your-way",
     brand:"Fairmont",
     name:"Play Your Way — Resort Credit",
@@ -733,19 +633,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-10-13", lastUpdated:"2026-10-13"
   },
   {
-    id:"waldorf-astoria-costa-rica-punta-cacique-fourth-night",
-    brand:"Waldorf Astoria",
-    name:"Complimentary Fourth Night — Waldorf Astoria Costa Rica Punta Cacique",
-    scope:"Waldorf Astoria Costa Rica Punta Cacique, Guanacaste",
-    type:"Free Night",
-    region:"Central America",
-    summary:"Book through American Express Fine Hotels + Resorts at Waldorf Astoria Costa Rica Punta Cacique, on the Papagayo Peninsula, and get a complimentary fourth night, plus daily breakfast for two and a $100 property credit.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Nov 30, 2026 for travel by Mar 31, 2027.",
-    url:"https://www.americanexpress.com/en-us/travel/discover/property/Costa-Rica/Guanacaste/Waldorf-Astoria-Costa-Rica-Punta-Cacique",
-    source:"americanexpress.com",
-    dateAdded:"2026-10-14", lastUpdated:"2026-10-14"
-  },
-  {
     id:"intercontinental-hayman-third-night",
     brand:"InterContinental",
     name:"Complimentary Third Night — InterContinental Hayman Great Barrier Reef",
@@ -757,32 +644,6 @@ const HOTEL_DEALS = [
     url:"https://www.americanexpress.com/en-us/travel/discover/property/Australia/Hayman-Island/Intercontinental-Hayman-Great-Barrier-Reef",
     source:"americanexpress.com",
     dateAdded:"2026-10-14", lastUpdated:"2026-10-14"
-  },
-  {
-    id:"mandarin-oriental-jumeira-dubai-third-night",
-    brand:"Mandarin Oriental",
-    name:"Complimentary Third Night — Mandarin Oriental Jumeira, Dubai",
-    scope:"Mandarin Oriental Jumeira, Dubai",
-    type:"Free Night",
-    region:"Middle East",
-    summary:"Book through American Express Fine Hotels + Resorts at Mandarin Oriental Jumeira, Dubai and get a complimentary third night. This is a different property from Mandarin Oriental Downtown Dubai, whose comparable offer closed earlier in 2026.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Dec 21, 2026 for travel by Dec 24, 2026.",
-    url:"https://www.americanexpress.com/en-us/travel/discover/property/United-Arab-Emirates/Dubai/Mandarin-Oriental-Jumeira-Dubai",
-    source:"americanexpress.com",
-    dateAdded:"2026-10-15", lastUpdated:"2026-10-15"
-  },
-  {
-    id:"four-seasons-ocean-club-bahamas-fourth-night-free",
-    brand:"Four Seasons",
-    name:"Stay Longer, Fourth Night Free — The Ocean Club, Bahamas",
-    scope:"The Ocean Club, A Four Seasons Resort, Paradise Island, Bahamas",
-    type:"Free Night",
-    region:"Caribbean",
-    summary:"Book three consecutive nights at The Ocean Club on Paradise Island and the fourth night is complimentary, with round-trip private SUV airport transfers from Lynden Pindling International Airport included.",
-    terms:"Three consecutive paid nights required for the complimentary fourth. Valid for stays Jul 28, 2026 through Dec 31, 2027. Not combinable with other offers; blackout dates and availability restrictions apply.",
-    url:"https://www.fourseasons.com/oceanclub/offers/fourth-night-free/",
-    source:"fourseasons.com",
-    dateAdded:"2026-10-15", lastUpdated:"2026-10-15"
   },
   {
     id:"fairmont-tokyo-stay-4-pay-3",
