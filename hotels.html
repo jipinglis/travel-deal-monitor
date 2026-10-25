@@ -175,7 +175,7 @@
 // own offer page (e.g. Four Seasons Chicago, Four Seasons Miami) and the main
 // button reads "View all offers". Omit it for a single brand-wide deal.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-24";
+const LAST_CHECKED = "2026-10-25";
 
 const HOTEL_DEALS = [
   {
@@ -329,19 +329,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-06-30", lastUpdated:"2026-10-20"
   },
   {
-    id:"relais-chateaux-extended-stays",
-    brand:"Relais & Châteaux",
-    name:"Extended Stays & Complimentary Fourth Night",
-    scope:"Relais & Châteaux boutique hotels & château estates",
-    type:"Free Night",
-    region:"Worldwide",
-    summary:"Extended-weekend packages plus complimentary-fourth-night offers across the independent Relais & Châteaux collection of luxury inns and gourmet estates. A separate targeted Amex Offer gives a $100 statement credit after spending $500 or more at a participating property — an effective 20% back on the qualifying spend.",
-    terms:"Amex Offers statement credit: spend $500+ at a participating property between July 15 and Nov 15, 2026 (enrollment required, targeted offer, booking must go through the Relais & Châteaux channel). Complimentary-night and stay-longer offers vary by property; check relaischateaux.com for current per-property dates.",
-    url:"https://www.relaischateaux.com/us/special-offers",
-    source:"relaischateaux.com",
-    dateAdded:"2026-06-22", lastUpdated:"2026-10-07"
-  },
-  {
     id:"st-regis-free-night",
     brand:"St. Regis",
     name:"Third/Fourth Night Free at Resorts",
@@ -402,54 +389,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-07-12", lastUpdated:"2026-10-18"
   },
   {
-    id:"intercontinental-member-sales",
-    brand:"InterContinental",
-    name:"IHG Fall 2026 Points Promotion + Member Rates",
-    scope:"InterContinental Hotels & Resorts worldwide",
-    type:"Member Rate",
-    region:"Worldwide",
-    summary:"InterContinental's global collection features IHG One Rewards member rates, seasonal flash sales and stay-longer packages — a broad, reliable upscale option in nearly every major city. IHG's new Fall 2026 points promotion (successor to the Autumn Sale and Member Sale, which both closed in late September) runs stays Oct 1 through Dec 31, 2026: no bonus on the first qualifying stay, then 2x points from the second stay booked direct, or 3x points when booked through the IHG One Rewards app, with no cap on bonus points. IHG is also running double and triple base points on stays across the portfolio, including InterContinental, for the same Oct 1–Dec 31, 2026 window.",
-    terms:"Requires a free IHG One Rewards account. Fall 2026 points promotion: pre-registration closed Sept 30, 2026 but late registration is accepted during the promotion period; qualifying stays must fall between Oct 1 and Dec 31, 2026.",
-    url:"https://www.ihg.com/content/us/en/deals/member-offers",
-    source:"ihg.com",
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-18"
-  },
-  {
-    id:"belmond-longer-stay",
-    brand:"Belmond",
-    name:"Complimentary Fifth Night — New Year in Rio",
-    scope:"Copacabana Palace, A Belmond Hotel, Rio de Janeiro",
-    type:"Free Night",
-    region:"South America",
-    summary:"Belmond's storied Copacabana Palace in Rio is currently offering a complimentary fifth night through American Express Fine Hotels + Resorts, on top of curated packages spanning Belmond's legendary hotels and trains.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Book by Dec 20, 2026 for travel by Dec 23, 2026.",
-    url:"https://www.belmond.com/packages-and-tours",
-    source:"belmond.com",
-    properties:[
-      {name:"Copacabana Palace, Rio (5th night free)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Brazil/Rio-de-Janeiro/Copacabana-Palace-A-Belmond-Hotel-Rio-De-Janeiro"}
-    ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-07"
-  },
-  {
-    id:"six-senses-stay-longer",
-    brand:"Six Senses",
-    name:"Complimentary Third Night — Krabey Island, Cambodia",
-    scope:"Six Senses Krabey Island, Cambodia (+ stay-longer & early-booking deals portfolio-wide)",
-    type:"Free Night",
-    region:"Worldwide",
-    summary:"Six Senses Krabey Island in Cambodia runs a 'Three Nights Plus' rate — stay three or more consecutive nights and save on the nightly rate, with no advertised end date. Six Senses Bhutan's 'Seasonal Discovery' gives two complimentary nights on a stay of 5-8 paid nights, or three complimentary nights on 9 or more paid nights, bundled with a spa treatment, a private car and driver, and a guide. Other Six Senses resorts run their own stay-longer, early-booking and extended-stay discounts with bonus inclusions.",
-    terms:"Krabey Island: discount applies to stays of three or more consecutive nights; exact percentage and any cutoff date are not published — confirm current terms on sixsenses.com before booking. Bhutan: five consecutive paid nights minimum; not combinable with other offers and not valid for groups of four or more rooms; no published end date — contact the resort to confirm current availability. Other resorts' discounts and inclusions vary by season; see each offer page for terms.",
-    url:"https://www.sixsenses.com/en/offers/",
-    source:"sixsenses.com",
-    properties:[
-      {name:"Krabey Island, Cambodia (Three Nights Plus)", url:"https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/cambodia/krabey-island/offers/three-nights-plus"},
-      {name:"Bhutan (Seasonal Discovery, 2-3 free nights)", url:"https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/bhutan/bhutan/offers/seasonal-discovery/"},
-      {name:"Stay Longer deals", url:"https://www.sixsenses.com/en/offers/stay-longer/"},
-      {name:"Early Booking offers", url:"https://www.sixsenses.com/en/offers/early-booking/"}
-    ],
-    dateAdded:"2026-07-12", lastUpdated:"2026-10-16"
-  },
-  {
     id:"acqualina-fourth-night-free",
     brand:"Acqualina",
     name:"Fourth Night Free — Oceanfront Miami",
@@ -482,11 +421,11 @@ const HOTEL_DEALS = [
     scope:"Participating Peninsula hotels worldwide (Beverly Hills, New York, London, Bangkok, Hong Kong & more)",
     type:"Free Night",
     region:"Worldwide",
-    summary:"Book two consecutive paid nights through American Express Fine Hotels + Resorts at a participating Peninsula hotel and the third night is complimentary. Peninsula Beverly Hills' third-night window (booked by Sept 28, 2026) has closed; its complimentary-fourth-night window remains open: book by Dec 20, 2026 for travel by Dec 23, 2026. Peninsula Hong Kong runs its own complimentary third night, book by Dec 27, 2026 for travel by Dec 30, 2026 (an earlier window booked by Oct 28, 2026 has closed). A separate, targeted Amex Offer credits $100 back after spending $500 or more at a participating Peninsula hotel, for spending between Aug 21 and Nov 30, 2026 (enrollment required; not all cardholders will see it).",
+    summary:"Book through American Express Fine Hotels + Resorts at a participating Peninsula hotel for a complimentary extra night. Peninsula Beverly Hills' complimentary fourth night runs on its own window: book by Dec 20, 2026 for travel by Dec 23, 2026. A separate, targeted Amex Offer credits $100 back after spending $500 or more at a participating Peninsula hotel, for spending between Aug 21 and Nov 30, 2026 (enrollment required; not all cardholders will see it).",
     terms:"FHR free-night offer requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card; exact night count and window vary by hotel and by booking date. The $100 Amex Offers statement credit requires separate enrollment and is targeted.",
     url:"https://www.americanexpress.com/en-us/travel/discover/brand/peninsula-hotels",
     source:"americanexpress.com",
-    dateAdded:"2026-09-05", lastUpdated:"2026-10-24"
+    dateAdded:"2026-09-05", lastUpdated:"2026-10-25"
   },
   {
     id:"w-hotels-fb-credit",
@@ -541,22 +480,6 @@ const HOTEL_DEALS = [
     dateAdded:"2026-09-20", lastUpdated:"2026-09-27"
   },
   {
-    id:"oneandonly-royal-mirage-fourth-night",
-    brand:"One&Only",
-    name:"Royal Mirage Fourth Night Free with Spa Perks",
-    scope:"One&Only Royal Mirage, Dubai (+ Moonlight Basin, Montana & Mandarina, Mexico)",
-    type:"Free Night",
-    region:"Middle East",
-    summary:"One&Only Royal Mirage in Dubai is currently offering up to 45% off room rates with a complimentary half-board meal upgrade. One&Only Moonlight Basin in Montana runs its own evergreen complimentary-night program, 'Night On Us,' rather than a fixed seasonal window; One&Only Mandarina in Mexico has a fourth-night-free offer, book by Nov 22, 2026 for travel by Dec 25, 2026. One&Only Le Saint Géran in Mauritius runs its own 'Nights On Us' version — book five consecutive nights and pay for four, with daily breakfast included.",
-    terms:"Royal Mirage's 45% off + half-board upgrade is subject to availability and rate restrictions. Booking windows roll periodically — check each property's own offers page for current dates; blackout dates and property-specific conditions apply. Le Saint Géran: five-night minimum stay, bookable for stays through Jan 2, 2028.",
-    url:"https://www.oneandonlyresorts.com/royal-mirage/offers",
-    source:"oneandonlyresorts.com",
-    properties:[
-      {name:"Le Saint Géran, Mauritius (5 nights for the price of 4)", url:"https://www.oneandonlyresorts.com/le-saint-geran/offers/night-on-us"}
-    ],
-    dateAdded:"2026-09-20", lastUpdated:"2026-10-22"
-  },
-  {
     id:"jw-marriott-guanacaste-fourth-night",
     brand:"JW Marriott",
     name:"Complimentary Fourth Night — Guanacaste, Costa Rica",
@@ -581,36 +504,6 @@ const HOTEL_DEALS = [
     url:"https://www.americanexpress.com/en-us/travel/discover/property/Virginia-US/Hot-Springs/The-Omni-Homestead-Resort-And-Spa",
     source:"americanexpress.com",
     dateAdded:"2026-10-04", lastUpdated:"2026-10-04"
-  },
-  {
-    id:"capella-bangkok-amex-third-night",
-    brand:"Capella",
-    name:"Complimentary Night — Capella Bangkok & Capella Singapore",
-    scope:"Capella Bangkok, Thailand & Capella Singapore",
-    type:"Free Night",
-    region:"Worldwide",
-    summary:"Book through American Express Fine Hotels + Resorts at Capella Bangkok, on the banks of the Chao Phraya River, and a complimentary night is applied on a minimum three-night stay. Capella Singapore, on Sentosa Island, runs the same complimentary-night mechanic on its own booking window, repeatable depending on length of stay. Capella Ubud, Bali runs a complimentary third night the same way.",
-    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Minimum three consecutive nights at both properties. Bangkok: book by Dec 16, 2026 for travel by Dec 19, 2026. Singapore: book by Dec 15, 2026 for travel by Dec 18, 2026. Ubud, Bali: book by Dec 16, 2026 for travel by Dec 19, 2026.",
-    url:"https://www.americanexpress.com/en-us/travel/discover/property/Thailand/Bangkok/Capella-Bangkok",
-    source:"americanexpress.com",
-    properties:[
-      {name:"Capella Singapore (comp night)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Singapore/Singapore/Capella-Singapore"},
-      {name:"Capella Ubud, Bali (comp 3rd night)", url:"https://www.americanexpress.com/en-us/travel/discover/property/Indonesia/Ubud/Capella-Ubud-Bali"}
-    ],
-    dateAdded:"2026-10-06", lastUpdated:"2026-10-22"
-  },
-  {
-    id:"jumeirah-zabeel-saray-sixth-night",
-    brand:"Jumeirah",
-    name:"Complimentary Night — Jumeirah Zabeel Saray",
-    scope:"Jumeirah Zabeel Saray, Palm Jumeirah, Dubai",
-    type:"Free Night",
-    region:"Middle East",
-    summary:"Book six consecutive nights at Jumeirah Zabeel Saray on Palm Jumeirah and one night is complimentary, across most room and suite categories.",
-    terms:"Minimum six consecutive nights required. Book Jul 4 through Dec 31, 2026 for stays Oct 1, 2026 through Jan 6, 2027. Blackout dates Dec 25–31, 2026.",
-    url:"https://www.jumeirah.com/en/offers/category-offers/stay/jumeirah-zabeel-saray/jumeirah-escapes",
-    source:"jumeirah.com",
-    dateAdded:"2026-10-06", lastUpdated:"2026-10-06"
   },
   {
     id:"dorchester-collection-fourth-night",
@@ -665,17 +558,30 @@ const HOTEL_DEALS = [
     dateAdded:"2026-10-17", lastUpdated:"2026-10-17"
   },
   {
-    id:"waldorf-astoria-conrad-lxr-extra-night",
-    brand:"Waldorf Astoria",
-    name:"25% Off + Fourth Night Free — Waldorf Astoria, Conrad, LXR & Signia Portfolio",
-    scope:"Waldorf Astoria, Conrad, LXR and Signia hotels worldwide",
-    type:"Percent Off",
-    region:"Worldwide",
-    summary:"Hilton's standing luxury-brand promotion gives 25% off the best available rate on stays of four to seven consecutive nights at participating Waldorf Astoria, Conrad, LXR and Signia hotels worldwide — in effect a complimentary fourth night spread across the stay. Book by calling Hilton's luxury reservations desk and requesting the 'LRM Extra Night' package, or ask the property to apply plan code PBBOG1.",
-    terms:"Minimum four consecutive nights, maximum seven; the 25% discount applies across all nights of the stay rather than as a single literal free night, and checking out early forfeits the benefit. Excludes gratuities, resort fees and incidentals; does not apply to Hilton Honors award stays. No published end date — participation varies by property, so confirm with the hotel before booking.",
-    url:"https://www.hilton.com/en/p/luxury/extra-night/",
-    source:"hilton.com",
-    dateAdded:"2026-10-24", lastUpdated:"2026-10-24"
+    id:"autograph-el-mangroove-resort-credit",
+    brand:"Autograph Collection",
+    name:"$100 Property Credit — El Mangroove, Costa Rica",
+    scope:"El Mangroove, Autograph Collection, Guanacaste, Costa Rica",
+    type:"Resort Credit",
+    region:"Central America",
+    summary:"Book through American Express Fine Hotels + Resorts at El Mangroove, Autograph Collection, on the Papagayo Peninsula in Guanacaste, and get a $100 property credit toward qualifying on-property charges on a two-night minimum stay.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Two-night minimum stay. Book by Nov 30, 2026 for travel Apr 5 through Dec 31, 2026; blackout dates apply around the December holidays.",
+    url:"https://www.americanexpress.com/en-us/travel/discover/property/Costa-Rica/Carrillo/El-Mangroove-Autograph-Collection",
+    source:"americanexpress.com",
+    dateAdded:"2026-10-25", lastUpdated:"2026-10-25"
+  },
+  {
+    id:"westin-maui-property-credit",
+    brand:"Westin",
+    name:"$100 Property Credit — Westin Maui Resort & Spa",
+    scope:"The Westin Maui Resort & Spa, Lahaina, Hawaii",
+    type:"Resort Credit",
+    region:"United States",
+    summary:"Book through American Express Fine Hotels + Resorts at The Westin Maui Resort & Spa in Lahaina and get a $100 property credit toward dining, spa and resort activities, plus daily breakfast for two.",
+    terms:"Requires booking through Amex Fine Hotels + Resorts with an eligible Amex Platinum or Business Platinum card. Four-night minimum stay for the special offer; book by Dec 20, 2026 for travel through Dec 31, 2026. Blackout dates apply in January, February and May 2026.",
+    url:"https://www.americanexpress.com/en-us/travel/discover/property/Hawaii-US/Lahaina/The-Westin-Maui-Resort--Spa",
+    source:"americanexpress.com",
+    dateAdded:"2026-10-25", lastUpdated:"2026-10-25"
   }
 ];
 

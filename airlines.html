@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-24";
+const LAST_CHECKED = "2026-10-25";
 
 const AIRLINE_DEALS = [
   {
@@ -171,24 +171,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Bonus Miles",
     dest:"49 cities from Atlanta (NYC, Chicago, Orlando, Vegas & more)",
-    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus recurring system-wide Discount Den fare sales (fares advertised from $19) with rotating booking windows and register-and-earn bonus-mile offers on round-trip bookings. Frontier's 2026-27 GoWild pass gives unlimited travel through Apr 30, 2027 for a regular price of $599, but Frontier periodically discounts it for new purchasers during limited-time sales (it launched in November 2025 at an intro price of $349).",
+    summary:"Ultra-low fares from Atlanta — sample one-ways like ATL→Las Vegas around $56 — plus recurring system-wide Discount Den fare sales (fares advertised from $19) with rotating booking windows and register-and-earn bonus-mile offers on round-trip bookings. Frontier's GoWild all-you-can-fly pass runs through Apr 30, 2027 at a regular price of $599, but Frontier frequently runs limited-time sale prices for new purchasers — a 2026-27 annual pass has sold for as low as $299 and a shorter fall/winter-dated version for $199 — so check flyfrontier.com/gowildearlyrenew for the current price.",
     terms:"Discount Den sale fares need advance purchase and apply only on select days of the week — check flyfrontier.com for the current booking window. Bonus-mile promos require registering before booking; carry-on, seat and bag fees are extra and add up fast, so compare the all-in price against Delta and Southwest before booking. Fares are one-way and non-refundable. The GoWild pass requires a Discount Den membership; its regular price is $599, but check flyfrontier.com for a current discounted sale price before buying.",
     url:"https://flights.flyfrontier.com/en/flights-from-atlanta",
     source:"flyfrontier.com",
-    dateAdded:"2026-07-05", lastUpdated:"2026-10-16"
-  },
-  {
-    id:"american-atl-deals",
-    airline:"American Airlines",
-    name:"Summer Flight Deals from ATL",
-    scope:"Domestic",
-    type:"Fare Sale",
-    dest:"American hubs & beyond from Atlanta (DFW, CLT, MIA, ORD)",
-    summary:"American's Domestic Deals page lists reduced web fares to its hubs and beyond. From Atlanta it connects to DFW, CLT, MIA and ORD with frequent sales and AAdvantage award specials — a handy alternative to Delta for one-stop international connections. (American Airlines Vacations runs its own current promo codes for package bookings — see the separate American Airlines Vacations listing.)",
-    terms:"Web specials are date-limited and advance-purchase; award availability varies by route and current promo codes change frequently — check aa.com's Domestic Deals page for what's live now.",
-    url:"https://www.aa.com/en-us/domestic-deals",
-    source:"aa.com",
-    dateAdded:"2026-07-02", lastUpdated:"2026-09-20"
+    dateAdded:"2026-07-05", lastUpdated:"2026-10-25"
   },
   {
     id:"united-atl-deals",
@@ -211,10 +198,10 @@ const AIRLINE_DEALS = [
     type:"Fare Sale",
     dest:"East Coast & focus cities from Atlanta (BOS, JFK, FLL)",
     summary:"JetBlue serves ATL to the Northeast and Florida with roomy seats and free Wi-Fi. Its early-August Fall Fare flash sale (one-way fares from $54, for travel Tuesdays, Wednesdays and Saturdays between Sept 9 and Nov 18, 2026, blackout dates Oct 9-14 and Nov 8-11) has closed for new bookings; that travel window still runs through Nov 18, 2026 at standard fares. JetBlue Vacations' 'Very Important Perks' throws in extras worth up to $125 — resort credits, breakfast and upgrades — on flight-plus-hotel packages of four or more nights booked at select resorts at least four days ahead. JetBlue Vacations also takes up to 50% off flight-plus-cruise packages, up to 35% off car rentals added to a flight or package, and includes free airport transfers to Aruba, Cancun, Montego Bay, Punta Cana, Nassau, San Juan, St. Lucia and Tulum on qualifying vacation packages.",
-    terms:"The $54 Fall Fare sale booking window has closed; check flyjetblue.com for the next flash sale. Blue Basic is cheapest for flight-only bookings. Very Important Perks requires flight and hotel booked together on jetbluevacations.com at least 4 days before travel; exact perks vary by resort. The up-to-50%-off flight+cruise package sale requires a four-night minimum and must be booked by Feb 10, 2027.",
+    terms:"The $54 Fall Fare sale booking window has closed; check flyjetblue.com for the next flash sale. Blue Basic is cheapest for flight-only bookings. Very Important Perks requires flight and hotel booked together on jetbluevacations.com at least 4 days before travel; exact perks vary by resort. The up-to-50%-off flight+cruise package sale must be booked by Nov 14, 2026; the discount applies to the flight portion only, varies by fare class, and does not apply to Mint fares.",
     url:"https://www.jetbluevacations.com/sale/current",
     source:"jetbluevacations.com",
-    dateAdded:"2026-07-06", lastUpdated:"2026-10-08"
+    dateAdded:"2026-07-06", lastUpdated:"2026-10-25"
   },
   {
     id:"virgin-atlantic-atl-london",
@@ -236,11 +223,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Award Sale",
     dest:"Europe via Paris (CDG) or Amsterdam (AMS), connecting from Atlanta",
-    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates. The October 2026 window (book by Oct 31, 2026) covers travel through Mar 31, 2027, across 54 flagged routes, with discounted awards priced as low as 18,750 miles each way in economy; this round also newly flags some non-Europe routes, such as Europe to Vancouver from 18,750 miles on KLM and ATL-Beijing economy awards from 30,000 miles.",
-    terms:"Book by Oct 31, 2026 for travel through Mar 31, 2027. Discount applies only to specific flagged routes/dates, so check the Promo Rewards calendar for Atlanta availability before booking. 16 of the 54 flagged routes require an active paid Flying Blue Extra subscription to unlock the discount. Flying Blue award tickets are split into Light/Standard/Flex fares; Promo Rewards seats are typically issued as Light fares, which carry no changes, no refunds, no advance seat selection and no complimentary checked bag in economy or premium economy.",
+    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates, with a fresh set of flagged routes published roughly every month. The October 2026 round (book by Oct 31, 2026, for travel through Mar 31, 2027) covers 54 flagged routes, with discounted awards priced as low as 18,750 miles each way in economy; this round also newly flags some non-Europe routes, such as Europe to Vancouver from 18,750 miles on KLM and ATL-Beijing economy awards from 30,000 miles. A new November round replaces this one once the Oct 31 booking window closes.",
+    terms:"Book by Oct 31, 2026 for this round's travel through Mar 31, 2027; Flying Blue publishes a new Promo Rewards list roughly every month, so check the Promo Rewards calendar at flyingblue.com for the current routes and Atlanta availability after that date. Discount applies only to specific flagged routes/dates. 16 of the 54 flagged routes in this round require an active paid Flying Blue Extra subscription to unlock the discount. Flying Blue award tickets are split into Light/Standard/Flex fares; Promo Rewards seats are typically issued as Light fares, which carry no changes, no refunds, no advance seat selection and no complimentary checked bag in economy or premium economy.",
     url:"https://wwws.airfrance.us/en-us/flights-from-atlanta",
     source:"airfrance.us / klm.com",
-    dateAdded:"2026-07-30", lastUpdated:"2026-10-03"
+    dateAdded:"2026-07-30", lastUpdated:"2026-10-25"
   },
   {
     id:"delta-vacations-summer-package-savings",
@@ -249,11 +236,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Package Deal",
     dest:"U.S., Canada, Mexico, the Caribbean & Central America from Atlanta",
-    summary:"Delta Vacations discounts flight-and-hotel packages property by property rather than one broad worldwide rate, and the featured list rotates regularly. Current examples include $150 instant savings at RIU Palace Costa Mujeres, up to 40% off plus a complimentary tequila or mezcal tasting at Haven Riviera Cancun Resort & Spa, and 50% off rooms plus a waived resort fee at Margaritaville Beach Resort Fort Myers — all bookable with an ATL flight. The lead traveler also picks up bonus SkyMiles on qualifying bookings.",
-    terms:"RIU Palace Costa Mujeres: book by Oct 31, 2026 for travel through Mar 31, 2027, 3-night minimum. Haven Riviera Cancun: book by Oct 31, 2026 for travel through Apr 30, 2027. Margaritaville Beach Resort Fort Myers: book by Oct 31, 2026 for travel Nov 3, 2026 through Jan 31, 2027. Requires flight and hotel booked together, at least one Delta-operated flight; the lead traveler must be a (free) SkyMiles member. Exact discount varies by package — check delta.com/vacations for current terms.",
+    summary:"Delta Vacations discounts flight-and-hotel packages property by property rather than one broad worldwide rate, and the featured list rotates every few weeks as offers close and new ones take their place. As of Oct 25, 2026, current examples include $150 instant savings at RIU Palace Costa Mujeres, up to 40% off plus a complimentary tequila or mezcal tasting at Haven Riviera Cancun Resort & Spa, and 50% off rooms plus a waived resort fee at Margaritaville Beach Resort Fort Myers — all bookable with an ATL flight. The lead traveler also picks up bonus SkyMiles on qualifying bookings.",
+    terms:"RIU Palace Costa Mujeres: book by Oct 31, 2026 for travel through Mar 31, 2027, 3-night minimum. Haven Riviera Cancun: book by Oct 31, 2026 for travel through Apr 30, 2027. Margaritaville Beach Resort Fort Myers: book by Oct 31, 2026 for travel Nov 3, 2026 through Jan 31, 2027. Requires flight and hotel booked together, at least one Delta-operated flight; the lead traveler must be a (free) SkyMiles member. This round of featured properties closes Oct 31, 2026 and delta.com/vacations rotates in a new set afterward — check there for current terms.",
     url:"https://www.delta.com/us/en/delta-vacations/offers-deals",
     source:"delta.com",
-    dateAdded:"2026-08-03", lastUpdated:"2026-10-04"
+    dateAdded:"2026-08-03", lastUpdated:"2026-10-25"
   },
   {
     id:"american-vacations-fall-savings",
@@ -262,11 +249,11 @@ const AIRLINE_DEALS = [
     scope:"Domestic",
     type:"Package Deal",
     dest:"U.S. & Canada vacation packages from Atlanta",
-    summary:"American Airlines Vacations is discounting flight-and-hotel packages with promo codes VACATIONS100 ($100 off eligible trips) and LUXURY600 ($600 off vacation packages), both valid through Dec 31, 2026. The earlier FALL75/FALL100/EURO200 codes' Sept 1-30, 2026 booking window has closed. Each requires round-trip flights booked as part of the package.",
-    terms:"VACATIONS100 and LUXURY600 valid through Dec 31, 2026; exact minimum spend and stay requirements vary by code — check aavacations.com for current terms.",
+    summary:"American Airlines Vacations is discounting flight-and-hotel packages with promo code VACATIONS100 ($100 off eligible trips), valid through Dec 31, 2026. The earlier FALL75/FALL100/EURO200 codes' Sept 1-30, 2026 booking window has closed, and a previously listed LUXURY600 code could not be confirmed as currently active. Requires round-trip flights booked as part of the package.",
+    terms:"VACATIONS100 valid through Dec 31, 2026; exact minimum spend and stay requirements vary — check aavacations.com for current terms and any other active codes.",
     url:"https://www.aavacations.com/en/",
     source:"aavacations.com",
-    dateAdded:"2026-09-07", lastUpdated:"2026-10-01"
+    dateAdded:"2026-09-07", lastUpdated:"2026-10-25"
   },
   {
     id:"american-europe-flight-deals",
@@ -275,11 +262,11 @@ const AIRLINE_DEALS = [
     scope:"International",
     type:"Fare Sale",
     dest:"London Heathrow (LHR) and Dublin (DUB), one-stop from Atlanta via American hubs or partner airlines",
-    summary:"American's Europe Flight Deals page discounts Basic Economy and Premium Economy fares to the UK, Ireland and other European destinations on American, British Airways, Iberia, Aer Lingus and Finnair. Atlanta connects via an American hub or via BA/Aer Lingus partner service. The current round covers outbound travel Oct 7–Nov 19, 2026; Nov 23–Dec 13, 2026; or Dec 24, 2026–Mar 10, 2027, with return travel Nov 1–27, 2026; Dec 3–25, 2026; or Jan 9–Mar 10, 2027.",
-    terms:"Book at least 7 days before departure. Weekday-pattern travel required: outbound Sun/Mon/Tue/Wed, return Tue/Wed/Thu/Fri. Basic Economy, non-refundable; seats limited by day and route; not combinable with other offers.",
+    summary:"American's Europe Flight Deals page discounts Basic Economy and Premium Economy fares to the UK, Ireland and other European destinations on American, British Airways, Iberia, Aer Lingus and Finnair. Atlanta connects via an American hub or via BA/Aer Lingus partner service. The page republishes a new booking and travel window every few weeks; the Oct 7, 2026–Mar 10, 2027 window advertised in September 2026 has since rolled over, so check aa.com/en-us/europe-deals for the current dates.",
+    terms:"Book at least 7 days before departure. Weekday-pattern travel is typically required (outbound Sun/Mon/Tue/Wed, return Tue/Wed/Thu/Fri), though the exact days shift with each new window. Basic Economy, non-refundable; seats limited by day and route; not combinable with other offers.",
     url:"https://www.aa.com/en-us/europe-deals",
     source:"aa.com",
-    dateAdded:"2026-09-17", lastUpdated:"2026-09-24"
+    dateAdded:"2026-09-17", lastUpdated:"2026-10-25"
   },
   {
     id:"delta-atl-riyadh-skymiles-launch-sale",
@@ -306,19 +293,6 @@ const AIRLINE_DEALS = [
     url:"https://www.delta.com/us/en/flight-deals/flash-sale",
     source:"delta.com",
     dateAdded:"2026-10-05", lastUpdated:"2026-10-08"
-  },
-  {
-    id:"lufthansa-atl-frankfurt-nonstop",
-    airline:"Lufthansa",
-    name:"Nonstop Atlanta–Frankfurt Flights",
-    scope:"International",
-    type:"Route / Fare",
-    dest:"Frankfurt (FRA), nonstop from Atlanta — easy onward connections across Europe",
-    summary:"Lufthansa flies nonstop between Atlanta and Frankfurt daily on a Boeing 787-9, a useful alternative to Delta's SkyTeam network for European and onward connections through Lufthansa's Frankfurt hub. Lufthansa has set Dec 1, 2026 as the start date for upgrading this route to its new Allegris cabin product, still on the 787-9.",
-    terms:"Fares are dynamic; check lufthansa.com for current round-trip pricing on specific dates. This is Lufthansa's standard scheduled service rather than a time-limited sale; the Dec 1, 2026 Allegris start date is subject to change.",
-    url:"https://www.lufthansa.com/lhg/us/en/o-d/cy-cy/frankfurt-atlanta",
-    source:"lufthansa.com",
-    dateAdded:"2026-10-09", lastUpdated:"2026-10-16"
   },
   {
     id:"american-aadvantage-sydney-award-sale",
