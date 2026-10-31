@@ -161,7 +161,7 @@
 // nightly-check banner (anything with lastUpdated === LAST_CHECKED).
 // scope must be "Domestic" or "International" for the filter to work.
 // ===========================================================================
-const LAST_CHECKED = "2026-10-30";
+const LAST_CHECKED = "2026-10-31";
 
 const AIRLINE_DEALS = [
   {
@@ -219,28 +219,15 @@ const AIRLINE_DEALS = [
   {
     id:"air-france-klm-flying-blue-promo",
     airline:"Air France / KLM",
-    name:"Flying Blue Promo Rewards — 25% Off Award Flights",
+    name:"Flying Blue Promo Rewards — Up to 25% Off Award Flights",
     scope:"International",
     type:"Award Sale",
     dest:"Europe via Paris (CDG) or Amsterdam (AMS), connecting from Atlanta",
-    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates, with a fresh set of flagged routes published roughly every month. The October 2026 round (book by Oct 31, 2026, for travel through Mar 31, 2027) covers 54 flagged routes, with discounted awards priced as low as 18,750 miles each way in economy; this round also newly flags some non-Europe routes, such as Europe to Vancouver from 18,750 miles on KLM and ATL-Beijing economy awards from 30,000 miles. A new November round replaces this one once the Oct 31 booking window closes.",
-    terms:"Book by Oct 31, 2026 for this round's travel through Mar 31, 2027; Flying Blue publishes a new Promo Rewards list roughly every month, so check the Promo Rewards calendar at flyingblue.com for the current routes and Atlanta availability after that date. Discount applies only to specific flagged routes/dates. 16 of the 54 flagged routes in this round require an active paid Flying Blue Extra subscription to unlock the discount. Flying Blue award tickets are split into Light/Standard/Flex fares; Promo Rewards seats are typically issued as Light fares, which carry no changes, no refunds, no advance seat selection and no complimentary checked bag in economy or premium economy.",
+    summary:"Flying Blue's monthly Promo Rewards take up to 25% off select Air France and KLM award flights between North America and Europe — economy, premium economy and business fares flagged on specific routes and dates, with a fresh set of flagged routes published roughly every month. The October 2026 round's Oct 31, 2026 booking window has closed.",
+    terms:"Flying Blue typically posts a new Promo Rewards round in the first days of each month; check the Promo Rewards calendar at flyingblue.com for the current month's flagged routes and Atlanta/CDG/AMS availability. Discount applies only to specific flagged routes/dates. Some flagged routes require an active paid Flying Blue Extra subscription to unlock the discount. Flying Blue award tickets are split into Light/Standard/Flex fares; Promo Rewards seats are typically issued as Light fares, which carry no changes, no refunds, no advance seat selection and no complimentary checked bag in economy or premium economy.",
     url:"https://wwws.airfrance.us/en-us/flights-from-atlanta",
     source:"airfrance.us / klm.com",
-    dateAdded:"2026-07-30", lastUpdated:"2026-10-25"
-  },
-  {
-    id:"delta-vacations-summer-package-savings",
-    airline:"Delta Air Lines",
-    name:"Delta Vacations — Save on Flight + Hotel Packages",
-    scope:"Domestic",
-    type:"Package Deal",
-    dest:"U.S., Canada, Mexico, the Caribbean & Central America from Atlanta",
-    summary:"Delta Vacations discounts flight-and-hotel packages property by property rather than one broad worldwide rate, and the featured list rotates every few weeks as offers close and new ones take their place. As of Oct 25, 2026, current examples include $150 instant savings at RIU Palace Costa Mujeres, up to 40% off plus a complimentary tequila or mezcal tasting at Haven Riviera Cancun Resort & Spa, and 50% off rooms plus a waived resort fee at Margaritaville Beach Resort Fort Myers — all bookable with an ATL flight. The lead traveler also picks up bonus SkyMiles on qualifying bookings.",
-    terms:"RIU Palace Costa Mujeres: book by Oct 31, 2026 for travel through Mar 31, 2027, 3-night minimum. Haven Riviera Cancun: book by Oct 31, 2026 for travel through Apr 30, 2027. Margaritaville Beach Resort Fort Myers: book by Oct 31, 2026 for travel Nov 3, 2026 through Jan 31, 2027. Requires flight and hotel booked together, at least one Delta-operated flight; the lead traveler must be a (free) SkyMiles member. This round of featured properties closes Oct 31, 2026 and delta.com/vacations rotates in a new set afterward — check there for current terms.",
-    url:"https://www.delta.com/us/en/delta-vacations/offers-deals",
-    source:"delta.com",
-    dateAdded:"2026-08-03", lastUpdated:"2026-10-25"
+    dateAdded:"2026-07-30", lastUpdated:"2026-10-31"
   },
   {
     id:"american-vacations-fall-savings",
@@ -294,19 +281,6 @@ const AIRLINE_DEALS = [
     source:"delta.com",
     dateAdded:"2026-10-05", lastUpdated:"2026-10-08"
   },
-  {
-    id:"american-aadvantage-sydney-award-sale",
-    airline:"American Airlines",
-    name:"Sydney Award Sale — Main Cabin from 25,000 Miles",
-    scope:"International",
-    type:"Award Sale",
-    dest:"Sydney, Australia (SYD), one-stop from Atlanta via an American Airlines hub",
-    summary:"American is running a one-way Main Cabin award sale between the contiguous 48 states and Sydney, priced from 25,000 AAdvantage miles plus taxes and fees. Atlanta connects via an American hub such as Dallas-Fort Worth or Los Angeles; the sale covers American and American Eagle marketed-and-operated flights only, not partner codeshares such as Qantas.",
-    terms:"Reservations and travel must both be completed by 11:59pm CT on Oct 31, 2026 — a tight window. Valid only on American and American Eagle flights; not valid on codeshare flights. Taxes and fees apply on top of the mileage price. American may change or end the sale at any time without notice.",
-    url:"https://www.aa.com/en-us/south-pacific-miles",
-    source:"aa.com",
-    dateAdded:"2026-10-16", lastUpdated:"2026-10-16"
-  }
 ];
 
 // ===========================================================================
