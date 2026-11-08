@@ -90,7 +90,7 @@
 <div class="grid" id="grid"></div>
 <footer>Travel Deal Monitor — Domestic Destinations · Refreshed nightly by an automated check. Each card shows only live hotel deals plus current Atlanta flight options; fares and offers change often, so confirm on the provider's own site before booking.</footer>
 <script>
-const LAST_CHECKED = "2026-11-07";
+const LAST_CHECKED = "2026-11-08";
 const DESTINATIONS = [
   {
     "id": "sarasota",
@@ -129,6 +129,11 @@ const DESTINATIONS = [
         "name": "The Ritz-Carlton, Amelia Island — Amex Fine Hotels + Resorts",
         "deal": "$275 property credit, book by Dec 28, 2026 for travel by Dec 31, 2026",
         "url": "https://www.americanexpress.com/en-us/travel/discover/property/Florida-US/Amelia-Island/The-Ritz-carlton-Amelia-Island"
+      },
+      {
+        "name": "Omni Amelia Island Resort — Sun-Sational Sundays",
+        "deal": "Up to 25% off the regular rate for Sunday arrivals, ongoing standing offer",
+        "url": "https://www.omnihotels.com/hotels/amelia-island/specials"
       }
     ],
     "flights": [
@@ -139,14 +144,20 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-11-08"
   },
   {
     "id": "sea-island",
     "name": "Sea Island",
     "region": "Georgia",
     "subtitle": "Golden Isles, Georgia coast",
-    "hotels": [],
+    "hotels": [
+      {
+        "name": "The Cloister / The Lodge at Sea Island",
+        "deal": "10% off the standard room rate when the full stay is prepaid, booking 8–90 days before arrival",
+        "url": "https://www.seaisland.com/stay/offer/save-10-off-our-standard-rate"
+      }
+    ],
     "flights": [
       {
         "airline": "Delta",
@@ -155,7 +166,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-10-15"
+    "lastUpdated": "2026-11-08"
   },
   {
     "id": "st-simons-island",
@@ -186,14 +197,9 @@ const DESTINATIONS = [
     "subtitle": "Scenic 30A, Florida Panhandle",
     "hotels": [
       {
-        "name": "The Pearl Hotel, Rosemary Beach — Advance Purchase",
-        "deal": "25% off, prepaid and non-refundable, for stays Aug 9, 2026 through Feb 28, 2027 (promo code ADVNON; some suites excluded)",
-        "url": "https://www.thepearlrb.com/offers/advanced-purchase-offer"
-      },
-      {
-        "name": "WaterColor Inn & Resort — Advanced Purchase Offer",
-        "deal": "Up to 25% off standard rates for stays through May 21, 2026 and Aug 9, 2026 through Feb 28, 2027 (15% off for stays May 22–Aug 8, 2026); prepaid and non-refundable, promo code ADVNON",
-        "url": "https://www.watercolorresort.com/offers/advanced-purchase-offer"
+        "name": "WaterColor Inn & Resort — Advance Purchase Offer",
+        "deal": "25% off when booked at least 30 days ahead, for stays through Feb 28, 2027, promo code ADVNON",
+        "url": "https://watercolorresort.com/offers/advanced-purchase-offer"
       }
     ],
     "flights": [
@@ -204,7 +210,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-10-25"
+    "lastUpdated": "2026-11-08"
   },
   {
     "id": "texas-hill-country",
@@ -213,13 +219,8 @@ const DESTINATIONS = [
     "subtitle": "Around Austin & San Antonio",
     "hotels": [
       {
-        "name": "JW Marriott San Antonio Hill Country Resort & Spa — Amex Fine Hotels + Resorts",
-        "deal": "$150 property credit, book by Apr 30, 2027 for stays through Dec 31, 2027, four-night minimum (the resort is undergoing phased renovation through March 2027)",
-        "url": "https://www.americanexpress.com/en-us/travel/discover/property/Texas-US/San-Antonio/Jw-Marriott-San-Antonio-Hill-Country-Resort--Spa"
-      },
-      {
         "name": "Lake Austin Spa Resort — A Rare Moment",
-        "deal": "$600 credit toward spa and personal experiences during the stay, for stays Sept 1 through Dec 31, 2026 (the lake itself is drained for scheduled maintenance Oct 12–Nov 30, 2026; the resort stays open and some activities shift to nearby Lake Travis)",
+        "deal": "$600 credit toward spa and personal experiences during the stay, for stays Sept 1 through Dec 31, 2026 (the lake itself is drained for scheduled maintenance through Nov 30, 2026; the resort remains open throughout and some activities shift to nearby Lake Travis)",
         "url": "https://www.lakeaustin.com/resort/offers/a-rare-moment/"
       },
       {
@@ -234,8 +235,8 @@ const DESTINATIONS = [
       },
       {
         "name": "Four Seasons Hotel Austin — Austin Getaway",
-        "deal": "Up to 20% off plus a welcome amenity, for stays May 19, 2026 through Mar 31, 2027; reservation must be made at least 7 days in advance and prepaid in full, non-refundable",
-        "url": "https://www.fourseasons.com/austin/offers/austin-getaway-20-off/"
+        "deal": "Up to 20% off plus a welcome amenity, for select dates Sept 3, 2026 through Jul 31, 2027; reservation must be made at least 7 days in advance and prepaid in full, non-refundable",
+        "url": "https://www.fourseasons.com/austin/offers/austin-getaway/"
       }
     ],
     "flights": [
@@ -246,7 +247,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-10-29"
+    "lastUpdated": "2026-11-08"
   },
   {
     "id": "scottsdale",
@@ -255,9 +256,9 @@ const DESTINATIONS = [
     "subtitle": "Sonoran Desert, Arizona",
     "hotels": [
       {
-        "name": "Fairmont Scottsdale Princess \u2014 Suite Retreat",
-        "deal": "Complimentary fourth night with a three-night stay, for stays Sept 8, 2026 through Jan 31, 2027, plus a $100 resort credit and up to 20% off Fairmont Gold rooms",
-        "url": "https://www.fairmont.com/scottsdale/offers/suite-retreat-package/"
+        "name": "Fairmont Scottsdale Princess \u2014 Embrace Season",
+        "deal": "Complimentary fourth night with a three-night stay, for stays Sept 7, 2026 through Jan 31, 2027, plus a $100 resort credit and up to 20% off Fairmont Gold rooms",
+        "url": "https://www.fairmont.com/scottsdale/offers/embrace-season"
       },
       {
         "name": "Four Seasons Resort Scottsdale at Troon North — Bed & Breakfast",
@@ -270,9 +271,9 @@ const DESTINATIONS = [
         "url": "https://www.americanexpress.com/en-us/travel/discover/property/Arizona-US/Scottsdale/The-Phoenician-a-Luxury-Collection-Resort-Scottsdale"
       },
       {
-        "name": "Omni Scottsdale Resort & Spa at Montelucia — Amex Fine Hotels + Resorts",
-        "deal": "Complimentary fourth night, book by Dec 31, 2026 for travel by Jan 4, 2027",
-        "url": "https://www.omnihotels.com/hotels/scottsdale-montelucia/specials"
+        "name": "Omni Scottsdale Resort & Spa at Montelucia — Escape to Scottsdale",
+        "deal": "Complimentary fourth night plus a $150 resort credit per stay, book by Dec 31, 2026 for stays by Dec 31, 2026",
+        "url": "https://www.omnihotels.com/hotels/scottsdale-montelucia/specials/escape-to-scottsdale"
       }
     ],
     "flights": [
@@ -283,7 +284,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-10-09"
+    "lastUpdated": "2026-11-08"
   },
   {
     "id": "tucson",
@@ -363,9 +364,9 @@ const DESTINATIONS = [
         "url": "https://www.keswick.com/offers/stay-5-get-the-5th-night-free/"
       },
       {
-        "name": "Keswick Hall — Autumn Unwind",
-        "deal": "Book a three-night stay through Dec 20, 2026 and save 20%, plus daily breakfast at Marigold by Jean-Georges and a $100 resort credit",
-        "url": "https://www.keswick.com/offers/autumn-unwind/"
+        "name": "Keswick Hall — The Suite Life, A Little Longer",
+        "deal": "20% off suites, plus daily breakfast at Marigold by Jean-Georges",
+        "url": "https://www.keswick.com/offers/the-suite-life/"
       },
       {
         "name": "Boar's Head Resort — Virginia's Presidential Package",
@@ -381,7 +382,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-10-09"
+    "lastUpdated": "2026-11-08"
   },
   {
     "id": "maryland-eastern-shore",
@@ -393,6 +394,11 @@ const DESTINATIONS = [
         "name": "Inn at Perry Cabin — Amex Fine Hotels + Resorts",
         "deal": "$100 property credit toward on-property charges for stays beginning Jan 1, 2027, plus a room upgrade when available and daily breakfast for two",
         "url": "https://www.americanexpress.com/en-us/travel/discover/property/Maryland-US/St.-Michaels/Inn-At-Perry-Cabin"
+      },
+      {
+        "name": "Inn at Perry Cabin — Check In to Spring",
+        "deal": "Up to 35% off the nightly rate, booked direct (see the resort's offers page for the current window)",
+        "url": "https://innatperrycabin.com/special-offers"
       }
     ],
     "flights": [
@@ -403,7 +409,7 @@ const DESTINATIONS = [
       }
     ],
     "dateAdded": "2026-07-12",
-    "lastUpdated": "2026-10-22"
+    "lastUpdated": "2026-11-08"
   }
 ];
 
